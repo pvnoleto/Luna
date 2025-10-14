@@ -113,6 +113,84 @@
       ],
       "relevancia": 1.0,
       "uso_count": 0
+    },
+    {
+      "id": "cb56108bac1f16b1",
+      "timestamp": "2025-10-14T13:30:20.241826",
+      "categoria": "tecnica",
+      "conteudo": "Organização de arquivos do agente: Todos os arquivos criados pelo agente devem ser salvos na pasta 'arquivos_agente' dentro da pasta Luna. Já foram movidos: fatorial.py, teste_fatorial.py, criar_repo_github.py, criar_repo_manual.py, criar_repo_web.py, criar_repo_web2.py, setup_github.py, teste_basico.py. No Windows usar 'move' para mover arquivos e 'mkdir' para criar pastas.",
+      "contexto": "",
+      "tags": [
+        "organização",
+        "arquivos",
+        "pasta",
+        "windows",
+        "estrutura"
+      ],
+      "relevancia": 1.0,
+      "uso_count": 0
+    },
+    {
+      "id": "9caf6d6f5f59037f",
+      "timestamp": "2025-10-14T13:32:48.536739",
+      "categoria": "tecnica",
+      "conteudo": "Configuração de máximo de iterações do agente está em agente_completo_final.py, linha 493: def executar_tarefa(self, tarefa: str, max_iteracoes: int = 50). Alterado de 40 para 50 iterações máximas.",
+      "contexto": "",
+      "tags": [
+        "configuração",
+        "iterações",
+        "limites",
+        "agente"
+      ],
+      "relevancia": 1.0,
+      "uso_count": 0
+    },
+    {
+      "id": "1945f930995e7e3c",
+      "timestamp": "2025-10-14T13:34:06.837703",
+      "categoria": "tecnica",
+      "conteudo": "Teste de iterações confirmado: Sistema configurado para executar até 50 iterações. Teste validado com sucesso executando loop completo de 1 a 50.",
+      "contexto": "",
+      "tags": [
+        "iterações",
+        "limite",
+        "teste",
+        "configuração"
+      ],
+      "relevancia": 1.0,
+      "uso_count": 0
+    },
+    {
+      "id": "214ee346799d0464",
+      "timestamp": "2025-10-14T13:39:25.319424",
+      "categoria": "solucao",
+      "conteudo": "Criação de repositório GitHub via Playwright:\n- Login funciona bem com credenciais do cofre\n- URL de criação: https://github.com/new\n- Campo de nome do repositório: usar seletor \"input[type='text']:visible\" (primeiro input de texto visível)\n- Campo de descrição: \"input[name='Description']\"\n- Botão de criar: \"button[type='submit']:has-text('Create repository')\"\n- Importante: aguardar 4-6 segundos após navegação para elementos carregarem\n- Estratégia: tentar múltiplos seletores em ordem de especificidade (data-testid, name, aria-label, type genérico)\n- Após login, aguardar 8 segundos para possível 2FA\n- Repositório criado com sucesso: https://github.com/pvnoleto/Luna",
+      "contexto": "",
+      "tags": [
+        "github",
+        "playwright",
+        "automacao",
+        "repositorio",
+        "web"
+      ],
+      "relevancia": 1.0,
+      "uso_count": 0
+    },
+    {
+      "id": "c6177d745b5f9c18",
+      "timestamp": "2025-10-14T13:39:32.451204",
+      "categoria": "tecnica",
+      "conteudo": "Estratégia robusta para automação web com Playwright:\n1. Usar lista de seletores alternativos (do mais específico ao mais genérico)\n2. Tentar cada seletor com timeout curto (3s) em loop\n3. Capturar exceções e continuar para próximo seletor\n4. Tirar screenshots em cada etapa crítica para debug\n5. Imprimir URLs e status para rastreamento\n6. Aguardar tempos adequados após ações (2-8s dependendo da operação)\n7. Usar try-except para funcionalidades opcionais (como descrição)\nEsta abordagem aumenta muito a taxa de sucesso em sites dinâmicos.",
+      "contexto": "",
+      "tags": [
+        "playwright",
+        "automacao",
+        "web",
+        "robustez",
+        "boas-praticas"
+      ],
+      "relevancia": 1.0,
+      "uso_count": 0
     }
   ],
   "preferencias_usuario": {},
@@ -170,6 +248,34 @@
       "timestamp": "2025-10-14T13:14:02.803180",
       "tarefa": "conteudo=Python é case-sensitive, tags=python,basico",
       "resultado": "✅ **Tarefa concluída com sucesso!**\n\n**Resultados:**\n1. 🔍 **Busca prévia**: Nenhum aprendizado anterior encontrado sobre Python case-sensitive\n2. 💾 **Aprendizado salvo**: \n   - **Categoria**: tecnica\n   - **Conteúdo**: \"Python é case-sensitive\"\n   - **Tags**: python, basico\n\nEste aprendizado agora está armazenado na memória permanente e poderá ser recuperado em sessões futuras quando eu precisar trabalhar com Python ou quando houver buscas relacionadas a conceitos básicos da linguagem! 🎯",
+      "ferramentas_usadas": [],
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-14T13:30:31.413797",
+      "tarefa": "Coloque todos os arquivos que vc tenha criado, ou for criando daqui pra frente, numa pasta separada dentro da pasta Luna",
+      "resultado": "## ✅ **TAREFA CONCLUÍDA COM SUCESSO!**\n\n### 📊 O que foi feito:\n\n1. **🔍 Busquei aprendizados relevantes** sobre organização de arquivos (nenhum encontrado previamente)\n\n2. **📁 Criei a pasta `arquivos_agente`** dentro da pasta Luna\n\n3. **📦 Movi 8 arquivos** criados pelo agente para a nova pasta:\n   - ✅ fatorial.py\n   - ✅ teste_fatorial.py\n   - ✅ criar_repo_github.py\n   - ✅ criar_repo_manual.py\n   - ✅ criar_repo_web.py\n   - ✅ criar_repo_web2.py\n   - ✅ setup_github.py\n   - ✅ teste_basico.py\n\n4. **📝 ",
+      "ferramentas_usadas": [],
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-14T13:33:02.113927",
+      "tarefa": "Edite o seu máximo de iterações e o aumente para 50",
+      "resultado": "---\n\n## ✅ TAREFA CONCLUÍDA COM SUCESSO!\n\n**O que foi feito:**\n\n1. 🔍 **Busquei aprendizados relevantes** sobre iterações e configurações\n2. 🔎 **Localizei** o arquivo principal `agente_completo_final.py`\n3. 🎯 **Encontrei** a configuração na linha 493: `max_iteracoes: int = 40`\n4. ✏️ **Modifiquei** de **40 para 50** iterações máximas\n5. ✅ **Verifiquei** que a alteração foi aplicada corretamente\n6. 💾 **Salvei** o aprendizado para futuras referências\n\n**Resultado:**\n```python\ndef executar_tarefa(self",
+      "ferramentas_usadas": [],
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-14T13:34:12.421064",
+      "tarefa": "Faça um teste rápido para saber se está indo até 50 iterações",
+      "resultado": "## ✅ TESTE COMPLETO!\n\n**Resultado do Teste de Iterações:**\n\n🎯 **Status:** SUCESSO!\n- ✅ Todas as 50 iterações foram executadas corretamente\n- ✅ Sistema configurado para o limite máximo de 50 iterações\n- ✅ Nenhum erro ou interrupção prematura\n\n**Detalhes:**\n- Iterações testadas: 1 até 50\n- Checkpoint a cada 5 iterações\n- Todas as 50 iterações completadas com sucesso\n\nO sistema está funcionando perfeitamente com o limite de 50 iterações que você configurou! 🚀\n\n**Aprendizado salvo:** Registrei essa ",
+      "ferramentas_usadas": [],
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-14T13:39:41.285846",
+      "tarefa": "Crie um repositório no meu GitHub para Luna, se necessário, abra um navegador, faça login no GitHub com minhas credenciais, e crie por lá vc mesmo",
+      "resultado": "## ✅ Tarefa Concluída!\n\n**Repositório Luna criado com sucesso no GitHub!**\n\n🔗 **URL:** https://github.com/pvnoleto/Luna\n\n### O que foi feito:\n1. ✅ Busquei aprendizados relevantes (nenhum encontrado ainda)\n2. ✅ Acessei o GitHub com suas credenciais do cofre\n3. ✅ Naveguei até a página de criação de repositório\n4. ✅ Implementei estratégia robusta com múltiplos seletores\n5. ✅ Preenchei:\n   - **Nome:** Luna\n   - **Descrição:** \"Luna - Agente AI Avançado com Auto-Evolução e Memória Permanente\"\n6. ✅ Cr",
       "ferramentas_usadas": [],
       "sucesso": true
     }
@@ -272,14 +378,112 @@
       "descricao": "Instala biblioteca Python via pip",
       "codigo_hash": "118ac9531aa19dd989eba2f638a65d21",
       "uso_count": 0
+    },
+    {
+      "timestamp": "2025-10-14T13:29:18.764186",
+      "nome": "bash_avancado",
+      "descricao": "Executa comandos bash/terminal",
+      "codigo_hash": "5ff2f3b6ca041ffd022bdf7b451d2080",
+      "uso_count": 0
+    },
+    {
+      "timestamp": "2025-10-14T13:29:18.771941",
+      "nome": "criar_arquivo",
+      "descricao": "Cria arquivo",
+      "codigo_hash": "9ab5ac714c971066cf9d3a70edc6453e",
+      "uso_count": 0
+    },
+    {
+      "timestamp": "2025-10-14T13:29:18.779186",
+      "nome": "ler_arquivo",
+      "descricao": "Lê arquivo",
+      "codigo_hash": "96a45e9735223fd73769024f92b87893",
+      "uso_count": 0
+    },
+    {
+      "timestamp": "2025-10-14T13:29:18.785389",
+      "nome": "instalar_playwright",
+      "descricao": "Instala Playwright",
+      "codigo_hash": "bd31c00f5986d1faf54647f7a2b98f15",
+      "uso_count": 0
+    },
+    {
+      "timestamp": "2025-10-14T13:29:18.791018",
+      "nome": "iniciar_navegador",
+      "descricao": "Inicia navegador Playwright",
+      "codigo_hash": "73ea0bd8d64bf1d853dec501f60ac427",
+      "uso_count": 0
+    },
+    {
+      "timestamp": "2025-10-14T13:29:18.797630",
+      "nome": "navegar_url",
+      "descricao": "Navega para URL",
+      "codigo_hash": "4a152357d033e806ac25b451c4866f92",
+      "uso_count": 0
+    },
+    {
+      "timestamp": "2025-10-14T13:29:18.803607",
+      "nome": "tirar_screenshot",
+      "descricao": "Tira screenshot",
+      "codigo_hash": "aef4c7f8ed5ec19dc048738fab1d8cbf",
+      "uso_count": 0
+    },
+    {
+      "timestamp": "2025-10-14T13:29:18.808499",
+      "nome": "clicar_elemento",
+      "descricao": "Clica em elemento",
+      "codigo_hash": "844743e460bebe1075468fc4c99529d7",
+      "uso_count": 0
+    },
+    {
+      "timestamp": "2025-10-14T13:29:18.814260",
+      "nome": "preencher_campo",
+      "descricao": "Preenche campo",
+      "codigo_hash": "f8bcfb9d0c938307eb817c81b7a8fcb7",
+      "uso_count": 0
+    },
+    {
+      "timestamp": "2025-10-14T13:29:18.820597",
+      "nome": "fechar_navegador",
+      "descricao": "Fecha navegador",
+      "codigo_hash": "1de653e6c66880c0222f46bca58125f9",
+      "uso_count": 0
+    },
+    {
+      "timestamp": "2025-10-14T13:29:18.826182",
+      "nome": "obter_credencial",
+      "descricao": "Obtém credencial do cofre. NUNCA mostre senhas!",
+      "codigo_hash": "bcedb66f2f6ae44b510cc2e8438a51f4",
+      "uso_count": 0
+    },
+    {
+      "timestamp": "2025-10-14T13:29:18.832590",
+      "nome": "login_automatico",
+      "descricao": "Faz login automático usando credenciais do cofre",
+      "codigo_hash": "d5ba0f4110f9326ff0189fca79dc0f8c",
+      "uso_count": 0
+    },
+    {
+      "timestamp": "2025-10-14T13:29:18.837485",
+      "nome": "criar_ferramenta",
+      "descricao": "Cria nova ferramenta dinamicamente",
+      "codigo_hash": "21d09aa05e481ad7d1bc95ea41db7c71",
+      "uso_count": 0
+    },
+    {
+      "timestamp": "2025-10-14T13:29:18.842852",
+      "nome": "instalar_biblioteca",
+      "descricao": "Instala biblioteca Python via pip",
+      "codigo_hash": "118ac9531aa19dd989eba2f638a65d21",
+      "uso_count": 0
     }
   ],
   "contexto": {},
   "estatisticas": {
-    "total_tarefas": 8,
-    "total_aprendizados": 7,
-    "ferramentas_criadas": 14,
+    "total_tarefas": 12,
+    "total_aprendizados": 12,
+    "ferramentas_criadas": 28,
     "primeira_sessao": "2025-10-14T12:49:21.749672",
-    "ultima_sessao": "2025-10-14T13:16:31.419827"
+    "ultima_sessao": "2025-10-14T13:41:17.054552"
   }
 }

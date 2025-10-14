@@ -490,7 +490,7 @@ class AgenteCompletoFinal:
         self.sistema_ferramentas = SistemaFerramentasCompleto(master_password, usar_memoria)
         self.historico_conversa = []
     
-    def executar_tarefa(self, tarefa: str, max_iteracoes: int = 40):
+    def executar_tarefa(self, tarefa: str, max_iteracoes: int = 50):
         """Executa tarefa com todas capacidades"""
         
         # Buscar aprendizados relevantes
