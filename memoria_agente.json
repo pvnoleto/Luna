@@ -1,0 +1,285 @@
+{
+  "aprendizados": [
+    {
+      "id": "1b21ebadf2a12a33",
+      "timestamp": "2025-10-14T12:50:41.572292",
+      "categoria": "tecnica",
+      "conteudo": "Programa Python para calcular fatorial - Implementações:\n1. RECURSIVA: Base case (0,1) retorna 1, caso recursivo n * fatorial(n-1)\n2. ITERATIVA: Loop de 2 até n multiplicando resultado\n3. MATH.FACTORIAL: Função nativa da biblioteca math\n\nBoas práticas aplicadas:\n- Docstrings completas\n- Tratamento de erros (ValueError para negativos)\n- RecursionError para números muito grandes\n- Interface interativa com while True\n- Testes automatizados verificando consistência\n- Formatação de números grandes com :,\n\nCuidados: Python 3.13 no Windows pode ter problemas com emojis (UnicodeEncodeError cp1252)",
+      "contexto": "",
+      "tags": [
+        "python",
+        "fatorial",
+        "recursao",
+        "iteracao",
+        "math",
+        "algoritmo"
+      ],
+      "relevancia": 1.0,
+      "uso_count": 0
+    },
+    {
+      "id": "b9130914adbf6ce0",
+      "timestamp": "2025-10-14T12:52:45.462872",
+      "categoria": "tecnica",
+      "conteudo": "Para tirar screenshots de sites: 1) Iniciar navegador com iniciar_navegador(headless=false para ver ou true para background), 2) Navegar com navegar_url(), 3) Tirar screenshot com tirar_screenshot(caminho), 4) Fechar navegador. Caminho ~/Desktop/ acessa área de trabalho do usuário.",
+      "contexto": "",
+      "tags": [
+        "screenshot",
+        "navegador",
+        "playwright",
+        "web",
+        "google",
+        "desktop"
+      ],
+      "relevancia": 1.0,
+      "uso_count": 0
+    },
+    {
+      "id": "0cae1432517e5fe8",
+      "timestamp": "2025-10-14T12:55:47.896564",
+      "categoria": "tecnica",
+      "conteudo": "Screenshot do Google foi salvo em: C:\\Users\\Pedro Victor\\OneDrive\\Área de Trabalho\\Documentos\\Projetos Automações e Digitais\\Luna\\~\\Desktop\\google_screenshot.png. Para encontrar arquivos PNG no sistema Windows: usar comando 'dir /b /s \"caminho\\*.png\"' para busca recursiva. Área de trabalho do usuário está em OneDrive.",
+      "contexto": "",
+      "tags": [
+        "screenshot",
+        "windows",
+        "arquivo",
+        "desktop",
+        "onedrive",
+        "busca"
+      ],
+      "relevancia": 1.0,
+      "uso_count": 0
+    },
+    {
+      "id": "753b5e97623bec47",
+      "timestamp": "2025-10-14T12:56:37.584474",
+      "categoria": "tecnica",
+      "conteudo": "Em ambiente Windows, usar 'rmdir /S /Q' para apagar pastas recursivamente (equivalente a rm -rf no Linux). O comando rm não funciona no Windows CMD. Para verificar conteúdo de pastas usar 'dir' ao invés de 'ls'.",
+      "contexto": "",
+      "tags": [
+        "windows",
+        "comandos",
+        "rmdir",
+        "apagar",
+        "pasta",
+        "diretório"
+      ],
+      "relevancia": 1.0,
+      "uso_count": 0
+    },
+    {
+      "id": "4618623060a5ec01",
+      "timestamp": "2025-10-14T12:58:51.848362",
+      "categoria": "solucao",
+      "conteudo": "Para abrir Notion no Windows: criar script Python separado em /tmp/ sem emojis Unicode devido a encoding cp1252. Usar playwright.sync_api com sync_playwright(). URL: https://www.notion.so/login",
+      "contexto": "",
+      "tags": [
+        "notion",
+        "login",
+        "windows",
+        "playwright",
+        "encoding"
+      ],
+      "relevancia": 1.0,
+      "uso_count": 0
+    },
+    {
+      "id": "943cca55c5da1447",
+      "timestamp": "2025-10-14T13:03:32.826782",
+      "categoria": "solucao",
+      "conteudo": "Login automático no Notion via Playwright: 1) Usar async_playwright em script separado por conta do loop asyncio, 2) Navegar para https://www.notion.so/login, 3) Preencher email e clicar Continue, 4) Aguardar 3s, 5) Preencher senha e clicar Continue novamente, 6) Credenciais: pvnoleto@hotmail.com, 7) Remover emojis de prints no Windows para evitar UnicodeEncodeError, 8) Usar timeout longo ou executar em background",
+      "contexto": "",
+      "tags": [
+        "notion",
+        "login",
+        "playwright",
+        "async",
+        "windows",
+        "credenciais"
+      ],
+      "relevancia": 1.0,
+      "uso_count": 0
+    },
+    {
+      "id": "4a3fc49309e78771",
+      "timestamp": "2025-10-14T13:13:58.175899",
+      "categoria": "tecnica",
+      "conteudo": "Python é case-sensitive",
+      "contexto": "",
+      "tags": [
+        "python",
+        "basico"
+      ],
+      "relevancia": 1.0,
+      "uso_count": 0
+    }
+  ],
+  "preferencias_usuario": {},
+  "historico_tarefas": [
+    {
+      "timestamp": "2025-10-14T12:50:50.623593",
+      "tarefa": "👤 Crie um programa Python que calcula fatorial",
+      "resultado": "## ✅ Programa de Fatorial Criado com Sucesso!\n\nCriei um programa Python completo com **3 implementações diferentes**:\n\n### 📋 Arquivos Criados:\n1. **`fatorial.py`** - Programa principal com interface interativa\n2. **`teste_fatorial.py`** - Suite de testes automatizados\n\n### 🎯 Funcionalidades:\n\n#### **1. Método Recursivo**\n```python\ndef fatorial_recursivo(n):\n    if n == 0 or n == 1:\n        return 1\n    return n * fatorial_recursivo(n - 1)\n```\n\n#### **2. Método Iterativo** (mais eficiente)\n```pyt",
+      "ferramentas_usadas": [],
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-14T12:52:48.713407",
+      "tarefa": "👤 Acesse google.com e tire um screenshot e salve na minha área de trabalho",
+      "resultado": "🧠 **Aprendizado salvo!** Agora sei como capturar screenshots de sites para uso futuro.",
+      "ferramentas_usadas": [],
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-14T12:55:51.422195",
+      "tarefa": "apague a screenshot que vc tirou",
+      "resultado": "Pronto! O screenshot foi localizado e apagado com sucesso. O arquivo estava salvo no diretório de projetos, não diretamente na área de trabalho. 🗑️✨",
+      "ferramentas_usadas": [],
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-14T12:56:42.733049",
+      "tarefa": "agora apague a pasta Desktop que vc criou",
+      "resultado": "✅ **Pasta Desktop apagada com sucesso!**\n\n**Resumo da operação:**\n1. 🔍 Busquei aprendizados relevantes (nenhum encontrado)\n2. 🖥️ Identifiquei que estamos em ambiente Windows\n3. 📁 Localizei a pasta Desktop em `~\\Desktop`\n4. 🗑️ Apaguei a pasta usando `rmdir /S /Q \"~\\Desktop\"`\n5. ✔️ Verifiquei que a pasta foi removida com sucesso\n6. 💾 Salvei o aprendizado sobre comandos Windows para referência futura\n\nA pasta Desktop que estava dentro do diretório \"~\" foi completamente removida!",
+      "ferramentas_usadas": [],
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-14T12:58:54.629388",
+      "tarefa": "👤 Entre no Notion",
+      "resultado": "💾 **Aprendizado salvo** para futuras sessões!",
+      "ferramentas_usadas": [],
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-14T13:03:39.540986",
+      "tarefa": "Na verdade eu quero que vc abra e faça login no Notion usando as credenciais",
+      "resultado": "✅ **Tarefa Concluída!**\n\n**O que foi feito:**\n1. 🔍 Busquei aprendizados relevantes (não havia nenhum ainda)\n2. 🔑 Obtive suas credenciais do cofre de forma segura\n3. 🤖 Criei um script Python com Playwright assíncrono\n4. 🌐 Abri o navegador Chromium (modo visual)\n5. 🔐 Fiz login automático no Notion usando:\n   - Email: pvnoleto@hotmail.com\n   - Senha: (usada do cofre, sem expor)\n6. 💾 Salvei o aprendizado para uso futuro\n\n**O navegador está aberto e logado no Notion!** O script vai manter o navegador",
+      "ferramentas_usadas": [],
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-14T13:13:34.213445",
+      "tarefa": "👤 Salve um aprendizado: categoria=tecnica,",
+      "resultado": "Encontrei que ainda não temos aprendizados técnicos salvos! \n\nPara salvar o aprendizado, preciso que você complete as informações:\n\n**Formato necessário:**\n- **Categoria**: tecnica ✅ (já informado)\n- **Conteúdo**: ❓ (o que você quer salvar?)\n- **Tags**: ❓ (palavras-chave separadas por vírgula)\n\n**Exemplo:**\n```\ncategoria=tecnica\nconteudo=Para fazer login no Notion, use login_automatico com servico='notion' e url_login='https://www.notion.so/login'\ntags=notion,login,autenticacao,web\n```\n\nPor favo",
+      "ferramentas_usadas": [],
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-14T13:14:02.803180",
+      "tarefa": "conteudo=Python é case-sensitive, tags=python,basico",
+      "resultado": "✅ **Tarefa concluída com sucesso!**\n\n**Resultados:**\n1. 🔍 **Busca prévia**: Nenhum aprendizado anterior encontrado sobre Python case-sensitive\n2. 💾 **Aprendizado salvo**: \n   - **Categoria**: tecnica\n   - **Conteúdo**: \"Python é case-sensitive\"\n   - **Tags**: python, basico\n\nEste aprendizado agora está armazenado na memória permanente e poderá ser recuperado em sessões futuras quando eu precisar trabalhar com Python ou quando houver buscas relacionadas a conceitos básicos da linguagem! 🎯",
+      "ferramentas_usadas": [],
+      "sucesso": true
+    }
+  ],
+  "ferramentas_criadas": [
+    {
+      "timestamp": "2025-10-14T12:49:21.750676",
+      "nome": "bash_avancado",
+      "descricao": "Executa comandos bash/terminal",
+      "codigo_hash": "5ff2f3b6ca041ffd022bdf7b451d2080",
+      "uso_count": 0
+    },
+    {
+      "timestamp": "2025-10-14T12:49:21.755551",
+      "nome": "criar_arquivo",
+      "descricao": "Cria arquivo",
+      "codigo_hash": "9ab5ac714c971066cf9d3a70edc6453e",
+      "uso_count": 0
+    },
+    {
+      "timestamp": "2025-10-14T12:49:21.761664",
+      "nome": "ler_arquivo",
+      "descricao": "Lê arquivo",
+      "codigo_hash": "96a45e9735223fd73769024f92b87893",
+      "uso_count": 0
+    },
+    {
+      "timestamp": "2025-10-14T12:49:21.766996",
+      "nome": "instalar_playwright",
+      "descricao": "Instala Playwright",
+      "codigo_hash": "bd31c00f5986d1faf54647f7a2b98f15",
+      "uso_count": 0
+    },
+    {
+      "timestamp": "2025-10-14T12:49:21.772116",
+      "nome": "iniciar_navegador",
+      "descricao": "Inicia navegador Playwright",
+      "codigo_hash": "73ea0bd8d64bf1d853dec501f60ac427",
+      "uso_count": 0
+    },
+    {
+      "timestamp": "2025-10-14T12:49:21.778766",
+      "nome": "navegar_url",
+      "descricao": "Navega para URL",
+      "codigo_hash": "4a152357d033e806ac25b451c4866f92",
+      "uso_count": 0
+    },
+    {
+      "timestamp": "2025-10-14T12:49:21.784540",
+      "nome": "tirar_screenshot",
+      "descricao": "Tira screenshot",
+      "codigo_hash": "aef4c7f8ed5ec19dc048738fab1d8cbf",
+      "uso_count": 0
+    },
+    {
+      "timestamp": "2025-10-14T12:49:21.789464",
+      "nome": "clicar_elemento",
+      "descricao": "Clica em elemento",
+      "codigo_hash": "844743e460bebe1075468fc4c99529d7",
+      "uso_count": 0
+    },
+    {
+      "timestamp": "2025-10-14T12:49:21.795038",
+      "nome": "preencher_campo",
+      "descricao": "Preenche campo",
+      "codigo_hash": "f8bcfb9d0c938307eb817c81b7a8fcb7",
+      "uso_count": 0
+    },
+    {
+      "timestamp": "2025-10-14T12:49:21.800269",
+      "nome": "fechar_navegador",
+      "descricao": "Fecha navegador",
+      "codigo_hash": "1de653e6c66880c0222f46bca58125f9",
+      "uso_count": 0
+    },
+    {
+      "timestamp": "2025-10-14T12:49:21.805146",
+      "nome": "obter_credencial",
+      "descricao": "Obtém credencial do cofre. NUNCA mostre senhas!",
+      "codigo_hash": "bcedb66f2f6ae44b510cc2e8438a51f4",
+      "uso_count": 0
+    },
+    {
+      "timestamp": "2025-10-14T12:49:21.810618",
+      "nome": "login_automatico",
+      "descricao": "Faz login automático usando credenciais do cofre",
+      "codigo_hash": "d5ba0f4110f9326ff0189fca79dc0f8c",
+      "uso_count": 0
+    },
+    {
+      "timestamp": "2025-10-14T12:49:21.815478",
+      "nome": "criar_ferramenta",
+      "descricao": "Cria nova ferramenta dinamicamente",
+      "codigo_hash": "21d09aa05e481ad7d1bc95ea41db7c71",
+      "uso_count": 0
+    },
+    {
+      "timestamp": "2025-10-14T12:49:21.821033",
+      "nome": "instalar_biblioteca",
+      "descricao": "Instala biblioteca Python via pip",
+      "codigo_hash": "118ac9531aa19dd989eba2f638a65d21",
+      "uso_count": 0
+    }
+  ],
+  "contexto": {},
+  "estatisticas": {
+    "total_tarefas": 8,
+    "total_aprendizados": 7,
+    "ferramentas_criadas": 14,
+    "primeira_sessao": "2025-10-14T12:49:21.749672",
+    "ultima_sessao": "2025-10-14T13:16:31.419827"
+  }
+}
