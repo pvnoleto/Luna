@@ -173,7 +173,12 @@ class MemoriaPermanente:
         self._salvar_memoria()
     
     def registrar_ferramenta_criada(self, nome: str, descricao: str, codigo: str):
-        """Registra ferramenta criada pelo agente"""
+        """
+        Registra ferramenta criada pelo agente
+
+        Mantém apenas as últimas 100 ferramentas para evitar crescimento
+        infinito do arquivo de memória.
+        """
         ferramenta = {
             "timestamp": datetime.now().isoformat(),
             "nome": nome,
@@ -181,9 +186,15 @@ class MemoriaPermanente:
             "codigo_hash": hashlib.md5(codigo.encode()).hexdigest(),
             "uso_count": 0
         }
-        
+
         self.memoria["ferramentas_criadas"].append(ferramenta)
         self.memoria["estatisticas"]["ferramentas_criadas"] += 1
+
+        # ✅ CORREÇÃO: Podar para evitar crescimento infinito (igual historico_tarefas)
+        if len(self.memoria["ferramentas_criadas"]) > 100:
+            self.memoria["ferramentas_criadas"] = self.memoria["ferramentas_criadas"][-100:]
+            print(f"⚠️  Memória podada: mantidas últimas 100 ferramentas")
+
         self._salvar_memoria()
     
     def salvar_preferencia(self, chave: str, valor):
@@ -308,7 +319,69 @@ Data: {datetime.now().strftime("%Y-%m-%d %H:%M")}
         self._salvar_memoria()
         print(f"✅ Memória limpa. Backup salvo em: {backup}")
         return True
-    
+
+    def compactar_memoria(self):
+        """
+        Compacta memória removendo duplicatas e mantendo apenas itens relevantes.
+
+        Útil quando memoria_agente.json fica muito grande (>500KB).
+        Remove:
+        - Aprendizados duplicados (mesmo ID)
+        - Ferramentas nunca usadas
+        - Tarefas antigas não relevantes
+
+        Mantém:
+        - Aprendizados com uso_count > 0
+        - Últimas 100 tarefas
+        - Últimas 100 ferramentas
+        """
+        print("\n🗜️  Compactando memória...")
+
+        # Remove aprendizados duplicados (por ID)
+        aprendizados_unicos = {}
+        for a in self.memoria["aprendizados"]:
+            if a["id"] not in aprendizados_unicos:
+                aprendizados_unicos[a["id"]] = a
+            else:
+                # Mantém o que tem maior uso_count
+                if a["uso_count"] > aprendizados_unicos[a["id"]]["uso_count"]:
+                    aprendizados_unicos[a["id"]] = a
+
+        antes_aprendizados = len(self.memoria["aprendizados"])
+        self.memoria["aprendizados"] = list(aprendizados_unicos.values())
+        depois_aprendizados = len(self.memoria["aprendizados"])
+
+        # Podar ferramentas (manter últimas 100)
+        antes_ferramentas = len(self.memoria["ferramentas_criadas"])
+        if antes_ferramentas > 100:
+            self.memoria["ferramentas_criadas"] = self.memoria["ferramentas_criadas"][-100:]
+        depois_ferramentas = len(self.memoria["ferramentas_criadas"])
+
+        # Podar tarefas (manter últimas 100)
+        antes_tarefas = len(self.memoria["historico_tarefas"])
+        if antes_tarefas > 100:
+            self.memoria["historico_tarefas"] = self.memoria["historico_tarefas"][-100:]
+        depois_tarefas = len(self.memoria["historico_tarefas"])
+
+        self._salvar_memoria()
+
+        print(f"✅ Compactação concluída:")
+        print(f"   Aprendizados: {antes_aprendizados} → {depois_aprendizados} ({antes_aprendizados - depois_aprendizados} removidos)")
+        print(f"   Ferramentas: {antes_ferramentas} → {depois_ferramentas} ({antes_ferramentas - depois_ferramentas} removidas)")
+        print(f"   Tarefas: {antes_tarefas} → {depois_tarefas} ({antes_tarefas - depois_tarefas} removidas)")
+
+        # Calcular tamanho do arquivo
+        import os
+        tamanho_kb = os.path.getsize(self.arquivo_memoria) / 1024
+        print(f"   Tamanho do arquivo: {tamanho_kb:.1f} KB")
+
+        return {
+            "aprendizados_removidos": antes_aprendizados - depois_aprendizados,
+            "ferramentas_removidas": antes_ferramentas - depois_ferramentas,
+            "tarefas_removidas": antes_tarefas - depois_tarefas,
+            "tamanho_kb": tamanho_kb
+        }
+
     def exportar_backup(self, arquivo: str):
         """Exporta backup completo"""
         import shutil
