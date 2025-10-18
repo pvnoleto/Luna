@@ -1,0 +1,131 @@
+================================================================================
+ANALISE DO ARQUIVO: agendador_final_corrigido.py
+================================================================================
+
+ESTATISTICAS:
+   - Total de linhas: 915
+   - Total de caracteres: 38800
+
+BIBLIOTECAS IMPORTADAS:
+   - datetime
+   - notion_client
+   - os
+   - playwright.sync_api
+   - re
+   - sys
+   - time
+
+FUNCOES DEFINIDAS (15):
+   1. log_info
+   2. log_sucesso
+   3. log_erro
+   4. log_aviso
+   5. conectar_notion
+   6. buscar_tarefas_nao_iniciadas
+   7. atualizar_status_tarefa
+   8. atualizar_status_tarefa_completa
+   9. navegar_para_agenda
+   10. selecionar_especialidade
+   11. buscar_horarios_disponiveis
+   12. preencher_formulario
+   13. clicar_reservar
+   14. verificar_confirmacao
+   15. executar_agendamento_final
+
+CLASSES DEFINIDAS:
+   (Nenhuma classe definida)
+
+INTEGRACOES IDENTIFICADAS:
+   [OK] Notion API
+        -> 16 referencias no codigo
+   [OK] Google Calendar
+        -> 3 referencias no codigo
+   [OK] Playwright
+        -> 10 referencias no codigo
+
+VARIAVEIS DE AMBIENTE/CONFIG:
+   - DATABASE_ID
+   - DRY_RUN
+   - NOTION_TOKEN
+
+URLs/ENDPOINTS IDENTIFICADOS:
+   - https://outlook.office365.com/owa/calendar/AdultoTeleNeBP@bp.org.br/bookings/
+   - https://outlook.office365.com/owa/calendar/PeditricoTeleNEBP@bp.org.br/bookings/
+
+DOCSTRING DO MODULO:
+   AGENDADOR FINAL CORRIGIDO
+   Versão que estava 95% funcional - encontrava 4 dias com vagas (16, 23, 30, 31)
+
+ESTRUTURAS LOGICAS:
+   - Loops 'for': 22
+   - Loops 'while': 0
+   - Condicionais 'if': 74
+   - Try/Except: 33
+   - Funcoes async: 0
+
+PADROES DE AUTOMACAO WEB:
+   - Navegacao: 8 ocorrencias
+   - Cliques: 10 ocorrencias
+   - Preenchimento: 7 ocorrencias
+   - Espera: 23 ocorrencias
+   - Seletores: 7 ocorrencias
+
+FLUXO PRINCIPAL - Funcoes de Alto Nivel:
+   -> executar_agendamento_final()
+   -> conectar_notion()
+   -> buscar_tarefas_nao_iniciadas()
+   -> buscar_horarios_disponiveis()
+   -> verificar_confirmacao()
+   -> atualizar_status_tarefa()
+   -> atualizar_status_tarefa_completa()
+
+================================================================================
+
+ANALISE DETALHADA DO FLUXO:
+================================================================================
+
+Funcao principal: executar_agendamento()
+Documentacao:
+   Executa o agendamento final com todas as melhorias.
+
+SEQUENCIA DE OPERACOES (baseada em comentarios e funcoes):
+   1. Etapa 1: Navegar para agenda
+   2. Etapa 2: Selecionar especialidade
+   3. Etapa 3: Encontrar horário
+   4. Etapa 4: Preencher formulário
+   5. Etapa 5: Clicar em Reservar
+   6. Etapa 6: Verificar confirmação
+
+CHAMADAS DE FUNCOES CHAVE:
+   1. log_sucesso("Conectado ao Notion")
+   2. log_erro(f"Erro ao conectar ao Notion: {e}")
+   3. log_info("🔍 Buscando tarefas 'Não Iniciadas' no Notion...")
+   4. log_erro(f"Erro ao processar tarefa: {e}")
+   5. log_sucesso(f"Encontradas {len(tarefas)
+   6. log_info(f"   {i}. {tarefa['nome']} ({tarefa['especialidade']} - {t...
+   7. log_erro(f"Erro ao buscar tarefas: {e}")
+   8. log_aviso(f"🧪 DRY RUN: Simulando atualização de status para '{novo_...
+   9. log_sucesso(f"✅ Status atualizado para: {novo_status}")
+   10. log_erro(f"❌ Erro ao atualizar status: {e}")
+   11. log_aviso(f"🧪 DRY RUN: Simulando atualização para 'Concluída' - {da...
+   12. log_sucesso(f"✅ Tarefa marcada como 'Concluída' - {data} às {horari...
+   13. log_erro(f"❌ Erro ao marcar como concluída: {e}")
+   14. log_info("🧭 Navegando para Agenda Infantil...")
+   15. log_info("🧭 Navegando para Agenda Adulto...")
+   16. log_info(f"🧭 URL: {url}")
+   17. log_info("🧭 Aguardando carregamento da agenda...")
+   18. log_sucesso(f"✅ Navegação para Agenda {'Infantil' if tipo.lower()
+   19. log_erro(f"❌ Erro ao navegar para agenda: {e}")
+   20. log_info(f"🔍 Procurando especialidade: {especialidade}")
+   21. log_info(f"🔍 Variações a buscar: {variacoes}")
+   22. log_sucesso(f"✅ Especialidade encontrada (exata)
+   23. log_sucesso(f"✅ Especialidade encontrada (contém)
+   24. log_sucesso(f"✅ Especialidade encontrada (elemento)
+   25. log_sucesso(f"✅ ✅ Especialidade '{especialidade}' encontrada!")
+
+================================================================================
+FIM DA ANALISE
+================================================================================
+
+Salvando resumo da analise...
+OK - Analise salva em: RESUMO_AGENDADOR.md

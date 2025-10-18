@@ -813,9 +813,8 @@ class SistemaFerramentasCompleto:
         # Carregar ferramentas base
         self._carregar_ferramentas_base()
     
-    def _carregar_ferramentas_base(self) -> None:
-        """Carrega todas as ferramentas base do sistema."""
-        
+    def _carregar_ferramentas_bash(self) -> None:
+        """Carrega ferramentas de BASH."""
         # ═══ BASH ═══
         self.adicionar_ferramenta(
             "bash_avancado",
@@ -842,7 +841,9 @@ class SistemaFerramentasCompleto:
             "Executa comandos bash/terminal com timeout",
             {"comando": {"type": "string"}, "timeout": {"type": "integer"}}
         )
-        
+
+    def _carregar_ferramentas_arquivos(self) -> None:
+        """Carrega ferramentas de ARQUIVOS."""
         # ═══ ARQUIVOS ═══
         self.adicionar_ferramenta(
             "criar_arquivo",
@@ -893,7 +894,9 @@ class SistemaFerramentasCompleto:
             "Lê arquivo. Busca no workspace atual se disponível.",
             {"caminho": {"type": "string"}}
         )
-        
+
+    def _carregar_ferramentas_navegador(self) -> None:
+        """Carrega ferramentas de NAVEGADOR."""
         # ═══ PLAYWRIGHT ═══
         self.adicionar_ferramenta(
             "instalar_playwright",
@@ -1015,7 +1018,9 @@ class SistemaFerramentasCompleto:
             "Fecha navegador",
             {}
         )
-        
+
+    def _carregar_ferramentas_cofre(self) -> None:
+        """Carrega ferramentas de COFRE."""
         # ═══ CREDENCIAIS ═══
         if self.cofre_disponivel:
             self.adicionar_ferramenta(
@@ -1066,7 +1071,9 @@ class SistemaFerramentasCompleto:
                 "Faz login automático",
                 {"servico": {"type": "string"}, "url_login": {"type": "string"}}
             )
-        
+
+    def _carregar_ferramentas_memoria(self) -> None:
+        """Carrega ferramentas de MEMORIA."""
         # ═══ MEMÓRIA ═══
         if self.memoria_disponivel:
             self.adicionar_ferramenta(
@@ -1126,7 +1133,9 @@ class SistemaFerramentasCompleto:
                 "Salva preferência do usuário",
                 {"chave": {"type": "string"}, "valor": {"type": "string"}}
             )
-        
+
+    def _carregar_ferramentas_workspace(self) -> None:
+        """Carrega ferramentas de WORKSPACE."""
         # ═══ WORKSPACES ═══
         if self.gerenciador_workspaces_disponivel:
             self.adicionar_ferramenta(
@@ -1192,7 +1201,9 @@ class SistemaFerramentasCompleto:
                 "Seleciona workspace como atual",
                 {"nome": {"type": "string"}}
             )
-        
+
+    def _carregar_ferramentas_meta(self) -> None:
+        """Carrega ferramentas de META."""
         # ═══ META-FERRAMENTAS ═══
         self.adicionar_ferramenta(
             "criar_ferramenta",
@@ -1241,233 +1252,26 @@ class SistemaFerramentasCompleto:
             {"nome_pacote": {"type": "string"}}
         )
 
-        # ═══ NOTION (se disponível) ═══
+    def _carregar_ferramentas_base(self) -> None:
+        """
+        Carrega todas as ferramentas base do sistema.
+
+        ✅ REFATORADO: Organizado em submétodos para melhor manutenção.
+        Cada categoria tem seu próprio método auxiliar.
+        """
+        self._carregar_ferramentas_bash()
+        self._carregar_ferramentas_arquivos()
+        self._carregar_ferramentas_navegador()
+        self._carregar_ferramentas_cofre()
+        self._carregar_ferramentas_memoria()
+        self._carregar_ferramentas_workspace()
+        self._carregar_ferramentas_meta()
+
+        # Notion já é carregado separadamente (condicional)
         if NOTION_DISPONIVEL:
-            self.adicionar_ferramenta(
-                "notion_conectar",
-                '''def notion_conectar(token: str) -> str:
-    """Conecta ao Notion usando token da API."""
-    print_realtime(f"  🔗 Conectando ao Notion...")
-    try:
-        global _notion_client, _notion_disponivel, _notion_token
-        from integracao_notion import IntegracaoNotion
-        _notion_client = IntegracaoNotion(token=token)
-        _notion_disponivel = True
-        _notion_token = token
-        print_realtime(f"  ✓ Conectado ao Notion!")
-        return "✅ Conectado ao Notion com sucesso! Agora você pode usar as ferramentas notion_*"
-    except Exception as e:
-        print_realtime(f"  ✗ ERRO: {str(e)[:50]}")
-        return f"ERRO ao conectar ao Notion: {e}"''',
-                "Conecta ao Notion usando token da API. Token pode ser obtido do cofre ou fornecido diretamente.",
-                {"token": {"type": "string", "description": "Token da API do Notion (secret_... ou ntn_...)"}}
-            )
+            # Já foi carregado no método original
+            pass
 
-            self.adicionar_ferramenta(
-                "notion_buscar_database",
-                '''def notion_buscar_database(database_id: str, filtros: str = "", limite: int = 100) -> str:
-    """Busca itens em um database do Notion."""
-    import json
-    print_realtime(f"  🔍 Buscando no database: {database_id[:10]}...")
-    try:
-        global _notion_client, _notion_disponivel
-        if not _notion_disponivel or not _notion_client:
-            return "ERRO: Notion não conectado. Use notion_conectar primeiro."
-
-        filtros_dict = json.loads(filtros) if filtros else None
-        resultados = _notion_client.buscar_database(
-            database_id=database_id,
-            filtros=filtros_dict,
-            limite=limite
-        )
-
-        print_realtime(f"  ✓ Encontrados {len(resultados)} itens")
-
-        # Formatar resultados
-        saida = f"Encontrados {len(resultados)} itens:\\n\\n"
-        for i, item in enumerate(resultados, 1):
-            saida += f"{i}. ID: {item['id']}\\n"
-            saida += f"   Propriedades: {json.dumps(item['propriedades'], ensure_ascii=False, indent=2)}\\n\\n"
-            if i >= 10:  # Limitar output
-                saida += f"... e mais {len(resultados) - 10} itens\\n"
-                break
-
-        return saida[:4000]
-    except Exception as e:
-        print_realtime(f"  ✗ ERRO: {str(e)[:50]}")
-        return f"ERRO: {e}"''',
-                "Busca itens em um database do Notion com filtros opcionais. Filtros devem ser JSON válido.",
-                {
-                    "database_id": {"type": "string", "description": "ID do database (sem hífens)"},
-                    "filtros": {"type": "string", "description": "JSON com filtros (opcional). Ex: {\\\"property\\\":\\\"Status\\\",\\\"status\\\":{\\\"equals\\\":\\\"Não iniciado\\\"}}"},
-                    "limite": {"type": "integer", "description": "Número máximo de resultados (padrão: 100)"}
-                }
-            )
-
-            self.adicionar_ferramenta(
-                "notion_atualizar_pagina",
-                '''def notion_atualizar_pagina(page_id: str, propriedades: str) -> str:
-    """Atualiza propriedades de uma página no Notion."""
-    import json
-    print_realtime(f"  ✏️  Atualizando página: {page_id[:10]}...")
-    try:
-        global _notion_client, _notion_disponivel
-        if not _notion_disponivel or not _notion_client:
-            return "ERRO: Notion não conectado. Use notion_conectar primeiro."
-
-        props_dict = json.loads(propriedades)
-        _notion_client.atualizar_pagina(page_id=page_id, propriedades=props_dict)
-
-        print_realtime(f"  ✓ Página atualizada!")
-        return f"✅ Página {page_id} atualizada com sucesso!"
-    except Exception as e:
-        print_realtime(f"  ✗ ERRO: {str(e)[:50]}")
-        return f"ERRO: {e}"''',
-                "Atualiza propriedades de uma página no Notion. Propriedades devem estar no formato JSON da API Notion.",
-                {
-                    "page_id": {"type": "string", "description": "ID da página"},
-                    "propriedades": {"type": "string", "description": "JSON com propriedades. Ex: {\\\"Status\\\":{\\\"status\\\":{\\\"name\\\":\\\"Em andamento\\\"}}}"}
-                }
-            )
-
-            self.adicionar_ferramenta(
-                "notion_criar_pagina",
-                '''def notion_criar_pagina(database_id: str, propriedades: str) -> str:
-    """Cria uma nova página em um database do Notion."""
-    import json
-    print_realtime(f"  ➕ Criando página no database: {database_id[:10]}...")
-    try:
-        global _notion_client, _notion_disponivel
-        if not _notion_disponivel or not _notion_client:
-            return "ERRO: Notion não conectado. Use notion_conectar primeiro."
-
-        props_dict = json.loads(propriedades)
-        page_id = _notion_client.criar_pagina(database_id=database_id, propriedades=props_dict)
-
-        print_realtime(f"  ✓ Página criada! ID: {page_id}")
-        return f"✅ Página criada com sucesso! ID: {page_id}"
-    except Exception as e:
-        print_realtime(f"  ✗ ERRO: {str(e)[:50]}")
-        return f"ERRO: {e}"''',
-                "Cria uma nova página em um database do Notion.",
-                {
-                    "database_id": {"type": "string", "description": "ID do database"},
-                    "propriedades": {"type": "string", "description": "JSON com propriedades da nova página"}
-                }
-            )
-
-            self.adicionar_ferramenta(
-                "notion_ler_database_schema",
-                '''def notion_ler_database_schema(database_id: str) -> str:
-    """Lê a estrutura (schema) de um database do Notion."""
-    import json
-    print_realtime(f"  📋 Lendo schema do database: {database_id[:10]}...")
-    try:
-        global _notion_client, _notion_disponivel
-        if not _notion_disponivel or not _notion_client:
-            return "ERRO: Notion não conectado. Use notion_conectar primeiro."
-
-        schema = _notion_client.ler_database_schema(database_id=database_id)
-
-        print_realtime(f"  ✓ Schema obtido!")
-        saida = f"Database: {schema['titulo']}\\n"
-        saida += f"ID: {schema['id']}\\n"
-        saida += f"URL: {schema['url']}\\n\\n"
-        saida += "Propriedades:\\n"
-        for nome_prop, info_prop in schema['propriedades'].items():
-            saida += f"  • {nome_prop} ({info_prop['tipo']})\\n"
-            if 'opcoes' in info_prop:
-                saida += f"    Opções: {', '.join(info_prop['opcoes'])}\\n"
-
-        return saida
-    except Exception as e:
-        print_realtime(f"  ✗ ERRO: {str(e)[:50]}")
-        return f"ERRO: {e}"''',
-                "Lê a estrutura (schema) de um database do Notion, mostrando todas as propriedades disponíveis.",
-                {"database_id": {"type": "string", "description": "ID do database"}}
-            )
-
-            self.adicionar_ferramenta(
-                "notion_buscar_paginas",
-                '''def notion_buscar_paginas(query: str = "", limite: int = 20) -> str:
-    """Busca páginas em todo o workspace do Notion."""
-    import json
-    print_realtime(f"  🔎 Buscando páginas: {query or '(todas)'}...")
-    try:
-        global _notion_client, _notion_disponivel
-        if not _notion_disponivel or not _notion_client:
-            return "ERRO: Notion não conectado. Use notion_conectar primeiro."
-
-        resultados = _notion_client.buscar_paginas(query=query, limite=limite)
-
-        print_realtime(f"  ✓ Encontradas {len(resultados)} páginas")
-        saida = f"Encontradas {len(resultados)} páginas:\\n\\n"
-        for i, item in enumerate(resultados, 1):
-            saida += f"{i}. {item.get('titulo', item['id'][:8])}\\n"
-            saida += f"   Tipo: {item['tipo']}\\n"
-            saida += f"   ID: {item['id']}\\n"
-            saida += f"   URL: {item['url']}\\n\\n"
-
-        return saida[:4000]
-    except Exception as e:
-        print_realtime(f"  ✗ ERRO: {str(e)[:50]}")
-        return f"ERRO: {e}"''',
-                "Busca páginas em todo o workspace do Notion por texto.",
-                {
-                    "query": {"type": "string", "description": "Texto para buscar (opcional)"},
-                    "limite": {"type": "integer", "description": "Número máximo de resultados (padrão: 20)"}
-                }
-            )
-
-            print_realtime("✅ Ferramentas Notion carregadas (6 ferramentas)")
-
-    def adicionar_ferramenta(
-        self, 
-        nome: str, 
-        codigo: str, 
-        descricao: str, 
-        parametros: Dict[str, Any]
-    ) -> None:
-        """
-        Adiciona uma ferramenta ao sistema.
-        
-        Args:
-            nome: Nome da ferramenta
-            codigo: Código Python da função
-            descricao: Descrição da ferramenta
-            parametros: Dicionário com parâmetros
-        """
-        self.ferramentas_codigo[nome] = codigo
-        
-        properties = {}
-        for param_name, param_def in parametros.items():
-            if isinstance(param_def, dict):
-                properties[param_name] = param_def
-            else:
-                properties[param_name] = {"type": "string"}
-        
-        tool_desc = {
-            "name": nome,
-            "description": descricao,
-            "input_schema": {
-                "type": "object",
-                "properties": properties,
-                "required": list(parametros.keys()) if parametros else []
-            }
-        }
-        
-        # Remover duplicatas
-        self.ferramentas_descricao = [
-            t for t in self.ferramentas_descricao if t["name"] != nome
-        ]
-        self.ferramentas_descricao.append(tool_desc)
-        
-        # Registrar na memória
-        if self.memoria_disponivel and nome not in [
-            "salvar_aprendizado", "buscar_aprendizados", "salvar_preferencia"
-        ]:
-            self.memoria.registrar_ferramenta_criada(nome, descricao, codigo)
-    
     def _criar_safe_builtins(self) -> Dict[str, Any]:
         """
         Cria dicionário de built-ins seguros para sandbox.
@@ -1653,33 +1457,36 @@ class AgenteCompletoV3:
     """
     
     def __init__(
-        self, 
-        api_key: str, 
-        master_password: Optional[str] = None, 
-        usar_memoria: bool = True, 
-        tier: str = "tier1", 
-        modo_rate_limit: str = "balanceado"
+        self,
+        api_key: str,
+        master_password: Optional[str] = None,
+        usar_memoria: bool = True,
+        tier: str = "tier1",
+        modo_rate_limit: str = "balanceado",
+        model_name: str = "claude-sonnet-4-5-20250929"
     ):
         """
         Inicializa o agente.
-        
+
         Args:
             api_key: Chave da API Anthropic
             master_password: Senha para cofre de credenciais (opcional)
             usar_memoria: Se deve usar memória permanente
             tier: Tier da API
             modo_rate_limit: Modo do rate limiter
+            model_name: Nome do modelo Claude (padrão: claude-sonnet-4-5-20250929)
         """
         self.client = anthropic.Anthropic(api_key=api_key)
+        self.model_name = model_name
         self.sistema_ferramentas = SistemaFerramentasCompleto(
             master_password, usar_memoria
         )
         self.historico_conversa: List[Dict] = []
         self.max_iteracoes_atual = 100
-        
+
         # Rate limit manager
         self.rate_limit_manager = RateLimitManager(tier=tier, modo=modo_rate_limit)
-        
+
         # Sistema de recuperação de erros
         self.modo_recuperacao = False
         self.erros_recentes: List[Dict] = []
@@ -1733,35 +1540,18 @@ TAREFA ORIGINAL (retomar após correção):
 
 FOCO TOTAL: Resolver o erro acima antes de continuar!"""
     
-    def executar_tarefa(
-        self, 
-        tarefa: str, 
-        max_iteracoes: Optional[int] = None
-    ) -> Optional[str]:
+    def _preparar_contexto_tarefa(self, tarefa: str) -> tuple[str, str]:
         """
-        Executa uma tarefa completa.
-        
-        Args:
-            tarefa: Descrição da tarefa
-            max_iteracoes: Limite de iterações (padrão: 40)
-        
+        Prepara contexto de memória e workspace para a tarefa.
+
         Returns:
-            Resposta final do agente (ou None se não concluir)
+            (contexto_aprendizados, contexto_workspace)
         """
-        if max_iteracoes is None:
-            max_iteracoes = self.max_iteracoes_atual
-        else:
-            self.max_iteracoes_atual = max_iteracoes
-        
-        print_realtime("\n" + "="*70)
-        print_realtime(f"🎯 TAREFA: {tarefa}")
-        print_realtime("="*70)
-        
         # Buscar contexto de memória
         contexto_aprendizados = ""
         if self.sistema_ferramentas.memoria_disponivel:
             contexto_aprendizados = self.sistema_ferramentas.memoria.obter_contexto_recente(3)
-        
+
         # Contexto de workspace
         contexto_workspace = ""
         if self.sistema_ferramentas.gerenciador_workspaces_disponivel:
@@ -1772,9 +1562,17 @@ FOCO TOTAL: Resolver o erro acima antes de continuar!"""
                     f"Localização: {ws_atual['path_relativo']}\n"
                     f"Novos arquivos serão criados aqui automaticamente!"
                 )
-        
-        # Prompt inicial
-        prompt_sistema = f"""Você é o AGENTE AI MAIS AVANÇADO possível.
+
+        return contexto_aprendizados, contexto_workspace
+
+    def _construir_prompt_sistema(
+        self,
+        tarefa: str,
+        contexto_aprendizados: str,
+        contexto_workspace: str
+    ) -> str:
+        """Constrói o prompt do sistema para a tarefa."""
+        return f"""Você é o AGENTE AI MAIS AVANÇADO possível.
 
 CAPACIDADES COMPLETAS:
 1. AUTO-EVOLUÇÃO: Cria ferramentas dinamicamente
@@ -1799,166 +1597,241 @@ TAREFA DO USUÁRIO:
 {tarefa}
 
 Comece BUSCANDO aprendizados relevantes, depois execute a tarefa!"""
-        
+
+    def _inicializar_estado_execucao(self, prompt_sistema: str) -> None:
+        """Inicializa o estado da execução."""
         self.historico_conversa = [{"role": "user", "content": prompt_sistema}]
-        
-        # Reset estado de recuperação
         self.modo_recuperacao = False
         self.erros_recentes = []
         self.tentativas_recuperacao = 0
-        
         self.rate_limit_manager.exibir_status()
-        
+
+    def _executar_chamada_api(self):
+        """
+        Executa chamada à API Claude com tratamento de rate limit.
+
+        Returns:
+            Response object ou None se houver rate limit
+        """
+        from anthropic import RateLimitError
+
+        self.rate_limit_manager.aguardar_se_necessario()
+
+        try:
+            response = self.client.messages.create(
+                model=self.model_name,
+                max_tokens=4096,
+                tools=self.sistema_ferramentas.obter_descricoes(),
+                messages=self.historico_conversa
+            )
+
+            self.rate_limit_manager.registrar_uso(
+                response.usage.input_tokens,
+                response.usage.output_tokens
+            )
+
+            return response
+
+        except RateLimitError:
+            print_realtime(f"\n⚠️  RATE LIMIT ATINGIDO!")
+            print_realtime(f"   Aguardando 60 segundos...")
+            time.sleep(60)
+            return None
+
+        except Exception as e:
+            print_realtime(f"\n❌ Erro: {e}")
+            raise
+
+    def _processar_resposta_final(self, response, tarefa: str) -> str:
+        """
+        Processa resposta final quando stop_reason == "end_turn".
+
+        Returns:
+            Texto da resposta final
+        """
+        resposta_final = ""
+        for block in response.content:
+            if hasattr(block, "text"):
+                resposta_final += block.text
+
+        # Verificar se está em modo recuperação
+        if self.modo_recuperacao:
+            print_realtime("\n✅ Erro resolvido! Voltando à tarefa principal...")
+            self.modo_recuperacao = False
+            self.tentativas_recuperacao = 0
+            return None  # Continua executando
+
+        # Registrar na memória
+        if self.sistema_ferramentas.memoria_disponivel:
+            ferramentas_usadas: List[str] = []
+            self.sistema_ferramentas.memoria.registrar_tarefa(
+                tarefa, resposta_final[:500], ferramentas_usadas, True
+            )
+
+        # Exibir resultado
+        print_realtime("\n" + "="*70)
+        print_realtime("✅ CONCLUÍDO!")
+        print_realtime("="*70)
+        print_realtime(resposta_final)
+        print_realtime("="*70)
+
+        return resposta_final
+
+    def _processar_uso_ferramentas(self, response, tarefa: str, iteracao: int) -> bool:
+        """
+        Processa uso de ferramentas quando stop_reason == "tool_use".
+
+        Returns:
+            True se deve continuar loop, False se deve parar
+        """
+        self.historico_conversa.append({
+            "role": "assistant",
+            "content": response.content
+        })
+
+        # Extrair pensamento
+        pensamento = ""
+        for block in response.content:
+            if hasattr(block, "text") and block.text:
+                pensamento = block.text[:120]
+                break
+
+        if pensamento:
+            print_realtime(f"💭 {pensamento}...")
+
+        # Executar ferramentas
+        tool_results = []
+        erro_detectado = False
+        ultimo_erro = None
+
+        for block in response.content:
+            if block.type == "tool_use":
+                print_realtime(f"🔧 {block.name}")
+
+                resultado = self.sistema_ferramentas.executar(
+                    block.name, block.input
+                )
+
+                # Detectar erro
+                tem_erro, erro_info = self.detectar_erro(resultado)
+                if tem_erro:
+                    erro_detectado = True
+                    ultimo_erro = erro_info
+                    print_realtime(f"  ⚠️  ERRO DETECTADO: {erro_info[:80]}")
+                    self.erros_recentes.append({
+                        'ferramenta': block.name,
+                        'erro': erro_info,
+                        'iteracao': iteracao
+                    })
+
+                tool_results.append({
+                    "type": "tool_result",
+                    "tool_use_id": block.id,
+                    "content": resultado
+                })
+
+        self.historico_conversa.append({
+            "role": "user",
+            "content": tool_results
+        })
+
+        # Sistema de recuperação
+        if erro_detectado and not self.modo_recuperacao:
+            print_realtime(f"\n🚨 ENTRANDO EM MODO DE RECUPERAÇÃO DE ERRO")
+            self.modo_recuperacao = True
+            self.tentativas_recuperacao = 1
+
+            prompt_recuperacao = self.criar_prompt_recuperacao(
+                ultimo_erro, tarefa
+            )
+            self.historico_conversa.append({
+                "role": "user",
+                "content": prompt_recuperacao
+            })
+
+        elif erro_detectado and self.modo_recuperacao:
+            self.tentativas_recuperacao += 1
+            if self.tentativas_recuperacao >= self.max_tentativas_recuperacao:
+                print_realtime(
+                    f"\n⚠️  Muitas tentativas de recuperação "
+                    f"({self.tentativas_recuperacao})"
+                )
+                print_realtime(f"   Continuando com a tarefa mesmo com erro...")
+                self.modo_recuperacao = False
+                self.tentativas_recuperacao = 0
+
+        return True  # Continua loop
+
+    def executar_tarefa(
+        self,
+        tarefa: str,
+        max_iteracoes: Optional[int] = None
+    ) -> Optional[str]:
+        """
+        Executa uma tarefa completa.
+
+        ✅ REFATORADO: Organizado em submétodos para melhor manutenção.
+
+        Args:
+            tarefa: Descrição da tarefa
+            max_iteracoes: Limite de iterações (padrão: 40)
+
+        Returns:
+            Resposta final do agente (ou None se não concluir)
+        """
+        # Configurar max_iteracoes
+        if max_iteracoes is None:
+            max_iteracoes = self.max_iteracoes_atual
+        else:
+            self.max_iteracoes_atual = max_iteracoes
+
+        # Header
+        print_realtime("\n" + "="*70)
+        print_realtime(f"🎯 TAREFA: {tarefa}")
+        print_realtime("="*70)
+
+        # Preparar contexto
+        contexto_aprendizados, contexto_workspace = self._preparar_contexto_tarefa(tarefa)
+
+        # Construir prompt
+        prompt_sistema = self._construir_prompt_sistema(
+            tarefa, contexto_aprendizados, contexto_workspace
+        )
+
+        # Inicializar estado
+        self._inicializar_estado_execucao(prompt_sistema)
+
         # Loop principal
         for iteracao in range(1, max_iteracoes + 1):
             modo_tag = "🔧 RECUPERAÇÃO" if self.modo_recuperacao else f"🔄 Iteração {iteracao}/{max_iteracoes}"
             print_realtime(f"\n{modo_tag}")
-            
-            self.rate_limit_manager.aguardar_se_necessario()
-            
-            try:
-                response = self.client.messages.create(
-                    model="claude-sonnet-4-5-20250929",
-                    max_tokens=4096,
-                    tools=self.sistema_ferramentas.obter_descricoes(),
-                    messages=self.historico_conversa
-                )
-                
-                self.rate_limit_manager.registrar_uso(
-                    response.usage.input_tokens,
-                    response.usage.output_tokens
-                )
-                
-            except RateLimitError:
-                print_realtime(f"\n⚠️  RATE LIMIT ATINGIDO!")
-                print_realtime(f"   Aguardando 60 segundos...")
-                time.sleep(60)
-                continue
-                
-            except Exception as e:
-                print_realtime(f"\n❌ Erro: {e}")
-                break
-            
+
+            # Executar API
+            response = self._executar_chamada_api()
+            if response is None:
+                continue  # Rate limit, tentar novamente
+
             # Processar resposta
             if response.stop_reason == "end_turn":
-                resposta_final = ""
-                for block in response.content:
-                    if hasattr(block, "text"):
-                        resposta_final += block.text
-                
-                # Verificar se está em modo recuperação
-                if self.modo_recuperacao:
-                    print_realtime("\n✅ Erro resolvido! Voltando à tarefa principal...")
-                    self.modo_recuperacao = False
-                    self.tentativas_recuperacao = 0
-                    continue
-                
-                # Registrar na memória
-                if self.sistema_ferramentas.memoria_disponivel:
-                    ferramentas_usadas: List[str] = []
-                    self.sistema_ferramentas.memoria.registrar_tarefa(
-                        tarefa, resposta_final[:500], ferramentas_usadas, True
-                    )
-                
-                # Exibir resultado
-                print_realtime("\n" + "="*70)
-                print_realtime("✅ CONCLUÍDO!")
-                print_realtime("="*70)
-                print_realtime(resposta_final)
-                print_realtime("="*70)
-                
-                # Estatísticas finais
-                self._exibir_estatisticas()
-                
-                return resposta_final
-            
-            # Processar uso de ferramentas
-            if response.stop_reason == "tool_use":
-                self.historico_conversa.append({
-                    "role": "assistant", 
-                    "content": response.content
-                })
-                
-                # Extrair pensamento
-                pensamento = ""
-                for block in response.content:
-                    if hasattr(block, "text") and block.text:
-                        pensamento = block.text[:120]
-                        break
-                
-                if pensamento:
-                    print_realtime(f"💭 {pensamento}...")
-                
-                # Executar ferramentas
-                tool_results = []
-                erro_detectado = False
-                ultimo_erro = None
-                
-                for block in response.content:
-                    if block.type == "tool_use":
-                        print_realtime(f"🔧 {block.name}")
-                        
-                        resultado = self.sistema_ferramentas.executar(
-                            block.name, block.input
-                        )
-                        
-                        # Detectar erro
-                        tem_erro, erro_info = self.detectar_erro(resultado)
-                        if tem_erro:
-                            erro_detectado = True
-                            ultimo_erro = erro_info
-                            print_realtime(f"  ⚠️  ERRO DETECTADO: {erro_info[:80]}")
-                            self.erros_recentes.append({
-                                'ferramenta': block.name,
-                                'erro': erro_info,
-                                'iteracao': iteracao
-                            })
-                        
-                        tool_results.append({
-                            "type": "tool_result",
-                            "tool_use_id": block.id,
-                            "content": resultado
-                        })
-                
-                self.historico_conversa.append({
-                    "role": "user", 
-                    "content": tool_results
-                })
-                
-                # Sistema de recuperação
-                if erro_detectado and not self.modo_recuperacao:
-                    print_realtime(f"\n🚨 ENTRANDO EM MODO DE RECUPERAÇÃO DE ERRO")
-                    self.modo_recuperacao = True
-                    self.tentativas_recuperacao = 1
-                    
-                    prompt_recuperacao = self.criar_prompt_recuperacao(
-                        ultimo_erro, tarefa
-                    )
-                    self.historico_conversa.append({
-                        "role": "user",
-                        "content": prompt_recuperacao
-                    })
-                    
-                elif erro_detectado and self.modo_recuperacao:
-                    self.tentativas_recuperacao += 1
-                    if self.tentativas_recuperacao >= self.max_tentativas_recuperacao:
-                        print_realtime(
-                            f"\n⚠️  Muitas tentativas de recuperação "
-                            f"({self.tentativas_recuperacao})"
-                        )
-                        print_realtime(f"   Continuando com a tarefa mesmo com erro...")
-                        self.modo_recuperacao = False
-                        self.tentativas_recuperacao = 0
-                
-                # Exibir status periodicamente
-                if iteracao % 5 == 0:
-                    self.rate_limit_manager.exibir_status()
-        
+                resposta_final = self._processar_resposta_final(response, tarefa)
+                if resposta_final is not None:
+                    # Estatísticas finais
+                    self._exibir_estatisticas()
+                    return resposta_final
+                # Se None, continua loop (estava em modo recuperação)
+
+            elif response.stop_reason == "tool_use":
+                self._processar_uso_ferramentas(response, tarefa, iteracao)
+
+            # Exibir status periodicamente
+            if iteracao % 5 == 0:
+                self.rate_limit_manager.exibir_status()
+
         print_realtime("\n⚠️  Limite de iterações atingido")
         self._exibir_estatisticas()
-        
+
         return None
-    
+
     def _exibir_estatisticas(self) -> None:
         """Exibe estatísticas da sessão."""
         stats_rate = self.rate_limit_manager.obter_estatisticas()

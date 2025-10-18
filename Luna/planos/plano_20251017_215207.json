@@ -1,0 +1,434 @@
+{
+  "tarefa_original": "crie um workspace chamado versoes_luna e mova todas as outras versões da luna, exceto luna v3 tier2 completo corrigido (a mais recente) para lá, para organizar melhor os arquivos",
+  "analise": {
+    "requisitos_explicitos": [
+      "Criar um workspace chamado 'versoes_luna'",
+      "Mover todas as versões da Luna para o novo workspace",
+      "Excluir da movimentação o arquivo 'luna v3 tier2 completo corrigido'",
+      "Manter apenas a versão mais recente fora do workspace de versões antigas",
+      "Organizar arquivos relacionados à Luna"
+    ],
+    "requisitos_implicitos": [
+      "Identificar todos os arquivos relacionados à Luna no diretório atual",
+      "Verificar a estrutura atual de diretórios",
+      "Garantir que não há dependências entre arquivos antes de mover",
+      "Preservar a integridade dos arquivos durante a movimentação",
+      "Confirmar qual arquivo é exatamente 'luna v3 tier2 completo corrigido'",
+      "Lidar com possíveis variações de nomenclatura (maiúsculas, espaços, caracteres especiais)",
+      "Verificar permissões de escrita no diretório",
+      "Criar backup ou verificação antes de mover arquivos críticos"
+    ],
+    "dependencias": {
+      "ferramentas": [
+        "Sistema de arquivos (filesystem)",
+        "Comandos de terminal ou API de manipulação de arquivos"
+      ],
+      "bibliotecas": [
+        "os",
+        "shutil",
+        "pathlib"
+      ],
+      "arquivos": [
+        "Todos os arquivos relacionados à Luna no diretório atual (a serem identificados)",
+        "luna v3 tier2 completo corrigido (arquivo a ser mantido fora do workspace)"
+      ]
+    },
+    "riscos": [
+      {
+        "descricao": "Mover arquivo errado por ambiguidade no nome",
+        "probabilidade": "media",
+        "impacto": "alto"
+      },
+      {
+        "descricao": "Não identificar todos os arquivos relacionados à Luna",
+        "probabilidade": "media",
+        "impacto": "medio"
+      },
+      {
+        "descricao": "Quebrar dependências entre arquivos ao separá-los",
+        "probabilidade": "baixa",
+        "impacto": "alto"
+      },
+      {
+        "descricao": "Perda de dados por erro na movimentação",
+        "probabilidade": "baixa",
+        "impacto": "alto"
+      },
+      {
+        "descricao": "Conflito de nomes no diretório de destino",
+        "probabilidade": "baixa",
+        "impacto": "medio"
+      },
+      {
+        "descricao": "Permissões insuficientes para criar diretório ou mover arquivos",
+        "probabilidade": "baixa",
+        "impacto": "medio"
+      }
+    ],
+    "estimativa_complexidade": "simples",
+    "tempo_estimado": "5-10 minutos",
+    "conhecimento_previo_relevante": [
+      "Manipulação de arquivos e diretórios em Python",
+      "Padrões de nomenclatura de arquivos do projeto Luna",
+      "Estrutura de diretórios do projeto",
+      "Boas práticas de organização de código e versionamento"
+    ]
+  },
+  "estrategia": {
+    "abordagem": "Abordagem incremental e defensiva com validação em cada etapa: listar arquivos, criar workspace, validar identificação da versão atual, mover arquivos antigos com confirmação",
+    "justificativa": "Esta abordagem minimiza riscos de perda de dados ou movimentação incorreta ao validar cada passo antes de executar ações irreversíveis. A listagem prévia permite revisão humana e evita ambiguidades na identificação da versão mais recente.",
+    "sequencia_otima": [
+      {
+        "ordem": 1,
+        "acao": "Listar todos os arquivos no diretório atual que contêm 'luna' no nome (case-insensitive)",
+        "razao": "Identificar o escopo completo antes de qualquer ação permite revisão e evita surpresas. É uma operação de leitura segura sem risco de perda de dados."
+      },
+      {
+        "ordem": 2,
+        "acao": "Exibir lista para confirmação humana e identificar explicitamente qual arquivo é 'luna v3 tier2 completo corrigido'",
+        "razao": "Variações de nomenclatura (espaços, maiúsculas, extensões) podem causar ambiguidade. Confirmação humana elimina o risco mais crítico identificado na análise."
+      },
+      {
+        "ordem": 3,
+        "acao": "Verificar se o diretório 'versoes_luna' já existe",
+        "razao": "Prevenir conflitos e decidir se deve criar novo ou usar existente. Operação rápida que evita erros posteriores."
+      },
+      {
+        "ordem": 4,
+        "acao": "Criar diretório 'versoes_luna' se não existir",
+        "razao": "Necessário ter o destino pronto antes de mover arquivos. Falha aqui indica problemas de permissão que devem ser resolvidos antes de prosseguir."
+      },
+      {
+        "ordem": 5,
+        "acao": "Filtrar lista de arquivos para excluir 'luna v3 tier2 completo corrigido'",
+        "razao": "Criar lista final de arquivos a mover garante que a versão mais recente não será tocada. Permite revisão antes da ação irreversível."
+      },
+      {
+        "ordem": 6,
+        "acao": "Mover cada arquivo da lista filtrada para 'versoes_luna', registrando cada operação",
+        "razao": "Executar a movimentação de forma controlada com log permite rastreabilidade. Mover (não copiar) mantém organização e economiza espaço."
+      },
+      {
+        "ordem": 7,
+        "acao": "Validar que todos os arquivos foram movidos e 'luna v3 tier2 completo corrigido' permanece no diretório original",
+        "razao": "Confirmação final garante que o objetivo foi alcançado corretamente. Permite detectar falhas parciais antes de concluir."
+      }
+    ],
+    "oportunidades_paralelizacao": [
+      {
+        "acoes": [
+          "Mover arquivos individuais para versoes_luna"
+        ],
+        "ganho_estimado": "Mínimo (2-5 segundos) - poucos arquivos e operações I/O simples não justificam complexidade de paralelização"
+      }
+    ],
+    "pontos_validacao": [
+      {
+        "apos": "Listagem de arquivos",
+        "validar": "Confirmação humana da lista e identificação correta da versão mais recente",
+        "criterio_sucesso": "Usuário confirma explicitamente qual arquivo deve permanecer no diretório original"
+      },
+      {
+        "apos": "Criação do diretório versoes_luna",
+        "validar": "Diretório foi criado com sucesso e tem permissões de escrita",
+        "criterio_sucesso": "os.path.exists('versoes_luna') retorna True e os.access verifica permissão de escrita"
+      },
+      {
+        "apos": "Filtragem da lista de arquivos",
+        "validar": "Lista final não contém 'luna v3 tier2 completo corrigido' e contém todos os outros arquivos Luna",
+        "criterio_sucesso": "Versão mais recente ausente da lista E quantidade de arquivos = total - 1"
+      },
+      {
+        "apos": "Movimentação de cada arquivo",
+        "validar": "Arquivo existe no destino e não existe mais na origem",
+        "criterio_sucesso": "os.path.exists(destino) AND not os.path.exists(origem) para cada arquivo"
+      },
+      {
+        "apos": "Conclusão de todas as movimentações",
+        "validar": "Apenas 'luna v3 tier2 completo corrigido' permanece no diretório original e todos os outros estão em versoes_luna",
+        "criterio_sucesso": "Contagem de arquivos Luna no original = 1 E contagem em versoes_luna = total_inicial - 1"
+      }
+    ],
+    "planos_contingencia": [
+      "Se arquivo correto for ambíguo: solicitar caminho completo ou escolha por índice numérico da lista",
+      "Se diretório versoes_luna já existir com arquivos: adicionar timestamp ao nome (versoes_luna_YYYYMMDD_HHMMSS) ou perguntar se deve mesclar",
+      "Se falha em permissão: exibir erro claro e sugerir execução com privilégios adequados ou mudança de diretório destino",
+      "Se movimentação falhar parcialmente: manter log de arquivos movidos com sucesso e lista de pendentes, permitir retomada",
+      "Se nenhum arquivo Luna for encontrado: alertar usuário e sugerir verificação de diretório ou padrão de busca",
+      "Se múltiplos arquivos corresponderem à versão mais recente: listar todos e solicitar seleção manual com base em data de modificação"
+    ]
+  },
+  "decomposicao": {
+    "ondas": [
+      {
+        "numero": 1,
+        "descricao": "Descoberta e mapeamento de arquivos Luna no diretório atual",
+        "subtarefas": [
+          {
+            "id": "1.1",
+            "titulo": "Listar arquivos Luna",
+            "descricao": "Executar busca case-insensitive por todos os arquivos que contenham 'luna' no nome no diretório atual. Coletar nome completo, tamanho e data de modificação de cada arquivo.",
+            "ferramentas": [
+              "os.listdir",
+              "fnmatch",
+              "os.path.getmtime",
+              "os.path.getsize"
+            ],
+            "input": "Diretório atual (path)",
+            "output_esperado": "Lista de dicionários com {nome, tamanho_bytes, data_modificacao, path_completo} para cada arquivo Luna encontrado",
+            "criterio_sucesso": "Lista retornada contém pelo menos 1 arquivo e todos contêm 'luna' no nome (case-insensitive)",
+            "tokens_estimados": 3000,
+            "tempo_estimado": "5s",
+            "prioridade": "critica",
+            "dependencias": []
+          },
+          {
+            "id": "1.2",
+            "titulo": "Formatar lista para revisão",
+            "descricao": "Criar apresentação legível da lista de arquivos Luna com índice numérico, nome, tamanho formatado (MB/KB) e data de modificação formatada. Destacar arquivo mais recente por data.",
+            "ferramentas": [
+              "datetime.strftime",
+              "humanize"
+            ],
+            "input": "Lista de arquivos da subtarefa 1.1",
+            "output_esperado": "String formatada numerada para exibição ao usuário, indicando qual parece ser o mais recente",
+            "criterio_sucesso": "Output contém índices de 0 a N-1, todos os nomes de arquivo e indicação clara do candidato mais recente",
+            "tokens_estimados": 2000,
+            "tempo_estimado": "3s",
+            "prioridade": "critica",
+            "dependencias": [
+              "1.1"
+            ]
+          },
+          {
+            "id": "1.3",
+            "titulo": "Solicitar confirmação humana",
+            "descricao": "Exibir lista formatada e solicitar que usuário confirme qual arquivo é 'luna v3 tier2 completo corrigido' (por índice ou nome completo). Validar entrada até receber resposta válida.",
+            "ferramentas": [
+              "input",
+              "re.match"
+            ],
+            "input": "Lista formatada da subtarefa 1.2",
+            "output_esperado": "Índice ou nome do arquivo confirmado como versão mais recente a preservar",
+            "criterio_sucesso": "Entrada corresponde a um arquivo existente na lista, confirmação explícita recebida",
+            "tokens_estimados": 2500,
+            "tempo_estimado": "tempo_usuario",
+            "prioridade": "critica",
+            "dependencias": [
+              "1.2"
+            ]
+          }
+        ],
+        "pode_executar_paralelo": false
+      },
+      {
+        "numero": 2,
+        "descricao": "Preparação do diretório de destino",
+        "subtarefas": [
+          {
+            "id": "2.1",
+            "titulo": "Verificar existência de versoes_luna",
+            "descricao": "Checar se diretório 'versoes_luna' já existe no path atual. Se existir, verificar se contém arquivos e listar quantidade.",
+            "ferramentas": [
+              "os.path.exists",
+              "os.path.isdir",
+              "os.listdir"
+            ],
+            "input": "Path do diretório atual",
+            "output_esperado": "Boolean indicando se existe + lista de arquivos se existir (vazia se novo)",
+            "criterio_sucesso": "Retorna status claro: não_existe, existe_vazio ou existe_com_N_arquivos",
+            "tokens_estimados": 2000,
+            "tempo_estimado": "3s",
+            "prioridade": "critica",
+            "dependencias": []
+          },
+          {
+            "id": "2.2",
+            "titulo": "Resolver conflito se necessário",
+            "descricao": "Se versoes_luna existir com arquivos, perguntar ao usuário: (1) mesclar com existentes, (2) criar novo com timestamp, (3) abortar. Executar escolha.",
+            "ferramentas": [
+              "input",
+              "datetime.now",
+              "os.makedirs"
+            ],
+            "input": "Status da subtarefa 2.1 + lista de arquivos existentes",
+            "output_esperado": "Path definitivo do diretório destino (pode ser 'versoes_luna' ou 'versoes_luna_20240115_143022')",
+            "criterio_sucesso": "Path de destino definido, usuário confirmou estratégia de conflito",
+            "tokens_estimados": 3000,
+            "tempo_estimado": "tempo_usuario + 2s",
+            "prioridade": "critica",
+            "dependencias": [
+              "2.1"
+            ]
+          },
+          {
+            "id": "2.3",
+            "titulo": "Criar diretório destino",
+            "descricao": "Criar o diretório com o path definido na subtarefa 2.2 (se não existir). Verificar permissões de escrita com os.access. Tratar exceções de permissão.",
+            "ferramentas": [
+              "os.makedirs",
+              "os.access",
+              "os.W_OK"
+            ],
+            "input": "Path definitivo da subtarefa 2.2",
+            "output_esperado": "Path do diretório criado e confirmação de permissão de escrita",
+            "criterio_sucesso": "os.path.exists(path) retorna True E os.access(path, os.W_OK) retorna True",
+            "tokens_estimados": 2500,
+            "tempo_estimado": "5s",
+            "prioridade": "critica",
+            "dependencias": [
+              "2.2"
+            ]
+          }
+        ],
+        "pode_executar_paralelo": false
+      },
+      {
+        "numero": 3,
+        "descricao": "Filtragem e validação pré-movimentação",
+        "subtarefas": [
+          {
+            "id": "3.1",
+            "titulo": "Criar lista de arquivos a mover",
+            "descricao": "Filtrar lista original de arquivos Luna removendo o arquivo confirmado como 'luna v3 tier2 completo corrigido'. Validar que lista resultante tem N-1 elementos.",
+            "ferramentas": [
+              "list.remove",
+              "list comprehension"
+            ],
+            "input": "Lista completa da subtarefa 1.1 + arquivo a preservar da subtarefa 1.3",
+            "output_esperado": "Lista filtrada contendo apenas arquivos que devem ser movidos",
+            "criterio_sucesso": "len(lista_filtrada) = len(lista_original) - 1 E arquivo preservado não está na lista_filtrada",
+            "tokens_estimados": 2000,
+            "tempo_estimado": "2s",
+            "prioridade": "critica",
+            "dependencias": [
+              "1.1",
+              "1.3"
+            ]
+          },
+          {
+            "id": "3.2",
+            "titulo": "Exibir plano de movimentação",
+            "descricao": "Mostrar ao usuário lista formatada dos arquivos que serão movidos (origem -> destino) e solicitar confirmação final antes de executar. Permitir cancelamento.",
+            "ferramentas": [
+              "print",
+              "input"
+            ],
+            "input": "Lista filtrada da subtarefa 3.1 + path destino da subtarefa 2.3",
+            "output_esperado": "Confirmação booleana do usuário (sim/não)",
+            "criterio_sucesso": "Usuário digitou confirmação explícita (s/sim/yes) ou cancelamento (n/não/no)",
+            "tokens_estimados": 2000,
+            "tempo_estimado": "tempo_usuario",
+            "prioridade": "critica",
+            "dependencias": [
+              "3.1",
+              "2.3"
+            ]
+          }
+        ],
+        "pode_executar_paralelo": false
+      },
+      {
+        "numero": 4,
+        "descricao": "Execução da movimentação com logging",
+        "subtarefas": [
+          {
+            "id": "4.1",
+            "titulo": "Mover arquivos individualmente",
+            "descricao": "Iterar sobre lista filtrada e executar shutil.move para cada arquivo. Registrar em log: timestamp, arquivo origem, arquivo destino, status (sucesso/falha), mensagem de erro se houver. Continuar mesmo se houver falhas individuais.",
+            "ferramentas": [
+              "shutil.move",
+              "logging",
+              "try-except",
+              "os.path.join"
+            ],
+            "input": "Lista filtrada da subtarefa 3.1 + path destino da subtarefa 2.3 + confirmação da subtarefa 3.2",
+            "output_esperado": "Dicionário com {arquivos_movidos: [lista], arquivos_falhados: [lista com erros], log_completo: string}",
+            "criterio_sucesso": "Todos os arquivos da lista foram processados (movidos ou registrados como falha) E log contém entrada para cada arquivo",
+            "tokens_estimados": 4000,
+            "tempo_estimado": "10s",
+            "prioridade": "critica",
+            "dependencias": [
+              "3.1",
+              "2.3",
+              "3.2"
+            ]
+          }
+        ],
+        "pode_executar_paralelo": false
+      },
+      {
+        "numero": 5,
+        "descricao": "Validação final e relatório",
+        "subtarefas": [
+          {
+            "id": "5.1",
+            "titulo": "Verificar integridade pós-movimentação",
+            "descricao": "Validar que: (1) arquivo preservado ainda existe no diretório original, (2) todos os arquivos movidos existem no destino, (3) arquivos movidos não existem mais na origem. Contar arquivos Luna em ambos os locais.",
+            "ferramentas": [
+              "os.path.exists",
+              "os.listdir",
+              "fnmatch"
+            ],
+            "input": "Arquivo preservado da subtarefa 1.3 + lista de arquivos movidos da subtarefa 4.1 + paths origem e destino",
+            "output_esperado": "Dicionário de validação: {preservado_existe: bool, todos_no_destino: bool, nenhum_na_origem: bool, contagem_origem: int, contagem_destino: int}",
+            "criterio_sucesso": "preservado_existe=True E todos_no_destino=True E nenhum_na_origem=True E contagem_origem=1 E contagem_destino=N-1",
+            "tokens_estimados": 3000,
+            "tempo_estimado": "8s",
+            "prioridade": "critica",
+            "dependencias": [
+              "4.1",
+              "1.3"
+            ]
+          },
+          {
+            "id": "5.2",
+            "titulo": "Gerar relatório final",
+            "descricao": "Criar relatório consolidado: total de arquivos processados, movidos com sucesso, falhas, arquivo preservado, localização do backup, status de validação. Salvar em arquivo relatorio_movimentacao_TIMESTAMP.txt no diretório atual.",
+            "ferramentas": [
+              "open",
+              "write",
+              "datetime.now",
+              "json.dumps"
+            ],
+            "input": "Resultados das subtarefas 4.1 e 5.1 + todos os metadados coletados",
+            "output_esperado": "Arquivo de relatório criado + resumo exibido no console",
+            "criterio_sucesso": "Arquivo de relatório existe E contém todas as seções: resumo, detalhes, validação, log completo",
+            "tokens_estimados": 3500,
+            "tempo_estimado": "5s",
+            "prioridade": "alta",
+            "dependencias": [
+              "5.1",
+              "4.1"
+            ]
+          },
+          {
+            "id": "5.3",
+            "titulo": "Exibir resumo ao usuário",
+            "descricao": "Mostrar no console resumo colorido/formatado com: ✓ arquivos movidos, ✗ falhas se houver, ℹ localização do arquivo preservado, ℹ localização do backup, ⚠ alertas se validação parcial. Sugerir próximos passos se houver falhas.",
+            "ferramentas": [
+              "print",
+              "colorama ou rich"
+            ],
+            "input": "Relatório da subtarefa 5.2",
+            "output_esperado": "Mensagem formatada no console",
+            "criterio_sucesso": "Usuário visualiza status claro de sucesso/falha e sabe onde encontrar todos os arquivos",
+            "tokens_estimados": 2500,
+            "tempo_estimado": "3s",
+            "prioridade": "media",
+            "dependencias": [
+              "5.2"
+            ]
+          }
+        ],
+        "pode_executar_paralelo": false
+      }
+    ],
+    "total_subtarefas": 12,
+    "tempo_estimado_sequencial": "46s + tempo_usuario",
+    "tempo_estimado_paralelo": "46s + tempo_usuario"
+  },
+  "criado_em": "2025-10-17T21:52:07.520740",
+  "executado_em": null,
+  "resultado": null
+}

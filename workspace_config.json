@@ -1,0 +1,83 @@
+{
+  "workspace_atual": "agendamentos_telenordeste",
+  "workspaces": {
+    "teste_correcao": {
+      "nome": "teste_correcao",
+      "descricao": "Teste da correção WinError 3",
+      "caminho": "C:\\Users\\Pedro Victor\\OneDrive\\Área de Trabalho\\Documentos\\Projetos Automações e Digitais\\Luna\\workspaces\\teste_correcao",
+      "criado_em": "2025-10-15T12:45:31.047445",
+      "ultimo_acesso": "2025-10-15T12:45:31.049633",
+      "arquivos": 2,
+      "tamanho_bytes": 1474,
+      "tamanho_mb": 0.0,
+      "path_relativo": "workspaces/teste_correcao",
+      "atual": false
+    },
+    "demo_analise": {
+      "nome": "demo_analise",
+      "descricao": "Workspace de demonstração da análise",
+      "caminho": "C:\\Users\\Pedro Victor\\OneDrive\\Área de Trabalho\\Documentos\\Projetos Automações e Digitais\\Luna\\workspaces\\demo_analise",
+      "criado_em": "2025-10-15T13:48:50.984436",
+      "ultimo_acesso": "2025-10-15T13:49:30.297158",
+      "arquivos": 2,
+      "tamanho_bytes": 181,
+      "tamanho_mb": 0.0,
+      "path_relativo": "workspaces/demo_analise",
+      "atual": false
+    },
+    "arquivos_luna": {
+      "nome": "arquivos_luna",
+      "descricao": "Workspace para organizar arquivos diversos da pasta Luna",
+      "caminho": "C:\\Users\\Pedro Victor\\OneDrive\\Área de Trabalho\\Documentos\\Projetos Automações e Digitais\\Luna\\workspaces\\arquivos_luna",
+      "criado_em": "2025-10-15T13:55:38.975694",
+      "ultimo_acesso": "2025-10-16T09:29:45.843555",
+      "arquivos": 58,
+      "tamanho_bytes": 371994,
+      "tamanho_mb": 0.35,
+      "path_relativo": "workspaces/arquivos_luna",
+      "atual": false
+    },
+    "buscador_filmes": {
+      "nome": "buscador_filmes",
+      "descricao": "Workspace para projeto de busca e gerenciamento de filmes",
+      "caminho": "C:\\Users\\Pedro Victor\\OneDrive\\Área de Trabalho\\Documentos\\Projetos Automações e Digitais\\Luna\\workspaces\\buscador_filmes",
+      "criado_em": "2025-10-15T14:01:05.538623",
+      "ultimo_acesso": "2025-10-15T14:02:24.455357",
+      "arquivos": 1,
+      "tamanho_bytes": 111,
+      "tamanho_mb": 0.0,
+      "path_relativo": "workspaces/buscador_filmes",
+      "atual": false
+    },
+    "estudos_estella": {
+      "nome": "estudos_estella",
+      "descricao": "Workspace dedicado aos estudos da Estella",
+      "caminho": "C:\\Users\\Pedro Victor\\OneDrive\\Área de Trabalho\\Documentos\\Projetos Automações e Digitais\\Luna\\workspaces\\estudos_estella",
+      "criado_em": "2025-10-16T09:42:00.847178",
+      "ultimo_acesso": "2025-10-16T12:30:58.180789",
+      "arquivos": 13,
+      "tamanho_bytes": 1211379,
+      "tamanho_mb": 1.16,
+      "path_relativo": "workspaces/estudos_estella",
+      "atual": false
+    },
+    "agendamentos_telenordeste": {
+      "nome": "agendamentos_telenordeste",
+      "descricao": "Workspace para automação de agendamentos da TeleNordeste",
+      "caminho": "C:\\Users\\Pedro Victor\\OneDrive\\Área de Trabalho\\Documentos\\Projetos Automações e Digitais\\Luna\\workspaces\\agendamentos_telenordeste",
+      "criado_em": "2025-10-16T10:28:10.262579",
+      "ultimo_acesso": "2025-10-18T00:12:33.334519",
+      "arquivos": 36,
+      "tamanho_bytes": 42332531,
+      "tamanho_mb": 40.37,
+      "path_relativo": "workspaces/agendamentos_telenordeste",
+      "atual": true
+    }
+  },
+  "criado_em": "2025-10-15T12:45:31.046958",
+  "estatisticas": {
+    "total_workspaces": 6,
+    "total_arquivos": 0,
+    "ultimo_uso": "2025-10-18T00:12:33.334526"
+  }
+}

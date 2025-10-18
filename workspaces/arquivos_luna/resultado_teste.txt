@@ -1,0 +1,36 @@
+Traceback (most recent call last):
+  File "C:\Users\Pedro Victor\OneDrive\Área de Trabalho\Documentos\Projetos Automações e Digitais\Luna\teste_pratico_gerenciadores.py", line 226, in <module>
+    teste_gerenciador_workspaces()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Pedro Victor\OneDrive\Área de Trabalho\Documentos\Projetos Automações e Digitais\Luna\teste_pratico_gerenciadores.py", line 60, in teste_gerenciador_workspaces
+    print(f"   📄 {arq['nome']} ({arq['tamanho_bytes']} bytes)")
+                   ~~~^^^^^^^^
+TypeError: 'WindowsPath' object is not subscriptable
+
+🚀 INICIANDO TESTES COMPLETOS DOS GERENCIADORES
+
+================================================================================
+
+================================================================================
+  🧪 TESTE: GERENCIADOR DE WORKSPACES
+================================================================================
+
+1️⃣ Criando novo workspace 'demo_analise'...
+   ✅ Criado: (False, "Workspace 'demo_analise' ja existe")
+
+2️⃣ Listando workspaces existentes...
+   📁 teste_correcao: Teste da correção WinError 3
+   📁 demo_analise: Workspace de demonstração da análise
+
+3️⃣ Selecionando workspace 'demo_analise'...
+   ✅ Workspace atual: {'nome': 'demo_analise', 'descricao': 'Workspace de demonstração da análise', 'caminho': 'C:\\Users\\Pedro Victor\\OneDrive\\Área de Trabalho\\Documentos\\Projetos Automações e Digitais\\Luna\\workspaces\\demo_analise', 'criado_em': '2025-10-15T13:48:50.984436', 'ultimo_acesso': '2025-10-15T13:49:30.297158', 'arquivos': 2, 'tamanho_bytes': 181, 'tamanho_mb': 0.0, 'path_relativo': 'workspaces/demo_analise', 'atual': True}
+
+4️⃣ Criando arquivo no workspace...
+   ✅ Arquivo criado
+
+5️⃣ Resolvendo caminho relativo...
+   📍 Caminho completo: C:\Users\Pedro Victor\OneDrive\Área de Trabalho\Documentos\Projetos Automações e Digitais\Luna\workspaces\demo_analise\exemplo.py
+
+6️⃣ Listando arquivos do workspace...
+
+❌ ERRO durante os testes: 'WindowsPath' object is not subscriptable
