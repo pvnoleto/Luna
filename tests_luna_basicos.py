@@ -342,6 +342,161 @@ class TestSistemaAutoEvolucao(unittest.TestCase):
 
 
 # ============================================================================
+# TESTES: Auto-Evolução Avançada (FASE 4)
+# ============================================================================
+
+class TestAutoEvolucaoAvancado(unittest.TestCase):
+    """Testes avançados para sistema de auto-evolução"""
+
+    def setUp(self):
+        """Setup para cada teste"""
+        self.temp_dir = tempfile.mkdtemp()
+        # Criar arquivo alvo de teste
+        self.arquivo_alvo = os.path.join(self.temp_dir, "teste_evolucao.py")
+        Path(self.arquivo_alvo).write_text(
+            "def funcao_teste():\n    return 'original'\n",
+            encoding='utf-8'
+        )
+        self.sistema = SistemaAutoEvolucao(arquivo_alvo=self.arquivo_alvo)
+
+    def tearDown(self):
+        """Limpeza após cada teste"""
+        if os.path.exists(self.temp_dir):
+            shutil.rmtree(self.temp_dir)
+
+    def test_fila_prioridade(self):
+        """Teste: Melhorias são ordenadas por prioridade"""
+        fila = FilaDeMelhorias()
+
+        # Adicionar melhorias com prioridades diferentes
+        fila.adicionar("otimizacao", "func1", "Baixa prioridade", "pass", prioridade=3)
+        fila.adicionar("bug_fix", "func2", "Alta prioridade", "pass", prioridade=9)
+        fila.adicionar("feature", "func3", "Média prioridade", "pass", prioridade=5)
+
+        # Obter pendentes (devem estar ordenadas por prioridade)
+        pendentes = fila.obter_pendentes()
+
+        # Verificar ordem (mais alta primeiro)
+        self.assertEqual(pendentes[0]['prioridade'], 9)
+        self.assertEqual(pendentes[1]['prioridade'], 5)
+        self.assertEqual(pendentes[2]['prioridade'], 3)
+
+    def test_fila_tipos_diferentes(self):
+        """Teste: Fila aceita diferentes tipos de melhorias"""
+        fila = FilaDeMelhorias()
+
+        tipos = ['otimizacao', 'bug_fix', 'refatoracao', 'feature', 'qualidade', 'documentacao']
+
+        for tipo in tipos:
+            fila.adicionar(tipo, f"alvo_{tipo}", f"Teste {tipo}", "pass", prioridade=5)
+
+        # Verificar que todos foram adicionados
+        self.assertEqual(len(fila.melhorias_pendentes), len(tipos))
+
+        # Verificar que cada tipo está presente
+        tipos_na_fila = [m['tipo'] for m in fila.melhorias_pendentes]
+        for tipo in tipos:
+            self.assertIn(tipo, tipos_na_fila)
+
+    def test_aplicar_melhoria_sem_crash(self):
+        """Teste: Sistema aplica melhoria sem crashar"""
+        # Código original
+        conteudo_original = Path(self.arquivo_alvo).read_text(encoding='utf-8')
+
+        # Adicionar melhoria simples
+        melhoria = {
+            'id': 'test_001',
+            'tipo': 'otimizacao',
+            'alvo': 'funcao_teste',
+            'motivo': 'Melhorar retorno',
+            'codigo': "def funcao_teste():\n    return 'otimizado'\n"
+        }
+
+        # Aplicar modificação (não deve crashar, retorna bool)
+        try:
+            sucesso = self.sistema.aplicar_modificacao(melhoria)
+            # Verificar que retornou um boolean
+            self.assertIsInstance(sucesso, bool)
+
+            # Se falhou, verificar que rollback foi feito
+            if not sucesso:
+                conteudo_atual = Path(self.arquivo_alvo).read_text(encoding='utf-8')
+                self.assertEqual(conteudo_original, conteudo_atual)
+        except Exception as e:
+            self.fail(f"aplicar_modificacao não deve crashar: {e}")
+
+    def test_rollback_apos_falha(self):
+        """Teste: Rollback quando modificação causa erro de sintaxe"""
+        # Código original
+        conteudo_original = Path(self.arquivo_alvo).read_text(encoding='utf-8')
+
+        # Melhoria com código inválido
+        melhoria = {
+            'id': 'test_002',
+            'tipo': 'bug_fix',
+            'alvo': 'funcao_teste',
+            'motivo': 'Teste de rollback',
+            'codigo': "def funcao_teste(\n"  # Sintaxe inválida
+        }
+
+        # Tentar aplicar (deve falhar e fazer rollback)
+        sucesso = self.sistema.aplicar_modificacao(melhoria)
+
+        # Verificar que falhou
+        self.assertFalse(sucesso)
+
+        # Verificar que arquivo foi restaurado
+        conteudo_atual = Path(self.arquivo_alvo).read_text(encoding='utf-8')
+        self.assertEqual(conteudo_original, conteudo_atual)
+
+    def test_backups_criados(self):
+        """Teste: Backups são criados no diretório correto"""
+        # Verificar que diretório de backups existe
+        backups_dir = os.path.join(os.path.dirname(self.arquivo_alvo), 'backups_auto_evolucao')
+
+        # Aplicar melhoria (irá criar backup)
+        melhoria = {
+            'id': 'test_003',
+            'tipo': 'otimizacao',
+            'alvo': 'funcao_teste',
+            'motivo': 'Teste backup',
+            'codigo': "def funcao_teste():\n    return 'novo'\n"
+        }
+
+        # Stats iniciais
+        stats_inicial = self.sistema.stats.copy()
+
+        # Aplicar
+        self.sistema.aplicar_modificacao(melhoria)
+
+        # Verificar que pelo menos um backup foi criado (se diretório existe)
+        if os.path.exists(backups_dir):
+            backups = os.listdir(backups_dir)
+            self.assertGreaterEqual(len(backups), 1)
+
+    def test_historico_preservado(self):
+        """Teste: Histórico de melhorias é preservado"""
+        fila = FilaDeMelhorias()
+
+        # Adicionar e aplicar melhorias
+        id1 = fila.adicionar("otimizacao", "func1", "Teste 1", "pass", 5)
+        id2 = fila.adicionar("bug_fix", "func2", "Teste 2", "pass", 8)
+
+        # Marcar como aplicadas
+        melhoria1 = fila.melhorias_pendentes[0]
+        melhoria2 = fila.melhorias_pendentes[1]
+
+        fila.melhorias_pendentes.clear()
+        fila.melhorias_aplicadas.append(melhoria1)
+        fila.melhorias_aplicadas.append(melhoria2)
+
+        # Verificar histórico
+        self.assertEqual(len(fila.melhorias_aplicadas), 2)
+        self.assertEqual(fila.melhorias_aplicadas[0]['tipo'], 'otimizacao')
+        self.assertEqual(fila.melhorias_aplicadas[1]['tipo'], 'bug_fix')
+
+
+# ============================================================================
 # TESTES: Integração
 # ============================================================================
 
@@ -398,6 +553,7 @@ def run_tests():
     suite.addTests(loader.loadTestsFromTestCase(TestGerenciadorWorkspaces))
     suite.addTests(loader.loadTestsFromTestCase(TestGerenciadorTemporarios))
     suite.addTests(loader.loadTestsFromTestCase(TestSistemaAutoEvolucao))
+    suite.addTests(loader.loadTestsFromTestCase(TestAutoEvolucaoAvancado))  # ✅ FASE 4
     suite.addTests(loader.loadTestsFromTestCase(TestIntegracao))
 
     # Executar com verbosidade

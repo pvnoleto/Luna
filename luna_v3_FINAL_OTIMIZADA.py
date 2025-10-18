@@ -1256,6 +1256,339 @@ class SistemaFerramentasCompleto:
             {"nome_pacote": {"type": "string"}}
         )
 
+        # ═══ AUTO-EVOLUÇÃO ═══
+        if self.auto_evolucao_disponivel:
+            self.adicionar_ferramenta(
+                "sugerir_melhoria",
+                '''def sugerir_melhoria(tipo: str, alvo: str, motivo: str, codigo_sugerido: str, prioridade: int = 5) -> str:
+    """
+    Sugere uma melhoria ao código do Luna.
+
+    Args:
+        tipo: 'otimizacao', 'bug_fix', 'nova_feature', 'refatoracao'
+        alvo: Função/classe/módulo a modificar
+        motivo: Por que fazer essa melhoria
+        codigo_sugerido: Código Python da modificação
+        prioridade: 1-10 (10 = mais urgente)
+    """
+    print_realtime(f"  💡 Sugerindo: {tipo} - {alvo}")
+    try:
+        global _fila_melhorias
+        if not _fila_melhorias:
+            return "ERRO: Sistema de auto-evolução não disponível"
+
+        melhoria_id = _fila_melhorias.adicionar(
+            tipo=tipo,
+            alvo=alvo,
+            motivo=motivo,
+            codigo_sugerido=codigo_sugerido,
+            prioridade=prioridade
+        )
+
+        print_realtime(f"  ✓ Melhoria adicionada à fila (ID: {melhoria_id})")
+        return f"Melhoria '{tipo}' para '{alvo}' adicionada à fila!\\nID: {melhoria_id}\\nUse 'listar_melhorias_pendentes' para ver a fila."
+    except Exception as e:
+        return f"ERRO: {e}"''',
+                "Sugere melhoria ao código do Luna (adiciona à fila)",
+                {
+                    "tipo": {"type": "string"},
+                    "alvo": {"type": "string"},
+                    "motivo": {"type": "string"},
+                    "codigo_sugerido": {"type": "string"},
+                    "prioridade": {"type": "integer"}
+                }
+            )
+
+            self.adicionar_ferramenta(
+                "listar_melhorias_pendentes",
+                '''def listar_melhorias_pendentes() -> str:
+    """Lista todas as melhorias pendentes na fila."""
+    print_realtime(f"  📋 Listando melhorias...")
+    try:
+        global _fila_melhorias
+        if not _fila_melhorias:
+            return "Sistema de auto-evolução não disponível"
+
+        pendentes = _fila_melhorias.obter_pendentes(ordenar_por_prioridade=True)
+
+        if not pendentes:
+            return "Nenhuma melhoria pendente no momento."
+
+        resultado = f"Total: {len(pendentes)} melhoria(s) pendente(s)\\n\\n"
+        for i, m in enumerate(pendentes, 1):
+            resultado += f"{i}. [{m['tipo'].upper()}] {m['alvo']} (Prioridade: {m['prioridade']})\\n"
+            resultado += f"   Motivo: {m['motivo'][:80]}...\\n"
+            resultado += f"   ID: {m['id']}\\n"
+            resultado += f"   Detectado em: {m['detectado_em']}\\n\\n"
+
+        resultado += f"Use 'aplicar_melhorias()' para processar a fila."
+
+        print_realtime(f"  ✓ {len(pendentes)} melhoria(s) listada(s)")
+        return resultado
+    except Exception as e:
+        return f"ERRO: {e}"''',
+                "Lista todas as melhorias pendentes",
+                {}
+            )
+
+            self.adicionar_ferramenta(
+                "aplicar_melhorias",
+                '''def aplicar_melhorias(auto_approve: bool = False, max_aplicar: int = 5) -> str:
+    """
+    Aplica melhorias pendentes da fila.
+
+    Args:
+        auto_approve: Se True, aplica automaticamente melhorias seguras
+        max_aplicar: Máximo de melhorias a aplicar de uma vez
+    """
+    print_realtime(f"  🔄 Aplicando melhorias...")
+    try:
+        global _fila_melhorias, _sistema_evolucao, _memoria
+
+        if not _fila_melhorias or not _sistema_evolucao:
+            return "ERRO: Sistema de auto-evolução não disponível"
+
+        pendentes = _fila_melhorias.obter_pendentes(ordenar_por_prioridade=True)
+
+        if not pendentes:
+            return "Nenhuma melhoria pendente para aplicar."
+
+        # Limitar número de melhorias
+        a_processar = pendentes[:max_aplicar]
+
+        resultado = f"Processando {len(a_processar)} melhoria(s):\\n\\n"
+        sucesso_count = 0
+        falha_count = 0
+
+        for melhoria in a_processar:
+            print_realtime(f"  ⚙️  Aplicando: {melhoria['alvo']}")
+
+            # Se não auto_approve, verificar prioridade
+            if not auto_approve and melhoria['prioridade'] < 8:
+                resultado += f"⚠️  {melhoria['alvo']}: Requer aprovação manual (prioridade < 8)\\n"
+                continue
+
+            # Aplicar melhoria
+            sucesso = _sistema_evolucao.aplicar_modificacao(melhoria, memoria=_memoria)
+
+            if sucesso:
+                _fila_melhorias.marcar_aplicada(melhoria['id'], {'timestamp': datetime.now().isoformat()})
+                resultado += f"✅ {melhoria['alvo']}: Aplicada com sucesso!\\n"
+                sucesso_count += 1
+            else:
+                _fila_melhorias.marcar_falhada(melhoria['id'], "Validação falhou")
+                resultado += f"❌ {melhoria['alvo']}: Falhou na aplicação\\n"
+                falha_count += 1
+
+        resultado += f"\\nResumo: {sucesso_count} sucesso(s), {falha_count} falha(s)"
+
+        print_realtime(f"  ✓ Processamento concluído")
+        return resultado
+
+    except Exception as e:
+        return f"ERRO: {e}"''',
+                "Aplica melhorias pendentes da fila",
+                {
+                    "auto_approve": {"type": "boolean"},
+                    "max_aplicar": {"type": "integer"}
+                }
+            )
+
+            self.adicionar_ferramenta(
+                "status_auto_evolucao",
+                '''def status_auto_evolucao() -> str:
+    """Mostra estatísticas do sistema de auto-evolução."""
+    print_realtime(f"  📊 Status auto-evolução...")
+    try:
+        global _fila_melhorias, _sistema_evolucao
+
+        if not _fila_melhorias or not _sistema_evolucao:
+            return "Sistema de auto-evolução não disponível"
+
+        pendentes = len(_fila_melhorias.melhorias_pendentes)
+        aplicadas = len(_fila_melhorias.melhorias_aplicadas)
+        falhadas = len(_fila_melhorias.melhorias_falhadas)
+        stats = _sistema_evolucao.stats
+
+        resultado = "═══ STATUS AUTO-EVOLUÇÃO ═══\\n\\n"
+        resultado += f"Fila de Melhorias:\\n"
+        resultado += f"  Pendentes: {pendentes}\\n"
+        resultado += f"  Aplicadas: {aplicadas}\\n"
+        resultado += f"  Falhadas: {falhadas}\\n\\n"
+
+        resultado += f"Estatísticas de Modificação:\\n"
+        resultado += f"  Total: {stats['total_modificacoes']}\\n"
+        resultado += f"  Sucesso: {stats['sucesso']}\\n"
+        resultado += f"  Falhas: {stats['falhas']}\\n"
+        resultado += f"  Rollbacks: {stats['rollbacks']}\\n\\n"
+
+        if aplicadas > 0:
+            taxa_sucesso = (aplicadas / (aplicadas + falhadas)) * 100 if (aplicadas + falhadas) > 0 else 0
+            resultado += f"Taxa de sucesso: {taxa_sucesso:.1f}%\\n"
+
+        print_realtime(f"  ✓ Status obtido")
+        return resultado
+
+    except Exception as e:
+        return f"ERRO: {e}"''',
+                "Mostra estatísticas do sistema de auto-evolução",
+                {}
+            )
+
+            # ✅ FASE 3: Dashboard de auto-evolução
+            self.adicionar_ferramenta(
+                "dashboard_auto_evolucao",
+                '''def dashboard_auto_evolucao(incluir_detalhes: bool = False) -> str:
+    """
+    Dashboard completo do sistema de auto-evolução.
+
+    ✅ FASE 3: Visualização e controles
+
+    Args:
+        incluir_detalhes: Se True, mostra lista detalhada de melhorias pendentes
+    """
+    print_realtime(f"  📊 Gerando dashboard...")
+    try:
+        global _fila_melhorias, _sistema_evolucao
+
+        if not _fila_melhorias or not _sistema_evolucao:
+            return "Sistema de auto-evolução não disponível"
+
+        # Coletar dados
+        pendentes = _fila_melhorias.obter_pendentes()
+        aplicadas = _fila_melhorias.melhorias_aplicadas
+        falhadas = _fila_melhorias.melhorias_falhadas
+        stats = _sistema_evolucao.stats
+
+        # Construir dashboard
+        dashboard = []
+        dashboard.append("╔" + "═" * 68 + "╗")
+        dashboard.append("║" + " " * 18 + "🚀 DASHBOARD AUTO-EVOLUÇÃO" + " " * 24 + "║")
+        dashboard.append("╚" + "═" * 68 + "╝")
+        dashboard.append("")
+
+        # ═══ RESUMO GERAL ═══
+        dashboard.append("📊 RESUMO GERAL")
+        dashboard.append("─" * 70)
+        dashboard.append(f"  Melhorias pendentes:    {len(pendentes):>3}")
+        dashboard.append(f"  Melhorias aplicadas:    {len(aplicadas):>3}")
+        dashboard.append(f"  Melhorias falhadas:     {len(falhadas):>3}")
+        dashboard.append(f"  Total de modificações:  {stats['total_modificacoes']:>3}")
+        dashboard.append("")
+
+        # ═══ ANÁLISE POR TIPO ═══
+        if pendentes:
+            dashboard.append("📋 MELHORIAS PENDENTES POR TIPO")
+            dashboard.append("─" * 70)
+
+            # Contar por tipo
+            tipos = {}
+            for m in pendentes:
+                tipo = m.get('tipo', 'desconhecido')
+                tipos[tipo] = tipos.get(tipo, 0) + 1
+
+            for tipo, count in sorted(tipos.items(), key=lambda x: -x[1]):
+                emoji = {
+                    'otimizacao': '⚡',
+                    'bug_fix': '🐛',
+                    'refatoracao': '🔧',
+                    'feature': '✨',
+                    'qualidade': '💎',
+                    'documentacao': '📝'
+                }.get(tipo, '📌')
+                dashboard.append(f"  {emoji} {tipo.ljust(20)} {count:>3}")
+            dashboard.append("")
+
+        # ═══ ANÁLISE POR PRIORIDADE ═══
+        if pendentes:
+            dashboard.append("🎯 MELHORIAS POR PRIORIDADE")
+            dashboard.append("─" * 70)
+
+            alta = sum(1 for m in pendentes if m.get('prioridade', 5) >= 8)
+            media = sum(1 for m in pendentes if 5 <= m.get('prioridade', 5) < 8)
+            baixa = sum(1 for m in pendentes if m.get('prioridade', 5) < 5)
+
+            dashboard.append(f"  🔴 Alta (8-10):    {alta:>3}")
+            dashboard.append(f"  🟡 Média (5-7):    {media:>3}")
+            dashboard.append(f"  🟢 Baixa (1-4):    {baixa:>3}")
+            dashboard.append("")
+
+        # ═══ TAXA DE SUCESSO ═══
+        total_tentativas = len(aplicadas) + len(falhadas)
+        if total_tentativas > 0:
+            taxa_sucesso = (len(aplicadas) / total_tentativas) * 100
+            dashboard.append("✅ TAXA DE SUCESSO")
+            dashboard.append("─" * 70)
+            dashboard.append(f"  Aplicadas: {len(aplicadas)} / {total_tentativas}")
+            dashboard.append(f"  Taxa: {taxa_sucesso:.1f}%")
+
+            # Barra de progresso visual
+            barra_len = 50
+            preenchido = int((taxa_sucesso / 100) * barra_len)
+            barra = "█" * preenchido + "░" * (barra_len - preenchido)
+            dashboard.append(f"  [{barra}] {taxa_sucesso:.1f}%")
+            dashboard.append("")
+
+        # ═══ ÚLTIMAS MELHORIAS ═══
+        if aplicadas:
+            dashboard.append("🕒 ÚLTIMAS 3 MELHORIAS APLICADAS")
+            dashboard.append("─" * 70)
+            for melhoria in aplicadas[-3:]:
+                tipo = melhoria.get('tipo', 'N/A')
+                alvo = melhoria.get('alvo', 'N/A')[:30]
+                dashboard.append(f"  ✓ [{tipo}] {alvo}")
+            dashboard.append("")
+
+        # ═══ RECOMENDAÇÕES ═══
+        dashboard.append("💡 RECOMENDAÇÕES")
+        dashboard.append("─" * 70)
+
+        if len(pendentes) == 0:
+            dashboard.append("  ✓ Nenhuma melhoria pendente no momento")
+        elif alta > 0:
+            dashboard.append(f"  ⚠️  {alta} melhoria(s) de ALTA prioridade detectada(s)!")
+            dashboard.append("  → Execute 'aplicar_melhorias()' para processar")
+        elif len(pendentes) >= 10:
+            dashboard.append(f"  ⚠️  {len(pendentes)} melhorias acumuladas na fila")
+            dashboard.append("  → Considere aplicar melhorias ou revisar com 'listar_melhorias_pendentes'")
+        else:
+            dashboard.append(f"  ℹ️  {len(pendentes)} melhoria(s) disponível(is)")
+            dashboard.append("  → Use 'listar_melhorias_pendentes' para revisar")
+
+        dashboard.append("")
+
+        # ═══ DETALHES (OPCIONAL) ═══
+        if incluir_detalhes and pendentes:
+            dashboard.append("📝 DETALHES DAS MELHORIAS PENDENTES")
+            dashboard.append("─" * 70)
+            for i, m in enumerate(pendentes[:5], 1):  # Máx 5 para não poluir
+                tipo = m.get('tipo', 'N/A')
+                alvo = m.get('alvo', 'N/A')[:40]
+                prioridade = m.get('prioridade', 5)
+                motivo = m.get('motivo', 'N/A')[:60]
+
+                dashboard.append(f"{i}. [{tipo}] {alvo}")
+                dashboard.append(f"   Prioridade: {prioridade}/10")
+                dashboard.append(f"   Motivo: {motivo}")
+                dashboard.append("")
+
+            if len(pendentes) > 5:
+                dashboard.append(f"... e mais {len(pendentes) - 5} melhoria(s)")
+                dashboard.append("")
+
+        dashboard.append("─" * 70)
+        dashboard.append("💡 Use 'aplicar_melhorias()' para processar a fila")
+        dashboard.append("")
+
+        print_realtime(f"  ✓ Dashboard gerado")
+        return "\\n".join(dashboard)
+
+    except Exception as e:
+        return f"ERRO: {e}"''',
+                "Dashboard completo do sistema de auto-evolução",
+                {"incluir_detalhes": {"type": "boolean"}}
+            )
+
     def _carregar_ferramentas_base(self) -> None:
         """
         Carrega todas as ferramentas base do sistema.
@@ -1396,9 +1729,12 @@ class SistemaFerramentasCompleto:
                 '_notion_client': self.notion,
                 '_notion_disponivel': self.notion_disponivel,
                 '_notion_token': self.notion_token,
+                '_fila_melhorias': self.fila_melhorias,  # ✅ Sistema de auto-evolução
+                '_sistema_evolucao': self.sistema_evolucao,  # ✅ Sistema de auto-evolução
                 '__builtins__': safe_builtins,  # ✅ SANDBOX ATIVO
                 'os': __import__('os'),  # Permitido (tools precisam)
-                'print_realtime': print_realtime
+                'print_realtime': print_realtime,
+                'datetime': __import__('datetime').datetime  # Para ferramentas de auto-evolução
             }
 
             exec(self.ferramentas_codigo[nome], namespace)
@@ -1747,6 +2083,11 @@ Comece BUSCANDO aprendizados relevantes, depois execute a tarefa!"""
             "content": tool_results
         })
 
+        # ✅ INTEGRAÇÃO COM AUTO-EVOLUÇÃO
+        # Detectar erros recorrentes e sugerir melhorias automaticamente
+        if erro_detectado and self.sistema_ferramentas.auto_evolucao_disponivel:
+            self._analisar_erro_recorrente(ultimo_erro, iteracao)
+
         # Sistema de recuperação
         if erro_detectado and not self.modo_recuperacao:
             print_realtime(f"\n🚨 ENTRANDO EM MODO DE RECUPERAÇÃO DE ERRO")
@@ -1773,6 +2114,559 @@ Comece BUSCANDO aprendizados relevantes, depois execute a tarefa!"""
                 self.tentativas_recuperacao = 0
 
         return True  # Continua loop
+
+    def _analisar_erro_recorrente(self, erro: str, iteracao: int) -> None:
+        """
+        Analisa erro recorrente e automaticamente adiciona melhoria à fila.
+
+        ✅ NOVO: Integração automática com sistema de auto-evolução
+
+        Args:
+            erro: Mensagem de erro
+            iteracao: Iteração atual
+        """
+        # Contar quantas vezes este tipo de erro ocorreu
+        erro_normalizado = erro[:100]  # Primeiros 100 chars para comparação
+        ocorrencias = sum(1 for e in self.erros_recentes
+                         if e['erro'][:100] == erro_normalizado)
+
+        # Se erro ocorreu 3+ vezes, adicionar à fila automaticamente
+        if ocorrencias >= 3:
+            print_realtime(f"\n💡 Erro recorrente detectado ({ocorrencias}x) - Adicionando à fila de melhorias...")
+
+            # Extrair informações do erro
+            ferramenta_problematica = None
+            for e in self.erros_recentes:
+                if e['erro'][:100] == erro_normalizado:
+                    ferramenta_problematica = e['ferramenta']
+                    break
+
+            # Criar sugestão de melhoria
+            motivo = f"Corrigir erro recorrente ({ocorrencias}x): {erro_normalizado}"
+            alvo = ferramenta_problematica if ferramenta_problematica else "sistema_recuperacao"
+
+            # Sugerir código genérico (Claude pode refiná-lo via ferramenta sugerir_melhoria)
+            codigo_sugerido = f"""# Correção automática para erro recorrente
+# Erro: {erro_normalizado}
+# TODO: Implementar correção específica
+pass
+"""
+
+            try:
+                self.sistema_ferramentas.fila_melhorias.adicionar(
+                    tipo='bug_fix',
+                    alvo=alvo,
+                    motivo=motivo,
+                    codigo_sugerido=codigo_sugerido,
+                    prioridade=9  # Alta prioridade para bugs recorrentes
+                )
+
+                # Salvar na memória
+                if self.sistema_ferramentas.memoria_disponivel:
+                    self.sistema_ferramentas.memoria.adicionar_aprendizado(
+                        categoria='bug',
+                        conteudo=f"Erro recorrente detectado: {erro_normalizado}",
+                        contexto=f"Ocorreu {ocorrencias} vezes. Adicionado à fila de melhorias.",
+                        tags=['auto-evolucao', 'erro-recorrente', 'bug-fix']
+                    )
+
+                print_realtime(f"   ✓ Melhoria adicionada! Use 'listar_melhorias_pendentes' para ver.")
+
+            except Exception as e:
+                print_realtime(f"   ⚠️  Erro ao adicionar melhoria: {e}")
+
+    def _verificar_melhorias_pendentes(self) -> None:
+        """
+        Verifica se há melhorias pendentes após conclusão da tarefa.
+
+        ✅ TRIGGER AUTOMÁTICO: Chamado ao final de cada tarefa bem-sucedida
+        ✅ FASE 2.3: Análise automática integrada
+
+        Comportamento:
+        1. Executa análise de performance e qualidade
+        2. Verifica fila de melhorias pendentes
+        3. Notifica usuário se houver melhorias
+        4. Sugere ações (listar/aplicar)
+        5. Não interrompe fluxo normal
+        """
+        # Verificar se auto-evolução está disponível
+        if not self.sistema_ferramentas.auto_evolucao_disponivel:
+            return
+
+        try:
+            # ✅ FASE 2.3: Executar análises automáticas
+            # Análise silenciosa - não mostra progresso para não poluir output
+            oportunidades_performance = self._analisar_oportunidades_performance()
+            oportunidades_qualidade = self._analisar_oportunidades_qualidade()
+
+            # Obter melhorias pendentes (agora inclui as recém-detectadas)
+            pendentes = self.sistema_ferramentas.fila_melhorias.obter_pendentes()
+
+            if not pendentes:
+                return  # Nada a fazer
+
+            # Contar por prioridade
+            alta_prioridade = sum(1 for m in pendentes if m.get('prioridade', 5) >= 8)
+            media_prioridade = sum(1 for m in pendentes if 5 <= m.get('prioridade', 5) < 8)
+            baixa_prioridade = len(pendentes) - alta_prioridade - media_prioridade
+
+            # Notificar usuário
+            print_realtime(f"\n{'='*70}")
+            print_realtime(f"💡 MELHORIAS PENDENTES DETECTADAS")
+            print_realtime(f"{'='*70}")
+            print_realtime(f"Total: {len(pendentes)} melhoria(s)")
+
+            if alta_prioridade > 0:
+                print_realtime(f"   🔴 Alta prioridade: {alta_prioridade}")
+            if media_prioridade > 0:
+                print_realtime(f"   🟡 Média prioridade: {media_prioridade}")
+            if baixa_prioridade > 0:
+                print_realtime(f"   🟢 Baixa prioridade: {baixa_prioridade}")
+
+            print_realtime(f"\n📋 Próximos passos:")
+            print_realtime(f"   1. Use 'listar_melhorias_pendentes' para revisar")
+            print_realtime(f"   2. Use 'aplicar_melhorias()' para processar fila")
+            print_realtime(f"{'='*70}\n")
+
+        except Exception as e:
+            # Falha silenciosa - não interromper execução normal
+            pass
+
+    def _analisar_oportunidades_performance(self, arquivo_alvo: Optional[str] = None) -> int:
+        """
+        Analisa código em busca de oportunidades de otimização de performance.
+
+        ✅ FASE 2.1: Detector inteligente de performance
+
+        Args:
+            arquivo_alvo: Arquivo a analisar (None = luna_v3_FINAL_OTIMIZADA.py)
+
+        Returns:
+            Número de oportunidades detectadas
+        """
+        if not self.sistema_ferramentas.auto_evolucao_disponivel:
+            return 0
+
+        # Determinar arquivo a analisar
+        if arquivo_alvo is None:
+            arquivo_alvo = __file__
+
+        if not os.path.exists(arquivo_alvo):
+            return 0
+
+        try:
+            # Ler código
+            with open(arquivo_alvo, 'r', encoding='utf-8') as f:
+                codigo = f.read()
+
+            # Parse AST
+            try:
+                tree = ast.parse(codigo)
+            except SyntaxError:
+                return 0  # Não analisar código inválido
+
+            oportunidades = 0
+
+            # 1. Detectar loops ineficientes (string concatenation O(n²))
+            oportunidades += self._detectar_loops_ineficientes(tree, arquivo_alvo)
+
+            # 2. Detectar imports problemáticos
+            oportunidades += self._detectar_imports_problematicos(tree, arquivo_alvo)
+
+            # 3. Detectar funções muito grandes
+            oportunidades += self._detectar_funcoes_grandes(tree, arquivo_alvo)
+
+            return oportunidades
+
+        except Exception as e:
+            return 0  # Falha silenciosa
+
+    def _detectar_loops_ineficientes(self, tree: ast.AST, arquivo: str) -> int:
+        """
+        Detecta loops com concatenação de strings (O(n²)).
+
+        Pattern detectado:
+            for item in items:
+                texto += algo  # ❌ O(n²)
+
+        Solução sugerida:
+            lista = []
+            for item in items:
+                lista.append(algo)
+            texto = ''.join(lista)  # ✅ O(n)
+        """
+        oportunidades = 0
+
+        class LoopVisitor(ast.NodeVisitor):
+            def __init__(self):
+                self.em_loop = False
+                self.problemas = []
+
+            def visit_For(self, node):
+                self.em_loop = True
+                self.generic_visit(node)
+                self.em_loop = False
+
+            def visit_While(self, node):
+                self.em_loop = True
+                self.generic_visit(node)
+                self.em_loop = False
+
+            def visit_AugAssign(self, node):
+                # Detectar += em strings dentro de loops
+                if self.em_loop and isinstance(node.op, ast.Add):
+                    # Verificar se variável provavelmente é string
+                    if isinstance(node.target, ast.Name):
+                        var_name = node.target.id
+                        # Heurística: nomes comuns de strings
+                        if any(palavra in var_name.lower() for palavra in
+                               ['texto', 'resultado', 'saida', 'msg', 'html', 'output', 'str']):
+                            self.problemas.append({
+                                'linha': node.lineno,
+                                'variavel': var_name
+                            })
+                self.generic_visit(node)
+
+        visitor = LoopVisitor()
+        visitor.visit(tree)
+
+        # Adicionar melhorias para cada problema encontrado
+        for problema in visitor.problemas:
+            try:
+                self.sistema_ferramentas.fila_melhorias.adicionar(
+                    tipo='otimizacao',
+                    alvo=f"linha_{problema['linha']}_{arquivo}",
+                    motivo=f"Loop ineficiente detectado: '{problema['variavel']} +=' em loop (O(n²))",
+                    codigo_sugerido=f"""# Substituir:
+# {problema['variavel']} += algo
+
+# Por:
+lista = []
+for item in items:
+    lista.append(algo)
+{problema['variavel']} = ''.join(lista)  # O(n) em vez de O(n²)
+""",
+                    prioridade=7
+                )
+                oportunidades += 1
+            except Exception:
+                pass
+
+        return oportunidades
+
+    def _detectar_imports_problematicos(self, tree: ast.AST, arquivo: str) -> int:
+        """
+        Detecta imports dentro de loops ou funções (potencial problema de performance).
+
+        Pattern detectado:
+            for item in items:
+                import modulo  # ❌ Import dentro de loop
+
+        Solução: Mover imports para topo do arquivo.
+        """
+        oportunidades = 0
+
+        class ImportVisitor(ast.NodeVisitor):
+            def __init__(self):
+                self.em_funcao_ou_loop = False
+                self.problemas = []
+
+            def visit_FunctionDef(self, node):
+                # Permitir imports em funções (lazy loading é válido)
+                # Mas detectar em loops
+                self.generic_visit(node)
+
+            def visit_For(self, node):
+                self.em_funcao_ou_loop = True
+                self.generic_visit(node)
+                self.em_funcao_ou_loop = False
+
+            def visit_While(self, node):
+                self.em_funcao_ou_loop = True
+                self.generic_visit(node)
+                self.em_funcao_ou_loop = False
+
+            def visit_Import(self, node):
+                if self.em_funcao_ou_loop:
+                    nomes = [alias.name for alias in node.names]
+                    self.problemas.append({
+                        'linha': node.lineno,
+                        'modulos': nomes
+                    })
+                self.generic_visit(node)
+
+            def visit_ImportFrom(self, node):
+                if self.em_funcao_ou_loop:
+                    self.problemas.append({
+                        'linha': node.lineno,
+                        'modulos': [node.module or 'relative']
+                    })
+                self.generic_visit(node)
+
+        visitor = ImportVisitor()
+        visitor.visit(tree)
+
+        for problema in visitor.problemas:
+            try:
+                self.sistema_ferramentas.fila_melhorias.adicionar(
+                    tipo='otimizacao',
+                    alvo=f"linha_{problema['linha']}_{arquivo}",
+                    motivo=f"Import dentro de loop detectado: {', '.join(problema['modulos'])}",
+                    codigo_sugerido=f"""# Mover imports para o topo do arquivo:
+# import {', '.join(problema['modulos'])}
+
+# Motivo: Imports dentro de loops causam overhead desnecessário
+""",
+                    prioridade=6
+                )
+                oportunidades += 1
+            except Exception:
+                pass
+
+        return oportunidades
+
+    def _detectar_funcoes_grandes(self, tree: ast.AST, arquivo: str) -> int:
+        """
+        Detecta funções muito grandes (> 100 linhas) que devem ser refatoradas.
+
+        Pattern detectado:
+            def funcao_grande():  # 150 linhas
+                # muito código...
+
+        Solução: Quebrar em funções auxiliares menores.
+        """
+        oportunidades = 0
+
+        for node in ast.walk(tree):
+            if isinstance(node, ast.FunctionDef):
+                if hasattr(node, 'end_lineno') and hasattr(node, 'lineno'):
+                    tamanho = node.end_lineno - node.lineno
+
+                    if tamanho > 100:
+                        try:
+                            self.sistema_ferramentas.fila_melhorias.adicionar(
+                                tipo='refatoracao',
+                                alvo=f"{node.name}",
+                                motivo=f"Função muito grande detectada: {node.name} ({tamanho} linhas)",
+                                codigo_sugerido=f"""# Refatorar função '{node.name}' ({tamanho} linhas)
+#
+# Sugestões:
+# 1. Identificar blocos lógicos distintos
+# 2. Extrair em métodos auxiliares privados (_metodo_auxiliar)
+# 3. Manter método principal com <= 50 linhas
+#
+# Exemplo:
+# def {node.name}(self, ...):
+#     parte1 = self._{node.name}_parte1(...)
+#     parte2 = self._{node.name}_parte2(...)
+#     return self._{node.name}_final(parte1, parte2)
+""",
+                                prioridade=5
+                            )
+                            oportunidades += 1
+                        except Exception:
+                            pass
+
+        return oportunidades
+
+    def _analisar_oportunidades_qualidade(self, arquivo_alvo: Optional[str] = None) -> int:
+        """
+        Analisa código em busca de oportunidades de melhoria de qualidade.
+
+        ✅ FASE 2.2: Detector inteligente de qualidade
+
+        Args:
+            arquivo_alvo: Arquivo a analisar (None = luna_v3_FINAL_OTIMIZADA.py)
+
+        Returns:
+            Número de oportunidades detectadas
+        """
+        if not self.sistema_ferramentas.auto_evolucao_disponivel:
+            return 0
+
+        # Determinar arquivo a analisar
+        if arquivo_alvo is None:
+            arquivo_alvo = __file__
+
+        if not os.path.exists(arquivo_alvo):
+            return 0
+
+        try:
+            # Ler código
+            with open(arquivo_alvo, 'r', encoding='utf-8') as f:
+                linhas = f.readlines()
+
+            oportunidades = 0
+
+            # 1. Detectar bare except clauses
+            oportunidades += self._detectar_bare_except(linhas, arquivo_alvo)
+
+            # 2. Detectar TODOs antigos
+            oportunidades += self._detectar_todos(linhas, arquivo_alvo)
+
+            # 3. Detectar funções sem docstrings
+            oportunidades += self._detectar_falta_documentacao(arquivo_alvo)
+
+            return oportunidades
+
+        except Exception as e:
+            return 0  # Falha silenciosa
+
+    def _detectar_bare_except(self, linhas: list, arquivo: str) -> int:
+        """
+        Detecta bare except clauses (except: sem tipo específico).
+
+        Pattern detectado:
+            try:
+                algo()
+            except:  # ❌ Bare except
+
+        Solução: Usar exceções específicas.
+        """
+        oportunidades = 0
+
+        for i, linha in enumerate(linhas, 1):
+            stripped = linha.strip()
+            if stripped == 'except:' or stripped.startswith('except:'):
+                try:
+                    self.sistema_ferramentas.fila_melhorias.adicionar(
+                        tipo='qualidade',
+                        alvo=f"linha_{i}_{arquivo}",
+                        motivo=f"Bare except clause detectado na linha {i}",
+                        codigo_sugerido=f"""# Substituir:
+# except:
+
+# Por uma exceção específica:
+# except Exception as e:
+#     # Tratar erro adequadamente
+#     print(f\"Erro: {{e}}\")
+
+# Ou múltiplas exceções específicas:
+# except (ValueError, TypeError) as e:
+#     # Tratar erros específicos
+""",
+                        prioridade=8
+                    )
+                    oportunidades += 1
+                except Exception:
+                    pass
+
+        return oportunidades
+
+    def _detectar_todos(self, linhas: list, arquivo: str) -> int:
+        """
+        Detecta comentários TODO que podem se tornar melhorias.
+
+        Pattern detectado:
+            # TODO: Implementar validação
+
+        Solução: Converter em melhoria rastreável.
+        """
+        oportunidades = 0
+
+        for i, linha in enumerate(linhas, 1):
+            if 'TODO' in linha and linha.strip().startswith('#'):
+                # Extrair conteúdo do TODO
+                todo_texto = linha.strip()[1:].strip()  # Remove #
+
+                try:
+                    self.sistema_ferramentas.fila_melhorias.adicionar(
+                        tipo='feature',
+                        alvo=f"linha_{i}_{arquivo}",
+                        motivo=f"TODO detectado: {todo_texto}",
+                        codigo_sugerido=f"""# Implementar: {todo_texto}
+#
+# Esta tarefa foi convertida de comentário TODO para melhoria rastreável.
+# Refine a implementação conforme necessário.
+""",
+                        prioridade=4  # Prioridade média-baixa
+                    )
+                    oportunidades += 1
+                except Exception:
+                    pass
+
+        return oportunidades
+
+    def _detectar_falta_documentacao(self, arquivo: str) -> int:
+        """
+        Detecta funções e classes sem docstrings.
+
+        Pattern detectado:
+            def funcao_importante(param):
+                # sem docstring
+                pass
+
+        Solução: Adicionar docstrings descritivas.
+        """
+        oportunidades = 0
+
+        try:
+            with open(arquivo, 'r', encoding='utf-8') as f:
+                codigo = f.read()
+
+            tree = ast.parse(codigo)
+
+            for node in ast.walk(tree):
+                # Verificar funções
+                if isinstance(node, ast.FunctionDef):
+                    # Pular métodos privados (começam com _)
+                    if node.name.startswith('_'):
+                        continue
+
+                    # Verificar se tem docstring
+                    docstring = ast.get_docstring(node)
+                    if not docstring:
+                        try:
+                            self.sistema_ferramentas.fila_melhorias.adicionar(
+                                tipo='documentacao',
+                                alvo=f"{node.name}",
+                                motivo=f"Função pública '{node.name}' sem docstring (linha {node.lineno})",
+                                codigo_sugerido=f'''def {node.name}(...):
+    """
+    [Descrição breve do que a função faz]
+
+    Args:
+        [param]: [descrição]
+
+    Returns:
+        [tipo]: [descrição]
+    """
+    # implementação...
+''',
+                                prioridade=3
+                            )
+                            oportunidades += 1
+                        except Exception:
+                            pass
+
+                # Verificar classes
+                elif isinstance(node, ast.ClassDef):
+                    docstring = ast.get_docstring(node)
+                    if not docstring:
+                        try:
+                            self.sistema_ferramentas.fila_melhorias.adicionar(
+                                tipo='documentacao',
+                                alvo=f"{node.name}",
+                                motivo=f"Classe '{node.name}' sem docstring (linha {node.lineno})",
+                                codigo_sugerido=f'''class {node.name}:
+    """
+    [Descrição breve da classe]
+
+    Attributes:
+        [atributo]: [descrição]
+    """
+    # implementação...
+''',
+                                prioridade=3
+                            )
+                            oportunidades += 1
+                        except Exception:
+                            pass
+
+        except Exception:
+            pass
+
+        return oportunidades
 
     def executar_tarefa(
         self,
@@ -1829,6 +2723,10 @@ Comece BUSCANDO aprendizados relevantes, depois execute a tarefa!"""
                 if resposta_final is not None:
                     # Estatísticas finais
                     self._exibir_estatisticas()
+
+                    # ✅ TRIGGER AUTOMÁTICO: Verificar melhorias pendentes
+                    self._verificar_melhorias_pendentes()
+
                     return resposta_final
                 # Se None, continua loop (estava em modo recuperação)
 
