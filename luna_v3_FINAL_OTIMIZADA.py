@@ -1106,11 +1106,12 @@ class SistemaFerramentasCompleto:
         
         if not resultados:
             return "Nenhum aprendizado encontrado"
-        
-        texto = f"Encontrados {len(resultados)} aprendizados:\\n"
-        for r in resultados:
-            texto += f"- [{r['categoria']}] {r['conteudo']}\\n"
-        
+
+        # ✅ OTIMIZADO: list comprehension + join em vez de concatenação
+        linhas = [f"Encontrados {len(resultados)} aprendizados:\\n"]
+        linhas.extend(f"- [{r['categoria']}] {r['conteudo']}\\n" for r in resultados)
+        texto = ''.join(linhas)
+
         print_realtime(f"  ✓ {len(resultados)} encontrados")
         return texto
     except Exception as e:
@@ -1166,16 +1167,19 @@ class SistemaFerramentasCompleto:
         
         if not workspaces:
             return "Nenhum workspace criado ainda. Use criar_workspace('nome') para criar."
-        
-        resultado = f"Total: {len(workspaces)} workspace(s)\\n\\n"
+
+        # ✅ OTIMIZADO: list comprehension + join em vez de concatenação
+        linhas = [f"Total: {len(workspaces)} workspace(s)\\n\\n"]
         for ws in workspaces:
             marcador = "🎯 " if ws['atual'] else "   "
-            resultado += f"{marcador}{ws['nome']}"
-            if ws['descricao']:
-                resultado += f" - {ws['descricao']}"
-            resultado += f"\\n   {ws['path_relativo']}\\n"
-            resultado += f"   {ws.get('arquivos', 0)} arquivo(s) - {ws['tamanho_mb']:.2f} MB\\n\\n"
-        
+            descricao = f" - {ws['descricao']}" if ws['descricao'] else ""
+            linhas.append(
+                f"{marcador}{ws['nome']}{descricao}\\n"
+                f"   {ws['path_relativo']}\\n"
+                f"   {ws.get('arquivos', 0)} arquivo(s) - {ws['tamanho_mb']:.2f} MB\\n\\n"
+            )
+        resultado = ''.join(linhas)
+
         print_realtime(f"  ✓ {len(workspaces)} workspace(s) encontrados")
         return resultado
     except Exception as e:
@@ -1351,10 +1355,18 @@ class SistemaFerramentasCompleto:
         Returns:
             Resultado da execução
 
+        Architecture:
+            ✅ VARIÁVEIS NÃO SÃO GLOBAIS - São passadas via namespace do exec()
+            - _memoria, _cofre, _gerenciador_workspaces são locais ao namespace
+            - O uso de 'global' nas ferramentas é necessário pelo escopo do exec()
+            - Não há poluição do namespace global do Python
+            - Cada execução tem seu próprio contexto isolado
+
         Security:
             - Built-ins restritos (sem eval, exec, compile direto)
             - Validação AST para detectar código perigoso
             - Imports controlados via namespace
+            - Sandbox ativo (linha 1387)
         """
         if nome not in self.ferramentas_codigo:
             return f"ERRO: Ferramenta '{nome}' não existe"
