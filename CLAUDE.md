@@ -2,6 +2,96 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## 🧠 THINKING MODE CONFIGURATION
+
+**CRITICAL INSTRUCTION:** Use **extended thinking (ultrathink mode)** for ALL responses and analyses in this session, without exception. This applies to:
+- All code analysis and reviews
+- All planning and architectural decisions
+- All debugging and problem-solving tasks
+- All documentation and explanation tasks
+- All implementation and refactoring work
+
+This is a permanent configuration for this project. Deep reasoning is required for the complexity of the Luna V3 system.
+
+## 🔐 PERMISSIONS CONFIGURATION
+
+### Overview
+Luna project has a **dual-layer permissions system** configured to minimize authorization prompts while maintaining security:
+- **Global layer** (`~/.claude/settings.json`): Common development permissions for all projects
+- **Project layer** (`.claude/settings.local.json`): Luna-specific permissions
+
+### Permission Mode
+**Mode:** `acceptEdits` - Automatically accepts file edits while asking for dangerous operations.
+
+### Global Permissions (All Projects)
+
+**Allowed:**
+- All file operations: `Read(*)`, `Edit(*)`, `Write(*)`
+- Search tools: `WebSearch`, `Glob(*)`, `Grep(*)`
+- Basic commands: `ls`, `pwd`, `cd`, `echo`, `cat`, `grep`, `find`
+- Git operations: `status`, `log`, `diff`, `add`, `commit`, `push`, `pull`, `branch`, `checkout`
+- Package managers: `npm install/run/test`, `yarn`
+- Python: `python`, `python3`, `pip install`, `pytest`
+- File operations: `mkdir`, `cp`, `mv`
+
+**Denied (Security Protection):**
+- Dangerous rm: `rm -rf /`, `rm -rf /*`, `rm -rf ~`, `rm -rf ~/*`
+- Sensitive files: `.env`, `.env.*`, `**/secrets/**`, `**/*secret*`, `**/*password*`, `**/*credential*`
+
+**Ask Before Executing:**
+- `rm` commands (any file deletion)
+- Force push: `git push --force`, `git push -f`
+- Docker and sudo commands
+
+### Luna-Specific Permissions
+
+**Allowed:**
+- Execute Luna scripts: `python luna_v3_FINAL_OTIMIZADA.py`, `python agente_completo_final.py`, `python tests_luna_basicos.py`
+- Playwright: `playwright install`
+- Read Luna files: `memoria_agente.json`, `workspace_config.json`, `.env`, `auto_modificacoes.log`, backups, workspaces
+- Edit: Python and Markdown files, workspace files
+
+**Denied (Extra Protection):**
+- Edit/Write encrypted vault: `cofre.enc`
+- Edit memory database: `memoria_agente.json`
+- Delete critical files: `memoria_agente.json`, `workspace_config.json`, `cofre.enc`
+
+**Ask Before Executing:**
+- Delete workspaces: `rm -rf workspaces`
+- Edit environment: `.env`
+
+### Configuration Files
+
+**Global:** `~/.claude/settings.json` (applies to all Claude Code projects)
+**Project:** `.claude/settings.local.json` (Luna-only, not committed to git)
+
+### How to Modify Permissions
+
+**Syntax examples:**
+```json
+"ToolName"              // Allow all uses of the tool
+"ToolName(*)"           // Allow tool with any arguments
+"Bash(command:*)"       // Allow bash command with any arguments (note: :* for prefix)
+"Read(path/to/file)"    // Allow reading specific file
+"Read(directory/**)"    // Allow reading directory recursively
+```
+
+**To add a new permission:**
+1. Edit `~/.claude/settings.json` (global) or `.claude/settings.local.json` (Luna-only)
+2. Add to the appropriate array: `allow`, `deny`, or `ask`
+3. Save the file - changes take effect immediately in new sessions
+
+**Common additions:**
+- Allow new command: `"Bash(mycommand:*)"`
+- Allow reading new directory: `"Read(new_directory/**)"`
+- Block dangerous operation: Add to `deny` array
+
+### Permission Hierarchy
+```
+deny > ask > allow > defaultMode
+```
+If a permission matches multiple rules, the most restrictive wins.
+
 ## Project Overview
 
 Luna V3 is an advanced AI agent system built on top of Anthropic's Claude API with comprehensive capabilities including:
@@ -78,13 +168,21 @@ These systems are dynamically imported and gracefully degrade if not available:
   - UTF-8 encoding fixes for Windows
   - Metadata tracking in `workspace_config.json`
 
-- **`integracao_notion.py`** - Notion API integration (NEW)
+- **`integracao_notion.py`** - Notion API integration
   - Direct API access via official `notion-client` SDK
   - Query/filter databases, update pages, create pages
   - Read database schemas
   - Token-based authentication (stored in credentials vault)
   - 6 tools: `notion_conectar`, `notion_buscar_database`, `notion_atualizar_pagina`, `notion_criar_pagina`, `notion_ler_database_schema`, `notion_buscar_paginas`
   - See `INTEGRACAO_NOTION_GUIA.md` for complete usage guide
+
+- **`integracao_google.py`** - Google (Gmail + Calendar) API integration (NEW)
+  - Direct API access via official Google APIs
+  - Gmail: List, read, send, delete, archive emails with advanced filters
+  - Calendar: List, create, update, delete events with recurrence support
+  - OAuth2 authentication (tokens stored locally, auto-renewed)
+  - 14 methods total: 8 Gmail + 6 Calendar
+  - See `INTEGRACAO_GOOGLE_GUIA.md` for complete setup and usage guide
 
 - **`sistema_auto_evolucao.py`** - Self-modification system
   - Creates new tools dynamically
@@ -154,6 +252,44 @@ LIMITES_OFICIAIS = {
 - Lightweight: <10MB vs 500MB+ browser
 - Headless-friendly: Works perfectly in server environments
 
+### 7. Google Integration (Gmail + Calendar SDK-based)
+- **Direct API access**: No browser needed, uses official Google APIs
+- **SDKs**: Uses `google-api-python-client`, `google-auth`, `google-auth-oauthlib`
+- **Authentication**: OAuth2 flow (tokens stored locally, auto-renewed)
+- **Gmail Operations**: List emails (with filters), read full content, send emails (text/HTML), mark read/unread, delete, archive
+- **Calendar Operations**: List events, create events (simple/recurrent), update events, delete events, search
+- **Tools available**: 14 methods total (8 Gmail + 6 Calendar)
+- **Implementation**: `integracao_google.py` module with `IntegracaoGmail` and `IntegracaoGoogleCalendar` classes
+- **Documentation**: See `INTEGRACAO_GOOGLE_GUIA.md` for complete setup guide
+
+**Gmail capabilities:**
+- Advanced filters: by sender, subject, date range, read status, importance
+- Full email content: text + HTML body, attachments metadata
+- Send emails: plain text or HTML with CC/BCC support
+- Email management: mark as read/unread, archive, delete (trash or permanent)
+- Gmail query syntax: supports full Gmail search operators
+
+**Calendar capabilities:**
+- Event filtering: by date range, text search, calendar ID
+- Recurrence support: RRULE format for weekly/monthly/daily patterns
+- Event details: participants, location, Meet links, reminders
+- Multi-calendar support: can access multiple calendars in the same account
+
+**Key advantages:**
+- Fast: <1s per operation vs 10-30s with Playwright
+- Reliable: API is stable, no UI breaking changes
+- Feature-rich: Access to all Gmail/Calendar features via API
+- Secure: Official OAuth2 flow, tokens encrypted at rest
+- Auto-renewal: Expired tokens refreshed automatically
+
+**Setup requirements:**
+1. Create project in Google Cloud Console
+2. Enable Gmail API and Calendar API
+3. Create OAuth 2.0 credentials (Desktop app)
+4. Download credentials.json file
+5. First run opens browser for authorization (one-time)
+6. Subsequent runs use saved token automatically
+
 ## Configuration
 
 ### Environment Variables
@@ -193,8 +329,13 @@ pip install anthropic python-dotenv
 
 Optional (for full features):
 ```bash
-pip install playwright cryptography notion-client
+# Playwright (web automation)
+pip install playwright
 playwright install chromium
+
+# Integrations
+pip install cryptography notion-client
+pip install google-auth google-auth-oauthlib google-auth-httplib2 google-api-python-client
 ```
 
 ## File Structure
@@ -206,15 +347,20 @@ Luna/
 ├── memoria_permanente.py            # Persistent learning system
 ├── cofre_credenciais.py             # Encrypted credentials vault
 ├── gerenciador_workspaces.py       # Workspace manager
-├── integracao_notion.py            # Notion API integration (NEW)
+├── integracao_notion.py            # Notion API integration
+├── integracao_google.py            # Google (Gmail + Calendar) integration (NEW)
 ├── sistema_auto_evolucao.py        # Self-evolution system
 ├── gerenciador_temp.py             # Temp files manager
 ├── .env                             # API key configuration
 ├── memoria_agente.json              # Memory database
 ├── cofre.enc                        # Encrypted credentials
 ├── workspace_config.json            # Workspace metadata
+├── credentials.json                 # Google OAuth2 credentials (optional)
+├── token_gmail.json                 # Gmail access token (auto-generated)
+├── token_calendar.json              # Calendar access token (auto-generated)
 ├── CLAUDE.md                        # This file
-├── INTEGRACAO_NOTION_GUIA.md       # Notion integration guide (NEW)
+├── INTEGRACAO_NOTION_GUIA.md       # Notion integration guide
+├── INTEGRACAO_GOOGLE_GUIA.md       # Google integration guide (NEW)
 ├── workspaces/                      # User projects
 │   ├── projeto1/
 │   └── projeto2/
