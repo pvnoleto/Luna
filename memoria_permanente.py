@@ -80,11 +80,11 @@ class MemoriaPermanente:
         except Exception as e:
             print(f"❌ Erro ao salvar memória: {e}")
     
-    def adicionar_aprendizado(self, categoria: str, conteudo: str, 
+    def adicionar_aprendizado(self, categoria: str, conteudo: str,
                              contexto: Optional[str] = None, tags: List[str] = None):
         """
         Adiciona novo aprendizado
-        
+
         Args:
             categoria: Tipo (ex: "tecnica", "preferencia", "bug", "solucao")
             conteudo: O que foi aprendido
@@ -101,7 +101,7 @@ class MemoriaPermanente:
             "relevancia": 1.0,
             "uso_count": 0
         }
-        
+
         # Evitar duplicatas
         if not any(a["id"] == aprendizado["id"] for a in self.memoria["aprendizados"]):
             self.memoria["aprendizados"].append(aprendizado)
@@ -110,6 +110,24 @@ class MemoriaPermanente:
             print(f"✅ Aprendizado salvo: {categoria}")
             return True
         return False
+
+    def salvar_aprendizado(self, tipo: str, titulo: str, conteudo: str,
+                          tags: List[str] = None):
+        """
+        Alias para adicionar_aprendizado (compatibilidade com Planning System)
+
+        Args:
+            tipo: Categoria do aprendizado (mapeado para categoria)
+            titulo: Contexto do aprendizado
+            conteudo: O que foi aprendido
+            tags: Tags para busca
+        """
+        return self.adicionar_aprendizado(
+            categoria=tipo,
+            conteudo=f"{titulo}\n{conteudo}",
+            contexto=titulo,
+            tags=tags or []
+        )
     
     def buscar_aprendizados(self, query: str = None, categoria: str = None, 
                            tags: List[str] = None, limite: int = 10) -> List[Dict]:

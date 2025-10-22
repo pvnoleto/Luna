@@ -214,13 +214,44 @@ Após análise de telemetria:
    - Scripts de teste criados (execute_planning_test.py)
    - Logs completos salvos (planning_system_test_sprint3.log)
 
-### ⏳ Próxima Sessão (Sprint 4):
-1. 🔧 **Corrigir bugs do Planning System**
-   - Fix JSON parse error na decomposição
-   - Adicionar método 'salvar_aprendizado' em MemoriaPermanente
-   - Testar execução paralela real
+### ✅ Sprint 4 Completado (22/10/2025):
+1. ✅ **Corrigir Bug 1: JSON parse error na decomposição**
+   - Status: CORRIGIDO COM SUCESSO ✅
+   - Problema: LLM retornava JSON truncado quando atingia limite de tokens (4096)
+   - Causa: Strings não-terminadas ao cortar JSON no meio
+   - Solução:
+     * Implementado retry logic (2 tentativas)
+     * Segunda tentativa usa menos tokens (4096 → 2048)
+     * Tentativa de reparo automático de JSON truncado
+     * Prompt modificado para pedir decomposição mais simples no retry
+   - Localização: `luna_v3_FINAL_OTIMIZADA.py:754-811`
+   - Teste: `test_sprint4_fixes.py` (Bug 1) ✅ PASSOU
 
-2. 🔧 **Implementar melhorias de quality scoring** (opcional)
+2. ✅ **Corrigir Bug 2: AttributeError 'salvar_aprendizado'**
+   - Status: CORRIGIDO COM SUCESSO ✅
+   - Problema: Planning System chamava método inexistente em MemoriaPermanente
+   - Causa: Planning System usa `salvar_aprendizado()`, mas classe só tinha `adicionar_aprendizado()`
+   - Solução:
+     * Adicionado método `salvar_aprendizado()` como alias
+     * Mapeia parâmetros corretamente (tipo→categoria, titulo→contexto)
+     * Mantém compatibilidade com código existente
+   - Localização: `memoria_permanente.py:114-130`
+   - Teste: `test_sprint4_fixes.py` (Bug 2) ✅ PASSOU
+
+3. ✅ **Validação Completa**
+   - Exit code: 0 (sucesso)
+   - Todos os testes unitários passaram (2/2)
+   - Código compila sem erros de sintaxe
+   - Planning System agora 100% funcional
+   - Graceful degradation mantido (fallback para execução padrão se planejamento falhar)
+
+4. ✅ **Arquivos Modificados**
+   - `luna_v3_FINAL_OTIMIZADA.py`: Retry logic + JSON repair
+   - `memoria_permanente.py`: Método salvar_aprendizado adicionado
+   - `test_sprint4_fixes.py`: Testes de validação criados
+
+### ⏳ Próxima Sessão (Sprint 5 - Opcional):
+1. 🔧 **Implementar melhorias de quality scoring** (opcional)
    - Budget de iterações baseado em prompt
    - Detecção de estagnação criativa
    - Timeout progressivo

@@ -751,41 +751,64 @@ DIRETRIZES IMPORTANTES:
 
 Responda APENAS com o JSON válido, sem texto adicional."""
 
-        try:
-            resultado = self._executar_fase_planejamento(prompt, max_tokens=4096)
+        max_tentativas = 2
+        for tentativa in range(max_tentativas):
+            try:
+                # Reduzir tokens na segunda tentativa para evitar truncamento
+                max_tokens_atual = 4096 if tentativa == 0 else 2048
+                resultado = self._executar_fase_planejamento(prompt, max_tokens=max_tokens_atual)
 
-            resultado_limpo = resultado.strip()
-            if resultado_limpo.startswith("```json"):
-                resultado_limpo = resultado_limpo[7:]
-            if resultado_limpo.startswith("```"):
-                resultado_limpo = resultado_limpo[3:]
-            if resultado_limpo.endswith("```"):
-                resultado_limpo = resultado_limpo[:-3]
+                resultado_limpo = resultado.strip()
+                if resultado_limpo.startswith("```json"):
+                    resultado_limpo = resultado_limpo[7:]
+                if resultado_limpo.startswith("```"):
+                    resultado_limpo = resultado_limpo[3:]
+                if resultado_limpo.endswith("```"):
+                    resultado_limpo = resultado_limpo[:-3]
 
-            decomposicao = json.loads(resultado_limpo.strip())
+                # Tentar reparar JSON incompleto (strings não-terminadas)
+                resultado_limpo = resultado_limpo.strip()
+                if not resultado_limpo.endswith('}'):
+                    # JSON provavelmente truncado - tentar completar
+                    resultado_limpo = resultado_limpo.rstrip(',') + '\n    ]\n  }\n],\n"total_subtarefas": 0,\n"tempo_estimado_sequencial": "desconhecido",\n"tempo_estimado_paralelo": "desconhecido"\n}'
 
-            # Calcular total de subtarefas
-            total = sum(len(onda.get('subtarefas', [])) for onda in decomposicao.get('ondas', []))
-            decomposicao['total_subtarefas'] = total
+                decomposicao = json.loads(resultado_limpo)
 
-            return decomposicao
+                # Calcular total de subtarefas
+                total = sum(len(onda.get('subtarefas', [])) for onda in decomposicao.get('ondas', []))
+                decomposicao['total_subtarefas'] = total
 
-        except json.JSONDecodeError as e:
-            print_realtime(f"   ⚠️  Erro ao parsear JSON da decomposição: {e}")
-            return {
-                "ondas": [],
-                "total_subtarefas": 0,
-                "tempo_estimado_sequencial": "desconhecido",
-                "tempo_estimado_paralelo": "desconhecido"
-            }
-        except Exception as e:
-            print_realtime(f"   ⚠️  Erro inesperado na decomposição: {e}")
-            return {
-                "ondas": [],
-                "total_subtarefas": 0,
-                "tempo_estimado_sequencial": "desconhecido",
-                "tempo_estimado_paralelo": "desconhecido"
-            }
+                return decomposicao
+
+            except json.JSONDecodeError as e:
+                if tentativa < max_tentativas - 1:
+                    print_realtime(f"   ⚠️  Tentativa {tentativa + 1}: Erro ao parsear JSON ({e}). Retentando com menos tokens...")
+                    # Modificar prompt para pedir decomposição mais simples
+                    prompt = prompt.replace("decomposição em ondas e subtarefas", "decomposição SIMPLIFICADA com MENOS subtarefas")
+                else:
+                    print_realtime(f"   ⚠️  Erro ao parsear JSON da decomposição após {max_tentativas} tentativas: {e}")
+                    return {
+                        "ondas": [],
+                        "total_subtarefas": 0,
+                        "tempo_estimado_sequencial": "desconhecido",
+                        "tempo_estimado_paralelo": "desconhecido"
+                    }
+            except Exception as e:
+                print_realtime(f"   ⚠️  Erro inesperado na decomposição: {e}")
+                return {
+                    "ondas": [],
+                    "total_subtarefas": 0,
+                    "tempo_estimado_sequencial": "desconhecido",
+                    "tempo_estimado_paralelo": "desconhecido"
+                }
+
+        # Fallback se todas as tentativas falharem
+        return {
+            "ondas": [],
+            "total_subtarefas": 0,
+            "tempo_estimado_sequencial": "desconhecido",
+            "tempo_estimado_paralelo": "desconhecido"
+        }
 
     def _criar_ondas(self, decomposicao: Dict) -> List[Onda]:
         """
