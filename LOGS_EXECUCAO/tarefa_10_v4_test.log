@@ -1,0 +1,342 @@
+
+════════════════════════════════════════════════════════════════════════════════
+
+  🌙 LUNA V3 - SISTEMA AI COMPLETO E OTIMIZADO
+
+  ⭐ QUALIDADE: 98/100 - NÍVEL PROFISSIONAL ⭐
+
+  ─── CORE SYSTEMS ───────────────────────────────────────────────────────────
+  🛡️ Rate Limiting Inteligente | 🔧 Error Recovery | 💾 Memória Permanente
+  📁 Workspaces | 🔑 Cofre Criptografado | ✨ Auto-evolução
+
+  ─── INTEGRAÇÕES ────────────────────────────────────────────────────────────
+  🌐 Computer Use (Playwright) | 📧 Google Suite (Gmail+Calendar)
+  📓 Notion API | 🔌 20+ Ferramentas Base
+
+  ─── OTIMIZAÇÕES AVANÇADAS ──────────────────────────────────────────────────
+  💎 Prompt Caching (90% economia) | 🧠 Iteração Profunda (Quality Scoring)
+  🎯 Planejamento Avançado | 📊 Telemetria Completa | 🔄 Iterações Dinâmicas
+
+  ─── FERRAMENTAS AUXILIARES ─────────────────────────────────────────────────
+  🗂️ Organizador Projeto | 📈 Dashboard Métricas | 🔍 Detector Melhorias
+  🔙 Rollback Manager | 🧬 Context Analyzer | ⚙️ Parameter Tuner
+
+════════════════════════════════════════════════════════════════════════════════
+    
+
+🛡️  CONFIGURAÇÃO DE RATE LIMITING
+   Qual é o seu tier da API Anthropic?
+   1. Tier 1 (50 RPM)
+   2. Tier 2 (1000 RPM) ✅ CORRIGIDO!
+   3. Tier 3 (2000 RPM)
+   4. Tier 4 (4000 RPM)
+
+   Escolha (1-4, Enter=2): 2
+
+   Qual modo de rate limiting você quer?
+   1. Conservador (75% threshold)
+   2. Balanceado (85% threshold) - RECOMENDADO
+   3. Agressivo (95% threshold)
+
+   Escolha (1-3, Enter=2): 2
+
+────────────────────────────────────────────────────────────────────────────────
+📋 STATUS DOS SISTEMAS
+────────────────────────────────────────────────────────────────────────────────
+
+🔷 CORE SYSTEMS:
+   ✅ Memória Permanente: ATIVADO
+   ✅ Workspaces: ATIVADO
+   ✅ Recuperação de Erros: ATIVADO
+   ✅ Auto-evolução: ATIVADO
+
+🔷 INTEGRAÇÕES:
+   ✅ Computer Use (Playwright): DISPONÍVEL
+   ✅ Google Suite (Gmail+Calendar): DISPONÍVEL
+   ✅ Notion API: DISPONÍVEL
+
+🔷 OTIMIZAÇÕES AVANÇADAS:
+   ✅ Prompt Caching: PADRÃO (economia ~90%)
+   ✅ Iteração Profunda: DISPONÍVEL (ative com usar_iteracao_profunda=True)
+   ✅ Planejamento Avançado: ATIVADO
+   ✅ Iterações Dinâmicas: ATIVADO (extensão sob demanda)
+   ✅ Telemetria: ATIVADO
+   ✅ Auto-aplicação de Melhorias: ATIVADO (semiautomático, max 5)
+
+🔷 FERRAMENTAS AUXILIARES:
+   ✅ Organizador de Projeto: DISPONÍVEL
+   ✅ Dashboard de Métricas: DISPONÍVEL
+   ✅ Detector de Melhorias: ATIVADO
+   ✅ Rollback Manager: DISPONÍVEL
+   ✅ Context Analyzer: DISPONÍVEL
+   ✅ Parameter Tuner: DISPONÍVEL
+
+────────────────────────────────────────────────────────────────────────────────
+
+🔑 Sistema de credenciais disponível
+   Usar cofre de credenciais? (s/n, Enter=n): n
+
+────────────────────────────────────────────────────────────────────────────────
+🚀 Inicializando Luna V3...
+────────────────────────────────────────────────────────────────────────────────
+🧠 Memória carregada: 86 aprendizados
+📓 Notion disponível (configure token via cofre ou manualmente)
+💎 Modo Turbo: ATIVADO (prompt caching - economia de até 90% em tokens)
+🚀 Batch Processing: ATIVADO (50-100x speedup para lotes grandes)
+🛡️  Rate Limit Manager: TIER2 - Modo BALANCEADO
+   Limites: 450,000 ITPM | 90,000 OTPM | 1000 RPM
+   Threshold: 85%
+⚠️  Sistema de planejamento avançado: DESABILITADO
+✅ Handler de interrupção ativado (Ctrl+C será tratado graciosamente)
+
+────────────────────────────────────────────────────────────────────────────────
+💡 DICAS DE USO
+────────────────────────────────────────────────────────────────────────────────
+
+📝 INPUT:
+   • Para textos grandes: Cole normalmente (Ctrl+V) - a Luna vai confirmar!
+   • Para modo multiline: Digite 'multi' e termine com 'FIM'
+
+🔧 COMANDOS ÚTEIS:
+   • 'sair' ou 'exit' - Encerra a sessão
+   • Peça 'analisar telemetria' - Veja métricas e sugestões de otimização
+   • Peça 'ver métricas da sessão' - Estatísticas em tempo real
+   • Peça 'organizar projeto' - Reorganiza arquivos da raiz
+   • Peça 'criar workspace X' - Organiza projetos separadamente
+
+🎯 FEATURES AVANÇADOS:
+   ✅ Prompt Caching ATIVO - Economia automática de tokens (~90%)
+   ✅ Planejamento Automático - Tarefas complexas serão decompostas
+   ✅ Iterações Dinâmicas - Sistema permite extensão sob demanda
+
+──────────────────────────────────────────────────────────────────────
+
+💬 O que você quer? (ou 'sair'): Execute o seguinte comando Python que contém um erro proposital: python -c "print(variavel_inexistente)". Quando o erro ocorrer, você deve: 1. Identificar o problema, 2. Corrigir criando um script válido, 3. Executar a versão corrigida, 4. Confirmar que funcionou
+
+📋 Comando recebido (263 caracteres)
+──────────────────────────────────────────────────────────────────────
+Execute o seguinte comando Python que contém um erro proposital: python -c "print(variavel_inexistente)". Quando o erro ocorrer, você deve: 1. Identificar o problema, 2. Corrigir criando um script válido, 3. Executar a versão corrigida, 4. Confirmar que funcionou
+──────────────────────────────────────────────────────────────────────
+
+✓ Este comando está correto?
+   [Enter] = Sim, executar
+   [e]     = Não, editar
+   [c]     = Cancelar
+
+Escolha: 
+💡 Limite dinâmico calculado: 20 iterações
+
+======================================================================
+🎯 TAREFA: Execute o seguinte comando Python que contém um erro proposital: python -c "print(variavel_inexistente)". Quando o erro ocorrer, você deve: 1. Identificar o problema, 2. Corrigir criando um script válido, 3. Executar a versão corrigida, 4. Confirmar que funcionou
+======================================================================
+
+📊 STATUS DO RATE LIMIT:
+   ITPM: 🟢 ░░░░░░░░░░░░░░░░░░░░ 0.0% (0/450,000)
+   OTPM: 🟢 ░░░░░░░░░░░░░░░░░░░░ 0.0% (0/90,000)
+   RPM:  🟢 ░░░░░░░░░░░░░░░░░░░░ 0.0% (0/1000)
+
+🔄 Iteração 1/20
+💭 Vou começar buscando aprendizados relevantes sobre tratamento de erros em Python e depois executar a tarefa....
+🔧 buscar_aprendizados
+  🔍 Buscando: erro Python variável indefinida NameError
+🔧 buscar_aprendizados
+  🔍 Buscando: recuperação erros execução script Python
+
+🔄 Iteração 2/20
+💭 Bom! Não há aprendizados prévios sobre este tipo de erro. Agora vou executar a tarefa seguindo os passos solicitados.
+
+#...
+🔧 bash_avancado
+  ⚡ Bash: python -c "print(variavel_inexistente)"...
+  ✓ Concluído (código 1)
+
+🔄 Iteração 3/20
+💭 ✅ **Erro capturado com sucesso!**
+
+## Passo 2: Identificar o problema
+
+**Problema identificado:**
+- **Tipo de erro:** `N...
+🔧 criar_arquivo
+  📝 Criando: script_corrigido.py
+  ✓ Arquivo criado: script_corrigido.py
+
+🔄 Iteração 4/20
+💭 ## Passo 4: Executar a versão corrigida...
+🔧 bash_avancado
+  ⚡ Bash: python script_corrigido.py...
+  ✓ Concluído (código 2)
+
+🔄 Iteração 5/20
+💭 🔧 **Detectei um problema de caminho!** Vou executar do diretório correto:...
+🔧 bash_avancado
+  ⚡ Bash: cd "C:\Users\Pedro Victor\OneDrive\Área de Trabalho\Documentos\Projeto...
+  ✓ Concluído (código 0)
+
+📊 STATUS DO RATE LIMIT:
+   ITPM: 🟢 ░░░░░░░░░░░░░░░░░░░░ 1.6% (6,985/450,000)
+   OTPM: 🟢 ░░░░░░░░░░░░░░░░░░░░ 1.0% (866/90,000)
+   RPM:  🟢 ░░░░░░░░░░░░░░░░░░░░ 0.5% (5/1000)
+
+🔄 Iteração 6/20
+💭 ## ✅ **TAREFA CONCLUÍDA COM SUCESSO!**
+
+### Resumo da Execução:
+
+**1. Erro Original Identificado:**
+```
+NameError: name ...
+🔧 salvar_aprendizado
+  💾 Salvando: debug
+✅ Aprendizado salvo: debug
+  ✓ Aprendizado salvo
+
+🔄 Iteração 7/20
+
+======================================================================
+✅ CONCLUÍDO!
+======================================================================
+🎓 **Aprendizado salvo com sucesso!** Este conhecimento agora está na memória permanente e pode ser usado em situações futuras similares.
+======================================================================
+
+📊 ESTATÍSTICAS DA SESSÃO:
+   Requisições: 7
+   Tokens usados: 13,094
+   Média tokens/req: 1871
+
+💎 ESTATÍSTICAS DE CACHE:
+   Cache Hit Rate: 85.7% (6/7 requests)
+   Tokens economizados: 17,352 (148.5%)
+   Economia de custo: $0.0469
+   Tokens do cache: 17,352
+    💡 Melhoria anotada: Loop ineficiente detectado: 'texto +=' em loop (O(n²))...
+    💡 Melhoria anotada: Função muito grande detectada: main (243 linhas)...
+    💡 Melhoria anotada: Função muito grande detectada: _analisar_tarefa (105 linhas)...
+    💡 Melhoria anotada: Função muito grande detectada: _criar_estrategia (101 linhas...
+    💡 Melhoria anotada: Função muito grande detectada: _validar_plano (133 linhas)...
+    💡 Melhoria anotada: Função muito grande detectada: executar_plano (116 linhas)...
+    💡 Melhoria anotada: Função muito grande detectada: _executar_onda_paralela (149 ...
+    💡 Melhoria anotada: Função muito grande detectada: _carregar_ferramentas_navegad...
+    💡 Melhoria anotada: Função muito grande detectada: _carregar_ferramentas_workspa...
+    💡 Melhoria anotada: Função muito grande detectada: _carregar_ferramentas_telemet...
+    💡 Melhoria anotada: Função muito grande detectada: _carregar_ferramentas_meta (3...
+    💡 Melhoria anotada: Função muito grande detectada: executar (138 linhas)...
+    💡 Melhoria anotada: Função muito grande detectada: __init__ (140 linhas)...
+    💡 Melhoria anotada: Função muito grande detectada: _executar_chamada_api (103 li...
+    💡 Melhoria anotada: Função muito grande detectada: _processar_uso_ferramentas (1...
+    💡 Melhoria anotada: Função muito grande detectada: executar_tarefa (232 linhas)...
+    💡 Melhoria anotada: Bare except clause detectado na linha 3598...
+    💡 Melhoria anotada: Bare except clause detectado na linha 4845...
+    💡 Melhoria anotada: TODO detectado: TODO: Implementar correção específica...
+    💡 Melhoria anotada: TODO detectado: 2. Detectar TODOs antigos...
+    💡 Melhoria anotada: TODO detectado: TODO: Implementar validação...
+    💡 Melhoria anotada: TODO detectado: Extrair conteúdo do TODO...
+    💡 Melhoria anotada: TODO detectado: Esta tarefa foi convertida de comentário TOD...
+    💡 Melhoria anotada: Função pública 'tem_ciclo' sem docstring (linha 900)...
+    💡 Melhoria anotada: Classe 'LoopVisitor' sem docstring (linha 4623)...
+    💡 Melhoria anotada: Classe 'ImportVisitor' sem docstring (linha 4692)...
+    💡 Melhoria anotada: Função pública 'visit_For' sem docstring (linha 4628)...
+    💡 Melhoria anotada: Função pública 'visit_While' sem docstring (linha 4633)...
+    💡 Melhoria anotada: Função pública 'visit_AugAssign' sem docstring (linha 4638)...
+    💡 Melhoria anotada: Função pública 'visit_FunctionDef' sem docstring (linha 4697...
+    💡 Melhoria anotada: Função pública 'visit_For' sem docstring (linha 4702)...
+    💡 Melhoria anotada: Função pública 'visit_While' sem docstring (linha 4707)...
+    💡 Melhoria anotada: Função pública 'visit_Import' sem docstring (linha 4712)...
+    💡 Melhoria anotada: Função pública 'visit_ImportFrom' sem docstring (linha 4721)...
+
+======================================================================
+💡 MELHORIAS PRIORITÁRIAS DETECTADAS
+======================================================================
+   🔴 Alta prioridade: 2
+
+   📊 Outras melhorias: 34 total
+      🟡 Média: 16
+      🟢 Baixa: 16
+
+🔄 AUTO-APLICAÇÃO INICIADA (semiautomático: só prioridade ≥8)
+   Limite: 5 melhorias por vez
+  🔄 Aplicando melhorias...
+  ⚙️  Aplicando: linha_3598_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+    ✅ Validando modificação...
+    ❌ Validação falhou: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+  ⚙️  Aplicando: linha_4845_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+    ✅ Validando modificação...
+    ❌ Validação falhou: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+  ⚙️  Aplicando: linha_5105_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+  ⚙️  Aplicando: main
+  ⚙️  Aplicando: _analisar_tarefa
+  ✓ Processamento concluído
+
+Processando 5 melhoria(s):
+
+❌ linha_3598_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py: Falhou na aplicação
+❌ linha_4845_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py: Falhou na aplicação
+⚠️  linha_5105_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py: Requer aprovação manual (prioridade < 8)
+⚠️  main: Requer aprovação manual (prioridade < 8)
+⚠️  _analisar_tarefa: Requer aprovação manual (prioridade < 8)
+
+Resumo: 0 sucesso(s), 2 falha(s)
+======================================================================
+
+
+⏸️  Pressione ENTER...sair
+
+──────────────────────────────────────────────────────────────────────
+
+💬 O que você quer? (ou 'sair'): 
+👋 Até logo!
+
+════════════════════════════════════════════════════════════════════════════════
+📊 ESTATÍSTICAS FINAIS DA SESSÃO
+════════════════════════════════════════════════════════════════════════════════
+
+🛡️ RATE LIMITING:
+   • Total de requisições: 7
+   • Total de tokens: 13,094
+   • Média tokens/req: 1871
+
+💎 PROMPT CACHING:
+   • Cache Hit Rate: 85.7%
+   • Tokens economizados: 17,352
+   • Economia de custo: $0.0469
+
+💾 MEMÓRIA PERMANENTE:
+
+======================================================================
+🧠 MEMÓRIA DO AGENTE
+======================================================================
+📊 Tarefas executadas: 75
+🎯 Aprendizados: 87
+🛠️  Ferramentas criadas: 581
+📅 Dias de uso: 8
+
+🏆 Top 5 Aprendizados Mais Usados:
+  1. [1x] Screenshot do Google foi salvo em: C:\Users\Pedro Victor\One...
+  2. [1x] Push para GitHub do projeto Luna - Passos: 1) git add . 2) g...
+  3. [1x] Implementei sistema de decomposição inteligente de tarefas. ...
+  4. [1x] SISTEMA TELENORDESTE AGENDAMENTO - Análise Completa:
+
+URL Ba...
+  5. [1x] Projeto TeleNordeste organizado em pasta dedicada "Automação...
+======================================================================
+
+
+📊 TELEMETRIA:
+   ✅ Sessão salva - Use 'analisar telemetria' na próxima sessão
+   ✅ Arquivo: luna_telemetria_ferramentas.jsonl
+
+════════════════════════════════════════════════════════════════════════════════
+
+📋 LIMPANDO RECURSOS:
+   📊 Salvando estatísticas...
+   ✅ Estatísticas salvas
+
+✅ Limpeza concluída!
+================================================================================
+LUNA V3 - BATCH MODE V2
+================================================================================
+Tier: 2
+Rate Mode: 2
+Prompt: Execute o seguinte comando Python que cont�m um erro proposital: python -c "print(variavel_inexisten...
+================================================================================
+
