@@ -208,10 +208,168 @@ def atualizar_status_tarefa_completa(client: Client, tarefa_id: str, data: str, 
 from playwright.sync_api import sync_playwright, Page
 from notion_client import Client
 
+# Importar integração Google Calendar
+import sys
+import os
+# Adicionar diretório raiz do Luna ao path para importar integracao_google
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
+from integracao_google import IntegracaoGoogleCalendar
+
 # Configurações
 NOTION_TOKEN = "ntn_V83285389753nEE04QHEhZ7yusPR9ZIjZg5JY3HfeKvakc"
 DATABASE_ID = "23b1f06b6b5f80659147d34f6084e0e0"
 DRY_RUN = True  # Modo de teste - MODO TESTE (DRY RUN) - Nenhum agendamento será efetivado!
+USAR_GOOGLE_CALENDAR = True  # Ativar integração com Google Calendar
+
+# ============================================================================
+# FUNÇÕES DE INTEGRAÇÃO GOOGLE CALENDAR
+# ============================================================================
+
+def conectar_google_calendar() -> IntegracaoGoogleCalendar:
+    """Conecta ao Google Calendar usando credenciais do projeto."""
+    try:
+        log_info("📅 Conectando ao Google Calendar...")
+
+        # Caminho para credentials.json (na raiz do projeto Luna)
+        credentials_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../credentials.json'))
+        token_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../token_calendar.json'))
+
+        calendar = IntegracaoGoogleCalendar(
+            credentials_path=credentials_path,
+            token_path=token_path
+        )
+
+        log_sucesso("✅ Conectado ao Google Calendar com sucesso!")
+        return calendar
+
+    except Exception as e:
+        log_erro(f"❌ Erro ao conectar ao Google Calendar: {e}")
+        return None
+
+def verificar_disponibilidade_calendar(calendar: IntegracaoGoogleCalendar, data: str, horario: str) -> bool:
+    """
+    Verifica se um horário específico está livre no Google Calendar.
+
+    Args:
+        calendar: Instância de IntegracaoGoogleCalendar
+        data: Data no formato DD/MM/YYYY
+        horario: Horário no formato HH:MM
+
+    Returns:
+        True se horário está livre, False se ocupado
+    """
+    try:
+        if not USAR_GOOGLE_CALENDAR or not calendar:
+            log_aviso("⚠️ Google Calendar desativado - pulando verificação")
+            return True
+
+        log_info(f"🔍 Verificando disponibilidade no Calendar: {data} às {horario}")
+
+        # Converter data DD/MM/YYYY para formato ISO
+        from datetime import datetime, timedelta
+        dia, mes, ano = data.split('/')
+        data_obj = datetime(int(ano), int(mes), int(dia))
+
+        # Converter horário HH:MM para datetime
+        hora, minuto = horario.split(':')
+        inicio = data_obj.replace(hour=int(hora), minute=int(minuto))
+        fim = inicio + timedelta(hours=1)  # Consultas geralmente duram 1h
+
+        # Formatar para ISO 8601
+        time_min = inicio.isoformat() + 'Z'
+        time_max = fim.isoformat() + 'Z'
+
+        # Buscar eventos nesse período
+        eventos = calendar.listar_eventos(
+            max_results=10,
+            time_min=time_min,
+            time_max=time_max,
+            apenas_futuros=False
+        )
+
+        if eventos and len(eventos) > 0:
+            log_aviso(f"⚠️ Horário {data} às {horario} OCUPADO no Calendar ({len(eventos)} evento(s))")
+            for evento in eventos:
+                log_info(f"   - {evento['titulo']}")
+            return False
+        else:
+            log_sucesso(f"✅ Horário {data} às {horario} LIVRE no Calendar")
+            return True
+
+    except Exception as e:
+        log_erro(f"❌ Erro ao verificar disponibilidade no Calendar: {e}")
+        # Em caso de erro, retornar True para não bloquear agendamento
+        return True
+
+def confirmar_agendamento_calendar(
+    calendar: IntegracaoGoogleCalendar,
+    tarefa: dict,
+    data: str,
+    horario: str
+) -> str:
+    """
+    Cria evento no Google Calendar após confirmação do agendamento.
+
+    Args:
+        calendar: Instância de IntegracaoGoogleCalendar
+        tarefa: Dicionário com dados da tarefa
+        data: Data no formato DD/MM/YYYY
+        horario: Horário no formato HH:MM
+
+    Returns:
+        ID do evento criado ou None se falhar
+    """
+    try:
+        if not USAR_GOOGLE_CALENDAR or not calendar:
+            log_aviso("⚠️ Google Calendar desativado - pulando confirmação")
+            return None
+
+        log_info(f"📅 Criando evento no Google Calendar...")
+
+        # Converter data DD/MM/YYYY para formato ISO
+        from datetime import datetime, timedelta
+        dia, mes, ano = data.split('/')
+        data_obj = datetime(int(ano), int(mes), int(dia))
+
+        # Converter horário HH:MM para datetime
+        hora, minuto = horario.split(':')
+        inicio = data_obj.replace(hour=int(hora), minute=int(minuto))
+        fim = inicio + timedelta(hours=1)  # Consultas duram 1h
+
+        # Formatar título e descrição
+        titulo = f"[TeleNE] {tarefa['especialidade']} - {tarefa['nome']}"
+        descricao = f"""Agendamento TeleNordeste
+
+Paciente: {tarefa['nome']}
+CPF: {tarefa.get('cpf', 'Não informado')}
+Especialidade: {tarefa['especialidade']}
+Tipo: {tarefa['tipo']}
+Motivo: {tarefa.get('motivo', 'Consulta médica')}
+ACS: {tarefa.get('acs', 'Não informado')}
+
+Agendado automaticamente pelo sistema Luna
+Data/Hora: {data} às {horario}
+"""
+
+        # Criar evento
+        evento_id = calendar.criar_evento(
+            titulo=titulo,
+            inicio=inicio.isoformat(),
+            fim=fim.isoformat(),
+            descricao=descricao,
+            lembrete_minutos=[30, 10]  # Lembretes 30 min e 10 min antes
+        )
+
+        log_sucesso(f"✅ Evento criado no Google Calendar: {evento_id}")
+        return evento_id
+
+    except Exception as e:
+        log_erro(f"❌ Erro ao criar evento no Calendar: {e}")
+        return None
+
+# ============================================================================
+# FUNÇÕES DE AUTOMAÇÃO WEB (PLAYWRIGHT)
+# ============================================================================
 
 def navegar_para_agenda(page: Page, tipo: str) -> bool:
     """Navega para a agenda especificada (Infantil ou Adulto)."""
@@ -368,7 +526,7 @@ def selecionar_especialidade(page: Page, especialidade: str) -> bool:
         log_erro(f"❌ Erro ao selecionar especialidade: {e}")
         return False
 
-def buscar_horarios_disponiveis(page: Page, horario_preferido: str = None) -> tuple:
+def buscar_horarios_disponiveis(page: Page, calendar: IntegracaoGoogleCalendar = None, horario_preferido: str = None) -> tuple:
     """Busca horários disponíveis no calendário."""
     try:
         log_info("🔍 Procurando horários disponíveis...")
@@ -520,16 +678,26 @@ def buscar_horarios_disponiveis(page: Page, horario_preferido: str = None) -> tu
                         log_info(f"🕐 Horário encontrado: {horario_texto}")
                         
                         if horario_texto in horarios_validos:
-                            log_sucesso(f"✅ Horário válido encontrado: {horario_texto}")
-                            
+                            log_sucesso(f"✅ Horário válido encontrado no site: {horario_texto}")
+
+                            # VERIFICAR DISPONIBILIDADE NO GOOGLE CALENDAR
+                            data_formatada = f"{numero_dia:02d}/{datetime.now().month:02d}/{datetime.now().year}"
+
+                            if calendar and USAR_GOOGLE_CALENDAR:
+                                if not verificar_disponibilidade_calendar(calendar, data_formatada, horario_texto):
+                                    log_aviso(f"⏭️ Pulando horário {horario_texto} - ocupado no Google Calendar")
+                                    continue  # Pular para próximo horário
+
+                            # Horário livre no Calendar (ou verificação desabilitada), pode agendar
+                            log_sucesso(f"✅ Horário {horario_texto} livre no Calendar! Prosseguindo...")
+
                             # Clicar no horário
                             elemento_horario.click()
                             page.wait_for_timeout(5000)
-                            
+
                             # Verificar se formulário carregou
                             formulario_carregado = page.locator("input[placeholder*='Primeiro e sobrenome']").is_visible()
                             if formulario_carregado:
-                                data_formatada = f"{numero_dia:02d}/{datetime.now().month:02d}/{datetime.now().year}"
                                 log_sucesso(f"✅ Formulário carregado! Data: {data_formatada}, Horário: {horario_texto}")
                                 return data_formatada, horario_texto
                             else:
@@ -684,16 +852,38 @@ def clicar_reservar(page: Page) -> bool:
         log_erro(f"❌ Erro ao clicar em Reservar: {e}")
         return False
 
-def verificar_confirmacao(page: Page) -> dict:
-    """Verifica se o agendamento foi confirmado."""
+def verificar_confirmacao(
+    page: Page,
+    calendar: IntegracaoGoogleCalendar = None,
+    tarefa: dict = None,
+    data: str = None,
+    horario: str = None
+) -> dict:
+    """
+    Verifica se o agendamento foi confirmado e cria evento no Calendar.
+
+    Args:
+        page: Página Playwright
+        calendar: Instância do Google Calendar (opcional)
+        tarefa: Dados da tarefa (opcional, para criar evento)
+        data: Data do agendamento (opcional)
+        horario: Horário do agendamento (opcional)
+    """
     try:
         if DRY_RUN:
             log_aviso("🧪 DRY RUN: Simulando confirmação de agendamento")
+
+            # Mesmo em DRY RUN, criar evento no Calendar se configurado
+            evento_id = None
+            if calendar and tarefa and data and horario and USAR_GOOGLE_CALENDAR:
+                evento_id = confirmar_agendamento_calendar(calendar, tarefa, data, horario)
+
             return {
                 "confirmado": True,
-                "data": datetime.now().strftime("%d/%m/%Y"),
-                "horario": "10:00",
-                "resumo": "Agendamento simulado em modo DRY RUN"
+                "data": data or datetime.now().strftime("%d/%m/%Y"),
+                "horario": horario or "10:00",
+                "resumo": "Agendamento simulado em modo DRY RUN",
+                "evento_calendar_id": evento_id
             }
         
         # Aguardar possível confirmação
@@ -708,13 +898,20 @@ def verificar_confirmacao(page: Page) -> dict:
         for texto in confirmacao_textos:
             if page.locator(f":has-text('{texto}')").is_visible():
                 log_sucesso(f"✅ Confirmação detectada: {texto}")
+
+                # CRIAR EVENTO NO GOOGLE CALENDAR após confirmação
+                evento_id = None
+                if calendar and tarefa and data and horario and USAR_GOOGLE_CALENDAR:
+                    evento_id = confirmar_agendamento_calendar(calendar, tarefa, data, horario)
+
                 return {
                     "confirmado": True,
-                    "data": datetime.now().strftime("%d/%m/%Y"),
-                    "horario": "10:00",
-                    "resumo": f"Agendamento confirmado - {texto}"
+                    "data": data or datetime.now().strftime("%d/%m/%Y"),
+                    "horario": horario or "10:00",
+                    "resumo": f"Agendamento confirmado - {texto}",
+                    "evento_calendar_id": evento_id
                 }
-        
+
         log_aviso("⚠️ Confirmação não detectada claramente")
         return {
             "confirmado": False,
@@ -748,7 +945,16 @@ def executar_agendamento_final() -> bool:
         if not client:
             log_erro("❌ Falha ao conectar com o Notion!")
             return False
-        
+
+        # Conectar ao Google Calendar
+        calendar = None
+        if USAR_GOOGLE_CALENDAR:
+            calendar = conectar_google_calendar()
+            if not calendar:
+                log_aviso("⚠️ Google Calendar não disponível - continuando sem integração")
+        else:
+            log_info("ℹ️  Google Calendar desativado nas configurações")
+
         # Buscar tarefas reais do Notion
         tarefas = buscar_tarefas_nao_iniciadas(client)
         log_sucesso(f"✅ Encontradas {len(tarefas)} tarefa(s) reais do Notion")
@@ -820,8 +1026,8 @@ def executar_agendamento_final() -> bool:
                             erros += 1
                             continue
                         
-                        # Etapa 3: Encontrar horário
-                        data, horario = buscar_horarios_disponiveis(page, None)
+                        # Etapa 3: Encontrar horário (com verificação Google Calendar)
+                        data, horario = buscar_horarios_disponiveis(page, calendar, None)
                         if not data or not horario:
                             log_erro(f"❌ {tarefa['nome']}: Nenhum horário disponível")
                             erros += 1
@@ -841,11 +1047,16 @@ def executar_agendamento_final() -> bool:
                             erros += 1
                             continue
                         
-                        # Etapa 6: Verificar confirmação
-                        confirmacao = verificar_confirmacao(page)
-                        
+                        # Etapa 6: Verificar confirmação (e criar evento no Calendar se confirmado)
+                        confirmacao = verificar_confirmacao(page, calendar, tarefa, data, horario)
+
                         if confirmacao["confirmado"]:
                             log_sucesso(f"🎉 {tarefa['nome']}: AGENDAMENTO REALIZADO COM SUCESSO!")
+
+                            # Log do evento do Calendar
+                            if confirmacao.get("evento_calendar_id"):
+                                log_sucesso(f"📅 Evento criado no Google Calendar: {confirmacao['evento_calendar_id']}")
+
                             # Atualizar status no Notion
                             if atualizar_status_tarefa_completa(client, tarefa["id"], data, horario):
                                 log_sucesso(f"✅ {tarefa['nome']}: Status atualizado no Notion para 'Concluída'")

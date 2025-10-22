@@ -151,14 +151,22 @@ class SistemaAutoEvolucao:
     Sistema completo de auto-modificação segura
     """
     
-    def __init__(self, arquivo_alvo: str = "agente_completo_final.py", 
+    def __init__(self, arquivo_alvo: str = "luna_v3_FINAL_OTIMIZADA.py",
                  dir_backups: str = "backups_auto_evolucao",
                  max_backups: int = 5):
         
         self.arquivo_alvo = arquivo_alvo
         self.dir_backups = dir_backups
         self.max_backups = max_backups
-        
+
+        # ✅ VALIDAÇÃO: Verificar que arquivo alvo existe
+        if not os.path.exists(self.arquivo_alvo):
+            raise FileNotFoundError(
+                f"❌ Arquivo alvo não encontrado: {self.arquivo_alvo}\n"
+                f"   O sistema de auto-evolução precisa que o arquivo exista.\n"
+                f"   Verifique o caminho e tente novamente."
+            )
+
         # Criar diretório de backups
         Path(self.dir_backups).mkdir(exist_ok=True)
         
@@ -198,10 +206,10 @@ class SistemaAutoEvolucao:
                 'arquivo_original': self.arquivo_alvo,
                 'hash': self._calcular_hash(self.arquivo_alvo)
             }
-            
-            with open(meta_path, 'w') as f:
+
+            with open(meta_path, 'w', encoding='utf-8') as f:
                 json.dump(meta, f, indent=2)
-            
+
             self._log(f"Backup criado: {backup_path}")
             return backup_path
             
@@ -246,7 +254,7 @@ class SistemaAutoEvolucao:
 
                     # Verificar se tem mais de 24h
                     if os.path.exists(meta_file):
-                        with open(meta_file) as f:
+                        with open(meta_file, 'r', encoding='utf-8') as f:
                             meta = json.load(f)
 
                         timestamp = datetime.strptime(meta['timestamp'], "%Y%m%d_%H%M%S")
@@ -471,10 +479,27 @@ class SistemaAutoEvolucao:
         # 2. Criar backup
         try:
             backup_path = self._criar_backup(motivo)
+
+            # ✅ FASE 3.1: Validar que backup foi criado com sucesso
+            if not os.path.exists(backup_path):
+                raise RuntimeError(f"Backup não foi criado: {backup_path}")
+
+            # Validar que backup tem tamanho razoável (não está vazio)
+            if os.path.getsize(backup_path) == 0:
+                raise RuntimeError(f"Backup está vazio: {backup_path}")
+
+            # Validar que backup tem mesmo hash que original (integridade)
+            hash_original = self._calcular_hash(self.arquivo_alvo)
+            hash_backup = self._calcular_hash(backup_path)
+            if hash_original != hash_backup:
+                raise RuntimeError(f"Hash do backup difere do original - backup corrompido")
+
+            self._log(f"✅ Backup validado: {backup_path}")
+
         except Exception as e:
-            self._log(f"ERRO ao criar backup: {e}", nivel='ERROR')
+            self._log(f"ERRO ao criar/validar backup: {e}", nivel='ERROR')
             return False
-        
+
         # 3. Aplicar modificação
         try:
             with open(self.arquivo_alvo, 'r', encoding='utf-8') as f:

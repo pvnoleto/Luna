@@ -176,7 +176,7 @@ class IntegracaoGmail:
         Lista emails da caixa de entrada.
 
         Args:
-            max_results: Número máximo de emails a retornar
+            max_results: Número máximo de emails a retornar (mínimo 1)
             query: Query de busca do Gmail (formato Gmail search)
             apenas_nao_lidos: Se True, retorna apenas emails não lidos
             remetente: Filtrar por email do remetente
@@ -191,6 +191,9 @@ class IntegracaoGmail:
             "from:exemplo@gmail.com subject:reunião after:2025/01/01"
         """
         try:
+            # Validar max_results (API do Gmail requer mínimo 1)
+            if max_results < 1:
+                max_results = 1
             # Construir query
             query_parts = []
             if query:
@@ -604,7 +607,7 @@ class IntegracaoGoogleCalendar:
         Lista eventos do calendário.
 
         Args:
-            max_results: Número máximo de eventos a retornar
+            max_results: Número máximo de eventos a retornar (mínimo 1)
             calendar_id: ID do calendário (padrão: 'primary' para calendário principal)
             time_min: Data/hora mínima no formato ISO 8601 (ex: 2025-10-20T00:00:00Z)
             time_max: Data/hora máxima no formato ISO 8601
@@ -615,6 +618,9 @@ class IntegracaoGoogleCalendar:
             Lista de eventos
         """
         try:
+            # Validar max_results (API do Calendar requer mínimo 1)
+            if max_results < 1:
+                max_results = 1
             params = {
                 'calendarId': calendar_id,
                 'maxResults': max_results,

@@ -1,0 +1,25 @@
+Analise e refatore o módulo massive_context_analyzer.py seguindo EXATAMENTE estes passos (NÃO adicione passos extras):
+
+PASSO 1: Ler o arquivo massive_context_analyzer.py completo
+PASSO 2: Identificar as 3 principais classes/funções (MÁXIMO 3)
+PASSO 3: Para CADA uma das 3 funções identificadas:
+  - Verificar complexidade ciclomática
+  - Contar linhas de código
+  - Identificar dependências diretas
+PASSO 4: Criar arquivo ANALISE_MASSIVE_CONTEXT.md com:
+  - Resumo das 3 funções (máximo 5 linhas cada)
+  - Métricas de complexidade
+  - Recomendações de refatoração (máximo 3 recomendações)
+PASSO 5: Implementar UMA refatoração simples (a mais impactante)
+PASSO 6: Validar que o código refatorado não tem erros de sintaxe
+PASSO 7: Criar arquivo TEST_REFATORACAO.py que testa a refatoração
+PASSO 8: Executar o teste
+PASSO 9: Documentar resultado em ANALISE_MASSIVE_CONTEXT.md
+PASSO 10: FIM - Tarefa concluída
+
+IMPORTANTE:
+- NÃO seja criativo
+- NÃO adicione passos extras
+- NÃO crie visualizações ou gráficos
+- PARE após o passo 10
+- MÁXIMO 15 iterações total

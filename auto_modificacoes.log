@@ -1,3 +1,1155 @@
 [2025-10-18 13:08:51] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251018_130851.py
 [2025-10-18 13:09:26] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251018_130926.py
 [2025-10-18 13:09:44] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251018_130944.py
+[2025-10-18 13:38:15] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251018_133815.py
+[2025-10-18 13:38:43] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251018_133843.py
+[2025-10-18 13:38:49] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251018_133849.py
+[2025-10-18 13:39:20] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251018_133920.py
+[2025-10-18 13:39:20] INFO: 
+======================================================================
+[2025-10-18 13:39:20] INFO: MODIFICAÇÃO: otimizacao
+[2025-10-18 13:39:20] INFO: Alvo: funcao_teste
+[2025-10-18 13:39:20] INFO: Motivo: Melhorar retorno
+[2025-10-18 13:39:20] INFO: ======================================================================
+[2025-10-18 13:39:20] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251018_133920.py
+[2025-10-18 13:39:20] INFO: Nó 'funcao_teste' substituído via AST
+[2025-10-18 13:39:20] INFO: ast.unparse não disponível (Python < 3.9) - usando fallback
+[2025-10-18 13:39:20] INFO: Código modificado
+[2025-10-18 13:39:20] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-18 13:39:20] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251018_133920.py
+[2025-10-18 13:39:20] INFO: 
+======================================================================
+[2025-10-18 13:39:20] INFO: MODIFICAÇÃO: otimizacao
+[2025-10-18 13:39:20] INFO: Alvo: funcao_teste
+[2025-10-18 13:39:20] INFO: Motivo: Teste
+[2025-10-18 13:39:20] INFO: ======================================================================
+[2025-10-18 13:39:20] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251018_133920.py
+[2025-10-18 13:39:20] INFO: Nó 'funcao_teste' substituído via AST
+[2025-10-18 13:39:20] INFO: ast.unparse não disponível (Python < 3.9) - usando fallback
+[2025-10-18 13:39:20] INFO: Código modificado
+[2025-10-18 13:39:20] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-18 13:39:20] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251018_133920.py
+[2025-10-18 13:39:20] INFO: 
+======================================================================
+[2025-10-18 13:39:20] INFO: MODIFICAÇÃO: bug_fix
+[2025-10-18 13:39:20] INFO: Alvo: funcao_teste
+[2025-10-18 13:39:20] INFO: Motivo: Teste de rollback
+[2025-10-18 13:39:20] INFO: ======================================================================
+[2025-10-18 13:39:20] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251018_133920.py
+[2025-10-18 13:39:20] ERROR: Erro de sintaxe ao processar AST: unexpected EOF while parsing (<unknown>, line 1)
+[2025-10-18 13:39:20] INFO: Fallback: usando substituição completa do código
+[2025-10-18 13:39:20] INFO: Código modificado
+[2025-10-18 13:39:20] ERROR: VALIDAÇÃO FALHOU: Sintaxe inválida: Linha 1: unexpected EOF while parsing
+[2025-10-18 13:39:20] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251018_133920.py
+[2025-10-18 13:39:26] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251018_133926.py
+[2025-10-18 13:39:26] INFO: 
+======================================================================
+[2025-10-18 13:39:26] INFO: MODIFICAÇÃO: otimizacao
+[2025-10-18 13:39:26] INFO: Alvo: funcao_teste
+[2025-10-18 13:39:26] INFO: Motivo: Melhorar retorno
+[2025-10-18 13:39:26] INFO: ======================================================================
+[2025-10-18 13:39:26] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251018_133926.py
+[2025-10-18 13:39:26] INFO: Nó 'funcao_teste' substituído via AST
+[2025-10-18 13:39:26] INFO: ast.unparse não disponível (Python < 3.9) - usando fallback
+[2025-10-18 13:39:26] INFO: Código modificado
+[2025-10-18 13:39:26] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-18 13:39:26] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251018_133926.py
+[2025-10-18 13:39:26] INFO: 
+======================================================================
+[2025-10-18 13:39:26] INFO: MODIFICAÇÃO: otimizacao
+[2025-10-18 13:39:26] INFO: Alvo: funcao_teste
+[2025-10-18 13:39:26] INFO: Motivo: Teste
+[2025-10-18 13:39:26] INFO: ======================================================================
+[2025-10-18 13:39:26] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251018_133926.py
+[2025-10-18 13:39:26] INFO: Nó 'funcao_teste' substituído via AST
+[2025-10-18 13:39:26] INFO: ast.unparse não disponível (Python < 3.9) - usando fallback
+[2025-10-18 13:39:26] INFO: Código modificado
+[2025-10-18 13:39:27] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-18 13:39:27] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251018_133926.py
+[2025-10-18 13:39:27] INFO: 
+======================================================================
+[2025-10-18 13:39:27] INFO: MODIFICAÇÃO: bug_fix
+[2025-10-18 13:39:27] INFO: Alvo: funcao_teste
+[2025-10-18 13:39:27] INFO: Motivo: Teste de rollback
+[2025-10-18 13:39:27] INFO: ======================================================================
+[2025-10-18 13:39:27] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251018_133927.py
+[2025-10-18 13:39:27] ERROR: Erro de sintaxe ao processar AST: unexpected EOF while parsing (<unknown>, line 1)
+[2025-10-18 13:39:27] INFO: Fallback: usando substituição completa do código
+[2025-10-18 13:39:27] INFO: Código modificado
+[2025-10-18 13:39:27] ERROR: VALIDAÇÃO FALHOU: Sintaxe inválida: Linha 1: unexpected EOF while parsing
+[2025-10-18 13:39:27] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251018_133927.py
+[2025-10-18 13:39:55] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251018_133955.py
+[2025-10-18 13:39:55] INFO: 
+======================================================================
+[2025-10-18 13:39:55] INFO: MODIFICAÇÃO: otimizacao
+[2025-10-18 13:39:55] INFO: Alvo: funcao_teste
+[2025-10-18 13:39:55] INFO: Motivo: Melhorar retorno
+[2025-10-18 13:39:55] INFO: ======================================================================
+[2025-10-18 13:39:55] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251018_133955.py
+[2025-10-18 13:39:55] INFO: Nó 'funcao_teste' substituído via AST
+[2025-10-18 13:39:55] INFO: ast.unparse não disponível (Python < 3.9) - usando fallback
+[2025-10-18 13:39:55] INFO: Código modificado
+[2025-10-18 13:39:55] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-18 13:39:55] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251018_133955.py
+[2025-10-18 13:39:55] INFO: 
+======================================================================
+[2025-10-18 13:39:55] INFO: MODIFICAÇÃO: otimizacao
+[2025-10-18 13:39:55] INFO: Alvo: funcao_teste
+[2025-10-18 13:39:55] INFO: Motivo: Teste
+[2025-10-18 13:39:55] INFO: ======================================================================
+[2025-10-18 13:39:55] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251018_133955.py
+[2025-10-18 13:39:55] INFO: Nó 'funcao_teste' substituído via AST
+[2025-10-18 13:39:55] INFO: ast.unparse não disponível (Python < 3.9) - usando fallback
+[2025-10-18 13:39:55] INFO: Código modificado
+[2025-10-18 13:39:55] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-18 13:39:55] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251018_133955.py
+[2025-10-18 13:39:55] INFO: 
+======================================================================
+[2025-10-18 13:39:55] INFO: MODIFICAÇÃO: bug_fix
+[2025-10-18 13:39:55] INFO: Alvo: funcao_teste
+[2025-10-18 13:39:55] INFO: Motivo: Teste de rollback
+[2025-10-18 13:39:55] INFO: ======================================================================
+[2025-10-18 13:39:55] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251018_133955.py
+[2025-10-18 13:39:55] ERROR: Erro de sintaxe ao processar AST: unexpected EOF while parsing (<unknown>, line 1)
+[2025-10-18 13:39:55] INFO: Fallback: usando substituição completa do código
+[2025-10-18 13:39:55] INFO: Código modificado
+[2025-10-18 13:39:55] ERROR: VALIDAÇÃO FALHOU: Sintaxe inválida: Linha 1: unexpected EOF while parsing
+[2025-10-18 13:39:55] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251018_133955.py
+[2025-10-18 13:40:00] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251018_134000.py
+[2025-10-18 13:40:00] INFO: 
+======================================================================
+[2025-10-18 13:40:00] INFO: MODIFICAÇÃO: otimizacao
+[2025-10-18 13:40:00] INFO: Alvo: funcao_teste
+[2025-10-18 13:40:00] INFO: Motivo: Melhorar retorno
+[2025-10-18 13:40:00] INFO: ======================================================================
+[2025-10-18 13:40:00] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251018_134000.py
+[2025-10-18 13:40:00] INFO: Nó 'funcao_teste' substituído via AST
+[2025-10-18 13:40:00] INFO: ast.unparse não disponível (Python < 3.9) - usando fallback
+[2025-10-18 13:40:00] INFO: Código modificado
+[2025-10-18 13:40:00] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-18 13:40:00] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251018_134000.py
+[2025-10-18 13:40:00] INFO: 
+======================================================================
+[2025-10-18 13:40:00] INFO: MODIFICAÇÃO: otimizacao
+[2025-10-18 13:40:00] INFO: Alvo: funcao_teste
+[2025-10-18 13:40:00] INFO: Motivo: Teste
+[2025-10-18 13:40:00] INFO: ======================================================================
+[2025-10-18 13:40:00] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251018_134000.py
+[2025-10-18 13:40:00] INFO: Nó 'funcao_teste' substituído via AST
+[2025-10-18 13:40:00] INFO: ast.unparse não disponível (Python < 3.9) - usando fallback
+[2025-10-18 13:40:00] INFO: Código modificado
+[2025-10-18 13:40:00] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-18 13:40:00] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251018_134000.py
+[2025-10-18 13:40:00] INFO: 
+======================================================================
+[2025-10-18 13:40:00] INFO: MODIFICAÇÃO: bug_fix
+[2025-10-18 13:40:00] INFO: Alvo: funcao_teste
+[2025-10-18 13:40:00] INFO: Motivo: Teste de rollback
+[2025-10-18 13:40:00] INFO: ======================================================================
+[2025-10-18 13:40:00] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251018_134000.py
+[2025-10-18 13:40:00] ERROR: Erro de sintaxe ao processar AST: unexpected EOF while parsing (<unknown>, line 1)
+[2025-10-18 13:40:01] INFO: Fallback: usando substituição completa do código
+[2025-10-18 13:40:01] INFO: Código modificado
+[2025-10-18 13:40:01] ERROR: VALIDAÇÃO FALHOU: Sintaxe inválida: Linha 1: unexpected EOF while parsing
+[2025-10-18 13:40:01] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251018_134000.py
+[2025-10-18 13:40:06] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251018_134006.py
+[2025-10-18 13:40:06] INFO: 
+======================================================================
+[2025-10-18 13:40:06] INFO: MODIFICAÇÃO: otimizacao
+[2025-10-18 13:40:06] INFO: Alvo: funcao_teste
+[2025-10-18 13:40:06] INFO: Motivo: Melhorar retorno
+[2025-10-18 13:40:06] INFO: ======================================================================
+[2025-10-18 13:40:06] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251018_134006.py
+[2025-10-18 13:40:06] INFO: Nó 'funcao_teste' substituído via AST
+[2025-10-18 13:40:06] INFO: ast.unparse não disponível (Python < 3.9) - usando fallback
+[2025-10-18 13:40:06] INFO: Código modificado
+[2025-10-18 13:40:06] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-18 13:40:06] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251018_134006.py
+[2025-10-18 13:40:06] INFO: 
+======================================================================
+[2025-10-18 13:40:06] INFO: MODIFICAÇÃO: otimizacao
+[2025-10-18 13:40:06] INFO: Alvo: funcao_teste
+[2025-10-18 13:40:06] INFO: Motivo: Teste
+[2025-10-18 13:40:06] INFO: ======================================================================
+[2025-10-18 13:40:06] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251018_134006.py
+[2025-10-18 13:40:06] INFO: Nó 'funcao_teste' substituído via AST
+[2025-10-18 13:40:06] INFO: ast.unparse não disponível (Python < 3.9) - usando fallback
+[2025-10-18 13:40:06] INFO: Código modificado
+[2025-10-18 13:40:06] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-18 13:40:06] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251018_134006.py
+[2025-10-18 13:40:06] INFO: 
+======================================================================
+[2025-10-18 13:40:06] INFO: MODIFICAÇÃO: bug_fix
+[2025-10-18 13:40:06] INFO: Alvo: funcao_teste
+[2025-10-18 13:40:06] INFO: Motivo: Teste de rollback
+[2025-10-18 13:40:06] INFO: ======================================================================
+[2025-10-18 13:40:06] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251018_134006.py
+[2025-10-18 13:40:06] ERROR: Erro de sintaxe ao processar AST: unexpected EOF while parsing (<unknown>, line 1)
+[2025-10-18 13:40:06] INFO: Fallback: usando substituição completa do código
+[2025-10-18 13:40:06] INFO: Código modificado
+[2025-10-18 13:40:06] ERROR: VALIDAÇÃO FALHOU: Sintaxe inválida: Linha 1: unexpected EOF while parsing
+[2025-10-18 13:40:06] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251018_134006.py
+[2025-10-18 13:40:36] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251018_134036.py
+[2025-10-18 13:40:36] INFO: 
+======================================================================
+[2025-10-18 13:40:36] INFO: MODIFICAÇÃO: otimizacao
+[2025-10-18 13:40:36] INFO: Alvo: funcao_teste
+[2025-10-18 13:40:36] INFO: Motivo: Melhorar retorno
+[2025-10-18 13:40:36] INFO: ======================================================================
+[2025-10-18 13:40:36] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251018_134036.py
+[2025-10-18 13:40:36] INFO: Nó 'funcao_teste' substituído via AST
+[2025-10-18 13:40:36] INFO: ast.unparse não disponível (Python < 3.9) - usando fallback
+[2025-10-18 13:40:36] INFO: Código modificado
+[2025-10-18 13:40:36] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-18 13:40:36] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251018_134036.py
+[2025-10-18 13:40:36] INFO: 
+======================================================================
+[2025-10-18 13:40:36] INFO: MODIFICAÇÃO: otimizacao
+[2025-10-18 13:40:36] INFO: Alvo: funcao_teste
+[2025-10-18 13:40:36] INFO: Motivo: Teste backup
+[2025-10-18 13:40:36] INFO: ======================================================================
+[2025-10-18 13:40:36] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251018_134036.py
+[2025-10-18 13:40:36] INFO: Nó 'funcao_teste' substituído via AST
+[2025-10-18 13:40:36] INFO: ast.unparse não disponível (Python < 3.9) - usando fallback
+[2025-10-18 13:40:36] INFO: Código modificado
+[2025-10-18 13:40:36] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-18 13:40:36] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251018_134036.py
+[2025-10-18 13:40:36] INFO: 
+======================================================================
+[2025-10-18 13:40:36] INFO: MODIFICAÇÃO: bug_fix
+[2025-10-18 13:40:36] INFO: Alvo: funcao_teste
+[2025-10-18 13:40:36] INFO: Motivo: Teste de rollback
+[2025-10-18 13:40:36] INFO: ======================================================================
+[2025-10-18 13:40:36] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251018_134036.py
+[2025-10-18 13:40:36] ERROR: Erro de sintaxe ao processar AST: unexpected EOF while parsing (<unknown>, line 1)
+[2025-10-18 13:40:36] INFO: Fallback: usando substituição completa do código
+[2025-10-18 13:40:36] INFO: Código modificado
+[2025-10-18 13:40:36] ERROR: VALIDAÇÃO FALHOU: Sintaxe inválida: Linha 1: unexpected EOF while parsing
+[2025-10-18 13:40:36] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251018_134036.py
+[2025-10-20 09:12:48] INFO: 
+======================================================================
+[2025-10-20 09:12:48] INFO: MODIFICAÇÃO: bugfix
+[2025-10-20 09:12:48] INFO: Alvo: luna_v3_FINAL_OTIMIZADA.py
+[2025-10-20 09:12:48] INFO: Motivo: ERRO CRÍTICO: ImportError __import__ not found em múltiplas funções (bash_avancado, criar_arquivo, criar_ferramenta). Sistema não consegue executar comandos básicos. Causa provável: problema na inicialização do ambiente de execução das ferramentas ou restrição de segurança muito agressiva bloqueando __import__.
+[2025-10-20 09:12:48] INFO: ======================================================================
+[2025-10-20 09:12:48] ERROR: ERRO ao criar backup: [WinError 2] O sistema não pode encontrar o arquivo especificado
+[2025-10-20 09:12:48] ERROR: ERRO ao criar backup: [WinError 2] O sistema não pode encontrar o arquivo especificado
+[2025-10-20 14:34:42] INFO: 
+======================================================================
+[2025-10-20 14:34:42] INFO: MODIFICAÇÃO: qualidade
+[2025-10-20 14:34:42] INFO: Alvo: linha_3598_c:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-20 14:34:42] INFO: Motivo: Bare except clause detectado na linha 3598
+[2025-10-20 14:34:42] INFO: ======================================================================
+[2025-10-20 14:34:42] ERROR: ERRO ao criar backup: [WinError 2] O sistema não pode encontrar o arquivo especificado
+[2025-10-20 14:34:42] ERROR: ERRO ao criar backup: [WinError 2] O sistema não pode encontrar o arquivo especificado
+[2025-10-20 14:34:42] INFO: 
+======================================================================
+[2025-10-20 14:34:42] INFO: MODIFICAÇÃO: qualidade
+[2025-10-20 14:34:42] INFO: Alvo: linha_4783_c:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-20 14:34:42] INFO: Motivo: Bare except clause detectado na linha 4783
+[2025-10-20 14:34:42] INFO: ======================================================================
+[2025-10-20 14:34:42] ERROR: ERRO ao criar backup: [WinError 2] O sistema não pode encontrar o arquivo especificado
+[2025-10-20 14:34:42] ERROR: ERRO ao criar backup: [WinError 2] O sistema não pode encontrar o arquivo especificado
+[2025-10-20 14:34:54] INFO: 
+======================================================================
+[2025-10-20 14:34:54] INFO: MODIFICAÇÃO: otimizacao
+[2025-10-20 14:34:54] INFO: Alvo: linha_5043_c:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-20 14:34:54] INFO: Motivo: Loop ineficiente detectado: 'texto +=' em loop (O(n²))
+[2025-10-20 14:34:54] INFO: ======================================================================
+[2025-10-20 14:34:54] ERROR: ERRO ao criar backup: [WinError 2] O sistema não pode encontrar o arquivo especificado
+[2025-10-20 14:34:54] ERROR: ERRO ao criar backup: [WinError 2] O sistema não pode encontrar o arquivo especificado
+[2025-10-20 14:34:54] INFO: 
+======================================================================
+[2025-10-20 14:34:54] INFO: MODIFICAÇÃO: refatoracao
+[2025-10-20 14:34:54] INFO: Alvo: main
+[2025-10-20 14:34:54] INFO: Motivo: Função muito grande detectada: main (262 linhas)
+[2025-10-20 14:34:54] INFO: ======================================================================
+[2025-10-20 14:34:54] ERROR: ERRO ao criar backup: [WinError 2] O sistema não pode encontrar o arquivo especificado
+[2025-10-20 14:34:54] ERROR: ERRO ao criar backup: [WinError 2] O sistema não pode encontrar o arquivo especificado
+[2025-10-20 14:34:54] INFO: 
+======================================================================
+[2025-10-20 14:34:54] INFO: MODIFICAÇÃO: refatoracao
+[2025-10-20 14:34:54] INFO: Alvo: _analisar_tarefa
+[2025-10-20 14:34:54] INFO: Motivo: Função muito grande detectada: _analisar_tarefa (105 linhas)
+[2025-10-20 14:34:54] INFO: ======================================================================
+[2025-10-20 14:34:54] ERROR: ERRO ao criar backup: [WinError 2] O sistema não pode encontrar o arquivo especificado
+[2025-10-20 14:34:54] ERROR: ERRO ao criar backup: [WinError 2] O sistema não pode encontrar o arquivo especificado
+[2025-10-20 14:34:54] INFO: 
+======================================================================
+[2025-10-20 14:34:54] INFO: MODIFICAÇÃO: refatoracao
+[2025-10-20 14:34:54] INFO: Alvo: _criar_estrategia
+[2025-10-20 14:34:54] INFO: Motivo: Função muito grande detectada: _criar_estrategia (101 linhas)
+[2025-10-20 14:34:54] INFO: ======================================================================
+[2025-10-20 14:34:54] ERROR: ERRO ao criar backup: [WinError 2] O sistema não pode encontrar o arquivo especificado
+[2025-10-20 14:34:54] ERROR: ERRO ao criar backup: [WinError 2] O sistema não pode encontrar o arquivo especificado
+[2025-10-20 14:34:54] INFO: 
+======================================================================
+[2025-10-20 14:34:54] INFO: MODIFICAÇÃO: refatoracao
+[2025-10-20 14:34:54] INFO: Alvo: _validar_plano
+[2025-10-20 14:34:54] INFO: Motivo: Função muito grande detectada: _validar_plano (133 linhas)
+[2025-10-20 14:34:54] INFO: ======================================================================
+[2025-10-20 14:34:54] ERROR: ERRO ao criar backup: [WinError 2] O sistema não pode encontrar o arquivo especificado
+[2025-10-20 14:34:54] ERROR: ERRO ao criar backup: [WinError 2] O sistema não pode encontrar o arquivo especificado
+[2025-10-20 14:34:54] INFO: 
+======================================================================
+[2025-10-20 14:34:54] INFO: MODIFICAÇÃO: refatoracao
+[2025-10-20 14:34:54] INFO: Alvo: executar_plano
+[2025-10-20 14:34:54] INFO: Motivo: Função muito grande detectada: executar_plano (116 linhas)
+[2025-10-20 14:34:54] INFO: ======================================================================
+[2025-10-20 14:34:54] ERROR: ERRO ao criar backup: [WinError 2] O sistema não pode encontrar o arquivo especificado
+[2025-10-20 14:34:54] ERROR: ERRO ao criar backup: [WinError 2] O sistema não pode encontrar o arquivo especificado
+[2025-10-20 14:34:54] INFO: 
+======================================================================
+[2025-10-20 14:34:54] INFO: MODIFICAÇÃO: refatoracao
+[2025-10-20 14:34:54] INFO: Alvo: _executar_onda_paralela
+[2025-10-20 14:34:54] INFO: Motivo: Função muito grande detectada: _executar_onda_paralela (149 linhas)
+[2025-10-20 14:34:54] INFO: ======================================================================
+[2025-10-20 14:34:54] ERROR: ERRO ao criar backup: [WinError 2] O sistema não pode encontrar o arquivo especificado
+[2025-10-20 14:34:54] ERROR: ERRO ao criar backup: [WinError 2] O sistema não pode encontrar o arquivo especificado
+[2025-10-20 14:34:54] INFO: 
+======================================================================
+[2025-10-20 14:34:54] INFO: MODIFICAÇÃO: refatoracao
+[2025-10-20 14:34:54] INFO: Alvo: _carregar_ferramentas_navegador
+[2025-10-20 14:34:54] INFO: Motivo: Função muito grande detectada: _carregar_ferramentas_navegador (122 linhas)
+[2025-10-20 14:34:54] INFO: ======================================================================
+[2025-10-20 14:34:54] ERROR: ERRO ao criar backup: [WinError 2] O sistema não pode encontrar o arquivo especificado
+[2025-10-20 14:34:54] ERROR: ERRO ao criar backup: [WinError 2] O sistema não pode encontrar o arquivo especificado
+[2025-10-20 14:34:54] INFO: 
+======================================================================
+[2025-10-20 14:34:54] INFO: MODIFICAÇÃO: refatoracao
+[2025-10-20 14:34:54] INFO: Alvo: _carregar_ferramentas_workspace
+[2025-10-20 14:34:54] INFO: Motivo: Função muito grande detectada: _carregar_ferramentas_workspace (152 linhas)
+[2025-10-20 14:34:54] INFO: ======================================================================
+[2025-10-20 14:34:54] ERROR: ERRO ao criar backup: [WinError 2] O sistema não pode encontrar o arquivo especificado
+[2025-10-20 14:34:54] ERROR: ERRO ao criar backup: [WinError 2] O sistema não pode encontrar o arquivo especificado
+[2025-10-20 14:34:54] INFO: 
+======================================================================
+[2025-10-20 14:34:54] INFO: MODIFICAÇÃO: refatoracao
+[2025-10-20 14:34:54] INFO: Alvo: _carregar_ferramentas_telemetria
+[2025-10-20 14:34:54] INFO: Motivo: Função muito grande detectada: _carregar_ferramentas_telemetria (120 linhas)
+[2025-10-20 14:34:54] INFO: ======================================================================
+[2025-10-20 14:34:54] ERROR: ERRO ao criar backup: [WinError 2] O sistema não pode encontrar o arquivo especificado
+[2025-10-20 14:34:54] ERROR: ERRO ao criar backup: [WinError 2] O sistema não pode encontrar o arquivo especificado
+[2025-10-20 14:34:54] INFO: 
+======================================================================
+[2025-10-20 14:34:54] INFO: MODIFICAÇÃO: refatoracao
+[2025-10-20 14:34:54] INFO: Alvo: _carregar_ferramentas_meta
+[2025-10-20 14:34:54] INFO: Motivo: Função muito grande detectada: _carregar_ferramentas_meta (381 linhas)
+[2025-10-20 14:34:54] INFO: ======================================================================
+[2025-10-20 14:34:54] ERROR: ERRO ao criar backup: [WinError 2] O sistema não pode encontrar o arquivo especificado
+[2025-10-20 14:34:54] ERROR: ERRO ao criar backup: [WinError 2] O sistema não pode encontrar o arquivo especificado
+[2025-10-20 14:34:54] INFO: 
+======================================================================
+[2025-10-20 14:34:54] INFO: MODIFICAÇÃO: refatoracao
+[2025-10-20 14:34:54] INFO: Alvo: executar
+[2025-10-20 14:34:54] INFO: Motivo: Função muito grande detectada: executar (138 linhas)
+[2025-10-20 14:34:54] INFO: ======================================================================
+[2025-10-20 14:34:54] ERROR: ERRO ao criar backup: [WinError 2] O sistema não pode encontrar o arquivo especificado
+[2025-10-20 14:34:54] ERROR: ERRO ao criar backup: [WinError 2] O sistema não pode encontrar o arquivo especificado
+[2025-10-20 14:34:54] INFO: 
+======================================================================
+[2025-10-20 14:34:54] INFO: MODIFICAÇÃO: refatoracao
+[2025-10-20 14:34:54] INFO: Alvo: __init__
+[2025-10-20 14:34:54] INFO: Motivo: Função muito grande detectada: __init__ (122 linhas)
+[2025-10-20 14:34:54] INFO: ======================================================================
+[2025-10-20 14:34:54] WARNING: ZONA PROTEGIDA: Não é permitido modificar '__init__'
+[2025-10-20 14:34:54] INFO: 
+======================================================================
+[2025-10-20 14:34:54] INFO: MODIFICAÇÃO: refatoracao
+[2025-10-20 14:34:54] INFO: Alvo: _executar_chamada_api
+[2025-10-20 14:34:54] INFO: Motivo: Função muito grande detectada: _executar_chamada_api (103 linhas)
+[2025-10-20 14:34:54] INFO: ======================================================================
+[2025-10-20 14:34:54] ERROR: ERRO ao criar backup: [WinError 2] O sistema não pode encontrar o arquivo especificado
+[2025-10-20 14:34:54] ERROR: ERRO ao criar backup: [WinError 2] O sistema não pode encontrar o arquivo especificado
+[2025-10-20 14:34:54] INFO: 
+======================================================================
+[2025-10-20 14:34:54] INFO: MODIFICAÇÃO: refatoracao
+[2025-10-20 14:34:54] INFO: Alvo: _processar_uso_ferramentas
+[2025-10-20 14:34:54] INFO: Motivo: Função muito grande detectada: _processar_uso_ferramentas (135 linhas)
+[2025-10-20 14:34:54] INFO: ======================================================================
+[2025-10-20 14:34:54] ERROR: ERRO ao criar backup: [WinError 2] O sistema não pode encontrar o arquivo especificado
+[2025-10-20 14:34:54] ERROR: ERRO ao criar backup: [WinError 2] O sistema não pode encontrar o arquivo especificado
+[2025-10-20 14:34:54] INFO: 
+======================================================================
+[2025-10-20 14:34:54] INFO: MODIFICAÇÃO: refatoracao
+[2025-10-20 14:34:54] INFO: Alvo: executar_tarefa
+[2025-10-20 14:34:54] INFO: Motivo: Função muito grande detectada: executar_tarefa (232 linhas)
+[2025-10-20 14:34:54] INFO: ======================================================================
+[2025-10-20 14:34:54] WARNING: ZONA PROTEGIDA: Não é permitido modificar 'executar_tarefa'
+[2025-10-20 14:34:54] INFO: 
+======================================================================
+[2025-10-20 14:34:54] INFO: MODIFICAÇÃO: feature
+[2025-10-20 14:34:54] INFO: Alvo: linha_4412_c:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-20 14:34:54] INFO: Motivo: TODO detectado: TODO: Implementar correção específica
+[2025-10-20 14:34:54] INFO: ======================================================================
+[2025-10-20 14:34:54] ERROR: ERRO ao criar backup: [WinError 2] O sistema não pode encontrar o arquivo especificado
+[2025-10-20 14:34:54] ERROR: ERRO ao criar backup: [WinError 2] O sistema não pode encontrar o arquivo especificado
+[2025-10-20 14:34:54] INFO: 
+======================================================================
+[2025-10-20 14:34:54] INFO: MODIFICAÇÃO: feature
+[2025-10-20 14:34:54] INFO: Alvo: linha_4765_c:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-20 14:34:54] INFO: Motivo: TODO detectado: 2. Detectar TODOs antigos
+[2025-10-20 14:34:54] INFO: ======================================================================
+[2025-10-20 14:34:54] ERROR: ERRO ao criar backup: [WinError 2] O sistema não pode encontrar o arquivo especificado
+[2025-10-20 14:34:54] ERROR: ERRO ao criar backup: [WinError 2] O sistema não pode encontrar o arquivo especificado
+[2025-10-20 14:34:54] INFO: 
+======================================================================
+[2025-10-20 14:34:54] INFO: MODIFICAÇÃO: feature
+[2025-10-20 14:34:54] INFO: Alvo: linha_4822_c:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-20 14:34:54] INFO: Motivo: TODO detectado: TODO: Implementar validação
+[2025-10-20 14:34:54] INFO: ======================================================================
+[2025-10-20 14:34:54] ERROR: ERRO ao criar backup: [WinError 2] O sistema não pode encontrar o arquivo especificado
+[2025-10-20 14:34:54] ERROR: ERRO ao criar backup: [WinError 2] O sistema não pode encontrar o arquivo especificado
+[2025-10-20 14:34:54] INFO: 
+======================================================================
+[2025-10-20 14:34:54] INFO: MODIFICAÇÃO: feature
+[2025-10-20 14:34:54] INFO: Alvo: linha_4830_c:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-20 14:34:54] INFO: Motivo: TODO detectado: Extrair conteúdo do TODO
+[2025-10-20 14:34:54] INFO: ======================================================================
+[2025-10-20 14:34:54] ERROR: ERRO ao criar backup: [WinError 2] O sistema não pode encontrar o arquivo especificado
+[2025-10-20 14:34:54] ERROR: ERRO ao criar backup: [WinError 2] O sistema não pode encontrar o arquivo especificado
+[2025-10-20 14:34:54] INFO: 
+======================================================================
+[2025-10-20 14:34:54] INFO: MODIFICAÇÃO: feature
+[2025-10-20 14:34:54] INFO: Alvo: linha_4840_c:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-20 14:34:54] INFO: Motivo: TODO detectado: Esta tarefa foi convertida de comentário TODO para melhoria rastreável.
+[2025-10-20 14:34:54] INFO: ======================================================================
+[2025-10-20 14:34:54] ERROR: ERRO ao criar backup: [WinError 2] O sistema não pode encontrar o arquivo especificado
+[2025-10-20 14:34:54] ERROR: ERRO ao criar backup: [WinError 2] O sistema não pode encontrar o arquivo especificado
+[2025-10-20 14:34:54] INFO: 
+======================================================================
+[2025-10-20 14:34:54] INFO: MODIFICAÇÃO: documentacao
+[2025-10-20 14:34:54] INFO: Alvo: tem_ciclo
+[2025-10-20 14:34:54] INFO: Motivo: Função pública 'tem_ciclo' sem docstring (linha 900)
+[2025-10-20 14:34:54] INFO: ======================================================================
+[2025-10-20 14:34:54] ERROR: ERRO ao criar backup: [WinError 2] O sistema não pode encontrar o arquivo especificado
+[2025-10-20 14:34:54] ERROR: ERRO ao criar backup: [WinError 2] O sistema não pode encontrar o arquivo especificado
+[2025-10-20 14:34:54] INFO: 
+======================================================================
+[2025-10-20 14:34:54] INFO: MODIFICAÇÃO: documentacao
+[2025-10-20 14:34:54] INFO: Alvo: LoopVisitor
+[2025-10-20 14:34:54] INFO: Motivo: Classe 'LoopVisitor' sem docstring (linha 4561)
+[2025-10-20 14:34:54] INFO: ======================================================================
+[2025-10-20 14:34:54] ERROR: ERRO ao criar backup: [WinError 2] O sistema não pode encontrar o arquivo especificado
+[2025-10-20 14:34:54] ERROR: ERRO ao criar backup: [WinError 2] O sistema não pode encontrar o arquivo especificado
+[2025-10-20 14:34:54] INFO: 
+======================================================================
+[2025-10-20 14:34:54] INFO: MODIFICAÇÃO: documentacao
+[2025-10-20 14:34:54] INFO: Alvo: ImportVisitor
+[2025-10-20 14:34:54] INFO: Motivo: Classe 'ImportVisitor' sem docstring (linha 4630)
+[2025-10-20 14:34:54] INFO: ======================================================================
+[2025-10-20 14:34:54] ERROR: ERRO ao criar backup: [WinError 2] O sistema não pode encontrar o arquivo especificado
+[2025-10-20 14:34:54] ERROR: ERRO ao criar backup: [WinError 2] O sistema não pode encontrar o arquivo especificado
+[2025-10-20 14:34:54] INFO: 
+======================================================================
+[2025-10-20 14:34:54] INFO: MODIFICAÇÃO: documentacao
+[2025-10-20 14:34:54] INFO: Alvo: visit_For
+[2025-10-20 14:34:54] INFO: Motivo: Função pública 'visit_For' sem docstring (linha 4566)
+[2025-10-20 14:34:54] INFO: ======================================================================
+[2025-10-20 14:34:54] ERROR: ERRO ao criar backup: [WinError 2] O sistema não pode encontrar o arquivo especificado
+[2025-10-20 14:34:54] ERROR: ERRO ao criar backup: [WinError 2] O sistema não pode encontrar o arquivo especificado
+[2025-10-20 14:34:54] INFO: 
+======================================================================
+[2025-10-20 14:34:54] INFO: MODIFICAÇÃO: documentacao
+[2025-10-20 14:34:54] INFO: Alvo: visit_While
+[2025-10-20 14:34:54] INFO: Motivo: Função pública 'visit_While' sem docstring (linha 4571)
+[2025-10-20 14:34:54] INFO: ======================================================================
+[2025-10-20 14:34:54] ERROR: ERRO ao criar backup: [WinError 2] O sistema não pode encontrar o arquivo especificado
+[2025-10-20 14:34:54] ERROR: ERRO ao criar backup: [WinError 2] O sistema não pode encontrar o arquivo especificado
+[2025-10-20 14:34:54] INFO: 
+======================================================================
+[2025-10-20 14:34:54] INFO: MODIFICAÇÃO: documentacao
+[2025-10-20 14:34:54] INFO: Alvo: visit_AugAssign
+[2025-10-20 14:34:54] INFO: Motivo: Função pública 'visit_AugAssign' sem docstring (linha 4576)
+[2025-10-20 14:34:54] INFO: ======================================================================
+[2025-10-20 14:34:54] ERROR: ERRO ao criar backup: [WinError 2] O sistema não pode encontrar o arquivo especificado
+[2025-10-20 14:34:54] ERROR: ERRO ao criar backup: [WinError 2] O sistema não pode encontrar o arquivo especificado
+[2025-10-20 14:34:54] INFO: 
+======================================================================
+[2025-10-20 14:34:54] INFO: MODIFICAÇÃO: documentacao
+[2025-10-20 14:34:54] INFO: Alvo: visit_FunctionDef
+[2025-10-20 14:34:54] INFO: Motivo: Função pública 'visit_FunctionDef' sem docstring (linha 4635)
+[2025-10-20 14:34:54] INFO: ======================================================================
+[2025-10-20 14:34:54] ERROR: ERRO ao criar backup: [WinError 2] O sistema não pode encontrar o arquivo especificado
+[2025-10-20 14:34:54] ERROR: ERRO ao criar backup: [WinError 2] O sistema não pode encontrar o arquivo especificado
+[2025-10-20 14:34:54] INFO: 
+======================================================================
+[2025-10-20 14:34:54] INFO: MODIFICAÇÃO: documentacao
+[2025-10-20 14:34:54] INFO: Alvo: visit_For
+[2025-10-20 14:34:54] INFO: Motivo: Função pública 'visit_For' sem docstring (linha 4640)
+[2025-10-20 14:34:54] INFO: ======================================================================
+[2025-10-20 14:34:54] ERROR: ERRO ao criar backup: [WinError 2] O sistema não pode encontrar o arquivo especificado
+[2025-10-20 14:34:54] ERROR: ERRO ao criar backup: [WinError 2] O sistema não pode encontrar o arquivo especificado
+[2025-10-20 14:34:54] INFO: 
+======================================================================
+[2025-10-20 14:34:54] INFO: MODIFICAÇÃO: documentacao
+[2025-10-20 14:34:54] INFO: Alvo: visit_While
+[2025-10-20 14:34:54] INFO: Motivo: Função pública 'visit_While' sem docstring (linha 4645)
+[2025-10-20 14:34:54] INFO: ======================================================================
+[2025-10-20 14:34:54] ERROR: ERRO ao criar backup: [WinError 2] O sistema não pode encontrar o arquivo especificado
+[2025-10-20 14:34:54] ERROR: ERRO ao criar backup: [WinError 2] O sistema não pode encontrar o arquivo especificado
+[2025-10-20 14:34:54] INFO: 
+======================================================================
+[2025-10-20 14:34:54] INFO: MODIFICAÇÃO: documentacao
+[2025-10-20 14:34:54] INFO: Alvo: visit_Import
+[2025-10-20 14:34:54] INFO: Motivo: Função pública 'visit_Import' sem docstring (linha 4650)
+[2025-10-20 14:34:54] INFO: ======================================================================
+[2025-10-20 14:34:54] ERROR: ERRO ao criar backup: [WinError 2] O sistema não pode encontrar o arquivo especificado
+[2025-10-20 14:34:54] ERROR: ERRO ao criar backup: [WinError 2] O sistema não pode encontrar o arquivo especificado
+[2025-10-20 14:34:54] INFO: 
+======================================================================
+[2025-10-20 14:34:54] INFO: MODIFICAÇÃO: documentacao
+[2025-10-20 14:34:54] INFO: Alvo: visit_ImportFrom
+[2025-10-20 14:34:54] INFO: Motivo: Função pública 'visit_ImportFrom' sem docstring (linha 4659)
+[2025-10-20 14:34:54] INFO: ======================================================================
+[2025-10-20 14:34:54] ERROR: ERRO ao criar backup: [WinError 2] O sistema não pode encontrar o arquivo especificado
+[2025-10-20 14:34:54] ERROR: ERRO ao criar backup: [WinError 2] O sistema não pode encontrar o arquivo especificado
+[2025-10-20 14:49:49] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251020_144949.py
+[2025-10-21 12:30:32] INFO: 
+======================================================================
+[2025-10-21 12:30:32] INFO: MODIFICAÇÃO: qualidade
+[2025-10-21 12:30:32] INFO: Alvo: linha_3598_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-21 12:30:32] INFO: Motivo: Bare except clause detectado na linha 3598
+[2025-10-21 12:30:32] INFO: ======================================================================
+[2025-10-21 12:30:32] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251021_123032.py
+[2025-10-21 12:30:32] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251021_123032.py
+[2025-10-21 12:30:32] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-21 12:30:32] INFO: Código modificado
+[2025-10-21 12:30:32] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-21 12:30:32] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251021_123032.py
+[2025-10-21 12:30:32] INFO: 
+======================================================================
+[2025-10-21 12:30:32] INFO: MODIFICAÇÃO: qualidade
+[2025-10-21 12:30:32] INFO: Alvo: linha_4839_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-21 12:30:32] INFO: Motivo: Bare except clause detectado na linha 4839
+[2025-10-21 12:30:32] INFO: ======================================================================
+[2025-10-21 12:30:32] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251021_123032.py
+[2025-10-21 12:30:32] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251021_123032.py
+[2025-10-21 12:30:33] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-21 12:30:33] INFO: Código modificado
+[2025-10-21 12:30:33] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-21 12:30:33] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251021_123032.py
+[2025-10-21 12:35:13] INFO: 
+======================================================================
+[2025-10-21 12:35:13] INFO: MODIFICAÇÃO: qualidade
+[2025-10-21 12:35:13] INFO: Alvo: linha_3598_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-21 12:35:13] INFO: Motivo: Bare except clause detectado na linha 3598
+[2025-10-21 12:35:13] INFO: ======================================================================
+[2025-10-21 12:35:13] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251021_123513.py
+[2025-10-21 12:35:13] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251021_123513.py
+[2025-10-21 12:35:13] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-21 12:35:13] INFO: Código modificado
+[2025-10-21 12:35:13] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-21 12:35:13] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251021_123513.py
+[2025-10-21 12:35:13] INFO: 
+======================================================================
+[2025-10-21 12:35:13] INFO: MODIFICAÇÃO: qualidade
+[2025-10-21 12:35:13] INFO: Alvo: linha_4839_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-21 12:35:13] INFO: Motivo: Bare except clause detectado na linha 4839
+[2025-10-21 12:35:13] INFO: ======================================================================
+[2025-10-21 12:35:13] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251021_123513.py
+[2025-10-21 12:35:13] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251021_123513.py
+[2025-10-21 12:35:13] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-21 12:35:13] INFO: Código modificado
+[2025-10-21 12:35:14] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-21 12:35:14] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251021_123513.py
+[2025-10-21 12:36:27] INFO: 
+======================================================================
+[2025-10-21 12:36:27] INFO: MODIFICAÇÃO: qualidade
+[2025-10-21 12:36:27] INFO: Alvo: linha_3598_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-21 12:36:27] INFO: Motivo: Bare except clause detectado na linha 3598
+[2025-10-21 12:36:27] INFO: ======================================================================
+[2025-10-21 12:36:27] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251021_123627.py
+[2025-10-21 12:36:27] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251021_123627.py
+[2025-10-21 12:36:28] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-21 12:36:28] INFO: Código modificado
+[2025-10-21 12:36:28] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-21 12:36:28] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251021_123627.py
+[2025-10-21 12:36:28] INFO: 
+======================================================================
+[2025-10-21 12:36:28] INFO: MODIFICAÇÃO: qualidade
+[2025-10-21 12:36:28] INFO: Alvo: linha_4839_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-21 12:36:28] INFO: Motivo: Bare except clause detectado na linha 4839
+[2025-10-21 12:36:28] INFO: ======================================================================
+[2025-10-21 12:36:28] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251021_123628.py
+[2025-10-21 12:36:28] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251021_123628.py
+[2025-10-21 12:36:28] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-21 12:36:28] INFO: Código modificado
+[2025-10-21 12:36:28] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-21 12:36:28] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251021_123628.py
+[2025-10-21 12:38:02] INFO: 
+======================================================================
+[2025-10-21 12:38:02] INFO: MODIFICAÇÃO: qualidade
+[2025-10-21 12:38:02] INFO: Alvo: linha_3598_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-21 12:38:02] INFO: Motivo: Bare except clause detectado na linha 3598
+[2025-10-21 12:38:02] INFO: ======================================================================
+[2025-10-21 12:38:02] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251021_123802.py
+[2025-10-21 12:38:02] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251021_123802.py
+[2025-10-21 12:38:02] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-21 12:38:02] INFO: Código modificado
+[2025-10-21 12:38:03] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-21 12:38:03] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251021_123802.py
+[2025-10-21 12:38:03] INFO: 
+======================================================================
+[2025-10-21 12:38:03] INFO: MODIFICAÇÃO: qualidade
+[2025-10-21 12:38:03] INFO: Alvo: linha_4839_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-21 12:38:03] INFO: Motivo: Bare except clause detectado na linha 4839
+[2025-10-21 12:38:03] INFO: ======================================================================
+[2025-10-21 12:38:03] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251021_123803.py
+[2025-10-21 12:38:03] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251021_123803.py
+[2025-10-21 12:38:03] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-21 12:38:03] INFO: Código modificado
+[2025-10-21 12:38:03] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-21 12:38:03] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251021_123803.py
+[2025-10-21 12:41:01] INFO: 
+======================================================================
+[2025-10-21 12:41:01] INFO: MODIFICAÇÃO: qualidade
+[2025-10-21 12:41:01] INFO: Alvo: linha_3598_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-21 12:41:01] INFO: Motivo: Bare except clause detectado na linha 3598
+[2025-10-21 12:41:01] INFO: ======================================================================
+[2025-10-21 12:41:01] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251021_124101.py
+[2025-10-21 12:41:02] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251021_124101.py
+[2025-10-21 12:41:02] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-21 12:41:02] INFO: Código modificado
+[2025-10-21 12:41:02] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-21 12:41:02] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251021_124101.py
+[2025-10-21 12:41:02] INFO: 
+======================================================================
+[2025-10-21 12:41:02] INFO: MODIFICAÇÃO: qualidade
+[2025-10-21 12:41:02] INFO: Alvo: linha_4845_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-21 12:41:02] INFO: Motivo: Bare except clause detectado na linha 4845
+[2025-10-21 12:41:02] INFO: ======================================================================
+[2025-10-21 12:41:02] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251021_124102.py
+[2025-10-21 12:41:02] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251021_124102.py
+[2025-10-21 12:41:02] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-21 12:41:02] INFO: Código modificado
+[2025-10-21 12:41:02] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-21 12:41:02] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251021_124102.py
+[2025-10-21 12:42:35] INFO: 
+======================================================================
+[2025-10-21 12:42:35] INFO: MODIFICAÇÃO: qualidade
+[2025-10-21 12:42:35] INFO: Alvo: linha_3598_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-21 12:42:35] INFO: Motivo: Bare except clause detectado na linha 3598
+[2025-10-21 12:42:35] INFO: ======================================================================
+[2025-10-21 12:42:35] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251021_124235.py
+[2025-10-21 12:42:35] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251021_124235.py
+[2025-10-21 12:42:35] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-21 12:42:36] INFO: Código modificado
+[2025-10-21 12:42:36] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-21 12:42:36] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251021_124235.py
+[2025-10-21 12:42:36] INFO: 
+======================================================================
+[2025-10-21 12:42:36] INFO: MODIFICAÇÃO: qualidade
+[2025-10-21 12:42:36] INFO: Alvo: linha_4845_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-21 12:42:36] INFO: Motivo: Bare except clause detectado na linha 4845
+[2025-10-21 12:42:36] INFO: ======================================================================
+[2025-10-21 12:42:36] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251021_124236.py
+[2025-10-21 12:42:36] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251021_124236.py
+[2025-10-21 12:42:36] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-21 12:42:36] INFO: Código modificado
+[2025-10-21 12:42:36] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-21 12:42:36] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251021_124236.py
+[2025-10-21 12:43:26] INFO: 
+======================================================================
+[2025-10-21 12:43:26] INFO: MODIFICAÇÃO: qualidade
+[2025-10-21 12:43:26] INFO: Alvo: linha_3598_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-21 12:43:26] INFO: Motivo: Bare except clause detectado na linha 3598
+[2025-10-21 12:43:26] INFO: ======================================================================
+[2025-10-21 12:43:26] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251021_124326.py
+[2025-10-21 12:43:26] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251021_124326.py
+[2025-10-21 12:43:26] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-21 12:43:26] INFO: Código modificado
+[2025-10-21 12:43:26] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-21 12:43:26] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251021_124326.py
+[2025-10-21 12:43:26] INFO: 
+======================================================================
+[2025-10-21 12:43:26] INFO: MODIFICAÇÃO: qualidade
+[2025-10-21 12:43:26] INFO: Alvo: linha_4845_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-21 12:43:26] INFO: Motivo: Bare except clause detectado na linha 4845
+[2025-10-21 12:43:26] INFO: ======================================================================
+[2025-10-21 12:43:26] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251021_124326.py
+[2025-10-21 12:43:26] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251021_124326.py
+[2025-10-21 12:43:26] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-21 12:43:26] INFO: Código modificado
+[2025-10-21 12:43:26] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-21 12:43:26] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251021_124326.py
+[2025-10-21 12:44:55] INFO: 
+======================================================================
+[2025-10-21 12:44:55] INFO: MODIFICAÇÃO: qualidade
+[2025-10-21 12:44:55] INFO: Alvo: linha_3598_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-21 12:44:55] INFO: Motivo: Bare except clause detectado na linha 3598
+[2025-10-21 12:44:55] INFO: ======================================================================
+[2025-10-21 12:44:55] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251021_124455.py
+[2025-10-21 12:44:55] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251021_124455.py
+[2025-10-21 12:44:55] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-21 12:44:55] INFO: Código modificado
+[2025-10-21 12:44:55] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-21 12:44:55] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251021_124455.py
+[2025-10-21 12:44:55] INFO: 
+======================================================================
+[2025-10-21 12:44:55] INFO: MODIFICAÇÃO: qualidade
+[2025-10-21 12:44:55] INFO: Alvo: linha_4845_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-21 12:44:55] INFO: Motivo: Bare except clause detectado na linha 4845
+[2025-10-21 12:44:55] INFO: ======================================================================
+[2025-10-21 12:44:56] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251021_124455.py
+[2025-10-21 12:44:56] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251021_124455.py
+[2025-10-21 12:44:56] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-21 12:44:56] INFO: Código modificado
+[2025-10-21 12:44:56] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-21 12:44:56] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251021_124455.py
+[2025-10-21 12:46:47] INFO: 
+======================================================================
+[2025-10-21 12:46:47] INFO: MODIFICAÇÃO: qualidade
+[2025-10-21 12:46:47] INFO: Alvo: linha_3598_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-21 12:46:47] INFO: Motivo: Bare except clause detectado na linha 3598
+[2025-10-21 12:46:47] INFO: ======================================================================
+[2025-10-21 12:46:47] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251021_124647.py
+[2025-10-21 12:46:47] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251021_124647.py
+[2025-10-21 12:46:47] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-21 12:46:47] INFO: Código modificado
+[2025-10-21 12:46:48] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-21 12:46:48] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251021_124647.py
+[2025-10-21 12:46:48] INFO: 
+======================================================================
+[2025-10-21 12:46:48] INFO: MODIFICAÇÃO: qualidade
+[2025-10-21 12:46:48] INFO: Alvo: linha_4845_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-21 12:46:48] INFO: Motivo: Bare except clause detectado na linha 4845
+[2025-10-21 12:46:48] INFO: ======================================================================
+[2025-10-21 12:46:48] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251021_124648.py
+[2025-10-21 12:46:48] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251021_124648.py
+[2025-10-21 12:46:48] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-21 12:46:48] INFO: Código modificado
+[2025-10-21 12:46:48] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-21 12:46:48] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251021_124648.py
+[2025-10-21 12:48:50] INFO: 
+======================================================================
+[2025-10-21 12:48:50] INFO: MODIFICAÇÃO: qualidade
+[2025-10-21 12:48:50] INFO: Alvo: linha_3598_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-21 12:48:50] INFO: Motivo: Bare except clause detectado na linha 3598
+[2025-10-21 12:48:50] INFO: ======================================================================
+[2025-10-21 12:48:50] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251021_124850.py
+[2025-10-21 12:48:50] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251021_124850.py
+[2025-10-21 12:48:50] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-21 12:48:50] INFO: Código modificado
+[2025-10-21 12:48:50] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-21 12:48:50] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251021_124850.py
+[2025-10-21 12:48:50] INFO: 
+======================================================================
+[2025-10-21 12:48:50] INFO: MODIFICAÇÃO: qualidade
+[2025-10-21 12:48:50] INFO: Alvo: linha_4845_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-21 12:48:50] INFO: Motivo: Bare except clause detectado na linha 4845
+[2025-10-21 12:48:50] INFO: ======================================================================
+[2025-10-21 12:48:50] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251021_124850.py
+[2025-10-21 12:48:50] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251021_124850.py
+[2025-10-21 12:48:50] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-21 12:48:50] INFO: Código modificado
+[2025-10-21 12:48:50] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-21 12:48:50] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251021_124850.py
+[2025-10-21 13:09:20] INFO: 
+======================================================================
+[2025-10-21 13:09:20] INFO: MODIFICAÇÃO: qualidade
+[2025-10-21 13:09:20] INFO: Alvo: linha_3598_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-21 13:09:20] INFO: Motivo: Bare except clause detectado na linha 3598
+[2025-10-21 13:09:20] INFO: ======================================================================
+[2025-10-21 13:09:20] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251021_130920.py
+[2025-10-21 13:09:20] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251021_130920.py
+[2025-10-21 13:09:20] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-21 13:09:20] INFO: Código modificado
+[2025-10-21 13:09:20] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-21 13:09:20] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251021_130920.py
+[2025-10-21 13:09:20] INFO: 
+======================================================================
+[2025-10-21 13:09:20] INFO: MODIFICAÇÃO: qualidade
+[2025-10-21 13:09:20] INFO: Alvo: linha_4845_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-21 13:09:20] INFO: Motivo: Bare except clause detectado na linha 4845
+[2025-10-21 13:09:20] INFO: ======================================================================
+[2025-10-21 13:09:20] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251021_130920.py
+[2025-10-21 13:09:20] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251021_130920.py
+[2025-10-21 13:09:20] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-21 13:09:20] INFO: Código modificado
+[2025-10-21 13:09:21] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-21 13:09:21] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251021_130920.py
+[2025-10-21 13:18:22] INFO: 
+======================================================================
+[2025-10-21 13:18:22] INFO: MODIFICAÇÃO: qualidade
+[2025-10-21 13:18:22] INFO: Alvo: linha_3598_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-21 13:18:22] INFO: Motivo: Bare except clause detectado na linha 3598
+[2025-10-21 13:18:22] INFO: ======================================================================
+[2025-10-21 13:18:22] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251021_131822.py
+[2025-10-21 13:18:22] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251021_131822.py
+[2025-10-21 13:18:22] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-21 13:18:22] INFO: Código modificado
+[2025-10-21 13:18:23] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-21 13:18:23] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251021_131822.py
+[2025-10-21 13:18:23] INFO: 
+======================================================================
+[2025-10-21 13:18:23] INFO: MODIFICAÇÃO: qualidade
+[2025-10-21 13:18:23] INFO: Alvo: linha_4845_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-21 13:18:23] INFO: Motivo: Bare except clause detectado na linha 4845
+[2025-10-21 13:18:23] INFO: ======================================================================
+[2025-10-21 13:18:23] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251021_131823.py
+[2025-10-21 13:18:23] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251021_131823.py
+[2025-10-21 13:18:23] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-21 13:18:23] INFO: Código modificado
+[2025-10-21 13:18:23] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-21 13:18:23] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251021_131823.py
+[2025-10-21 13:43:56] INFO: 
+======================================================================
+[2025-10-21 13:43:56] INFO: MODIFICAÇÃO: qualidade
+[2025-10-21 13:43:56] INFO: Alvo: linha_3598_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-21 13:43:56] INFO: Motivo: Bare except clause detectado na linha 3598
+[2025-10-21 13:43:56] INFO: ======================================================================
+[2025-10-21 13:43:56] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251021_134356.py
+[2025-10-21 13:43:56] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251021_134356.py
+[2025-10-21 13:43:56] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-21 13:43:56] INFO: Código modificado
+[2025-10-21 13:43:56] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-21 13:43:56] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251021_134356.py
+[2025-10-21 13:43:56] INFO: 
+======================================================================
+[2025-10-21 13:43:56] INFO: MODIFICAÇÃO: qualidade
+[2025-10-21 13:43:56] INFO: Alvo: linha_4845_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-21 13:43:56] INFO: Motivo: Bare except clause detectado na linha 4845
+[2025-10-21 13:43:56] INFO: ======================================================================
+[2025-10-21 13:43:56] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251021_134356.py
+[2025-10-21 13:43:56] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251021_134356.py
+[2025-10-21 13:43:56] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-21 13:43:56] INFO: Código modificado
+[2025-10-21 13:43:56] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-21 13:43:56] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251021_134356.py
+[2025-10-21 13:44:38] INFO: 
+======================================================================
+[2025-10-21 13:44:38] INFO: MODIFICAÇÃO: qualidade
+[2025-10-21 13:44:38] INFO: Alvo: linha_3598_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-21 13:44:38] INFO: Motivo: Bare except clause detectado na linha 3598
+[2025-10-21 13:44:38] INFO: ======================================================================
+[2025-10-21 13:44:38] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251021_134438.py
+[2025-10-21 13:44:38] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251021_134438.py
+[2025-10-21 13:44:38] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-21 13:44:38] INFO: Código modificado
+[2025-10-21 13:44:38] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-21 13:44:38] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251021_134438.py
+[2025-10-21 13:44:38] INFO: 
+======================================================================
+[2025-10-21 13:44:38] INFO: MODIFICAÇÃO: qualidade
+[2025-10-21 13:44:38] INFO: Alvo: linha_4845_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-21 13:44:38] INFO: Motivo: Bare except clause detectado na linha 4845
+[2025-10-21 13:44:38] INFO: ======================================================================
+[2025-10-21 13:44:38] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251021_134438.py
+[2025-10-21 13:44:39] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251021_134438.py
+[2025-10-21 13:44:39] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-21 13:44:39] INFO: Código modificado
+[2025-10-21 13:44:39] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-21 13:44:39] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251021_134438.py
+[2025-10-21 13:45:15] INFO: 
+======================================================================
+[2025-10-21 13:45:15] INFO: MODIFICAÇÃO: qualidade
+[2025-10-21 13:45:15] INFO: Alvo: linha_3598_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-21 13:45:15] INFO: Motivo: Bare except clause detectado na linha 3598
+[2025-10-21 13:45:15] INFO: ======================================================================
+[2025-10-21 13:45:15] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251021_134515.py
+[2025-10-21 13:45:15] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251021_134515.py
+[2025-10-21 13:45:15] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-21 13:45:15] INFO: Código modificado
+[2025-10-21 13:45:15] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-21 13:45:15] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251021_134515.py
+[2025-10-21 13:45:15] INFO: 
+======================================================================
+[2025-10-21 13:45:15] INFO: MODIFICAÇÃO: qualidade
+[2025-10-21 13:45:15] INFO: Alvo: linha_4845_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-21 13:45:15] INFO: Motivo: Bare except clause detectado na linha 4845
+[2025-10-21 13:45:15] INFO: ======================================================================
+[2025-10-21 13:45:15] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251021_134515.py
+[2025-10-21 13:45:15] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251021_134515.py
+[2025-10-21 13:45:15] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-21 13:45:15] INFO: Código modificado
+[2025-10-21 13:45:15] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-21 13:45:15] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251021_134515.py
+[2025-10-22 17:43:57] INFO: 
+======================================================================
+[2025-10-22 17:43:57] INFO: MODIFICAÇÃO: qualidade
+[2025-10-22 17:43:57] INFO: Alvo: linha_3598_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-22 17:43:57] INFO: Motivo: Bare except clause detectado na linha 3598
+[2025-10-22 17:43:57] INFO: ======================================================================
+[2025-10-22 17:43:57] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251022_174357.py
+[2025-10-22 17:43:57] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251022_174357.py
+[2025-10-22 17:43:57] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-22 17:43:57] INFO: Código modificado
+[2025-10-22 17:43:57] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-22 17:43:57] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251022_174357.py
+[2025-10-22 17:43:57] INFO: 
+======================================================================
+[2025-10-22 17:43:57] INFO: MODIFICAÇÃO: qualidade
+[2025-10-22 17:43:57] INFO: Alvo: linha_4845_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-22 17:43:57] INFO: Motivo: Bare except clause detectado na linha 4845
+[2025-10-22 17:43:57] INFO: ======================================================================
+[2025-10-22 17:43:57] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251022_174357.py
+[2025-10-22 17:43:57] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251022_174357.py
+[2025-10-22 17:43:57] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-22 17:43:57] INFO: Código modificado
+[2025-10-22 17:43:57] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-22 17:43:57] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251022_174357.py
+[2025-10-22 17:49:47] INFO: 
+======================================================================
+[2025-10-22 17:49:47] INFO: MODIFICAÇÃO: qualidade
+[2025-10-22 17:49:47] INFO: Alvo: linha_3598_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-22 17:49:47] INFO: Motivo: Bare except clause detectado na linha 3598
+[2025-10-22 17:49:47] INFO: ======================================================================
+[2025-10-22 17:49:47] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251022_174947.py
+[2025-10-22 17:49:47] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251022_174947.py
+[2025-10-22 17:49:47] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-22 17:49:47] INFO: Código modificado
+[2025-10-22 17:49:47] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-22 17:49:47] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251022_174947.py
+[2025-10-22 17:49:47] INFO: 
+======================================================================
+[2025-10-22 17:49:47] INFO: MODIFICAÇÃO: qualidade
+[2025-10-22 17:49:47] INFO: Alvo: linha_4845_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-22 17:49:47] INFO: Motivo: Bare except clause detectado na linha 4845
+[2025-10-22 17:49:47] INFO: ======================================================================
+[2025-10-22 17:49:47] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251022_174947.py
+[2025-10-22 17:49:47] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251022_174947.py
+[2025-10-22 17:49:48] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-22 17:49:48] INFO: Código modificado
+[2025-10-22 17:49:48] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-22 17:49:48] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251022_174947.py
+[2025-10-22 18:04:15] INFO: 
+======================================================================
+[2025-10-22 18:04:15] INFO: MODIFICAÇÃO: qualidade
+[2025-10-22 18:04:15] INFO: Alvo: linha_3598_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-22 18:04:15] INFO: Motivo: Bare except clause detectado na linha 3598
+[2025-10-22 18:04:15] INFO: ======================================================================
+[2025-10-22 18:04:15] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251022_180415.py
+[2025-10-22 18:04:15] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251022_180415.py
+[2025-10-22 18:04:15] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-22 18:04:15] INFO: Código modificado
+[2025-10-22 18:04:15] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-22 18:04:15] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251022_180415.py
+[2025-10-22 18:04:15] INFO: 
+======================================================================
+[2025-10-22 18:04:15] INFO: MODIFICAÇÃO: qualidade
+[2025-10-22 18:04:15] INFO: Alvo: linha_4845_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-22 18:04:15] INFO: Motivo: Bare except clause detectado na linha 4845
+[2025-10-22 18:04:15] INFO: ======================================================================
+[2025-10-22 18:04:15] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251022_180415.py
+[2025-10-22 18:04:15] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251022_180415.py
+[2025-10-22 18:04:15] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-22 18:04:15] INFO: Código modificado
+[2025-10-22 18:04:15] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-22 18:04:15] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251022_180415.py
+[2025-10-22 18:05:07] INFO: 
+======================================================================
+[2025-10-22 18:05:07] INFO: MODIFICAÇÃO: qualidade
+[2025-10-22 18:05:07] INFO: Alvo: linha_3598_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-22 18:05:07] INFO: Motivo: Bare except clause detectado na linha 3598
+[2025-10-22 18:05:07] INFO: ======================================================================
+[2025-10-22 18:05:07] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251022_180507.py
+[2025-10-22 18:05:07] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251022_180507.py
+[2025-10-22 18:05:07] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-22 18:05:07] INFO: Código modificado
+[2025-10-22 18:05:07] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-22 18:05:07] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251022_180507.py
+[2025-10-22 18:05:07] INFO: 
+======================================================================
+[2025-10-22 18:05:07] INFO: MODIFICAÇÃO: qualidade
+[2025-10-22 18:05:07] INFO: Alvo: linha_4845_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-22 18:05:07] INFO: Motivo: Bare except clause detectado na linha 4845
+[2025-10-22 18:05:07] INFO: ======================================================================
+[2025-10-22 18:05:07] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251022_180507.py
+[2025-10-22 18:05:07] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251022_180507.py
+[2025-10-22 18:05:07] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-22 18:05:07] INFO: Código modificado
+[2025-10-22 18:05:07] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-22 18:05:07] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251022_180507.py
+[2025-10-22 18:05:57] INFO: 
+======================================================================
+[2025-10-22 18:05:57] INFO: MODIFICAÇÃO: qualidade
+[2025-10-22 18:05:57] INFO: Alvo: linha_3598_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-22 18:05:57] INFO: Motivo: Bare except clause detectado na linha 3598
+[2025-10-22 18:05:57] INFO: ======================================================================
+[2025-10-22 18:05:57] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251022_180557.py
+[2025-10-22 18:05:57] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251022_180557.py
+[2025-10-22 18:05:57] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-22 18:05:58] INFO: Código modificado
+[2025-10-22 18:05:58] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-22 18:05:58] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251022_180557.py
+[2025-10-22 18:05:58] INFO: 
+======================================================================
+[2025-10-22 18:05:58] INFO: MODIFICAÇÃO: qualidade
+[2025-10-22 18:05:58] INFO: Alvo: linha_4845_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-22 18:05:58] INFO: Motivo: Bare except clause detectado na linha 4845
+[2025-10-22 18:05:58] INFO: ======================================================================
+[2025-10-22 18:05:58] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251022_180558.py
+[2025-10-22 18:05:58] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251022_180558.py
+[2025-10-22 18:05:58] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-22 18:05:58] INFO: Código modificado
+[2025-10-22 18:05:58] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-22 18:05:58] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251022_180558.py
+[2025-10-22 18:08:06] INFO: 
+======================================================================
+[2025-10-22 18:08:06] INFO: MODIFICAÇÃO: qualidade
+[2025-10-22 18:08:06] INFO: Alvo: linha_3598_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-22 18:08:06] INFO: Motivo: Bare except clause detectado na linha 3598
+[2025-10-22 18:08:06] INFO: ======================================================================
+[2025-10-22 18:08:06] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251022_180806.py
+[2025-10-22 18:08:06] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251022_180806.py
+[2025-10-22 18:08:06] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-22 18:08:06] INFO: Código modificado
+[2025-10-22 18:08:06] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-22 18:08:06] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251022_180806.py
+[2025-10-22 18:08:06] INFO: 
+======================================================================
+[2025-10-22 18:08:06] INFO: MODIFICAÇÃO: qualidade
+[2025-10-22 18:08:06] INFO: Alvo: linha_4845_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-22 18:08:06] INFO: Motivo: Bare except clause detectado na linha 4845
+[2025-10-22 18:08:06] INFO: ======================================================================
+[2025-10-22 18:08:06] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251022_180806.py
+[2025-10-22 18:08:06] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251022_180806.py
+[2025-10-22 18:08:07] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-22 18:08:07] INFO: Código modificado
+[2025-10-22 18:08:07] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-22 18:08:07] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251022_180806.py
+[2025-10-22 18:10:59] INFO: 
+======================================================================
+[2025-10-22 18:10:59] INFO: MODIFICAÇÃO: qualidade
+[2025-10-22 18:10:59] INFO: Alvo: linha_3598_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-22 18:10:59] INFO: Motivo: Bare except clause detectado na linha 3598
+[2025-10-22 18:10:59] INFO: ======================================================================
+[2025-10-22 18:10:59] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251022_181059.py
+[2025-10-22 18:10:59] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251022_181059.py
+[2025-10-22 18:10:59] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-22 18:10:59] INFO: Código modificado
+[2025-10-22 18:10:59] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-22 18:10:59] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251022_181059.py
+[2025-10-22 18:10:59] INFO: 
+======================================================================
+[2025-10-22 18:10:59] INFO: MODIFICAÇÃO: qualidade
+[2025-10-22 18:10:59] INFO: Alvo: linha_4845_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-22 18:10:59] INFO: Motivo: Bare except clause detectado na linha 4845
+[2025-10-22 18:10:59] INFO: ======================================================================
+[2025-10-22 18:10:59] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251022_181059.py
+[2025-10-22 18:10:59] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251022_181059.py
+[2025-10-22 18:10:59] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-22 18:10:59] INFO: Código modificado
+[2025-10-22 18:10:59] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-22 18:10:59] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251022_181059.py
+[2025-10-22 18:13:10] INFO: 
+======================================================================
+[2025-10-22 18:13:10] INFO: MODIFICAÇÃO: qualidade
+[2025-10-22 18:13:10] INFO: Alvo: linha_3598_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-22 18:13:10] INFO: Motivo: Bare except clause detectado na linha 3598
+[2025-10-22 18:13:10] INFO: ======================================================================
+[2025-10-22 18:13:10] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251022_181310.py
+[2025-10-22 18:13:10] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251022_181310.py
+[2025-10-22 18:13:10] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-22 18:13:10] INFO: Código modificado
+[2025-10-22 18:13:10] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-22 18:13:10] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251022_181310.py
+[2025-10-22 18:13:10] INFO: 
+======================================================================
+[2025-10-22 18:13:10] INFO: MODIFICAÇÃO: qualidade
+[2025-10-22 18:13:10] INFO: Alvo: linha_4845_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-22 18:13:10] INFO: Motivo: Bare except clause detectado na linha 4845
+[2025-10-22 18:13:10] INFO: ======================================================================
+[2025-10-22 18:13:10] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251022_181310.py
+[2025-10-22 18:13:10] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251022_181310.py
+[2025-10-22 18:13:10] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-22 18:13:10] INFO: Código modificado
+[2025-10-22 18:13:11] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-22 18:13:11] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251022_181310.py
+[2025-10-22 18:17:17] INFO: 
+======================================================================
+[2025-10-22 18:17:17] INFO: MODIFICAÇÃO: qualidade
+[2025-10-22 18:17:17] INFO: Alvo: linha_3598_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-22 18:17:17] INFO: Motivo: Bare except clause detectado na linha 3598
+[2025-10-22 18:17:17] INFO: ======================================================================
+[2025-10-22 18:17:17] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251022_181717.py
+[2025-10-22 18:17:17] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251022_181717.py
+[2025-10-22 18:17:17] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-22 18:17:17] INFO: Código modificado
+[2025-10-22 18:17:17] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-22 18:17:17] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251022_181717.py
+[2025-10-22 18:17:17] INFO: 
+======================================================================
+[2025-10-22 18:17:17] INFO: MODIFICAÇÃO: qualidade
+[2025-10-22 18:17:17] INFO: Alvo: linha_4845_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-22 18:17:17] INFO: Motivo: Bare except clause detectado na linha 4845
+[2025-10-22 18:17:17] INFO: ======================================================================
+[2025-10-22 18:17:17] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251022_181717.py
+[2025-10-22 18:17:17] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251022_181717.py
+[2025-10-22 18:17:18] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-22 18:17:18] INFO: Código modificado
+[2025-10-22 18:17:18] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-22 18:17:18] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251022_181717.py
+[2025-10-22 18:52:48] INFO: 
+======================================================================
+[2025-10-22 18:52:48] INFO: MODIFICAÇÃO: qualidade
+[2025-10-22 18:52:48] INFO: Alvo: linha_3598_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-22 18:52:48] INFO: Motivo: Bare except clause detectado na linha 3598
+[2025-10-22 18:52:48] INFO: ======================================================================
+[2025-10-22 18:52:48] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251022_185248.py
+[2025-10-22 18:52:48] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251022_185248.py
+[2025-10-22 18:52:48] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-22 18:52:48] INFO: Código modificado
+[2025-10-22 18:52:48] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-22 18:52:48] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251022_185248.py
+[2025-10-22 18:52:48] INFO: 
+======================================================================
+[2025-10-22 18:52:48] INFO: MODIFICAÇÃO: qualidade
+[2025-10-22 18:52:48] INFO: Alvo: linha_4845_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-22 18:52:48] INFO: Motivo: Bare except clause detectado na linha 4845
+[2025-10-22 18:52:48] INFO: ======================================================================
+[2025-10-22 18:52:48] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251022_185248.py
+[2025-10-22 18:52:48] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251022_185248.py
+[2025-10-22 18:52:48] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-22 18:52:48] INFO: Código modificado
+[2025-10-22 18:52:48] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-22 18:52:48] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251022_185248.py
+[2025-10-22 18:57:35] INFO: 
+======================================================================
+[2025-10-22 18:57:35] INFO: MODIFICAÇÃO: qualidade
+[2025-10-22 18:57:35] INFO: Alvo: linha_3598_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-22 18:57:35] INFO: Motivo: Bare except clause detectado na linha 3598
+[2025-10-22 18:57:35] INFO: ======================================================================
+[2025-10-22 18:57:35] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251022_185735.py
+[2025-10-22 18:57:35] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251022_185735.py
+[2025-10-22 18:57:36] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-22 18:57:36] INFO: Código modificado
+[2025-10-22 18:57:36] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-22 18:57:36] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251022_185735.py
+[2025-10-22 18:57:36] INFO: 
+======================================================================
+[2025-10-22 18:57:36] INFO: MODIFICAÇÃO: qualidade
+[2025-10-22 18:57:36] INFO: Alvo: linha_4845_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-22 18:57:36] INFO: Motivo: Bare except clause detectado na linha 4845
+[2025-10-22 18:57:36] INFO: ======================================================================
+[2025-10-22 18:57:36] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251022_185736.py
+[2025-10-22 18:57:36] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251022_185736.py
+[2025-10-22 18:57:36] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-22 18:57:36] INFO: Código modificado
+[2025-10-22 18:57:36] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-22 18:57:36] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251022_185736.py
+[2025-10-22 19:31:35] INFO: 
+======================================================================
+[2025-10-22 19:31:35] INFO: MODIFICAÇÃO: qualidade
+[2025-10-22 19:31:35] INFO: Alvo: linha_3598_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-22 19:31:35] INFO: Motivo: Bare except clause detectado na linha 3598
+[2025-10-22 19:31:35] INFO: ======================================================================
+[2025-10-22 19:31:35] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251022_193135.py
+[2025-10-22 19:31:35] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251022_193135.py
+[2025-10-22 19:31:35] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-22 19:31:35] INFO: Código modificado
+[2025-10-22 19:31:35] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-22 19:31:35] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251022_193135.py
+[2025-10-22 19:31:35] INFO: 
+======================================================================
+[2025-10-22 19:31:35] INFO: MODIFICAÇÃO: qualidade
+[2025-10-22 19:31:35] INFO: Alvo: linha_4845_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-22 19:31:35] INFO: Motivo: Bare except clause detectado na linha 4845
+[2025-10-22 19:31:35] INFO: ======================================================================
+[2025-10-22 19:31:35] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251022_193135.py
+[2025-10-22 19:31:35] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251022_193135.py
+[2025-10-22 19:31:35] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-22 19:31:35] INFO: Código modificado
+[2025-10-22 19:31:35] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-22 19:31:35] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251022_193135.py

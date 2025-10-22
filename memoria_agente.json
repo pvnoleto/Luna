@@ -935,6 +935,516 @@
       ],
       "relevancia": 1.0,
       "uso_count": 0
+    },
+    {
+      "id": "c626ab9560d41880",
+      "timestamp": "2025-10-20T14:31:22.395896",
+      "categoria": "integracao",
+      "conteudo": "NOTION SDK - Diferença entre Login Web e API:\n- Login web usa email/senha para interface do Notion\n- API/SDK requer Integration Token (formato: secret_xxx)\n- Token obtido em: https://www.notion.so/my-integrations\n- IMPORTANTE: Após criar integração, é necessário compartilhar os databases/pages com ela\n- SDK Python: notion-client (pip install notion-client)\n- Autenticação: Client(auth=token)\n- Permissões necessárias: Read/Update/Insert content",
+      "contexto": "",
+      "tags": [
+        "notion",
+        "api",
+        "sdk",
+        "integracao",
+        "autenticacao"
+      ],
+      "relevancia": 1.0,
+      "uso_count": 0
+    },
+    {
+      "id": "6da6bb388046793f",
+      "timestamp": "2025-10-20T14:31:22.402657",
+      "categoria": "troubleshooting",
+      "conteudo": "Erro comum Notion API - \"object not found\":\n- Causa: Database/page não compartilhado com a integração\n- Solução: Abrir database > (...) > Add connections > Selecionar a integração\n- Sem compartilhar explicitamente, a API não tem acesso mesmo com token válido\n- Isso é uma medida de segurança do Notion",
+      "contexto": "",
+      "tags": [
+        "notion",
+        "api",
+        "erro",
+        "troubleshooting",
+        "permissoes"
+      ],
+      "relevancia": 1.0,
+      "uso_count": 0
+    },
+    {
+      "id": "31799a39d0ff08a3",
+      "timestamp": "2025-10-20T14:34:54.346537",
+      "categoria": "bug",
+      "conteudo": "Não modificar __init__ - é zona protegida",
+      "contexto": "Tentativa bloqueada: Função muito grande detectada: __init__ (122 linhas)",
+      "tags": [
+        "auto-modificacao",
+        "zona-protegida"
+      ],
+      "relevancia": 1.0,
+      "uso_count": 0
+    },
+    {
+      "id": "15cb8446ff6ff384",
+      "timestamp": "2025-10-20T14:34:54.361960",
+      "categoria": "bug",
+      "conteudo": "Não modificar executar_tarefa - é zona protegida",
+      "contexto": "Tentativa bloqueada: Função muito grande detectada: executar_tarefa (232 linhas)",
+      "tags": [
+        "auto-modificacao",
+        "zona-protegida"
+      ],
+      "relevancia": 1.0,
+      "uso_count": 0
+    },
+    {
+      "id": "96b7d8f9900ac341",
+      "timestamp": "2025-10-20T14:37:43.785502",
+      "categoria": "bug_fix",
+      "conteudo": "BUG CRÍTICO CORRIGIDO no sistema de auto-evolução do Luna:\n\nPROBLEMA: Todas as melhorias falhavam com erro \"O sistema não pode encontrar o arquivo especificado\"\n\nCAUSA RAIZ: SistemaAutoEvolucao() estava sendo inicializado SEM parâmetros, usando o valor padrão \"agente_completo_final.py\" que não existe. \n\nSOLUÇÃO: Passar __file__ como parâmetro:\n```python\n# ANTES (bugado):\nself.sistema_evolucao = SistemaAutoEvolucao() if AUTO_EVOLUCAO_DISPONIVEL else None\n\n# DEPOIS (corrigido):\nself.sistema_evolucao = SistemaAutoEvolucao(arquivo_alvo=__file__, dir_backups=\"backups_auto_evolucao\") if AUTO_EVOLUCAO_DISPONIVEL else None\n```\n\nLINHA: 2220 em luna_v3_FINAL_OTIMIZADA.py\n\nIMPACTO: Agora o sistema de auto-evolução pode criar backups e aplicar melhorias corretamente!\n\nMÉTODO DE CORREÇÃO:\n1. Criar backup do arquivo\n2. Ler conteúdo com encoding UTF-8\n3. Substituir string antiga por nova\n4. Salvar com encoding UTF-8",
+      "contexto": "",
+      "tags": [
+        "auto-evolucao",
+        "bug-critico",
+        "sistema",
+        "backup",
+        "__file__"
+      ],
+      "relevancia": 1.0,
+      "uso_count": 0
+    },
+    {
+      "id": "13f81b9f26bedc2c",
+      "timestamp": "2025-10-20T14:51:58.617494",
+      "categoria": "auto_evolucao",
+      "conteudo": "Sistema de auto-evolução verificado: Nenhuma melhoria pendente no momento. O sistema está funcionando corretamente e a fila está vazia. Processo: 1) Verificar dashboard, 2) Aplicar melhorias com auto_approve=false para revisão manual, 3) Máximo de 10 melhorias por vez para segurança.",
+      "contexto": "",
+      "tags": [
+        "auto-evolucao",
+        "melhorias",
+        "dashboard",
+        "status"
+      ],
+      "relevancia": 1.0,
+      "uso_count": 0
+    },
+    {
+      "id": "27baa7da3272331d",
+      "timestamp": "2025-10-21T12:30:29.108877",
+      "categoria": "comandos",
+      "conteudo": "Para listar os primeiros N arquivos .py em Windows no workspace atual: cd workspaces\\[nome_workspace] && for /L %i in (1,1,N) do @(dir *.py /b 2>nul | findstr /n \"^\" | findstr \"^%i:\")",
+      "contexto": "",
+      "tags": [
+        "windows",
+        "python",
+        "listar",
+        "arquivos",
+        "workspace"
+      ],
+      "relevancia": 1.0,
+      "uso_count": 0
+    },
+    {
+      "id": "b8a7232406f0d31c",
+      "timestamp": "2025-10-21T12:30:32.900713",
+      "categoria": "bug",
+      "conteudo": "Modificação de linha_3598_C:\\Projetos Automações e Digitais\\Luna\\luna_v3_FINAL_OTIMIZADA.py com esta abordagem causa erro: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada",
+      "contexto": "Bare except clause detectado na linha 3598",
+      "tags": [
+        "auto-modificacao",
+        "erro-validacao"
+      ],
+      "relevancia": 1.0,
+      "uso_count": 0
+    },
+    {
+      "id": "eb7a802c74dacb67",
+      "timestamp": "2025-10-21T12:30:33.364742",
+      "categoria": "bug",
+      "conteudo": "Modificação de linha_4839_C:\\Projetos Automações e Digitais\\Luna\\luna_v3_FINAL_OTIMIZADA.py com esta abordagem causa erro: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada",
+      "contexto": "Bare except clause detectado na linha 4839",
+      "tags": [
+        "auto-modificacao",
+        "erro-validacao"
+      ],
+      "relevancia": 1.0,
+      "uso_count": 0
+    },
+    {
+      "id": "752dc0bf83cd7a7d",
+      "timestamp": "2025-10-21T12:40:54.577896",
+      "categoria": "programacao",
+      "conteudo": "Implementação de Fibonacci em Python:\n\nRECURSIVA (O(2^n) - lenta):\n```python\ndef fibonacci_recursivo(n):\n    if n <= 1:\n        return n\n    return fibonacci_recursivo(n-1) + fibonacci_recursivo(n-2)\n```\n\nITERATIVA (O(n) - eficiente):\n```python\ndef fibonacci_iterativo(n):\n    if n <= 1:\n        return n\n    anterior, atual = 0, 1\n    for _ in range(2, n+1):\n        anterior, atual = atual, anterior + atual\n    return atual\n```\n\nA versão iterativa é muito mais eficiente para valores grandes de n. Para n=10, ambas retornam 55.",
+      "contexto": "",
+      "tags": [
+        "python",
+        "fibonacci",
+        "recursao",
+        "iteracao",
+        "algoritmos",
+        "complexidade"
+      ],
+      "relevancia": 1.0,
+      "uso_count": 0
+    },
+    {
+      "id": "9550fde01d31c9e7",
+      "timestamp": "2025-10-21T12:41:02.783881",
+      "categoria": "bug",
+      "conteudo": "Modificação de linha_4845_C:\\Projetos Automações e Digitais\\Luna\\luna_v3_FINAL_OTIMIZADA.py com esta abordagem causa erro: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada",
+      "contexto": "Bare except clause detectado na linha 4845",
+      "tags": [
+        "auto-modificacao",
+        "erro-validacao"
+      ],
+      "relevancia": 1.0,
+      "uso_count": 0
+    },
+    {
+      "id": "47e27282728c5a3b",
+      "timestamp": "2025-10-21T12:42:29.818074",
+      "categoria": "analise_arquivos",
+      "conteudo": "Para analisar arquivos de log no Windows:\n1. Usar 'find /c /v \"\"' para contar linhas totais\n2. Usar 'findstr /i \"PALAVRA\" arquivo.log | find /c \"PALAVRA\"' para contar ocorrências\n3. Usar 'powershell -command \"Get-Content arquivo.log | Select-Object -Last N\"' para últimas N linhas\n4. Importante: Verificar se arquivo está na raiz do projeto ou no workspace atual\n5. Caminho do workspace: workspaces/nome_workspace/\n6. Caminho raiz do Luna: usar 'cd' para voltar à raiz",
+      "contexto": "",
+      "tags": [
+        "log",
+        "analise",
+        "windows",
+        "cmd",
+        "powershell",
+        "contar_linhas"
+      ],
+      "relevancia": 1.0,
+      "uso_count": 0
+    },
+    {
+      "id": "6e801e3046c76c89",
+      "timestamp": "2025-10-21T12:43:18.456685",
+      "categoria": "comandos",
+      "conteudo": "Para listar e analisar arquivos .py na raiz (Windows):\n1. Listar: dir /b *.py\n2. Contar linhas: for %f in (*.py) do @echo %f & find /c /v \"\" \"%f\"\n3. O comando find /c /v \"\" conta todas as linhas não vazias\n4. Útil para análise rápida de projetos Python",
+      "contexto": "",
+      "tags": [
+        "python",
+        "windows",
+        "análise",
+        "linhas",
+        "arquivos"
+      ],
+      "relevancia": 1.0,
+      "uso_count": 0
+    },
+    {
+      "id": "f827d5270073a481",
+      "timestamp": "2025-10-21T12:44:44.660010",
+      "categoria": "programacao",
+      "conteudo": "ANÁLISE DE IMPORTS EM PYTHON\n\nTécnica para extrair e classificar imports de arquivos Python:\n\n1. EXTRAÇÃO DE IMPORTS:\n   - Usar regex para capturar: ^import\\s+([a-zA-Z0-9_\\.]+)\n   - E também: ^from\\s+([a-zA-Z0-9_\\.]+)\\s+import\n   - Pegar sempre o módulo base (antes do primeiro ponto)\n\n2. CLASSIFICAÇÃO:\n   - Biblioteca Padrão: Verificar contra lista de módulos stdlib\n   - Terceiros: Bibliotecas instaladas via pip (não stdlib)\n   - Locais: Imports relativos (começam com .) ou módulos do projeto\n\n3. PRINCIPAIS MÓDULOS STDLIB:\n   os, sys, re, json, time, datetime, pathlib, collections, itertools,\n   functools, typing, dataclasses, asyncio, threading, subprocess,\n   logging, unittest, ast, inspect, traceback, etc.\n\n4. RELATÓRIO:\n   - Total de imports\n   - Contagem por categoria\n   - Lista alfabética de cada categoria\n\nRESULTADO LUNA_V3:\n- Total: 44 imports\n- Padrão: 26 (59%)\n- Terceiros: 18 (41%)\n- Locais: 0\n\nNOTA: Detectado imports duplicados (json aparece 4x, subprocess 4x, time 3x, Path 2x)",
+      "contexto": "",
+      "tags": [
+        "python",
+        "imports",
+        "análise",
+        "regex",
+        "AST"
+      ],
+      "relevancia": 1.0,
+      "uso_count": 0
+    },
+    {
+      "id": "5cb3c4b1ab6af8a7",
+      "timestamp": "2025-10-21T12:46:19.021599",
+      "categoria": "tecnica",
+      "conteudo": "Comparação de arquivos JSON no Windows: Para ler arquivos fora do workspace atual, usar caminho ABSOLUTO completo (ex: C:\\Projetos...\\Luna\\arquivo.json) em vez de caminho relativo (../). O caminho relativo ../ dentro de um workspace leva para workspaces/ e não para a raiz do projeto. Usar Path do pathlib para manipulação de caminhos. Para comparar JSONs: 1) Comparar tamanho com os.path.getsize(), 2) Carregar com json.load(), 3) Comparar chaves com set operations, 4) Usar Counter para distribuição de categorias.",
+      "contexto": "",
+      "tags": [
+        "json",
+        "comparacao",
+        "arquivos",
+        "windows",
+        "caminho",
+        "absoluto",
+        "relativo",
+        "workspace"
+      ],
+      "relevancia": 1.0,
+      "uso_count": 0
+    },
+    {
+      "id": "074f54a1546477c3",
+      "timestamp": "2025-10-21T12:48:35.479028",
+      "categoria": "scripts",
+      "conteudo": "Script bash para organização automática de backups:\n\nFUNCIONALIDADES:\n- Busca recursiva de arquivos com \"backup\" no nome\n- Organização em estrutura hierárquica .backups/YYYY/MM/\n- Extração inteligente de data do nome do arquivo (YYYYMMDD)\n- Fallback para data de modificação do arquivo\n- Prevenção de duplicatas com adição de timestamp\n- Log detalhado de todas operações\n- Relatório estatístico final\n- Segurança: não move arquivos já organizados\n\nESTRUTURA CRIADA:\n.backups/YYYY/MM/arquivo_backup.ext\n\nPADRÕES DE DATA RECONHECIDOS:\n- arquivo_20251018.py → 20251018\n- backup_20251018_122017.tar.gz → 20251018\n- arquivo_backup.py → usa stat/date -r\n\nCOMANDO FIND:\nfind . -type f -iname \"*backup*\" ! -path \"*/.backups/*\" -print0\n\nBOAS PRÁTICAS:\n- Usar -print0 com read -d '' para nomes com espaços\n- Testar com echo antes de mv (dry-run)\n- Sempre gerar log detalhado com timestamp\n- Criar estrutura de diretórios antes de mover\n- Tratar duplicatas sem sobrescrever",
+      "contexto": "",
+      "tags": [
+        "bash script backup organização automação find mv logs"
+      ],
+      "relevancia": 1.0,
+      "uso_count": 0
+    },
+    {
+      "id": "02c991b50f43c003",
+      "timestamp": "2025-10-21T13:09:12.178538",
+      "categoria": "python",
+      "conteudo": "RECUPERAÇÃO DE ERRO: NameError em Python\n\n**Erro Original:**\n```python\npython -c \"print(variavel_inexistente)\"\n```\nResultado: NameError: name 'variavel_inexistente' is not defined\n\n**Causa:** Tentativa de usar variável não declarada\n\n**Solução:**\n1. Identificar o NameError no traceback\n2. Declarar a variável antes de usar\n3. Testar a correção\n\n**Código Corrigido:**\n```python\nvariavel_existente = \"valor\"\nprint(variavel_existente)\n```\n\n**Lição:** Sempre declarar variáveis antes de usá-las. NameError indica variável, função ou módulo não definido.\n\n**Passos de Recuperação:**\n1. Ler o traceback completo\n2. Identificar a linha e variável problemática\n3. Criar versão corrigida\n4. Testar e confirmar funcionamento\n",
+      "contexto": "",
+      "tags": [
+        "erro",
+        "NameError",
+        "debug",
+        "recuperação",
+        "variável"
+      ],
+      "relevancia": 1.0,
+      "uso_count": 0
+    },
+    {
+      "id": "7cb1f77adeda252f",
+      "timestamp": "2025-10-21T13:14:01.625340",
+      "categoria": "desenvolvimento",
+      "conteudo": "Sistema de Integração com API (APIClient):\n\nIMPLEMENTAÇÃO COMPLETA:\n1. Classe APIClient com métodos HTTP (GET, POST, PUT, DELETE)\n2. Retry logic com backoff exponencial (2^attempt segundos)\n3. Rate limiting usando janela de tempo\n4. Tratamento diferenciado de erros:\n   - 4xx (client errors): SEM retry\n   - 5xx (server errors): COM retry\n   - Timeouts: COM retry\n5. Logging detalhado de todas operações\n6. Estatísticas de uso (total, sucesso, falhas, retries)\n7. Context manager para gerenciamento de recursos\n\nMELHORES PRÁTICAS:\n- Usar requests.Session() para reutilizar conexões\n- Backoff exponencial evita sobrecarga no servidor\n- Rate limiting protege contra banimento\n- Não fazer retry em erros 4xx (cliente está errado)\n- Fazer retry em erros 5xx e timeouts (problema temporário)\n- Logging em INFO para sucesso, WARNING para retry, ERROR para falha final\n\nTESTES COM httpbin.org:\n- /get: testa requisições GET com parâmetros\n- /post: testa POST com JSON payload\n- /status/404: testa tratamento de erro 404\n- /delay/N: testa timeout (N segundos de delay)\n\nCÓDIGO-CHAVE:\n```python\nfor attempt in range(max_retries):\n    try:\n        response = session.request(method, url, timeout=timeout, **kwargs)\n        response.raise_for_status()\n        return response\n    except HTTPError as e:\n        if 400 <= e.response.status_code < 500:\n            raise  # Não retry para 4xx\n        wait = 2 ** attempt  # Backoff exponencial\n        time.sleep(wait)\n```",
+      "contexto": "",
+      "tags": [
+        "api",
+        "http",
+        "requests",
+        "retry",
+        "rate-limiting",
+        "error-handling",
+        "integration"
+      ],
+      "relevancia": 1.0,
+      "uso_count": 0
+    },
+    {
+      "id": "8c400ef7ed5a3f55",
+      "timestamp": "2025-10-21T13:43:52.688033",
+      "categoria": "tarefa",
+      "conteudo": "Para tarefas simples de cálculo e criação de arquivo: 1) Buscar aprendizados relevantes primeiro, 2) Realizar o cálculo, 3) Criar arquivo com criar_arquivo() no workspace atual, 4) Salvar aprendizado após sucesso",
+      "contexto": "",
+      "tags": [
+        "calculo",
+        "arquivo",
+        "resultado",
+        "workspace",
+        "fluxo"
+      ],
+      "relevancia": 1.0,
+      "uso_count": 0
+    },
+    {
+      "id": "9c6cb6040889616a",
+      "timestamp": "2025-10-21T13:44:33.546263",
+      "categoria": "matematica",
+      "conteudo": "Operações matemáticas básicas: 2 + 2 = 4. Para cálculos simples, posso usar bash_avancado com echo ou criar diretamente o resultado em arquivo. Em ambientes Windows sem Python instalado, preferir comandos bash nativos.",
+      "contexto": "",
+      "tags": [
+        "matematica",
+        "calculo",
+        "adicao",
+        "aritmetica",
+        "workspace"
+      ],
+      "relevancia": 1.0,
+      "uso_count": 0
+    },
+    {
+      "id": "142327d09fdc0622",
+      "timestamp": "2025-10-21T13:45:11.467033",
+      "categoria": "matematica",
+      "conteudo": "Cálculos matemáticos simples: 2 + 2 = 4. Para operações básicas, posso calcular diretamente sem necessidade de ferramentas externas. Operações comuns: adição, subtração, multiplicação, divisão.",
+      "contexto": "",
+      "tags": [
+        "matemática",
+        "cálculo",
+        "básico",
+        "adição"
+      ],
+      "relevancia": 1.0,
+      "uso_count": 0
+    },
+    {
+      "id": "b91e4ce172709338",
+      "timestamp": "2025-10-22T17:49:41.181824",
+      "categoria": "comandos",
+      "conteudo": "Para listar os primeiros N arquivos .py em Windows:\nComando: dir /b caminho\\*.py | findstr /n \"^\" | findstr \"^[1-N]:\"\nExemplo: dir /b workspaces\\agendamentos_telenordeste\\*.py | findstr /n \"^\" | findstr \"^[1-3]:\"\nResultado: Lista numerada dos 3 primeiros arquivos .py",
+      "contexto": "",
+      "tags": [
+        "windows",
+        "listar",
+        "arquivos",
+        "python",
+        "py",
+        "diretório"
+      ],
+      "relevancia": 1.0,
+      "uso_count": 0
+    },
+    {
+      "id": "dc6475a667be730e",
+      "timestamp": "2025-10-22T18:04:07.272356",
+      "categoria": "programacao",
+      "conteudo": "Implementação de Fibonacci em Python:\n\n1. RECURSIVA: Simples mas ineficiente (O(2^n))\n   - Caso base: se n <= 1, retorna n\n   - Caso recursivo: fib(n-1) + fib(n-2)\n\n2. ITERATIVA: Mais eficiente (O(n))\n   - Usa duas variáveis para armazenar os dois últimos valores\n   - Itera de 2 até n, atualizando os valores\n\n3. BOAS PRÁTICAS:\n   - Validar entrada (n >= 0)\n   - Incluir docstrings\n   - Testar ambas implementações\n   - Verificar consistência dos resultados\n\nPara n=10, o resultado é 55.\nSequência: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55]",
+      "contexto": "",
+      "tags": [
+        "fibonacci",
+        "python",
+        "recursao",
+        "iteracao",
+        "algoritmos"
+      ],
+      "relevancia": 1.0,
+      "uso_count": 0
+    },
+    {
+      "id": "da68c21acf935fce",
+      "timestamp": "2025-10-22T18:04:59.263618",
+      "categoria": "comandos",
+      "conteudo": "Análise de arquivos de log no Windows:\n- Contar linhas: find /c /v \"\" arquivo.log\n- Contar palavra específica: find /c \"PALAVRA\" arquivo.log\n- Últimas N linhas: powershell -Command \"Get-Content arquivo.log -Tail N\"\n- Verificar existência: dir arquivo 2>nul",
+      "contexto": "",
+      "tags": [
+        "log",
+        "análise",
+        "windows",
+        "find",
+        "powershell",
+        "contar"
+      ],
+      "relevancia": 1.0,
+      "uso_count": 0
+    },
+    {
+      "id": "443b48d1b572bf60",
+      "timestamp": "2025-10-22T18:05:49.009909",
+      "categoria": "comandos",
+      "conteudo": "Para analisar arquivos .py em Windows:\n1. Listar: dir *.py /b\n2. Contar linhas: for %f in (*.py) do @echo %f && find /c /v \"\" %f\n3. Total linhas: powershell -Command \"(Get-ChildItem -Filter '*.py' | ForEach-Object { (Get-Content $_.FullName | Measure-Object -Line).Lines }) -join '+' | Invoke-Expression\"",
+      "contexto": "",
+      "tags": [
+        "windows",
+        "python",
+        "análise",
+        "linhas",
+        "arquivos"
+      ],
+      "relevancia": 1.0,
+      "uso_count": 0
+    },
+    {
+      "id": "cde8af451d0d1e39",
+      "timestamp": "2025-10-22T18:07:56.510093",
+      "categoria": "python",
+      "conteudo": "Análise de Imports em Python:\n- Use regex para extrair imports: r'^import\\s+([a-zA-Z0-9_\\.]+)' e r'^from\\s+([a-zA-Z0-9_\\.]+)\\s+import'\n- Classifique em 3 categorias: stdlib (lista conhecida), terceiros, locais (começam com '.')\n- Lista de stdlib mais comuns: os, sys, json, re, datetime, pathlib, typing, collections, asyncio, logging, functools, etc.\n- Imports relativos (from .module) são sempre locais\n- Use sets para evitar duplicatas\n- Extraia apenas o módulo raiz (antes do primeiro ponto)",
+      "contexto": "",
+      "tags": [
+        "python",
+        "imports",
+        "análise",
+        "ast",
+        "regex",
+        "classificação"
+      ],
+      "relevancia": 1.0,
+      "uso_count": 0
+    },
+    {
+      "id": "e80e6900692d7711",
+      "timestamp": "2025-10-22T18:09:55.629749",
+      "categoria": "tecnico",
+      "conteudo": "Comparação de arquivos JSON memoria_agente: Para comparar arquivos JSON de forma completa: 1) Usar os.path.getsize() para tamanho em bytes, 2) Carregar ambos com json.load(), 3) Comparar chaves com set().keys(), 4) Para aprendizados, criar dicionários indexados por ID para comparação eficiente, 5) Verificar timestamp 'ultima_sessao' em estatísticas para identificar quando foi o último backup. Backups .bak são cópias de segurança automáticas praticamente idênticas ao original, diferindo apenas no timestamp de última sessão (milissegundos de diferença).",
+      "contexto": "",
+      "tags": [
+        "json",
+        "comparacao",
+        "backup",
+        "memoria_agente",
+        "python",
+        "analise"
+      ],
+      "relevancia": 1.0,
+      "uso_count": 0
+    },
+    {
+      "id": "320c6307aad5972a",
+      "timestamp": "2025-10-22T18:13:02.706337",
+      "categoria": "organizacao",
+      "conteudo": "Script de organização de backups criado com sucesso. Funcionalidades: 1) Busca recursiva de arquivos *backup*, 2) Extração de data do nome (YYYYMMDD/YYYY-MM-DD), 3) Organização em estrutura .backups/YYYY/MM/, 4) Log detalhado de operações, 5) Proteção contra duplicatas, 6) Duas versões: Bash (Linux/Mac) e PowerShell (Windows). Ignora automaticamente arquivos já em diretórios de backup (.backups, .rollback_backups, backups_auto_evolucao).",
+      "contexto": "",
+      "tags": [
+        "backup",
+        "organização",
+        "bash",
+        "powershell",
+        "automação",
+        "estrutura-pastas"
+      ],
+      "relevancia": 1.0,
+      "uso_count": 0
+    },
+    {
+      "id": "e5eb31d96fe24019",
+      "timestamp": "2025-10-22T18:17:00.916689",
+      "categoria": "desenvolvimento",
+      "conteudo": "Sistema de validação de configuração JSON criado com sucesso. Implementa: 1) Classe ValidationConfig com validação de estrutura, campos obrigatórios, tipos e validações extras; 2) Schemas completos para workspace_config.json e memoria_agente.json com suporte a listas de objetos, validações numéricas, patterns regex e valores permitidos; 3) Script de teste automatizado que encontra arquivos, valida e gera relatórios detalhados com sugestões de correção. Todos os arquivos do projeto estão válidos e conformes aos schemas.",
+      "contexto": "",
+      "tags": [
+        "validacao",
+        "json",
+        "schema",
+        "qualidade",
+        "testes",
+        "configuracao"
+      ],
+      "relevancia": 1.0,
+      "uso_count": 0
+    },
+    {
+      "id": "ca5714500cb87a65",
+      "timestamp": "2025-10-22T18:52:45.080121",
+      "categoria": "debug",
+      "conteudo": "NameError em Python - Variável não definida:\n- Erro: NameError ocorre quando tentamos usar uma variável que não foi definida\n- Solução: Sempre definir variáveis antes de usá-las\n- Exemplo erro: print(variavel_inexistente)\n- Exemplo correto: variavel_inexistente = \"valor\"; print(variavel_inexistente)\n- Importante: Python executa código linearmente, então a definição deve vir ANTES do uso\n- Recuperação de erro de caminho: usar cd para navegar ao diretório correto antes de executar scripts",
+      "contexto": "",
+      "tags": [
+        "python",
+        "nameerror",
+        "debug",
+        "variaveis",
+        "erro",
+        "recuperacao"
+      ],
+      "relevancia": 1.0,
+      "uso_count": 0
+    },
+    {
+      "id": "abd99be278b4e1c5",
+      "timestamp": "2025-10-22T18:54:18.643934",
+      "categoria": "desenvolvimento",
+      "conteudo": "INTEGRAÇÃO COM API REST EM PYTHON\n\nScript completo para integrar com APIs externas usando a biblioteca requests:\n\n1. FAZER REQUISIÇÃO:\n   - Use requests.get(url, timeout=10)\n   - Use response.raise_for_status() para detectar erros\n   - Parse JSON com response.json()\n\n2. PROCESSAR DADOS:\n   - Use collections.Counter para contagens\n   - Calcule estatísticas relevantes (totais, médias, únicos)\n   - Organize dados em dicionários estruturados\n\n3. SALVAR DADOS:\n   - Use json.dump() com indent=2 e ensure_ascii=False\n   - Salve dados brutos E estatísticas processadas\n   - Inclua timestamp no processamento\n\n4. BOAS PRÁTICAS:\n   - Tratamento de exceções com try/except\n   - Timeouts nas requisições\n   - Feedback visual com emojis\n   - Documentação clara com docstrings\n   - Separação de responsabilidades em funções\n\nESTRUTURA DO SCRIPT:\n- buscar_posts(): faz requisição GET\n- processar_dados(): calcula estatísticas\n- salvar_dados(): persiste em JSON\n- mostrar_estatisticas(): exibe resultados formatados\n- main(): orquestra o fluxo completo\n\nRESULTADO: 100 posts baixados, processados e salvos com sucesso!",
+      "contexto": "",
+      "tags": [
+        "API",
+        "REST",
+        "requests",
+        "JSON",
+        "HTTP",
+        "Python",
+        "integração",
+        "processamento-dados"
+      ],
+      "relevancia": 1.0,
+      "uso_count": 0
+    },
+    {
+      "id": "9600df526d62c8ee",
+      "timestamp": "2025-10-22T18:56:35.618906",
+      "categoria": "testes",
+      "conteudo": "CRIAÇÃO DE SUITE DE TESTES EM PYTHON\n\nFramework completo para validar integração com APIs:\n\n1. ESTRUTURA DE TESTES:\n   - Dividir em funções específicas (teste_*)\n   - Cada teste retorna True/False\n   - Função main() orquestra e reporta resultados\n\n2. CATEGORIAS DE TESTES:\n   - Existência de arquivos (os.path.exists)\n   - Validação de JSON (json.load com try/except)\n   - Estrutura de dados (verificar campos obrigatórios)\n   - Contagens e totais (comparar com esperado)\n   - Integridade (IDs únicos, campos não vazios)\n   - Lógica de negócio (médias, ranges, etc)\n\n3. BOAS PRÁTICAS:\n   - Mensagens claras com emojis (✅ ❌ ⚠️)\n   - Parar testes se dependências falharem\n   - Retornar exit code (0 sucesso, 1 falha)\n   - Mostrar progresso e resumo final\n   - Testar apenas amostras em loops grandes\n\n4. EXEMPLO DE TESTE:\n```python\ndef teste_json_valido():\n    try:\n        with open('dados.json', 'r') as f:\n            dados = json.load(f)\n        print(\"✅ JSON válido\")\n        return True, dados\n    except json.JSONDecodeError:\n        print(\"❌ JSON inválido\")\n        return False, None\n```\n\nRESULTADO: Suite com 6 testes, 100% de aprovação!",
+      "contexto": "",
+      "tags": [
+        "testes",
+        "validação",
+        "Python",
+        "QA",
+        "automatização",
+        "JSON",
+        "integridade"
+      ],
+      "relevancia": 1.0,
+      "uso_count": 0
     }
   ],
   "preferencias_usuario": {
@@ -1312,6 +1822,202 @@
       "timestamp": "2025-10-18T00:14:52.134989",
       "tarefa": "continue a tarefa anterior",
       "resultado": "---\n\n# ✅ RECUPERAÇÃO COMPLETA E TAREFA ATUALIZADA\n\n## 🔧 ERROS CORRIGIDOS:\n1. ✅ Caminho do workspace identificado corretamente\n2. ✅ Arquivos acessados com sucesso\n3. ✅ Problema do Notion diagnosticado\n\n## 📊 SITUAÇÃO ATUAL:\n\n### ✅ O QUE ESTÁ FUNCIONANDO:\n- Login no Notion realizado com sucesso (22:36 hoje)\n- Agendador Python 95% funcional (encontrava 4 dias com vagas: 16, 23, 30, 31)\n- Todos os PDFs organizados e criados\n- Sistema pronto para executar\n\n### ❌ BLOQUEIO IDENTIFICADO:\n**O Database do ",
+      "ferramentas_usadas": [],
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-20T14:32:17.863250",
+      "tarefa": "Teste a conexão com o Notion usando o agente SDK",
+      "resultado": "Excelente! Agora vou criar um resumo visual final:\n\n## 📊 **RESUMO DO TESTE DE CONEXÃO COM NOTION SDK**\n\n---\n\n### ✅ **STATUS GERAL**\n**Progresso:** 70% completo  \n**Bloqueio:** Aguardando Integration Token  \n**Tempo estimado para resolver:** 5-10 minutos\n\n---\n\n### 🎯 **O QUE FOI FEITO**\n\n#### 1. **SDK Instalado** ✅\n```bash\npip install notion-client\n```\n\n#### 2. **Scripts Criados** ✅\n| Arquivo | Função | Status |\n|---------|--------|--------|\n| `test_notion_connection.py` | Testa conexão com API | ",
+      "ferramentas_usadas": [],
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-20T14:34:17.754589",
+      "tarefa": "listar_melhorias_pendentes",
+      "resultado": "## 📊 Status das Melhorias Pendentes\n\n**Resultado:** Não há melhorias pendentes no momento! ✅\n\nIsso significa que:\n- ✅ A fila de auto-evolução está vazia\n- ✅ Todas as melhorias sugeridas anteriormente foram aplicadas ou descartadas\n- ✅ O sistema está em estado estável\n\n### 💡 Como Funciona o Sistema de Auto-Evolução\n\nO sistema permite que eu:\n1. **Detecte problemas** durante a execução de tarefas\n2. **Sugira melhorias** ao meu próprio código\n3. **Aplique correções** automaticamente (com aprovação)",
+      "ferramentas_usadas": [],
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-20T14:38:27.056619",
+      "tarefa": "aplicar_melhorias",
+      "resultado": "Perfeito! Agora vou criar um resumo visual final:\n\n---\n\n## 📊 **RESUMO EXECUTIVO: aplicar_melhorias**\n\n### 🔴 **PROBLEMA CRÍTICO ENCONTRADO E CORRIGIDO!**\n\n**Diagnóstico:**\n- ❌ Sistema de auto-evolução **completamente quebrado**\n- ❌ **Todas as 32 melhorias falharam** (0% sucesso)\n- ❌ Erro: `[WinError 2] O sistema não pode encontrar o arquivo especificado`\n\n**Causa Raiz:**\n```python\n# LINHA 2220 - luna_v3_FINAL_OTIMIZADA.py\nSistemaAutoEvolucao()  # ❌ Sem parâmetros!\n# Usava padrão: \"agente_completo",
+      "ferramentas_usadas": [],
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-20T14:52:08.114759",
+      "tarefa": "aplicar_melhorias",
+      "resultado": "## ✅ Relatório de Aplicação de Melhorias\n\n### 📊 Status Atual do Sistema de Auto-Evolução\n\n**Resultado:** ✅ Sistema operacional e saudável\n\n**Estatísticas:**\n- 🔄 Melhorias pendentes: **0**\n- ✅ Melhorias aplicadas: **0**\n- ❌ Melhorias falhadas: **0**\n- 📝 Total de modificações: **0**\n\n### 🎯 Ação Executada\n\nExecutei `aplicar_melhorias()` com os seguintes parâmetros:\n- `auto_approve`: **false** (requer revisão manual para segurança)\n- `max_aplicar`: **10** (limite seguro por execução)\n\n### 💡 Conclusã",
+      "ferramentas_usadas": [],
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-21T12:30:32.072904",
+      "tarefa": "Liste os 3 primeiros arquivos .py na raiz",
+      "resultado": "✅ **Tarefa concluída!** Listei os 3 primeiros arquivos Python e salvei o aprendizado para consultas futuras.",
+      "ferramentas_usadas": [],
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-21T12:41:01.634145",
+      "tarefa": "Crie um arquivo Python chamado 'fibonacci.py' com uma função que calcula o n-ésimo número da sequência de Fibonacci de forma recursiva e outra de forma iterativa. Inclua uma função main() que testa ambas as implementações com n=10 e imprime os resultados.",
+      "resultado": "✅ **Tarefa concluída com sucesso!**\n\nCriei o arquivo `fibonacci.py` no workspace **agendamentos_telenordeste** com:\n\n📁 **Conteúdo do arquivo:**\n- ✅ **Função recursiva** (`fibonacci_recursivo`): Implementação clássica com complexidade O(2^n)\n- ✅ **Função iterativa** (`fibonacci_iterativo`): Implementação otimizada com complexidade O(n)\n- ✅ **Função main()**: Testa ambas as implementações com n=10\n- ✅ **Documentação completa**: Docstrings, comentários explicativos e validação de entrada\n- ✅ **Outp",
+      "ferramentas_usadas": [],
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-21T12:42:35.596526",
+      "tarefa": "Analise o arquivo 'auto_modificacoes.log' e me diga:\n1. Quantas linhas ele possui?\n2. Quantas vezes aparece a palavra \"ERRO\"?\n3. Quantas vezes aparece a palavra \"SUCESSO\"?\n4. Mostre as 3 últimas linhas do arquivo.",
+      "resultado": "🎉 **TAREFA CONCLUÍDA COM SUCESSO!** O erro foi corrigido (arquivo encontrado na raiz do Luna) e a análise completa foi realizada!",
+      "ferramentas_usadas": [],
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-21T12:43:26.066113",
+      "tarefa": "Liste todos os arquivos .py na pasta raiz do projeto (não recursivo) e me informe:\n1. Quantos arquivos .py existem?\n2. Qual é o maior arquivo (em linhas)?\n3. Qual é o menor arquivo (em linhas)?\n4. Total de linhas de código Python no projeto (apenas raiz).",
+      "resultado": "## 📊 ANÁLISE COMPLETA DOS ARQUIVOS PYTHON NA RAIZ\n\n### Resumo:\n\n**1. Quantos arquivos .py existem?**\n   - **19 arquivos Python** na pasta raiz\n\n**2. Qual é o maior arquivo (em linhas)?**\n   - **luna_v3_FINAL_OTIMIZADA.py** com **5.616 linhas**\n\n**3. Qual é o menor arquivo (em linhas)?**\n   - **fix.py** com **22 linhas**\n\n**4. Total de linhas de código Python no projeto (apenas raiz):**\n   - **14.736 linhas de código**\n\n### Detalhamento completo:\n\n| Arquivo | Linhas |\n|---------|--------|\n| luna_",
+      "ferramentas_usadas": [],
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-21T12:44:55.303573",
+      "tarefa": "Crie um script Python chamado 'analisador_imports.py' que:\n1. Lê o arquivo 'luna_v3_FINAL_OTIMIZADA.py'\n2. Extrai todas as linhas de import (import X e from X import Y)\n3. Classifica os imports em: biblioteca padrão, terceiros, locais\n4. Gera um relatório em 'relatorio_imports.txt' com:\n   - Total de imports\n   - Imports por categoria\n   - Lista alfabética de cada categoria\n5. Execute o script e mostre o resultado",
+      "resultado": "## ✅ TAREFA CONCLUÍDA COM SUCESSO!\n\n### 📊 **RESUMO DA EXECUÇÃO:**\n\n**1. Script Criado:** `analisador_imports.py`\n   - ✅ Lê o arquivo `luna_v3_FINAL_OTIMIZADA.py`\n   - ✅ Extrai todas as linhas de import usando regex\n   - ✅ Classifica em: biblioteca padrão, terceiros, locais\n   - ✅ Gera relatório completo em `relatorio_imports.txt`\n\n**2. Resultado da Análise:**\n```\n📊 TOTAL DE IMPORTS: 44\n\n📚 Biblioteca Padrão: 26 imports (59%)\n   - dataclasses, datetime, pathlib, typing, ast, atexit, codecs\n   - ge",
+      "ferramentas_usadas": [],
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-21T12:46:47.435282",
+      "tarefa": "Compare os arquivos 'memoria_agente.json' e 'memoria_agente.json.bak':\n1. Qual é maior em tamanho?\n2. Carregue ambos como JSON e compare:\n   - Quantas chaves tem cada um?\n   - Quais chaves existem em um mas não no outro?\n   - Se houver chave 'aprendizados', quantos aprendizados tem em cada?\n3. Gere um resumo detalhado da comparação",
+      "resultado": "## ✅ RECUPERAÇÃO COMPLETA E TAREFA CONCLUÍDA!\n\n---\n\n## 📊 RELATÓRIO DETALHADO DA COMPARAÇÃO\n\n### **1. COMPARAÇÃO DE TAMANHO**\n- **memoria_agente.json**: 129.024 bytes (126.00 KB)\n- **memoria_agente.json.bak**: 129.024 bytes (126.00 KB)\n- **✅ RESULTADO**: **TAMANHO IDÊNTICO!**\n\n---\n\n### **2. COMPARAÇÃO DE ESTRUTURA JSON**\n\n#### **Chaves em ambos os arquivos** (6 chaves cada):\n1. `aprendizados`\n2. `contexto`\n3. `estatisticas`\n4. `ferramentas_criadas`\n5. `historico_tarefas`\n6. `preferencias_usuario`",
+      "ferramentas_usadas": [],
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-21T12:48:49.959117",
+      "tarefa": "Organize os arquivos de backup no projeto:\n1. Liste todos os arquivos que contêm 'backup' no nome (recursivo)\n2. Verifique se existe a pasta '.backups' (crie se não existir)\n3. Crie um script bash 'organizar_backups.sh' que:\n   - Encontra todos arquivos *backup* fora de .backups\n   - Move-os para .backups mantendo uma estrutura de pastas por data\n   - Gera log de operações\n4. NÃO execute o script, apenas crie-o para revisão",
+      "resultado": "## ✅ Tarefa Concluída com Sucesso!\n\n### 📊 Resumo da Análise\n\n**1️⃣ Arquivos com \"backup\" no nome encontrados**: 75 itens totais (arquivos + pastas)\n\n**2️⃣ Pasta `.backups`**: ✅ Já existe\n\n**3️⃣ Outras pastas de backup identificadas**:\n- `.backups/` (principal)\n- `.rollback_backups/`\n- `backups_auto_evolucao/`\n\n### 📝 Arquivos Criados\n\n#### 🔧 `organizar_backups.sh` (331 linhas)\nScript bash completo e robusto com:\n\n✅ **Busca inteligente** recursiva de arquivos  \n✅ **Extração de data** do nome (form",
+      "ferramentas_usadas": [],
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-21T13:09:20.146727",
+      "tarefa": "Execute o seguinte comando Python que contém um erro proposital:\npython -c \"print(variavel_inexistente)\"\n\nQuando o erro ocorrer, você deve:\n1. Identificar o problema\n2. Corrigir criando um script válido\n3. Executar a versão corrigida\n4. Confirmar que funcionou",
+      "resultado": "---\n\n## 📊 **RESUMO DA RECUPERAÇÃO DE ERRO**\n\n### **1. ❌ ERRO IDENTIFICADO:**\n```\nNameError: name 'variavel_inexistente' is not defined\n```\n- **Causa:** Variável não foi declarada antes do uso\n- **Tipo:** NameError (variável não definida)\n\n### **2. ✅ CORREÇÃO APLICADA:**\n- Criado arquivo `script_corrigido.py` no workspace\n- Declarada a variável antes de usá-la\n- Adicionadas validações extras para confirmar funcionamento\n\n### **3. ✅ VERSÃO CORRIGIDA EXECUTADA:**\n```\nOlá! Agora a variável existe e ",
+      "ferramentas_usadas": [],
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-21T13:18:22.076960",
+      "tarefa": "Crie um sistema de integração com API (simulada):\n\n1. 'api_client.py': Classe APIClient com:\n   - Métodos: get(), post(), put(), delete()\n   - Tratamento de erros (timeouts, 404, 500)\n   - Retry logic (3 tentativas)\n   - Rate limiting básico\n   - Logging de todas operações\n\n2. 'test_api_client.py': Testes usando httpbin.org:\n   - GET /get (sucesso)\n   - POST /post (com payload JSON)\n   - GET /status/404 (erro 404)\n   - GET /delay/10 (timeout)\n\n3. Execute os testes e mostre resultado de cada operação\n\nATENÇÃO: httpbin.org é um serviço de teste real, use com moderação.",
+      "resultado": "## ✅ ERRO CORRIGIDO!\n\n**Problema**: O script `exemplo_uso_real.py` estava causando timeout devido ao rate limiting e múltiplas requisições.\n\n**Solução**: Criei `exemplo_uso_simples.py` que executa rapidamente e demonstra os recursos principais sem timeout.\n\n---\n\n## 📊 RESUMO FINAL DA TAREFA COMPLETA\n\n# 🎉 SISTEMA DE INTEGRAÇÃO COM API - CONCLUÍDO\n\n## ✅ TODOS OS OBJETIVOS ALCANÇADOS\n\n### 1️⃣ api_client.py ✅\n**Classe APIClient implementada com:**\n- ✅ Métodos: `get()`, `post()`, `put()`, `delete()`\n-",
+      "ferramentas_usadas": [],
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-21T13:43:56.164209",
+      "tarefa": "Calcule 2 + 2 e crie um arquivo test_resultado.txt com a resposta",
+      "resultado": "Perfeito! Aprendizado salvo para futuras tarefas similares. 🎯",
+      "ferramentas_usadas": [],
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-21T13:44:38.345212",
+      "tarefa": "Calcule 2 + 2",
+      "resultado": "## ✅ Tarefa Concluída!\n\n**Cálculo realizado:** 2 + 2 = **4**\n\n**Arquivo criado:** `resultado_calculo.txt`\n- **Localização:** `workspaces/agendamentos_telenordeste/resultado_calculo.txt`\n- **Conteúdo:** Resultado do cálculo com informações adicionais\n\n**Aprendizado salvo:** Armazenei o conhecimento sobre operações matemáticas básicas e como lidar com ambientes sem Python instalado.\n\nA resposta é **4**! 🎯",
+      "ferramentas_usadas": [],
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-21T13:45:14.810906",
+      "tarefa": "Calcule 2 + 2",
+      "resultado": "✅ **Tarefa concluída!** Resultado salvo na memória permanente para futuras consultas.",
+      "ferramentas_usadas": [],
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-22T17:43:56.866917",
+      "tarefa": "Calcule 2 + 2",
+      "resultado": "Perfeito! Agora vou executar o cálculo:\n\n**2 + 2 = 4**\n\nA resposta é **4**.\n\nComo esta é uma operação matemática básica que já foi executada com sucesso anteriormente (conforme o histórico), o resultado é direto e simples. O cálculo de adição de dois números inteiros é uma operação fundamental.\n\n✅ **Tarefa concluída!**\n\nSe precisar que eu salve esse resultado em um arquivo ou realize alguma outra operação com ele, é só me avisar! 😊",
+      "ferramentas_usadas": [],
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-22T17:49:47.041244",
+      "tarefa": "Liste os 3 primeiros arquivos .py na raiz",
+      "resultado": "## ✅ Resultado\n\nOs **3 primeiros arquivos .py** na raiz do workspace `agendamentos_telenordeste` são:\n\n1. **agendador_final_corrigido.py** (47.794 bytes)\n2. **agendador_temp.py** (39.342 bytes)\n3. **analisar_agendador.py** (6.047 bytes)\n\n**Observação:** O workspace contém muitos outros arquivos Python (vi pelo menos 20+ arquivos .py na listagem completa), além de imagens PNG e PDFs relacionados ao projeto de agendamentos da Telenordeste.\n\n💾 **Aprendizado salvo**: Comando para listar arquivos .py",
+      "ferramentas_usadas": [],
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-22T18:04:14.857582",
+      "tarefa": "Crie um arquivo Python chamado 'fibonacci.py' com uma função que calcula o n-ésimo número da sequência de Fibonacci de forma recursiva e outra de forma iterativa. Inclua uma função main() que testa ambas as implementações com n=10 e imprime os resultados.",
+      "resultado": "## ✅ Tarefa Concluída!\n\nCriei com sucesso o arquivo **`fibonacci.py`** no workspace `agendamentos_telenordeste` com:\n\n### 📋 Conteúdo Implementado:\n\n1. **`fibonacci_recursivo(n)`** - Implementação recursiva clássica\n   - Complexidade: O(2^n)\n   - Usa caso base (n ≤ 1) e chamadas recursivas\n\n2. **`fibonacci_iterativo(n)`** - Implementação iterativa otimizada\n   - Complexidade: O(n)\n   - Usa loop e variáveis temporárias\n\n3. **`main()`** - Função de teste completa\n   - Testa ambas implementações com",
+      "ferramentas_usadas": [],
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-22T18:05:06.994582",
+      "tarefa": "Analise o arquivo 'auto_modificacoes.log' e me diga:\n1. Quantas linhas ele possui?\n2. Quantas vezes aparece a palavra \"ERRO\"?\n3. Quantas vezes aparece a palavra \"SUCESSO\"?\n4. Mostre as 3 últimas linhas do arquivo.",
+      "resultado": "## 📊 Análise do arquivo 'auto_modificacoes.log'\n\n### Resultados:\n\n**1. Quantidade de linhas:** `939 linhas`\n\n**2. Ocorrências da palavra \"ERRO\":** `127 vezes`\n\n**3. Ocorrências da palavra \"SUCESSO\":** `0 vezes`\n\n**4. Últimas 3 linhas do arquivo:**\n```\n[2025-10-22 18:04:15] INFO: Código modificado\n[2025-10-22 18:04:15] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada\n[2025-10-22 18:04:15] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251022_1",
+      "ferramentas_usadas": [],
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-22T18:05:57.574175",
+      "tarefa": "Liste todos os arquivos .py na pasta raiz do projeto (não recursivo) e me informe:\n1. Quantos arquivos .py existem?\n2. Qual é o maior arquivo (em linhas)?\n3. Qual é o menor arquivo (em linhas)?\n4. Total de linhas de código Python no projeto (apenas raiz).",
+      "resultado": "## 📊 Análise dos Arquivos Python na Raiz do Projeto\n\n### Resultados:\n\n**1. Quantidade de arquivos .py:** **21 arquivos**\n\n**2. Maior arquivo (em linhas):** \n   - **agendador_final_corrigido.py** com **1.130 linhas**\n\n**3. Menor arquivo (em linhas):**\n   - **pressionar_enter.py** com **17 linhas**\n\n**4. Total de linhas de código Python (apenas raiz):** **5.068 linhas**\n\n---\n\n### 📋 Lista Completa (ordenada por tamanho):\n\n| Arquivo | Linhas |\n|---------|--------|\n| agendador_final_corrigido.py | 1.",
+      "ferramentas_usadas": [],
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-22T18:08:06.083236",
+      "tarefa": "Crie um script Python chamado 'analisador_imports.py' que:\n1. Lê o arquivo 'luna_v3_FINAL_OTIMIZADA.py'\n2. Extrai todas as linhas de import (import X e from X import Y)\n3. Classifica os imports em: biblioteca padrão, terceiros, locais\n4. Gera um relatório em 'relatorio_imports.txt' com:\n   - Total de imports\n   - Imports por categoria\n   - Lista alfabética de cada categoria\n5. Execute o script e mostre o resultado",
+      "resultado": "🎉 **MISSÃO CUMPRIDA!** O script foi criado, executado com sucesso e o aprendizado foi salvo para referência futura!",
+      "ferramentas_usadas": [],
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-22T18:10:58.817089",
+      "tarefa": "Compare os arquivos 'memoria_agente.json' e 'memoria_agente.json.bak':\n1. Qual é maior em tamanho?\n2. Carregue ambos como JSON e compare:\n   - Quantas chaves tem cada um?\n   - Quais chaves existem em um mas não no outro?\n   - Se houver chave 'aprendizados', quantos aprendizados tem em cada?\n3. Gere um resumo detalhado da comparação",
+      "resultado": "---\n\n## ✅ **TAREFA CONCLUÍDA COM SUCESSO!**\n\n### 📊 **RESPOSTAS ÀS SUAS PERGUNTAS:**\n\n#### **1. Qual é maior em tamanho?**\n**✅ AMBOS TÊM EXATAMENTE O MESMO TAMANHO: 150.416 bytes (146,89 KB)**\n\n---\n\n#### **2. Comparação JSON detalhada:**\n\n**📋 Quantidade de chaves:**\n- **memoria_agente.json**: 6 chaves\n- **memoria_agente.json.bak**: 6 chaves\n- **✅ Estrutura idêntica!**\n\n**🔑 Chaves existentes (ambos possuem as mesmas):**\n1. `aprendizados` - Lista de aprendizados\n2. `contexto` - Contexto da sessão\n3",
+      "ferramentas_usadas": [],
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-22T18:13:10.258069",
+      "tarefa": "Organize os arquivos de backup no projeto:\n1. Liste todos os arquivos que contêm 'backup' no nome (recursivo)\n2. Verifique se existe a pasta '.backups' (crie se não existir)\n3. Crie um script bash 'organizar_backups.sh' que:\n   - Encontra todos arquivos *backup* fora de .backups\n   - Move-os para .backups mantendo uma estrutura de pastas por data\n   - Gera log de operações\n4. NÃO execute o script, apenas crie-o para revisão",
+      "resultado": "🎉 **TAREFA CONCLUÍDA COM SUCESSO!**\n\nOs scripts estão prontos para revisão e **não foram executados** conforme sua solicitação. Ambos contêm toda a lógica necessária para organizar os backups de forma segura e estruturada!",
+      "ferramentas_usadas": [],
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-22T18:17:17.301959",
+      "tarefa": "Crie um sistema completo de validação de configuração com 3 arquivos:\n\n1. 'validador_config.py': Classe ValidationConfig com métodos:\n   - validar_estrutura_json(arquivo) -> bool\n   - validar_campos_obrigatorios(json_data, campos) -> list[erros]\n   - validar_tipos(json_data, schema) -> list[erros]\n   - gerar_relatorio(resultados) -> str\n\n2. 'schemas.py': Dicionário com schemas de validação para:\n   - workspace_config.json\n   - memoria_agente.json\n\n3. 'test_validador.py': Script que:\n   - Testa o validador com arquivos reais do projeto\n   - Gera relatório de conformidade\n   - Sugere correções se houver problemas\n\nExecute apenas o test_validador.py e mostre os resultados.",
+      "resultado": "## 🎯 RESUMO DA EXECUÇÃO\n\n### ✅ Sistema de Validação Criado com Sucesso!\n\n**3 arquivos criados no workspace `agendamentos_telenordeste`:**\n\n1. **📄 schemas.py** (132 linhas)\n   - Schema completo para `workspace_config.json` com validações de:\n     - Campos obrigatórios: nome, descrição, criado_em, ultimo_acesso, arquivos, tags, metadata\n     - Tipos de dados para cada campo\n     - Validações extras: comprimento, patterns regex, tipos de elementos em listas\n     - Valores permitidos para status\n   ",
+      "ferramentas_usadas": [],
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-22T18:52:48.078120",
+      "tarefa": "Execute o seguinte comando Python que contém um erro proposital: python -c \"print(variavel_inexistente)\". Quando o erro ocorrer, você deve: 1. Identificar o problema, 2. Corrigir criando um script válido, 3. Executar a versão corrigida, 4. Confirmar que funcionou",
+      "resultado": "🎓 **Aprendizado salvo com sucesso!** Este conhecimento agora está na memória permanente e pode ser usado em situações futuras similares.",
+      "ferramentas_usadas": [],
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-22T18:57:35.720523",
+      "tarefa": "Simule uma integração com uma API externa: 1) Crie um script Python que faça requisições a https://jsonplaceholder.typicode.com/posts, 2) Processe os dados retornados, 3) Salve em um arquivo JSON local, 4) Mostre estatísticas (total de posts, autores únicos, etc.)",
+      "resultado": "Perfeito! Agora vou criar um relatório final consolidado:\n\n## 🎉 **TAREFA CONCLUÍDA COM SUCESSO!** ✨\n\n---\n\n# 📊 RELATÓRIO COMPLETO - Integração com API Externa\n\n## ✅ **TODOS OS REQUISITOS ATENDIDOS**\n\n### ✔️ **Requisito 1: Script Python que faz requisições**\n**Arquivo:** `integracao_api.py`\n- Requisição GET para https://jsonplaceholder.typicode.com/posts\n- Tratamento de erros e timeouts\n- Status 200 OK recebido\n- 100 posts baixados com sucesso\n\n### ✔️ **Requisito 2: Processa os dados retornados**\n",
+      "ferramentas_usadas": [],
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-22T19:31:34.796282",
+      "tarefa": "Analise e refatore o módulo massive_context_analyzer.py seguindo EXATAMENTE estes passos (NÃO adicione passos extras):\n\nPASSO 1: Ler o arquivo massive_context_analyzer.py completo\nPASSO 2: Identificar as 3 principais classes/funções (MÁXIMO 3)\nPASSO 3: Para CADA uma das 3 funções identificadas:\n  - Verificar complexidade ciclomática\n  - Contar linhas de código\n  - Identificar dependências diretas\nPASSO 4: Criar arquivo ANALISE_MASSIVE_CONTEXT.md com:\n  - Resumo das 3 funções (máximo 5 linhas cada)\n  - Métricas de complexidade\n  - Recomendações de refatoração (máximo 3 recomendações)\nPASSO 5: Implementar UMA refatoração simples (a mais impactante)\nPASSO 6: Validar que o código refatorado não tem erros de sintaxe\nPASSO 7: Criar arquivo TEST_REFATORACAO.py que testa a refatoração\nPASSO 8: Executar o teste\nPASSO 9: Documentar resultado em ANALISE_MASSIVE_CONTEXT.md\nPASSO 10: FIM - Tarefa concluída\n\nIMPORTANTE:\n- NÃO seja criativo\n- NÃO adicione passos extras\n- NÃO crie visualizações ou gráficos\n- PARE após o passo 10\n- MÁXIMO 15 iterações total",
+      "resultado": "### PASSO 10: FIM - Tarefa concluída\n\n---\n\n## ✅ RESUMO DA EXECUÇÃO\n\n**Tarefa**: Análise e refatoração de massive_context_analyzer.py\n\n**Passos Executados** (10/10):\n1. ✅ Arquivo lido com sucesso (após correção de erro de localização)\n2. ✅ 3 principais funções identificadas\n3. ✅ Métricas coletadas (complexidade, LOC, dependências)\n4. ✅ Arquivo ANALISE_MASSIVE_CONTEXT.md criado\n5. ✅ Refatoração de _aggregate_results implementada\n6. ✅ Código validado (sintaxe OK)\n7. ✅ Teste TEST_REFATORACAO.py cria",
       "ferramentas_usadas": [],
       "sucesso": true
     }
@@ -2020,10 +2726,10 @@
   ],
   "contexto": {},
   "estatisticas": {
-    "total_tarefas": 49,
-    "total_aprendizados": 57,
+    "total_tarefas": 77,
+    "total_aprendizados": 89,
     "ferramentas_criadas": 581,
     "primeira_sessao": "2025-10-14T12:49:21.749672",
-    "ultima_sessao": "2025-10-18T12:28:15.922395"
+    "ultima_sessao": "2025-10-22T19:31:34.796292"
   }
 }
