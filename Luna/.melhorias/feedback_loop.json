@@ -1,0 +1,423 @@
+{
+  "metricas_historico": [
+    {
+      "timestamp": "2025-10-23T14:18:30.301462",
+      "tipo": "qualidade",
+      "alvo": "linha_3708_C:\\Projetos Automações e Digitais\\Luna\\luna_v3_FINAL_OTIMIZADA.py",
+      "sucesso": false,
+      "erro": "Execução falhou: Classe 'AgenteCompletoFinal' não encontrada"
+    },
+    {
+      "timestamp": "2025-10-23T14:18:30.673699",
+      "tipo": "qualidade",
+      "alvo": "linha_4955_C:\\Projetos Automações e Digitais\\Luna\\luna_v3_FINAL_OTIMIZADA.py",
+      "sucesso": false,
+      "erro": "Execução falhou: Classe 'AgenteCompletoFinal' não encontrada"
+    },
+    {
+      "timestamp": "2025-10-23T14:31:31.025419",
+      "tipo": "bug_fix",
+      "alvo": "ler_arquivo",
+      "sucesso": false,
+      "erro": "Execução falhou: Classe 'AgenteCompletoFinal' não encontrada"
+    },
+    {
+      "timestamp": "2025-10-23T14:51:18.567715",
+      "tipo": "qualidade",
+      "alvo": "linha_3708_C:\\Projetos Automações e Digitais\\Luna\\luna_v3_FINAL_OTIMIZADA.py",
+      "sucesso": false,
+      "erro": "Execução falhou: Classe 'AgenteCompletoFinal' não encontrada"
+    },
+    {
+      "timestamp": "2025-10-23T14:51:18.913615",
+      "tipo": "qualidade",
+      "alvo": "linha_4955_C:\\Projetos Automações e Digitais\\Luna\\luna_v3_FINAL_OTIMIZADA.py",
+      "sucesso": false,
+      "erro": "Execução falhou: Classe 'AgenteCompletoFinal' não encontrada"
+    },
+    {
+      "timestamp": "2025-10-23T15:06:08.664532",
+      "tipo": "qualidade",
+      "alvo": "linha_3717_C:\\Projetos Automações e Digitais\\Luna\\luna_v3_FINAL_OTIMIZADA.py",
+      "sucesso": false,
+      "erro": "Execução falhou: Classe 'AgenteCompletoFinal' não encontrada"
+    },
+    {
+      "timestamp": "2025-10-23T15:06:09.081775",
+      "tipo": "qualidade",
+      "alvo": "linha_4964_C:\\Projetos Automações e Digitais\\Luna\\luna_v3_FINAL_OTIMIZADA.py",
+      "sucesso": false,
+      "erro": "Execução falhou: Classe 'AgenteCompletoFinal' não encontrada"
+    },
+    {
+      "timestamp": "2025-10-23T15:16:09.598222",
+      "tipo": "qualidade",
+      "alvo": "linha_3724_C:\\Projetos Automações e Digitais\\Luna\\luna_v3_FINAL_OTIMIZADA.py",
+      "sucesso": false,
+      "erro": "Execução falhou: Classe 'AgenteCompletoFinal' não encontrada"
+    },
+    {
+      "timestamp": "2025-10-23T15:16:09.971112",
+      "tipo": "qualidade",
+      "alvo": "linha_4971_C:\\Projetos Automações e Digitais\\Luna\\luna_v3_FINAL_OTIMIZADA.py",
+      "sucesso": false,
+      "erro": "Execução falhou: Classe 'AgenteCompletoFinal' não encontrada"
+    },
+    {
+      "timestamp": "2025-10-23T15:44:36.990105",
+      "tipo": "qualidade",
+      "alvo": "linha_3724_C:\\Projetos Automações e Digitais\\Luna\\luna_v3_FINAL_OTIMIZADA.py",
+      "sucesso": false,
+      "erro": "Execução falhou: Classe 'AgenteCompletoFinal' não encontrada"
+    },
+    {
+      "timestamp": "2025-10-23T15:44:37.646415",
+      "tipo": "qualidade",
+      "alvo": "linha_4972_C:\\Projetos Automações e Digitais\\Luna\\luna_v3_FINAL_OTIMIZADA.py",
+      "sucesso": false,
+      "erro": "Execução falhou: Classe 'AgenteCompletoFinal' não encontrada"
+    },
+    {
+      "timestamp": "2025-10-23T16:04:57.308319",
+      "tipo": "bug_fix",
+      "alvo": "ler_arquivo",
+      "sucesso": false,
+      "erro": "Execução falhou: Classe 'AgenteCompletoFinal' não encontrada"
+    },
+    {
+      "timestamp": "2025-10-23T16:04:57.762890",
+      "tipo": "qualidade",
+      "alvo": "linha_3728_C:\\Projetos Automações e Digitais\\Luna\\luna_v3_FINAL_OTIMIZADA.py",
+      "sucesso": false,
+      "erro": "Execução falhou: Classe 'AgenteCompletoFinal' não encontrada"
+    },
+    {
+      "timestamp": "2025-10-23T16:04:58.253684",
+      "tipo": "qualidade",
+      "alvo": "linha_4977_C:\\Projetos Automações e Digitais\\Luna\\luna_v3_FINAL_OTIMIZADA.py",
+      "sucesso": false,
+      "erro": "Execução falhou: Classe 'AgenteCompletoFinal' não encontrada"
+    },
+    {
+      "timestamp": "2025-10-23T17:33:46.659369",
+      "tipo": "qualidade",
+      "alvo": "linha_3758_C:\\Projetos Automações e Digitais\\Luna\\luna_v3_FINAL_OTIMIZADA.py",
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-23T17:33:46.882454",
+      "tipo": "qualidade",
+      "alvo": "linha_5007_C:\\Projetos Automações e Digitais\\Luna\\luna_v3_FINAL_OTIMIZADA.py",
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-23T17:46:10.807089",
+      "tipo": "qualidade",
+      "alvo": "linha_1683_C:\\Projetos Automações e Digitais\\Luna\\luna_v3_FINAL_OTIMIZADA.py",
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-23T17:46:11.035584",
+      "tipo": "qualidade",
+      "alvo": "linha_2417_C:\\Projetos Automações e Digitais\\Luna\\luna_v3_FINAL_OTIMIZADA.py",
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-23T18:03:47.053643",
+      "tipo": "qualidade",
+      "alvo": "linha_1690_C:\\Projetos Automações e Digitais\\Luna\\luna_v3_FINAL_OTIMIZADA.py",
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-23T18:03:47.346752",
+      "tipo": "qualidade",
+      "alvo": "linha_2424_C:\\Projetos Automações e Digitais\\Luna\\luna_v3_FINAL_OTIMIZADA.py",
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-23T18:19:13.842424",
+      "tipo": "qualidade",
+      "alvo": "linha_1685_C:\\Projetos Automações e Digitais\\Luna\\luna_v3_FINAL_OTIMIZADA.py",
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-23T18:19:14.067930",
+      "tipo": "qualidade",
+      "alvo": "linha_2419_C:\\Projetos Automações e Digitais\\Luna\\luna_v3_FINAL_OTIMIZADA.py",
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-23T19:01:18.299845",
+      "tipo": "qualidade",
+      "alvo": "linha_1697_C:\\Projetos Automações e Digitais\\Luna\\luna_v3_FINAL_OTIMIZADA.py",
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-23T19:01:18.560576",
+      "tipo": "qualidade",
+      "alvo": "linha_2431_C:\\Projetos Automações e Digitais\\Luna\\luna_v3_FINAL_OTIMIZADA.py",
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-23T20:14:19.277871",
+      "tipo": "bug_fix",
+      "alvo": "ler_arquivo",
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-23T20:14:19.603856",
+      "tipo": "bug_fix",
+      "alvo": "ler_arquivo",
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-23T20:14:19.918523",
+      "tipo": "bug_fix",
+      "alvo": "ler_arquivo",
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-23T20:14:20.235062",
+      "tipo": "bug_fix",
+      "alvo": "ler_arquivo",
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-23T20:14:20.557176",
+      "tipo": "bug_fix",
+      "alvo": "ler_arquivo",
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-23T20:14:51.878093",
+      "tipo": "qualidade",
+      "alvo": "linha_1697_C:\\Projetos Automações e Digitais\\Luna\\luna_v3_FINAL_OTIMIZADA.py",
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-23T20:14:52.399606",
+      "tipo": "qualidade",
+      "alvo": "linha_2431_C:\\Projetos Automações e Digitais\\Luna\\luna_v3_FINAL_OTIMIZADA.py",
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-23T20:33:30.256400",
+      "tipo": "bug_fix",
+      "alvo": "ler_arquivo",
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-23T20:33:30.579417",
+      "tipo": "bug_fix",
+      "alvo": "ler_arquivo",
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-23T20:33:30.925328",
+      "tipo": "bug_fix",
+      "alvo": "ler_arquivo",
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-23T20:33:31.231176",
+      "tipo": "bug_fix",
+      "alvo": "ler_arquivo",
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-23T20:33:31.548518",
+      "tipo": "bug_fix",
+      "alvo": "ler_arquivo",
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-23T20:33:32.744418",
+      "tipo": "bug_fix",
+      "alvo": "ler_arquivo",
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-23T20:33:33.042345",
+      "tipo": "bug_fix",
+      "alvo": "ler_arquivo",
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-23T20:33:33.341337",
+      "tipo": "bug_fix",
+      "alvo": "ler_arquivo",
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-23T20:33:33.571503",
+      "tipo": "qualidade",
+      "alvo": "linha_1697_C:\\Projetos Automações e Digitais\\Luna\\luna_v3_FINAL_OTIMIZADA.py",
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-23T20:33:33.800796",
+      "tipo": "qualidade",
+      "alvo": "linha_2431_C:\\Projetos Automações e Digitais\\Luna\\luna_v3_FINAL_OTIMIZADA.py",
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-23T21:03:14.311061",
+      "tipo": "bug_fix",
+      "alvo": "ler_arquivo",
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-23T21:03:14.622272",
+      "tipo": "bug_fix",
+      "alvo": "ler_arquivo",
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-23T21:03:14.921121",
+      "tipo": "bug_fix",
+      "alvo": "ler_arquivo",
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-23T21:20:51.766043",
+      "tipo": "qualidade",
+      "alvo": "linha_1707_C:\\Projetos Automações e Digitais\\Luna\\luna_v3_FINAL_OTIMIZADA.py",
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-23T21:20:52.030077",
+      "tipo": "qualidade",
+      "alvo": "linha_2445_C:\\Projetos Automações e Digitais\\Luna\\luna_v3_FINAL_OTIMIZADA.py",
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-23T21:22:05.699784",
+      "tipo": "qualidade",
+      "alvo": "linha_1701_C:\\Projetos Automações e Digitais\\Luna\\luna_v3_FINAL_OTIMIZADA.py",
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-23T21:22:05.944544",
+      "tipo": "qualidade",
+      "alvo": "linha_2437_C:\\Projetos Automações e Digitais\\Luna\\luna_v3_FINAL_OTIMIZADA.py",
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-23T22:14:47.109731",
+      "tipo": "qualidade",
+      "alvo": "linha_1722_C:\\Projetos Automações e Digitais\\Luna\\luna_v3_FINAL_OTIMIZADA.py",
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-23T22:14:47.425104",
+      "tipo": "qualidade",
+      "alvo": "linha_2460_C:\\Projetos Automações e Digitais\\Luna\\luna_v3_FINAL_OTIMIZADA.py",
+      "sucesso": true
+    },
+    {
+      "timestamp": "2025-10-24T00:06:10.864219",
+      "tipo": "otimizacao",
+      "alvo": "linha_5215_C:\\Projetos Automações e Digitais\\Luna\\luna_v3_FINAL_OTIMIZADA.py",
+      "sucesso": false,
+      "erro": "Import falhou: module 'importlib' has no attribute 'util'"
+    },
+    {
+      "timestamp": "2025-10-24T00:08:57.267499",
+      "tipo": "otimizacao",
+      "alvo": "linha_5215_C:\\Projetos Automações e Digitais\\Luna\\luna_v3_FINAL_OTIMIZADA.py",
+      "sucesso": false,
+      "erro": "Import falhou: module 'importlib' has no attribute 'util'"
+    },
+    {
+      "timestamp": "2025-10-24T00:17:47.120875",
+      "tipo": "documentacao",
+      "alvo": "tem_ciclo",
+      "sucesso": false,
+      "erro": "Sintaxe inválida: Linha 1: invalid syntax"
+    },
+    {
+      "timestamp": "2025-10-24T00:17:47.281418",
+      "tipo": "documentacao",
+      "alvo": "LoopVisitor",
+      "sucesso": false,
+      "erro": "Import falhou: module 'importlib' has no attribute 'util'"
+    },
+    {
+      "timestamp": "2025-10-24T00:17:47.463707",
+      "tipo": "documentacao",
+      "alvo": "ImportVisitor",
+      "sucesso": false,
+      "erro": "Import falhou: module 'importlib' has no attribute 'util'"
+    },
+    {
+      "timestamp": "2025-10-24T00:17:47.645330",
+      "tipo": "documentacao",
+      "alvo": "visit_For",
+      "sucesso": false,
+      "erro": "Sintaxe inválida: Linha 1: invalid syntax"
+    },
+    {
+      "timestamp": "2025-10-24T00:17:47.825587",
+      "tipo": "documentacao",
+      "alvo": "visit_While",
+      "sucesso": false,
+      "erro": "Sintaxe inválida: Linha 1: invalid syntax"
+    },
+    {
+      "timestamp": "2025-10-24T00:17:48.001402",
+      "tipo": "documentacao",
+      "alvo": "visit_AugAssign",
+      "sucesso": false,
+      "erro": "Sintaxe inválida: Linha 1: invalid syntax"
+    },
+    {
+      "timestamp": "2025-10-24T00:17:48.178040",
+      "tipo": "documentacao",
+      "alvo": "visit_FunctionDef",
+      "sucesso": false,
+      "erro": "Sintaxe inválida: Linha 1: invalid syntax"
+    },
+    {
+      "timestamp": "2025-10-24T00:17:48.349265",
+      "tipo": "documentacao",
+      "alvo": "visit_For",
+      "sucesso": false,
+      "erro": "Sintaxe inválida: Linha 1: invalid syntax"
+    },
+    {
+      "timestamp": "2025-10-24T00:17:48.524241",
+      "tipo": "documentacao",
+      "alvo": "visit_While",
+      "sucesso": false,
+      "erro": "Sintaxe inválida: Linha 1: invalid syntax"
+    },
+    {
+      "timestamp": "2025-10-24T00:17:48.688803",
+      "tipo": "documentacao",
+      "alvo": "visit_Import",
+      "sucesso": false,
+      "erro": "Sintaxe inválida: Linha 1: invalid syntax"
+    }
+  ],
+  "blacklist_padroes": [],
+  "taxa_sucesso_por_tipo": {
+    "qualidade": {
+      "tentativas": 32,
+      "sucessos": 20
+    },
+    "bug_fix": {
+      "tentativas": 18,
+      "sucessos": 16
+    },
+    "otimizacao": {
+      "tentativas": 2,
+      "sucessos": 0
+    },
+    "documentacao": {
+      "tentativas": 10,
+      "sucessos": 0
+    }
+  },
+  "ultima_atualizacao": "2025-10-24T00:17:48.688829",
+  "versao": "1.0"
+}
