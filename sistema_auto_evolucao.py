@@ -1255,8 +1255,8 @@ class SistemaAutoEvolucao:
         print(f"{'='*70}\n")
 
         print(f"[STATS] Resumo:")
-        print(f"   [OK] {resultados["sucesso"]} melhorias aplicadas")
-        print(f"   [ERRO] {resultados["falhas"]} falhas (revertidas)")
+        print(f"   [OK] {resultados['sucesso']} melhorias aplicadas")
+        print(f"   [ERRO] {resultados['falhas']} falhas (revertidas)")
 
         # ✅ FASE 5: Mostrar melhorias bloqueadas por blacklist
         if resultados.get('bloqueadas_blacklist', 0) > 0:
