@@ -11,33 +11,123 @@ import ast
 from typing import Dict, List, Optional, Tuple
 
 
-def inferir_descricao_funcao(node: ast.FunctionDef, codigo_fonte: str) -> Dict[str, any]:
+def inferir_descricao_funcao(node: ast.AST, codigo_fonte: str) -> Dict[str, any]:
     """
     Infere descrição,args e returns a partir do AST e análise do código.
 
     Args:
-        node: Nó AST da função
+        node: Nó AST da função ou classe
         codigo_fonte: Código fonte completo
 
     Returns:
-        Dict com 'descricao', 'args', 'returns'
+        Dict com 'descricao', 'args', 'returns', 'attributes' (se classe)
     """
     nome = node.name
 
-    # 1. INFERIR DESCRIÇÃO baseada no nome e corpo
-    descricao = inferir_descricao_por_nome_e_corpo(nome, node)
+    # Detectar se é classe ou função
+    if isinstance(node, ast.ClassDef):
+        # Processar como classe
+        descricao = inferir_descricao_classe(nome, node)
+        attributes = inferir_atributos_classe(node)
 
-    # 2. INFERIR ARGUMENTOS reais (não placeholders)
-    args = inferir_argumentos(node)
+        return {
+            'descricao': descricao,
+            'attributes': attributes,
+            'tipo': 'classe'
+        }
+    else:
+        # Processar como função
+        # 1. INFERIR DESCRIÇÃO baseada no nome e corpo
+        descricao = inferir_descricao_por_nome_e_corpo(nome, node)
 
-    # 3. INFERIR RETURNS real
-    returns_desc = inferir_returns(node)
+        # 2. INFERIR ARGUMENTOS reais (não placeholders)
+        args = inferir_argumentos(node)
 
-    return {
-        'descricao': descricao,
-        'args': args,
-        'returns': returns_desc
-    }
+        # 3. INFERIR RETURNS real
+        returns_desc = inferir_returns(node)
+
+        return {
+            'descricao': descricao,
+            'args': args,
+            'returns': returns_desc,
+            'tipo': 'funcao'
+        }
+
+
+def inferir_descricao_classe(nome: str, node: ast.ClassDef) -> str:
+    """
+    Infere descrição de uma classe baseada no nome e estrutura.
+    """
+    # Heurísticas baseadas no nome da classe
+    if 'Manager' in nome or 'Gerenciador' in nome:
+        return f"Gerenciador de {nome.replace('Manager', '').replace('Gerenciador', '')}"
+
+    if 'Handler' in nome or 'Manipulador' in nome:
+        return f"Manipulador de {nome.replace('Handler', '').replace('Manipulador', '')}"
+
+    if 'Controller' in nome or 'Controlador' in nome:
+        return f"Controlador de {nome.replace('Controller', '').replace('Controlador', '')}"
+
+    if 'Service' in nome or 'Servico' in nome:
+        return f"Serviço de {nome.replace('Service', '').replace('Servico', '')}"
+
+    if nome.endswith('Config') or nome.endswith('Configuracao'):
+        return f"Configuração para {nome.replace('Config', '').replace('Configuracao', '')}"
+
+    if nome.endswith('Exception') or nome.endswith('Error'):
+        return f"Exceção customizada para {nome.replace('Exception', '').replace('Error', '')}"
+
+    # Analisar métodos para inferir propósito
+    metodos = [n.name for n in node.body if isinstance(n, ast.FunctionDef)]
+
+    if '__init__' in metodos and len(metodos) > 1:
+        return f"Classe {nome} com inicialização e métodos auxiliares"
+
+    # Fallback genérico
+    return f"Classe {nome}"
+
+
+def inferir_atributos_classe(node: ast.ClassDef) -> Dict[str, str]:
+    """
+    Infere atributos de uma classe a partir do __init__.
+    """
+    attributes = {}
+
+    # Procurar método __init__
+    init_method = None
+    for item in node.body:
+        if isinstance(item, ast.FunctionDef) and item.name == '__init__':
+            init_method = item
+            break
+
+    if not init_method:
+        return {}
+
+    # Extrair self.atributo = valor
+    for stmt in ast.walk(init_method):
+        if isinstance(stmt, ast.Assign):
+            for target in stmt.targets:
+                if isinstance(target, ast.Attribute) and isinstance(target.value, ast.Name):
+                    if target.value.id == 'self':
+                        attr_name = target.attr
+
+                        # Tentar inferir descrição baseada no nome
+                        if 'config' in attr_name.lower():
+                            descricao = "Configurações"
+                        elif 'path' in attr_name.lower() or 'caminho' in attr_name.lower():
+                            descricao = "Caminho do arquivo/diretório"
+                        elif 'nome' in attr_name.lower() or 'name' in attr_name.lower():
+                            descricao = "Nome identificador"
+                        elif 'lista' in attr_name.lower() or 'list' in attr_name.lower():
+                            descricao = "Lista de elementos"
+                        elif 'dict' in attr_name.lower() or 'dicionario' in attr_name.lower():
+                            descricao = "Dicionário de dados"
+                        else:
+                            descricao = f"Atributo {attr_name.replace('_', ' ')}"
+
+                        attributes[attr_name] = descricao
+
+    return attributes
 
 
 def inferir_descricao_por_nome_e_corpo(nome: str, node: ast.FunctionDef) -> str:
@@ -164,9 +254,9 @@ def inferir_returns(node: ast.FunctionDef) -> str:
     return f"Resultado da operação (tipo: {tipo_retorno})"
 
 
-def gerar_docstring_concreta(node: ast.FunctionDef, codigo_fonte: str) -> str:
+def gerar_docstring_concreta(node: ast.AST, codigo_fonte: str) -> str:
     """
-    Gera docstring CONCRETA (sem placeholders) para uma função.
+    Gera docstring CONCRETA (sem placeholders) para uma função ou classe.
     """
     info = inferir_descricao_funcao(node, codigo_fonte)
 
@@ -175,17 +265,27 @@ def gerar_docstring_concreta(node: ast.FunctionDef, codigo_fonte: str) -> str:
     docstring_parts.append(f'    """')
     docstring_parts.append(f"    {info['descricao']}")
 
-    # Adicionar Args se houver
-    if info['args']:
-        docstring_parts.append("")
-        docstring_parts.append("    Args:")
-        for arg_name, arg_desc in info['args'].items():
-            docstring_parts.append(f"        {arg_name}: {arg_desc}")
+    if info['tipo'] == 'classe':
+        # Docstring de classe com Attributes
+        if info.get('attributes'):
+            docstring_parts.append("")
+            docstring_parts.append("    Attributes:")
+            for attr_name, attr_desc in info['attributes'].items():
+                docstring_parts.append(f"        {attr_name}: {attr_desc}")
 
-    # Adicionar Returns
-    docstring_parts.append("")
-    docstring_parts.append("    Returns:")
-    docstring_parts.append(f"        {info['returns']}")
+    else:
+        # Docstring de função com Args e Returns
+        # Adicionar Args se houver
+        if info.get('args'):
+            docstring_parts.append("")
+            docstring_parts.append("    Args:")
+            for arg_name, arg_desc in info['args'].items():
+                docstring_parts.append(f"        {arg_name}: {arg_desc}")
+
+        # Adicionar Returns
+        docstring_parts.append("")
+        docstring_parts.append("    Returns:")
+        docstring_parts.append(f"        {info['returns']}")
 
     docstring_parts.append('    """')
 
