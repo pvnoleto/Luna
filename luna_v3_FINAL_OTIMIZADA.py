@@ -921,6 +921,15 @@ Responda APENAS com o JSON válido, sem texto adicional."""
         em_pilha = set()
 
         def tem_ciclo(node: str) -> bool:
+            """
+            Verifica se há ciclo
+
+            Args:
+                node: Nó do grafo a ser verificado (tipo: str)
+
+            Returns:
+                True se a condição é satisfeita, False caso contrário
+            """
             if node in em_pilha:
                 return True
             if node in visitados:
@@ -4644,21 +4653,55 @@ pass
         oportunidades = 0
 
         class LoopVisitor(ast.NodeVisitor):
+            """
+            Classe LoopVisitor com inicialização e métodos auxiliares
+
+            Attributes:
+                em_loop: Atributo em loop
+                problemas: Atributo problemas
+            """
             def __init__(self):
                 self.em_loop = False
                 self.problemas = []
 
             def visit_For(self, node):
+                """
+                Executa operação de visit For
+
+                Args:
+                    node: Nó do grafo a ser verificado (tipo: Any)
+
+                Returns:
+                    Resultado da operação (tipo: Any)
+                """
                 self.em_loop = True
                 self.generic_visit(node)
                 self.em_loop = False
 
             def visit_While(self, node):
+                """
+                Executa operação de visit While
+
+                Args:
+                    node: Nó do grafo a ser verificado (tipo: Any)
+
+                Returns:
+                    Resultado da operação (tipo: Any)
+                """
                 self.em_loop = True
                 self.generic_visit(node)
                 self.em_loop = False
 
             def visit_AugAssign(self, node):
+                """
+                Executa operação de visit AugAssign
+
+                Args:
+                    node: Nó do grafo a ser verificado (tipo: Any)
+
+                Returns:
+                    Resultado da operação (tipo: Any)
+                """
                 # Detectar += em strings dentro de loops
                 if self.em_loop and isinstance(node.op, ast.Add):
                     # Verificar se variável provavelmente é string
@@ -4713,11 +4756,27 @@ for item in items:
         oportunidades = 0
 
         class ImportVisitor(ast.NodeVisitor):
+            """
+            Classe ImportVisitor com inicialização e métodos auxiliares
+
+            Attributes:
+                em_funcao_ou_loop: Atributo em funcao ou loop
+                problemas: Atributo problemas
+            """
             def __init__(self):
                 self.em_funcao_ou_loop = False
                 self.problemas = []
 
             def visit_FunctionDef(self, node):
+                """
+                Executa operação de visit FunctionDef
+
+                Args:
+                    node: Nó do grafo a ser verificado (tipo: Any)
+
+                Returns:
+                    Resultado da operação (tipo: Any)
+                """
                 # Permitir imports em funções (lazy loading é válido)
                 # Mas detectar em loops
                 self.generic_visit(node)
@@ -4733,6 +4792,15 @@ for item in items:
                 self.em_funcao_ou_loop = False
 
             def visit_Import(self, node):
+                """
+                Executa operação de visit Import
+
+                Args:
+                    node: Nó do grafo a ser verificado (tipo: Any)
+
+                Returns:
+                    Resultado da operação (tipo: Any)
+                """
                 if self.em_funcao_ou_loop:
                     nomes = [alias.name for alias in node.names]
                     self.problemas.append({
@@ -4742,6 +4810,15 @@ for item in items:
                 self.generic_visit(node)
 
             def visit_ImportFrom(self, node):
+                """
+                Executa operação de visit ImportFrom
+
+                Args:
+                    node: Nó do grafo a ser verificado (tipo: Any)
+
+                Returns:
+                    Resultado da operação (tipo: Any)
+                """
                 if self.em_funcao_ou_loop:
                     self.problemas.append({
                         'linha': node.lineno,
