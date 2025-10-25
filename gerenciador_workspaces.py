@@ -1139,12 +1139,25 @@ Criado em: {datetime.now().strftime("%d/%m/%Y %H:%M")}
         # Se já é absoluto, retornar resolvido
         if path_obj.is_absolute():
             return str(path_obj.resolve())
-        
+
         # Se há workspace atual, resolver para dentro dele
         ws_atual = self.get_workspace_atual()
         if ws_atual:
             workspace_path = Path(ws_atual["caminho"])
-            caminho_completo = (workspace_path / caminho).resolve()
+
+            # 🛡️ PROTEÇÃO: Verifica se o caminho já contém o workspace_path
+            # Evita duplicação como: workspace/workspace/arquivo.txt
+            caminho_str = str(caminho)
+            workspace_str = str(workspace_path)
+
+            # Se o caminho já começa com o workspace_path, não concatenar
+            if caminho_str.startswith(workspace_str):
+                # Caminho já está correto, apenas resolver
+                caminho_completo = Path(caminho).resolve()
+            else:
+                # Caminho relativo, concatenar com workspace
+                caminho_completo = (workspace_path / caminho).resolve()
+
             return str(caminho_completo)
         
         # Se não há workspace, usar diretório base

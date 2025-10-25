@@ -1,0 +1,120 @@
+{
+  "summary": {
+    "total_files": 50,
+    "total_lines": 12500,
+    "total_code_lines": 9000,
+    "total_comment_lines": 2000,
+    "total_blank_lines": 1500,
+    "total_functions": 250,
+    "total_classes": 75,
+    "total_imports": 150,
+    "files_with_errors": 3,
+    "files_with_syntax_errors": 1,
+    "files_with_read_errors": 2,
+    "average_lines_per_file": 250.0,
+    "average_functions_per_file": 5.0,
+    "average_classes_per_file": 1.5
+  },
+  "top_imports": [
+    {
+      "module": "os",
+      "count": 35,
+      "percentage": 70.0
+    },
+    {
+      "module": "sys",
+      "count": 28,
+      "percentage": 56.0
+    },
+    {
+      "module": "json",
+      "count": 25,
+      "percentage": 50.0
+    },
+    {
+      "module": "datetime",
+      "count": 20,
+      "percentage": 40.0
+    },
+    {
+      "module": "pathlib",
+      "count": 18,
+      "percentage": 36.0
+    }
+  ],
+  "files_by_comments": [
+    {
+      "filepath": "/project/src/main.py",
+      "comment_lines": 150,
+      "code_lines": 450,
+      "comment_ratio": 0.25,
+      "total_lines": 600
+    },
+    {
+      "filepath": "/project/src/utils.py",
+      "comment_lines": 80,
+      "code_lines": 320,
+      "comment_ratio": 0.2,
+      "total_lines": 400
+    },
+    {
+      "filepath": "/project/tests/test_main.py",
+      "comment_lines": 45,
+      "code_lines": 255,
+      "comment_ratio": 0.15,
+      "total_lines": 300
+    }
+  ],
+  "file_details": [
+    {
+      "filepath": "/project/src/main.py",
+      "total_lines": 600,
+      "code_lines": 450,
+      "comment_lines": 150,
+      "blank_lines": 0,
+      "functions": 15,
+      "classes": 5,
+      "imports": [
+        "os",
+        "sys",
+        "json",
+        "datetime"
+      ],
+      "has_errors": false
+    },
+    {
+      "filepath": "/project/src/utils.py",
+      "total_lines": 400,
+      "code_lines": 320,
+      "comment_lines": 80,
+      "blank_lines": 0,
+      "functions": 20,
+      "classes": 3,
+      "imports": [
+        "os",
+        "pathlib",
+        "typing"
+      ],
+      "has_errors": false
+    },
+    {
+      "filepath": "/project/tests/test_main.py",
+      "total_lines": 300,
+      "code_lines": 255,
+      "comment_lines": 45,
+      "blank_lines": 0,
+      "functions": 10,
+      "classes": 0,
+      "imports": [
+        "unittest",
+        "main"
+      ],
+      "has_errors": false
+    }
+  ],
+  "metadata": {
+    "timestamp": "2025-10-23T21:00:23.891963",
+    "analyzer_version": "1.0.0",
+    "format_version": "1.0"
+  }
+}

@@ -1,0 +1,356 @@
+═══════════════════════════════════════════════════════════════════════════
+CRIAR BOT DE AGENDAMENTOS AUTOMÁTICOS - TELENORDESTE
+═══════════════════════════════════════════════════════════════════════════
+
+OBJETIVO:
+Criar um sistema que automatiza agendamentos de teleconsultas médicas no site
+do TeleNordeste, integrando com Notion (buscar tarefas) e Google Calendar
+(evitar conflitos).
+
+═══════════════════════════════════════════════════════════════════════════
+1. ACESSAR O SITE
+═══════════════════════════════════════════════════════════════════════════
+
+PLATAFORMA: Microsoft Bookings (Office 365)
+
+URLs DAS AGENDAS:
+• Agenda Adulto: https://outlook.office365.com/owa/calendar/AdultoTeleNeBP@bp.org.br/bookings/
+• Agenda Infantil: https://outlook.office365.com/owa/calendar/PeditricoTeleNEBP@bp.org.br/bookings/
+
+DECIDIR QUAL AGENDA USAR:
+Se especialidade for: triagem, pediatria, neuropediatria, psiquiatria infantil/pediátrica,
+endocrinologia pediátrica → usar Agenda Infantil
+Caso contrário → usar Agenda Adulto
+
+═══════════════════════════════════════════════════════════════════════════
+2. SELECIONAR ESPECIALIDADE
+═══════════════════════════════════════════════════════════════════════════
+
+O site mostra uma lista de especialidades médicas (grid com ~20 opções).
+Cada especialidade tem duração (maioria 30 min).
+
+PROBLEMA: Nomes podem variar ligeiramente
+SOLUÇÃO: Tentar variações comuns
+
+Exemplos de variações:
+• "Cardiologia" → também buscar: "cardio", "cardiologista"
+• "Neurologia" → também buscar: "neuro", "neurologista"
+• "Psiquiatria" → também buscar: "psiquiatra", "saúde mental"
+
+Implementar lógica que tenta múltiplas formas de encontrar a especialidade
+(texto exato, contém texto, em diferentes tipos de elementos).
+
+═══════════════════════════════════════════════════════════════════════════
+3. CALENDÁRIO - DETECTAR DIAS COM VAGAS (⚠️ CRÍTICO)
+═══════════════════════════════════════════════════════════════════════════
+
+O calendário mostra dias do mês. Cada dia tem uma APARÊNCIA que indica disponibilidade:
+
+REGRA SIMPLES E CLARA:
+
+📌 CINZA CLARO (apagado) = SEM VAGAS
+   • Dias passados sempre ficam cinza
+   • Dias futuros sem horários disponíveis também ficam cinza
+   • AÇÃO: IGNORAR estes dias
+
+📌 PRETO VIVO (texto escuro/normal) = COM VAGAS
+   • Dias futuros que têm horários disponíveis
+   • AÇÃO: PROCESSAR estes dias
+
+📌 CÍRCULO VERDE ao redor do número
+   • Significa apenas que o dia está SELECIONADO (foi clicado)
+   • NÃO INDICA se tem ou não vagas!
+   • Pode aparecer em dia cinza (sem vagas)
+   • Pode aparecer em dia preto (com vagas)
+   • AÇÃO: IGNORAR círculo verde na lógica de disponibilidade
+
+IMPORTANTE:
+Use a COR DO TEXTO como critério principal, NÃO o círculo verde!
+
+APÓS CLICAR EM UM DIA:
+• Se tiver vagas: aparece lista de horários
+• Se não tiver: aparece mensagem "Não há disponibilidade"
+
+═══════════════════════════════════════════════════════════════════════════
+4. HORÁRIOS PERMITIDOS (⚠️ CRÍTICO)
+═══════════════════════════════════════════════════════════════════════════
+
+ESCOPO PERMITIDO:
+• Início: 9:00
+• Fim: 14:30
+• Intervalo: 15 em 15 minutos
+
+HORÁRIOS VÁLIDOS (total 17):
+Manhã:  9:00, 9:15, 9:30, 9:45, 10:00, 10:15, 10:30, 10:45, 11:00, 11:15, 11:30, 11:45
+Tarde:  13:30, 13:45, 14:00, 14:15, 14:30
+
+HORÁRIOS BLOQUEADOS - NUNCA USAR (horário de almoço):
+12:00, 12:15, 12:30, 12:45, 13:00, 13:15
+
+IMPORTANTE:
+Mesmo que o site mostre horários fora deste escopo (ex: 8:00, 15:00, 12:00),
+o sistema deve IGNORÁ-LOS e usar APENAS os 17 horários permitidos acima.
+
+VALIDAÇÃO:
+1. Horário está entre 9:00 e 14:30? Se não → ignorar
+2. Horário está na lista de bloqueados? Se sim → ignorar
+3. Horário está na lista de permitidos? Se sim → pode usar
+
+═══════════════════════════════════════════════════════════════════════════
+5. FORMULÁRIO - PREENCHER DADOS
+═══════════════════════════════════════════════════════════════════════════
+
+Após selecionar horário, aparece formulário com vários campos.
+
+CAMPOS OBRIGATÓRIOS (7 - todos os campos são obrigatórios):
+1. Primeiro e sobrenome
+2. Email
+3. CPF (Paciente)
+4. CNES (UBS)
+5. Motivo principal do encaminhamento
+6. Profissional Médico (UBS)
+7. Telefone de contato (UBS)
+
+ORIGEM DOS DADOS:
+
+DO NOTION (buscar da tarefa):
+• Primeiro e sobrenome → campo "Nome da tarefa" ou parsear de "Descrição"
+• CPF (Paciente) → parsear linha "CPF: xxx.xxx.xxx-xx" da descrição
+• Motivo → parsear linha "Motivo da Consulta: texto" da descrição
+
+DADOS FIXOS DA UBS (usar sempre os mesmos):
+• Email: equipesos02@outlook.com
+• CNES (UBS): 2368846
+• Telefone de contato (UBS): 86999978887
+• Profissional Médico (UBS): Pedro
+
+MÍNIMO PARA AGENDAR: preencher todos os 7 campos obrigatórios
+
+═══════════════════════════════════════════════════════════════════════════
+6. NOTION - BUSCAR E ATUALIZAR TAREFAS
+═══════════════════════════════════════════════════════════════════════════
+
+CREDENCIAIS NECESSÁRIAS:
+• Token do Notion
+• ID do Database
+
+BUSCAR TAREFAS:
+Filtrar tarefas com status = "Não iniciado"
+
+ESTRUTURA DOS DADOS NO NOTION:
+Cada tarefa tem:
+• Nome da tarefa (título)
+• Status (select/status: "Não iniciado", "Concluída", etc)
+• Descrição (texto rico) com formato:
+  ```
+  Nome: João Silva
+  CPF: 123.456.789-00
+  Especialidade: Cardiologia
+  Motivo da Consulta: Dor no peito
+  ACS: Dr. Pedro Santos
+  Tipo: Adulto (ou Infantil)
+  ```
+
+PARSEAR DESCRIÇÃO:
+Ler linha por linha buscando padrões:
+• Linha começa com "CPF:" → extrair CPF
+• Linha começa com "Especialidade:" → extrair especialidade
+• Linha começa com "Motivo da Consulta:" → extrair motivo
+• Contém palavra "Infantil" ou "Adulto" → extrair tipo
+• Linha "ACS:" pode existir mas é IGNORADA (Profissional Médico é sempre "Pedro")
+
+INFERIR TIPO SE NÃO ENCONTRADO:
+Se especialidade for infantil (pediatria, neuropediatria, etc) → tipo = "Infantil"
+Senão → tipo = "Adulto"
+
+ATUALIZAR APÓS SUCESSO:
+Mudar status da tarefa para "Concluída"
+
+═══════════════════════════════════════════════════════════════════════════
+7. GOOGLE CALENDAR - EVITAR CONFLITOS
+═══════════════════════════════════════════════════════════════════════════
+
+USAR MÓDULO: integracao_google.py (já existe no projeto Luna)
+Importar: IntegracaoGoogleCalendar
+
+CREDENCIAIS NECESSÁRIAS:
+• credentials.json (OAuth2 do Google)
+• token_calendar.json (gerado automaticamente)
+
+FLUXO:
+
+ANTES DE RESERVAR NO SITE:
+1. Encontrou horário disponível no site (ex: 23/10 às 14:00)
+2. VERIFICAR no Google Calendar: há algum evento entre 14:00 e 14:15?
+3. Se SIM (ocupado) → pular para próximo horário
+4. Se NÃO (livre) → prosseguir com agendamento
+
+DEPOIS DE CONFIRMAR NO SITE:
+1. Agendamento foi confirmado no TeleNordeste
+2. CRIAR evento no Google Calendar com:
+   • Título: [TeleNE] Cardiologia - João Silva
+   • Data/Hora: 23/10/2025 14:00-14:15 (duração: 15 minutos)
+   • Descrição: Paciente: ..., CPF: ..., Especialidade: ..., etc
+   • Lembretes: 30 minutos e 10 minutos antes
+
+BENEFÍCIOS:
+• Evita agendar no mesmo horário que já tem algo no calendário
+• Centraliza todos os agendamentos em um só lugar
+• Lembretes automáticos
+
+═══════════════════════════════════════════════════════════════════════════
+8. FLUXO COMPLETO DE UM AGENDAMENTO
+═══════════════════════════════════════════════════════════════════════════
+
+1. CONECTAR
+   ├─ Notion: buscar tarefas "Não iniciado"
+   └─ Google Calendar: preparar para verificações
+
+2. PARA CADA TAREFA:
+   ├─ Determinar tipo (Adulto/Infantil) pela especialidade
+   ├─ Abrir URL da agenda correspondente
+   ├─ Aguardar página carregar (~8 segundos)
+   │
+   ├─ Selecionar especialidade
+   │  ├─ Buscar nome exato
+   │  ├─ Se não encontrar: tentar variações
+   │  └─ Clicar quando encontrar
+   │
+   ├─ Aguardar calendário carregar (~60 segundos - CRÍTICO!)
+   │
+   ├─ Buscar dias com vagas
+   │  ├─ Verificar cor do texto de cada dia
+   │  ├─ CINZA = sem vagas → ignorar
+   │  ├─ PRETO = com vagas → adicionar à lista
+   │  └─ Ignorar círculo verde (não indica disponibilidade)
+   │
+   ├─ Para cada dia com vagas:
+   │  ├─ Clicar no dia
+   │  ├─ Aguardar horários aparecerem (~8 segundos)
+   │  ├─ Verificar se apareceu "Não há disponibilidade"
+   │  │
+   │  ├─ Para cada horário mostrado:
+   │  │  ├─ Validar se está em horários_permitidos
+   │  │  ├─ Validar se NÃO está em horários_bloqueados (12:00-13:15)
+   │  │  ├─ Verificar Google Calendar: está livre?
+   │  │  └─ Se todas validações OK: usar este horário
+   │  │
+   │  └─ Se encontrou horário válido: break
+   │
+   ├─ Preencher formulário
+   │  ├─ Nome: do Notion
+   │  ├─ Email: fixo da UBS
+   │  ├─ CPF: do Notion
+   │  ├─ CNES: fixo da UBS
+   │  ├─ Profissional: fixo (Pedro)
+   │  ├─ Telefone: fixo da UBS
+   │  └─ Motivo: do Notion
+   │
+   ├─ Clicar em "Reservar"
+   ├─ Aguardar confirmação (~10 segundos)
+   ├─ Verificar textos: "confirmado", "agendado", "sucesso"
+   │
+   ├─ Se confirmado:
+   │  ├─ Criar evento no Google Calendar
+   │  ├─ Atualizar tarefa no Notion para "Concluída"
+   │  └─ Log: sucesso
+   │
+   └─ Se falhou:
+      └─ Log: erro (mas continuar com próximas tarefas)
+
+3. RELATÓRIO FINAL
+   ├─ Total processado
+   ├─ Sucessos
+   ├─ Erros
+   └─ Taxa de sucesso
+
+═══════════════════════════════════════════════════════════════════════════
+9. CONFIGURAÇÕES E CREDENCIAIS
+═══════════════════════════════════════════════════════════════════════════
+
+CRIAR ARQUIVO .env (não commitar no git):
+```
+NOTION_TOKEN=seu_token_notion
+NOTION_DATABASE_ID=seu_database_id
+GOOGLE_CREDENTIALS_PATH=../../credentials.json
+GOOGLE_TOKEN_PATH=../../token_calendar.json
+DRY_RUN=true
+USAR_GOOGLE_CALENDAR=true
+```
+
+DADOS FIXOS DA UBS:
+• Email: equipesos02@outlook.com
+• Telefone: 86999978887
+• CNES: 2368846
+• Profissional Médico: Pedro
+
+HORÁRIOS PERMITIDOS:
+9:00, 9:15, 9:30, 9:45, 10:00, 10:15, 10:30, 10:45, 11:00, 11:15, 11:30, 11:45,
+13:30, 13:45, 14:00, 14:15, 14:30
+
+HORÁRIOS BLOQUEADOS:
+12:00, 12:15, 12:30, 12:45, 13:00, 13:15
+
+TIMEZONE: America/Fortaleza (BRT, UTC-03:00)
+
+═══════════════════════════════════════════════════════════════════════════
+10. MODO DRY RUN (TESTES)
+═══════════════════════════════════════════════════════════════════════════
+
+Quando DRY_RUN=true (modo teste):
+• Buscar tarefas reais no Notion ✓
+• Navegar no site real ✓
+• Encontrar horários disponíveis ✓
+• Preencher formulário ✓
+• SIMULAR clique em "Reservar" (não clicar de verdade)
+• SIMULAR confirmação
+• Criar evento no Google Calendar (opcional)
+• NÃO atualizar status no Notion
+
+Quando DRY_RUN=false (produção):
+• Fazer tudo de verdade
+• Clicar em "Reservar" de fato
+• Criar evento no Calendar
+• Atualizar status no Notion
+
+═══════════════════════════════════════════════════════════════════════════
+11. PONTOS CRÍTICOS E ARMADILHAS
+═══════════════════════════════════════════════════════════════════════════
+
+⚠️ CALENDÁRIO DEMORA PARA CARREGAR
+O calendário é carregado de forma assíncrona e pode demorar até 60 segundos.
+Aguardar tempo suficiente antes de buscar dias.
+
+⚠️ CÍRCULO VERDE NÃO INDICA DISPONIBILIDADE
+Usar COR DO TEXTO (cinza vs preto) como critério, NÃO o círculo verde!
+
+⚠️ BLOQUEAR HORÁRIO DE ALMOÇO
+Mesmo que 12:00, 12:15, etc apareçam no site, NUNCA usar estes horários.
+
+⚠️ NORMALIZAR FORMATO DE HORÁRIOS
+Site pode mostrar "9:00" ou "09:00". Normalizar antes de comparar.
+
+⚠️ VERIFICAR GOOGLE CALENDAR ANTES
+Sempre verificar Calendar ANTES de reservar para evitar duplos agendamentos.
+
+⚠️ TRATAMENTO DE ERROS
+Se uma tarefa falhar, continuar processando as próximas (não parar tudo).
+
+⚠️ LOGS DETALHADOS
+Logar cada etapa para facilitar debug (navegação, seleção, horários, etc).
+
+═══════════════════════════════════════════════════════════════════════════
+FIM DO PROMPT
+═══════════════════════════════════════════════════════════════════════════
+
+RESUMO:
+Sistema que busca tarefas no Notion, acessa site do TeleNordeste, seleciona
+especialidade, encontra horários válidos (9:00-14:30, exceto 12:00-13:15),
+verifica Google Calendar para evitar conflitos, preenche formulário e agenda.
+
+Detectar dias com vagas pela COR DO TEXTO (preto=tem, cinza=não tem).
+IGNORAR círculo verde (apenas seleção visual).
+
+Após confirmar: criar evento no Calendar e atualizar Notion para "Concluída".
+
+Modo DRY_RUN para testes sem efetivar reservas.

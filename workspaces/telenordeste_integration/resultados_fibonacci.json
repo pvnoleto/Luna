@@ -1,0 +1,14 @@
+{
+  "tempo_iterativo": 0.000004,
+  "tempo_recursivo": 0.196282,
+  "valor_calculado": 832040,
+  "n": 30,
+  "diferenca_performance": 44609.41,
+  "unidade_tempo": "segundos",
+  "data_execucao": "2024",
+  "validacao": {
+    "resultado_iterativo": 832040,
+    "resultado_recursivo": 832040,
+    "valores_identicos": true
+  }
+}

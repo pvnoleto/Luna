@@ -1,0 +1,627 @@
+{
+  "pendentes": [],
+  "aplicadas": [
+    {
+      "id": "07db658bf91f",
+      "tipo": "qualidade",
+      "alvo": "linha_3758_C:\\Projetos Automações e Digitais\\Luna\\luna_v3_FINAL_OTIMIZADA.py",
+      "motivo": "Bare except clause detectado na linha 3758",
+      "codigo": "# Substituir:\n# except:\n\n# Por uma exceção específica:\n# except Exception as e:\n#     # Tratar erro adequadamente\n#     print(f\"Erro: {e}\")\n\n# Ou múltiplas exceções específicas:\n# except (ValueError, TypeError) as e:\n#     # Tratar erros específicos\n",
+      "prioridade": 8,
+      "nivel_risco": "MEDIUM",
+      "detectado_em": "2025-10-23T17:33:46.193544",
+      "status": "aplicada",
+      "aplicada_em": "2025-10-23T17:33:46.665651",
+      "detalhes": {
+        "timestamp": "2025-10-23T17:33:46.665628"
+      }
+    },
+    {
+      "id": "0fea3e0ba748",
+      "tipo": "qualidade",
+      "alvo": "linha_5007_C:\\Projetos Automações e Digitais\\Luna\\luna_v3_FINAL_OTIMIZADA.py",
+      "motivo": "Bare except clause detectado na linha 5007",
+      "codigo": "# Substituir:\n# except:\n\n# Por uma exceção específica:\n# except Exception as e:\n#     # Tratar erro adequadamente\n#     print(f\"Erro: {e}\")\n\n# Ou múltiplas exceções específicas:\n# except (ValueError, TypeError) as e:\n#     # Tratar erros específicos\n",
+      "prioridade": 8,
+      "nivel_risco": "MEDIUM",
+      "detectado_em": "2025-10-23T17:33:46.197425",
+      "status": "aplicada",
+      "aplicada_em": "2025-10-23T17:33:46.889061",
+      "detalhes": {
+        "timestamp": "2025-10-23T17:33:46.889026"
+      }
+    },
+    {
+      "id": "b8d2a40f0a9d",
+      "tipo": "qualidade",
+      "alvo": "linha_1683_C:\\Projetos Automações e Digitais\\Luna\\luna_v3_FINAL_OTIMIZADA.py",
+      "motivo": "Bare except clause detectado na linha 1683",
+      "codigo": "# Substituir:\n# except:\n\n# Por uma exceção específica:\n# except Exception as e:\n#     # Tratar erro adequadamente\n#     print(f\"Erro: {e}\")\n\n# Ou múltiplas exceções específicas:\n# except (ValueError, TypeError) as e:\n#     # Tratar erros específicos\n",
+      "prioridade": 8,
+      "nivel_risco": "MEDIUM",
+      "detectado_em": "2025-10-23T17:46:10.387513",
+      "status": "aplicada",
+      "aplicada_em": "2025-10-23T17:46:10.813861",
+      "detalhes": {
+        "timestamp": "2025-10-23T17:46:10.813838"
+      }
+    },
+    {
+      "id": "600e4414cbdf",
+      "tipo": "qualidade",
+      "alvo": "linha_2417_C:\\Projetos Automações e Digitais\\Luna\\luna_v3_FINAL_OTIMIZADA.py",
+      "motivo": "Bare except clause detectado na linha 2417",
+      "codigo": "# Substituir:\n# except:\n\n# Por uma exceção específica:\n# except Exception as e:\n#     # Tratar erro adequadamente\n#     print(f\"Erro: {e}\")\n\n# Ou múltiplas exceções específicas:\n# except (ValueError, TypeError) as e:\n#     # Tratar erros específicos\n",
+      "prioridade": 8,
+      "nivel_risco": "MEDIUM",
+      "detectado_em": "2025-10-23T17:46:10.391601",
+      "status": "aplicada",
+      "aplicada_em": "2025-10-23T17:46:11.042458",
+      "detalhes": {
+        "timestamp": "2025-10-23T17:46:11.042427"
+      }
+    },
+    {
+      "id": "271e7b00b73e",
+      "tipo": "qualidade",
+      "alvo": "linha_1690_C:\\Projetos Automações e Digitais\\Luna\\luna_v3_FINAL_OTIMIZADA.py",
+      "motivo": "Bare except clause detectado na linha 1690",
+      "codigo": "# Substituir:\n# except:\n\n# Por uma exceção específica:\n# except Exception as e:\n#     # Tratar erro adequadamente\n#     print(f\"Erro: {e}\")\n\n# Ou múltiplas exceções específicas:\n# except (ValueError, TypeError) as e:\n#     # Tratar erros específicos\n",
+      "prioridade": 8,
+      "nivel_risco": "MEDIUM",
+      "detectado_em": "2025-10-23T18:03:46.576749",
+      "status": "aplicada",
+      "aplicada_em": "2025-10-23T18:03:47.060371",
+      "detalhes": {
+        "timestamp": "2025-10-23T18:03:47.060347"
+      }
+    },
+    {
+      "id": "19e8bec6fb41",
+      "tipo": "qualidade",
+      "alvo": "linha_2424_C:\\Projetos Automações e Digitais\\Luna\\luna_v3_FINAL_OTIMIZADA.py",
+      "motivo": "Bare except clause detectado na linha 2424",
+      "codigo": "# Substituir:\n# except:\n\n# Por uma exceção específica:\n# except Exception as e:\n#     # Tratar erro adequadamente\n#     print(f\"Erro: {e}\")\n\n# Ou múltiplas exceções específicas:\n# except (ValueError, TypeError) as e:\n#     # Tratar erros específicos\n",
+      "prioridade": 8,
+      "nivel_risco": "MEDIUM",
+      "detectado_em": "2025-10-23T18:03:46.581338",
+      "status": "aplicada",
+      "aplicada_em": "2025-10-23T18:03:47.353350",
+      "detalhes": {
+        "timestamp": "2025-10-23T18:03:47.353326"
+      }
+    },
+    {
+      "id": "4baaa073a3a2",
+      "tipo": "qualidade",
+      "alvo": "linha_1685_C:\\Projetos Automações e Digitais\\Luna\\luna_v3_FINAL_OTIMIZADA.py",
+      "motivo": "Bare except clause detectado na linha 1685",
+      "codigo": "# Substituir:\n# except:\n\n# Por uma exceção específica:\n# except Exception as e:\n#     # Tratar erro adequadamente\n#     print(f\"Erro: {e}\")\n\n# Ou múltiplas exceções específicas:\n# except (ValueError, TypeError) as e:\n#     # Tratar erros específicos\n",
+      "prioridade": 8,
+      "nivel_risco": "MEDIUM",
+      "detectado_em": "2025-10-23T18:19:13.408812",
+      "status": "aplicada",
+      "aplicada_em": "2025-10-23T18:19:13.849205",
+      "detalhes": {
+        "timestamp": "2025-10-23T18:19:13.849180"
+      }
+    },
+    {
+      "id": "c78274c198d6",
+      "tipo": "qualidade",
+      "alvo": "linha_2419_C:\\Projetos Automações e Digitais\\Luna\\luna_v3_FINAL_OTIMIZADA.py",
+      "motivo": "Bare except clause detectado na linha 2419",
+      "codigo": "# Substituir:\n# except:\n\n# Por uma exceção específica:\n# except Exception as e:\n#     # Tratar erro adequadamente\n#     print(f\"Erro: {e}\")\n\n# Ou múltiplas exceções específicas:\n# except (ValueError, TypeError) as e:\n#     # Tratar erros específicos\n",
+      "prioridade": 8,
+      "nivel_risco": "MEDIUM",
+      "detectado_em": "2025-10-23T18:19:13.413804",
+      "status": "aplicada",
+      "aplicada_em": "2025-10-23T18:19:14.074776",
+      "detalhes": {
+        "timestamp": "2025-10-23T18:19:14.074752"
+      }
+    },
+    {
+      "id": "94efa4ed9212",
+      "tipo": "qualidade",
+      "alvo": "linha_1697_C:\\Projetos Automações e Digitais\\Luna\\luna_v3_FINAL_OTIMIZADA.py",
+      "motivo": "Bare except clause detectado na linha 1697",
+      "codigo": "# Substituir:\n# except:\n\n# Por uma exceção específica:\n# except Exception as e:\n#     # Tratar erro adequadamente\n#     print(f\"Erro: {e}\")\n\n# Ou múltiplas exceções específicas:\n# except (ValueError, TypeError) as e:\n#     # Tratar erros específicos\n",
+      "prioridade": 8,
+      "nivel_risco": "MEDIUM",
+      "detectado_em": "2025-10-23T19:01:17.833390",
+      "status": "aplicada",
+      "aplicada_em": "2025-10-23T19:01:18.307469",
+      "detalhes": {
+        "timestamp": "2025-10-23T19:01:18.307441"
+      }
+    },
+    {
+      "id": "3b5c11ed688d",
+      "tipo": "qualidade",
+      "alvo": "linha_2431_C:\\Projetos Automações e Digitais\\Luna\\luna_v3_FINAL_OTIMIZADA.py",
+      "motivo": "Bare except clause detectado na linha 2431",
+      "codigo": "# Substituir:\n# except:\n\n# Por uma exceção específica:\n# except Exception as e:\n#     # Tratar erro adequadamente\n#     print(f\"Erro: {e}\")\n\n# Ou múltiplas exceções específicas:\n# except (ValueError, TypeError) as e:\n#     # Tratar erros específicos\n",
+      "prioridade": 8,
+      "nivel_risco": "MEDIUM",
+      "detectado_em": "2025-10-23T19:01:17.838194",
+      "status": "aplicada",
+      "aplicada_em": "2025-10-23T19:01:18.569161",
+      "detalhes": {
+        "timestamp": "2025-10-23T19:01:18.569115"
+      }
+    },
+    {
+      "id": "6f7a0df072ab",
+      "tipo": "bug_fix",
+      "alvo": "ler_arquivo",
+      "motivo": "Corrigir erro recorrente (3x): ERRO: [Errno 2] No such file or directory: 'C:\\\\Projetos Automações e Digitais\\\\Luna\\\\workspaces\\\\te",
+      "codigo": "# Correção automática para erro recorrente\n# Erro: ERRO: [Errno 2] No such file or directory: 'C:\\\\Projetos Automações e Digitais\\\\Luna\\\\workspaces\\\\te\n# TODO: Implementar correção específica\npass\n",
+      "prioridade": 9,
+      "nivel_risco": "RISKY",
+      "detectado_em": "2025-10-23T19:38:57.815891",
+      "status": "aplicada",
+      "aplicada_em": "2025-10-23T20:33:30.263781",
+      "detalhes": {
+        "timestamp": "2025-10-23T20:33:30.263752"
+      }
+    },
+    {
+      "id": "3e173f20649b",
+      "tipo": "bug_fix",
+      "alvo": "ler_arquivo",
+      "motivo": "Corrigir erro recorrente (3x): ERRO: [Errno 2] No such file or directory: 'C:\\\\Projetos Automações e Digitais\\\\Luna\\\\workspaces\\\\te",
+      "codigo": "# Correção automática para erro recorrente\n# Erro: ERRO: [Errno 2] No such file or directory: 'C:\\\\Projetos Automações e Digitais\\\\Luna\\\\workspaces\\\\te\n# TODO: Implementar correção específica\npass\n",
+      "prioridade": 9,
+      "nivel_risco": "RISKY",
+      "detectado_em": "2025-10-23T19:42:39.745881",
+      "status": "aplicada",
+      "aplicada_em": "2025-10-23T20:33:30.581359",
+      "detalhes": {
+        "timestamp": "2025-10-23T20:33:30.581299"
+      }
+    },
+    {
+      "id": "1e72ab493472",
+      "tipo": "bug_fix",
+      "alvo": "ler_arquivo",
+      "motivo": "Corrigir erro recorrente (3x): ERRO: [Errno 2] No such file or directory: 'C:\\\\Projetos Automações e Digitais\\\\Luna\\\\workspaces\\\\te",
+      "codigo": "# Correção automática para erro recorrente\n# Erro: ERRO: [Errno 2] No such file or directory: 'C:\\\\Projetos Automações e Digitais\\\\Luna\\\\workspaces\\\\te\n# TODO: Implementar correção específica\npass\n",
+      "prioridade": 9,
+      "nivel_risco": "RISKY",
+      "detectado_em": "2025-10-23T19:49:33.321317",
+      "status": "aplicada",
+      "aplicada_em": "2025-10-23T20:33:30.926469",
+      "detalhes": {
+        "timestamp": "2025-10-23T20:33:30.926434"
+      }
+    },
+    {
+      "id": "039588a84f2c",
+      "tipo": "bug_fix",
+      "alvo": "ler_arquivo",
+      "motivo": "Corrigir erro recorrente (4x): ERRO: [Errno 2] No such file or directory: 'C:\\\\Projetos Automações e Digitais\\\\Luna\\\\workspaces\\\\te",
+      "codigo": "# Correção automática para erro recorrente\n# Erro: ERRO: [Errno 2] No such file or directory: 'C:\\\\Projetos Automações e Digitais\\\\Luna\\\\workspaces\\\\te\n# TODO: Implementar correção específica\npass\n",
+      "prioridade": 9,
+      "nivel_risco": "RISKY",
+      "detectado_em": "2025-10-23T19:59:02.968780",
+      "status": "aplicada",
+      "aplicada_em": "2025-10-23T20:33:31.238871",
+      "detalhes": {
+        "timestamp": "2025-10-23T20:33:31.238841"
+      }
+    },
+    {
+      "id": "63bd94ba1f82",
+      "tipo": "bug_fix",
+      "alvo": "ler_arquivo",
+      "motivo": "Corrigir erro recorrente (3x): ERRO: [Errno 2] No such file or directory: 'C:\\\\Projetos Automações e Digitais\\\\Luna\\\\workspaces\\\\te",
+      "codigo": "# Correção automática para erro recorrente\n# Erro: ERRO: [Errno 2] No such file or directory: 'C:\\\\Projetos Automações e Digitais\\\\Luna\\\\workspaces\\\\te\n# TODO: Implementar correção específica\npass\n",
+      "prioridade": 9,
+      "nivel_risco": "RISKY",
+      "detectado_em": "2025-10-23T20:07:27.660766",
+      "status": "aplicada",
+      "aplicada_em": "2025-10-23T20:33:31.549714",
+      "detalhes": {
+        "timestamp": "2025-10-23T20:33:31.549678"
+      }
+    },
+    {
+      "id": "0512e85cb450",
+      "tipo": "bug_fix",
+      "alvo": "ler_arquivo",
+      "motivo": "Corrigir erro recorrente (3x): ERRO: [Errno 2] No such file or directory: 'C:\\\\Projetos Automações e Digitais\\\\Luna\\\\workspaces\\\\te",
+      "codigo": "# Correção automática para erro recorrente\n# Erro: ERRO: [Errno 2] No such file or directory: 'C:\\\\Projetos Automações e Digitais\\\\Luna\\\\workspaces\\\\te\n# TODO: Implementar correção específica\npass\n",
+      "prioridade": 9,
+      "nivel_risco": "RISKY",
+      "detectado_em": "2025-10-23T20:13:05.697425",
+      "status": "aplicada",
+      "aplicada_em": "2025-10-23T20:33:32.745620",
+      "detalhes": {
+        "timestamp": "2025-10-23T20:33:32.745581"
+      }
+    },
+    {
+      "id": "0611dbfc619c",
+      "tipo": "bug_fix",
+      "alvo": "ler_arquivo",
+      "motivo": "Corrigir erro recorrente (3x): ERRO: [Errno 2] No such file or directory: 'C:\\\\Projetos Automações e Digitais\\\\Luna\\\\workspaces\\\\te",
+      "codigo": "# Correção automática para erro recorrente\n# Erro: ERRO: [Errno 2] No such file or directory: 'C:\\\\Projetos Automações e Digitais\\\\Luna\\\\workspaces\\\\te\n# TODO: Implementar correção específica\npass\n",
+      "prioridade": 9,
+      "nivel_risco": "RISKY",
+      "detectado_em": "2025-10-23T20:16:33.701955",
+      "status": "aplicada",
+      "aplicada_em": "2025-10-23T20:33:33.043577",
+      "detalhes": {
+        "timestamp": "2025-10-23T20:33:33.043551"
+      }
+    },
+    {
+      "id": "64dffe0619cb",
+      "tipo": "bug_fix",
+      "alvo": "ler_arquivo",
+      "motivo": "Corrigir erro recorrente (4x): ERRO: [Errno 2] No such file or directory: 'C:\\\\Projetos Automações e Digitais\\\\Luna\\\\workspaces\\\\te",
+      "codigo": "# Correção automática para erro recorrente\n# Erro: ERRO: [Errno 2] No such file or directory: 'C:\\\\Projetos Automações e Digitais\\\\Luna\\\\workspaces\\\\te\n# TODO: Implementar correção específica\npass\n",
+      "prioridade": 9,
+      "nivel_risco": "RISKY",
+      "detectado_em": "2025-10-23T20:16:47.422055",
+      "status": "aplicada",
+      "aplicada_em": "2025-10-23T20:33:33.342641",
+      "detalhes": {
+        "timestamp": "2025-10-23T20:33:33.342615"
+      }
+    },
+    {
+      "id": "b0a0b99574c9",
+      "tipo": "qualidade",
+      "alvo": "linha_1697_C:\\Projetos Automações e Digitais\\Luna\\luna_v3_FINAL_OTIMIZADA.py",
+      "motivo": "Bare except clause detectado na linha 1697",
+      "codigo": "# Substituir:\n# except:\n\n# Por uma exceção específica:\n# except Exception as e:\n#     # Tratar erro adequadamente\n#     print(f\"Erro: {e}\")\n\n# Ou múltiplas exceções específicas:\n# except (ValueError, TypeError) as e:\n#     # Tratar erros específicos\n",
+      "prioridade": 8,
+      "nivel_risco": "MEDIUM",
+      "detectado_em": "2025-10-23T20:33:29.791962",
+      "status": "aplicada",
+      "aplicada_em": "2025-10-23T20:33:33.572506",
+      "detalhes": {
+        "timestamp": "2025-10-23T20:33:33.572483"
+      }
+    },
+    {
+      "id": "fc3c87751697",
+      "tipo": "qualidade",
+      "alvo": "linha_2431_C:\\Projetos Automações e Digitais\\Luna\\luna_v3_FINAL_OTIMIZADA.py",
+      "motivo": "Bare except clause detectado na linha 2431",
+      "codigo": "# Substituir:\n# except:\n\n# Por uma exceção específica:\n# except Exception as e:\n#     # Tratar erro adequadamente\n#     print(f\"Erro: {e}\")\n\n# Ou múltiplas exceções específicas:\n# except (ValueError, TypeError) as e:\n#     # Tratar erros específicos\n",
+      "prioridade": 8,
+      "nivel_risco": "MEDIUM",
+      "detectado_em": "2025-10-23T20:33:29.797250",
+      "status": "aplicada",
+      "aplicada_em": "2025-10-23T20:33:33.801919",
+      "detalhes": {
+        "timestamp": "2025-10-23T20:33:33.801897"
+      }
+    },
+    {
+      "id": "0b01d93b844c",
+      "tipo": "bug_fix",
+      "alvo": "ler_arquivo",
+      "motivo": "Corrigir erro recorrente (3x): ERRO: [Errno 2] No such file or directory: 'C:\\\\Projetos Automações e Digitais\\\\Luna\\\\workspaces\\\\te",
+      "codigo": "# Correção automática para erro recorrente\n# Erro: ERRO: [Errno 2] No such file or directory: 'C:\\\\Projetos Automações e Digitais\\\\Luna\\\\workspaces\\\\te\n# TODO: Implementar correção específica\npass\n",
+      "prioridade": 9,
+      "nivel_risco": "RISKY",
+      "detectado_em": "2025-10-23T20:42:32.755293",
+      "status": "aplicada",
+      "aplicada_em": "2025-10-23T21:03:14.312137",
+      "detalhes": {
+        "timestamp": "2025-10-23T21:03:14.312096"
+      }
+    },
+    {
+      "id": "3fa21d2c8858",
+      "tipo": "bug_fix",
+      "alvo": "ler_arquivo",
+      "motivo": "Corrigir erro recorrente (3x): ERRO: [Errno 2] No such file or directory: 'C:\\\\Projetos Automações e Digitais\\\\Luna\\\\workspaces\\\\te",
+      "codigo": "# Correção automática para erro recorrente\n# Erro: ERRO: [Errno 2] No such file or directory: 'C:\\\\Projetos Automações e Digitais\\\\Luna\\\\workspaces\\\\te\n# TODO: Implementar correção específica\npass\n",
+      "prioridade": 9,
+      "nivel_risco": "RISKY",
+      "detectado_em": "2025-10-23T20:47:46.466630",
+      "status": "aplicada",
+      "aplicada_em": "2025-10-23T21:03:14.623531",
+      "detalhes": {
+        "timestamp": "2025-10-23T21:03:14.623502"
+      }
+    },
+    {
+      "id": "e689af16b529",
+      "tipo": "bug_fix",
+      "alvo": "ler_arquivo",
+      "motivo": "Corrigir erro recorrente (3x): ERRO: [Errno 2] No such file or directory: 'C:\\\\Projetos Automações e Digitais\\\\Luna\\\\workspaces\\\\te",
+      "codigo": "# Correção automática para erro recorrente\n# Erro: ERRO: [Errno 2] No such file or directory: 'C:\\\\Projetos Automações e Digitais\\\\Luna\\\\workspaces\\\\te\n# TODO: Implementar correção específica\npass\n",
+      "prioridade": 9,
+      "nivel_risco": "RISKY",
+      "detectado_em": "2025-10-23T20:49:57.080609",
+      "status": "aplicada",
+      "aplicada_em": "2025-10-23T21:03:14.922244",
+      "detalhes": {
+        "timestamp": "2025-10-23T21:03:14.922217"
+      }
+    },
+    {
+      "id": "42ce13e0bcee",
+      "tipo": "qualidade",
+      "alvo": "linha_1707_C:\\Projetos Automações e Digitais\\Luna\\luna_v3_FINAL_OTIMIZADA.py",
+      "motivo": "Bare except clause detectado na linha 1707",
+      "codigo": "# Substituir:\n# except:\n\n# Por uma exceção específica:\n# except Exception as e:\n#     # Tratar erro adequadamente\n#     print(f\"Erro: {e}\")\n\n# Ou múltiplas exceções específicas:\n# except (ValueError, TypeError) as e:\n#     # Tratar erros específicos\n",
+      "prioridade": 8,
+      "nivel_risco": "MEDIUM",
+      "detectado_em": "2025-10-23T21:20:51.236094",
+      "status": "aplicada",
+      "aplicada_em": "2025-10-23T21:20:51.773805",
+      "detalhes": {
+        "timestamp": "2025-10-23T21:20:51.773758"
+      }
+    },
+    {
+      "id": "7057c15c38a5",
+      "tipo": "qualidade",
+      "alvo": "linha_2445_C:\\Projetos Automações e Digitais\\Luna\\luna_v3_FINAL_OTIMIZADA.py",
+      "motivo": "Bare except clause detectado na linha 2445",
+      "codigo": "# Substituir:\n# except:\n\n# Por uma exceção específica:\n# except Exception as e:\n#     # Tratar erro adequadamente\n#     print(f\"Erro: {e}\")\n\n# Ou múltiplas exceções específicas:\n# except (ValueError, TypeError) as e:\n#     # Tratar erros específicos\n",
+      "prioridade": 8,
+      "nivel_risco": "MEDIUM",
+      "detectado_em": "2025-10-23T21:20:51.241809",
+      "status": "aplicada",
+      "aplicada_em": "2025-10-23T21:20:52.038250",
+      "detalhes": {
+        "timestamp": "2025-10-23T21:20:52.038189"
+      }
+    },
+    {
+      "id": "eba893cd75e5",
+      "tipo": "qualidade",
+      "alvo": "linha_1701_C:\\Projetos Automações e Digitais\\Luna\\luna_v3_FINAL_OTIMIZADA.py",
+      "motivo": "Bare except clause detectado na linha 1701",
+      "codigo": "# Substituir:\n# except:\n\n# Por uma exceção específica:\n# except Exception as e:\n#     # Tratar erro adequadamente\n#     print(f\"Erro: {e}\")\n\n# Ou múltiplas exceções específicas:\n# except (ValueError, TypeError) as e:\n#     # Tratar erros específicos\n",
+      "prioridade": 8,
+      "nivel_risco": "MEDIUM",
+      "detectado_em": "2025-10-23T21:22:05.182809",
+      "status": "aplicada",
+      "aplicada_em": "2025-10-23T21:22:05.707748",
+      "detalhes": {
+        "timestamp": "2025-10-23T21:22:05.707679"
+      }
+    },
+    {
+      "id": "c1c145ea267d",
+      "tipo": "qualidade",
+      "alvo": "linha_2437_C:\\Projetos Automações e Digitais\\Luna\\luna_v3_FINAL_OTIMIZADA.py",
+      "motivo": "Bare except clause detectado na linha 2437",
+      "codigo": "# Substituir:\n# except:\n\n# Por uma exceção específica:\n# except Exception as e:\n#     # Tratar erro adequadamente\n#     print(f\"Erro: {e}\")\n\n# Ou múltiplas exceções específicas:\n# except (ValueError, TypeError) as e:\n#     # Tratar erros específicos\n",
+      "prioridade": 8,
+      "nivel_risco": "MEDIUM",
+      "detectado_em": "2025-10-23T21:22:05.189050",
+      "status": "aplicada",
+      "aplicada_em": "2025-10-23T21:22:05.952105",
+      "detalhes": {
+        "timestamp": "2025-10-23T21:22:05.952077"
+      }
+    },
+    {
+      "id": "cab9d6c36cdf",
+      "tipo": "qualidade",
+      "alvo": "linha_1722_C:\\Projetos Automações e Digitais\\Luna\\luna_v3_FINAL_OTIMIZADA.py",
+      "motivo": "Bare except clause detectado na linha 1722",
+      "codigo": "# Substituir:\n# except:\n\n# Por uma exceção específica:\n# except Exception as e:\n#     # Tratar erro adequadamente\n#     print(f\"Erro: {e}\")\n\n# Ou múltiplas exceções específicas:\n# except (ValueError, TypeError) as e:\n#     # Tratar erros específicos\n",
+      "prioridade": 8,
+      "nivel_risco": "MEDIUM",
+      "detectado_em": "2025-10-23T22:14:46.620570",
+      "status": "aplicada",
+      "aplicada_em": "2025-10-23T22:14:47.117401",
+      "detalhes": {
+        "timestamp": "2025-10-23T22:14:47.117346"
+      }
+    },
+    {
+      "id": "6db39c73015f",
+      "tipo": "qualidade",
+      "alvo": "linha_2460_C:\\Projetos Automações e Digitais\\Luna\\luna_v3_FINAL_OTIMIZADA.py",
+      "motivo": "Bare except clause detectado na linha 2460",
+      "codigo": "# Substituir:\n# except:\n\n# Por uma exceção específica:\n# except Exception as e:\n#     # Tratar erro adequadamente\n#     print(f\"Erro: {e}\")\n\n# Ou múltiplas exceções específicas:\n# except (ValueError, TypeError) as e:\n#     # Tratar erros específicos\n",
+      "prioridade": 8,
+      "nivel_risco": "MEDIUM",
+      "detectado_em": "2025-10-23T22:14:46.626818",
+      "status": "aplicada",
+      "aplicada_em": "2025-10-23T22:14:47.432821",
+      "detalhes": {
+        "timestamp": "2025-10-23T22:14:47.432790"
+      }
+    }
+  ],
+  "falhadas": [
+    {
+      "id": "d9fe570d2bb5",
+      "tipo": "qualidade",
+      "alvo": "linha_3708_C:\\Projetos Automações e Digitais\\Luna\\luna_v3_FINAL_OTIMIZADA.py",
+      "motivo": "Bare except clause detectado na linha 3708",
+      "codigo": "# Substituir:\n# except:\n\n# Por uma exceção específica:\n# except Exception as e:\n#     # Tratar erro adequadamente\n#     print(f\"Erro: {e}\")\n\n# Ou múltiplas exceções específicas:\n# except (ValueError, TypeError) as e:\n#     # Tratar erros específicos\n",
+      "prioridade": 8,
+      "nivel_risco": "MEDIUM",
+      "detectado_em": "2025-10-23T14:18:29.860153",
+      "status": "falhada",
+      "erro": "Validação falhou",
+      "tentada_em": "2025-10-23T14:18:30.309477"
+    },
+    {
+      "id": "abea06a53fd2",
+      "tipo": "qualidade",
+      "alvo": "linha_4955_C:\\Projetos Automações e Digitais\\Luna\\luna_v3_FINAL_OTIMIZADA.py",
+      "motivo": "Bare except clause detectado na linha 4955",
+      "codigo": "# Substituir:\n# except:\n\n# Por uma exceção específica:\n# except Exception as e:\n#     # Tratar erro adequadamente\n#     print(f\"Erro: {e}\")\n\n# Ou múltiplas exceções específicas:\n# except (ValueError, TypeError) as e:\n#     # Tratar erros específicos\n",
+      "prioridade": 8,
+      "nivel_risco": "MEDIUM",
+      "detectado_em": "2025-10-23T14:18:29.867800",
+      "status": "falhada",
+      "erro": "Validação falhou",
+      "tentada_em": "2025-10-23T14:18:30.680618"
+    },
+    {
+      "id": "305a5f2ae3de",
+      "tipo": "bug_fix",
+      "alvo": "ler_arquivo",
+      "motivo": "Corrigir erro recorrente (3x): ERRO: [Errno 2] No such file or directory: 'C:\\\\Users\\\\Pedro Victor\\\\OneDrive\\\\Área de Trabalho\\\\Doc",
+      "codigo": "# Correção automática para erro recorrente\n# Erro: ERRO: [Errno 2] No such file or directory: 'C:\\\\Users\\\\Pedro Victor\\\\OneDrive\\\\Área de Trabalho\\\\Doc\n# TODO: Implementar correção específica\npass\n",
+      "prioridade": 9,
+      "nivel_risco": "RISKY",
+      "detectado_em": "2025-10-23T14:30:21.852113",
+      "status": "falhada",
+      "erro": "Validação falhou",
+      "tentada_em": "2025-10-23T14:31:31.037038"
+    },
+    {
+      "id": "c1141fbe29fd",
+      "tipo": "qualidade",
+      "alvo": "linha_3708_C:\\Projetos Automações e Digitais\\Luna\\luna_v3_FINAL_OTIMIZADA.py",
+      "motivo": "Bare except clause detectado na linha 3708",
+      "codigo": "# Substituir:\n# except:\n\n# Por uma exceção específica:\n# except Exception as e:\n#     # Tratar erro adequadamente\n#     print(f\"Erro: {e}\")\n\n# Ou múltiplas exceções específicas:\n# except (ValueError, TypeError) as e:\n#     # Tratar erros específicos\n",
+      "prioridade": 8,
+      "nivel_risco": "MEDIUM",
+      "detectado_em": "2025-10-23T14:51:18.136563",
+      "status": "falhada",
+      "erro": "Validação falhou",
+      "tentada_em": "2025-10-23T14:51:18.568930"
+    },
+    {
+      "id": "5db0f2ea2b74",
+      "tipo": "qualidade",
+      "alvo": "linha_4955_C:\\Projetos Automações e Digitais\\Luna\\luna_v3_FINAL_OTIMIZADA.py",
+      "motivo": "Bare except clause detectado na linha 4955",
+      "codigo": "# Substituir:\n# except:\n\n# Por uma exceção específica:\n# except Exception as e:\n#     # Tratar erro adequadamente\n#     print(f\"Erro: {e}\")\n\n# Ou múltiplas exceções específicas:\n# except (ValueError, TypeError) as e:\n#     # Tratar erros específicos\n",
+      "prioridade": 8,
+      "nivel_risco": "MEDIUM",
+      "detectado_em": "2025-10-23T14:51:18.138245",
+      "status": "falhada",
+      "erro": "Validação falhou",
+      "tentada_em": "2025-10-23T14:51:18.915076"
+    },
+    {
+      "id": "bae603d84946",
+      "tipo": "qualidade",
+      "alvo": "linha_3717_C:\\Projetos Automações e Digitais\\Luna\\luna_v3_FINAL_OTIMIZADA.py",
+      "motivo": "Bare except clause detectado na linha 3717",
+      "codigo": "# Substituir:\n# except:\n\n# Por uma exceção específica:\n# except Exception as e:\n#     # Tratar erro adequadamente\n#     print(f\"Erro: {e}\")\n\n# Ou múltiplas exceções específicas:\n# except (ValueError, TypeError) as e:\n#     # Tratar erros específicos\n",
+      "prioridade": 8,
+      "nivel_risco": "MEDIUM",
+      "detectado_em": "2025-10-23T15:06:08.216587",
+      "status": "falhada",
+      "erro": "Validação falhou",
+      "tentada_em": "2025-10-23T15:06:08.672726"
+    },
+    {
+      "id": "a256acd613cf",
+      "tipo": "qualidade",
+      "alvo": "linha_4964_C:\\Projetos Automações e Digitais\\Luna\\luna_v3_FINAL_OTIMIZADA.py",
+      "motivo": "Bare except clause detectado na linha 4964",
+      "codigo": "# Substituir:\n# except:\n\n# Por uma exceção específica:\n# except Exception as e:\n#     # Tratar erro adequadamente\n#     print(f\"Erro: {e}\")\n\n# Ou múltiplas exceções específicas:\n# except (ValueError, TypeError) as e:\n#     # Tratar erros específicos\n",
+      "prioridade": 8,
+      "nivel_risco": "MEDIUM",
+      "detectado_em": "2025-10-23T15:06:08.219032",
+      "status": "falhada",
+      "erro": "Validação falhou",
+      "tentada_em": "2025-10-23T15:06:09.090696"
+    },
+    {
+      "id": "fa6ddcbdd2ca",
+      "tipo": "qualidade",
+      "alvo": "linha_3724_C:\\Projetos Automações e Digitais\\Luna\\luna_v3_FINAL_OTIMIZADA.py",
+      "motivo": "Bare except clause detectado na linha 3724",
+      "codigo": "# Substituir:\n# except:\n\n# Por uma exceção específica:\n# except Exception as e:\n#     # Tratar erro adequadamente\n#     print(f\"Erro: {e}\")\n\n# Ou múltiplas exceções específicas:\n# except (ValueError, TypeError) as e:\n#     # Tratar erros específicos\n",
+      "prioridade": 8,
+      "nivel_risco": "MEDIUM",
+      "detectado_em": "2025-10-23T15:16:09.135584",
+      "status": "falhada",
+      "erro": "Validação falhou",
+      "tentada_em": "2025-10-23T15:16:09.605189"
+    },
+    {
+      "id": "41d09b966764",
+      "tipo": "qualidade",
+      "alvo": "linha_4971_C:\\Projetos Automações e Digitais\\Luna\\luna_v3_FINAL_OTIMIZADA.py",
+      "motivo": "Bare except clause detectado na linha 4971",
+      "codigo": "# Substituir:\n# except:\n\n# Por uma exceção específica:\n# except Exception as e:\n#     # Tratar erro adequadamente\n#     print(f\"Erro: {e}\")\n\n# Ou múltiplas exceções específicas:\n# except (ValueError, TypeError) as e:\n#     # Tratar erros específicos\n",
+      "prioridade": 8,
+      "nivel_risco": "MEDIUM",
+      "detectado_em": "2025-10-23T15:16:09.138328",
+      "status": "falhada",
+      "erro": "Validação falhou",
+      "tentada_em": "2025-10-23T15:16:09.979876"
+    },
+    {
+      "id": "91c8562ae637",
+      "tipo": "qualidade",
+      "alvo": "linha_3724_C:\\Projetos Automações e Digitais\\Luna\\luna_v3_FINAL_OTIMIZADA.py",
+      "motivo": "Bare except clause detectado na linha 3724",
+      "codigo": "# Substituir:\n# except:\n\n# Por uma exceção específica:\n# except Exception as e:\n#     # Tratar erro adequadamente\n#     print(f\"Erro: {e}\")\n\n# Ou múltiplas exceções específicas:\n# except (ValueError, TypeError) as e:\n#     # Tratar erros específicos\n",
+      "prioridade": 8,
+      "nivel_risco": "MEDIUM",
+      "detectado_em": "2025-10-23T15:44:36.463547",
+      "status": "falhada",
+      "erro": "Validação falhou",
+      "tentada_em": "2025-10-23T15:44:36.991383"
+    },
+    {
+      "id": "0aa986f969f6",
+      "tipo": "qualidade",
+      "alvo": "linha_4972_C:\\Projetos Automações e Digitais\\Luna\\luna_v3_FINAL_OTIMIZADA.py",
+      "motivo": "Bare except clause detectado na linha 4972",
+      "codigo": "# Substituir:\n# except:\n\n# Por uma exceção específica:\n# except Exception as e:\n#     # Tratar erro adequadamente\n#     print(f\"Erro: {e}\")\n\n# Ou múltiplas exceções específicas:\n# except (ValueError, TypeError) as e:\n#     # Tratar erros específicos\n",
+      "prioridade": 8,
+      "nivel_risco": "MEDIUM",
+      "detectado_em": "2025-10-23T15:44:36.467272",
+      "status": "falhada",
+      "erro": "Validação falhou",
+      "tentada_em": "2025-10-23T15:44:37.654059"
+    },
+    {
+      "id": "659be5d79b60",
+      "tipo": "bug_fix",
+      "alvo": "ler_arquivo",
+      "motivo": "Corrigir erro recorrente (3x): ERRO: [Errno 2] No such file or directory: 'C:\\\\Projetos Automações e Digitais\\\\Luna\\\\workspaces\\\\te",
+      "codigo": "# Correção automática para erro recorrente\n# Erro: ERRO: [Errno 2] No such file or directory: 'C:\\\\Projetos Automações e Digitais\\\\Luna\\\\workspaces\\\\te\n# TODO: Implementar correção específica\npass\n",
+      "prioridade": 9,
+      "nivel_risco": "RISKY",
+      "detectado_em": "2025-10-23T16:01:29.202581",
+      "status": "falhada",
+      "erro": "Validação falhou",
+      "tentada_em": "2025-10-23T16:04:57.309427"
+    },
+    {
+      "id": "1b37d6b71c1a",
+      "tipo": "qualidade",
+      "alvo": "linha_3728_C:\\Projetos Automações e Digitais\\Luna\\luna_v3_FINAL_OTIMIZADA.py",
+      "motivo": "Bare except clause detectado na linha 3728",
+      "codigo": "# Substituir:\n# except:\n\n# Por uma exceção específica:\n# except Exception as e:\n#     # Tratar erro adequadamente\n#     print(f\"Erro: {e}\")\n\n# Ou múltiplas exceções específicas:\n# except (ValueError, TypeError) as e:\n#     # Tratar erros específicos\n",
+      "prioridade": 8,
+      "nivel_risco": "MEDIUM",
+      "detectado_em": "2025-10-23T16:04:56.829757",
+      "status": "falhada",
+      "erro": "Validação falhou",
+      "tentada_em": "2025-10-23T16:04:57.771609"
+    },
+    {
+      "id": "736811e950ec",
+      "tipo": "qualidade",
+      "alvo": "linha_4977_C:\\Projetos Automações e Digitais\\Luna\\luna_v3_FINAL_OTIMIZADA.py",
+      "motivo": "Bare except clause detectado na linha 4977",
+      "codigo": "# Substituir:\n# except:\n\n# Por uma exceção específica:\n# except Exception as e:\n#     # Tratar erro adequadamente\n#     print(f\"Erro: {e}\")\n\n# Ou múltiplas exceções específicas:\n# except (ValueError, TypeError) as e:\n#     # Tratar erros específicos\n",
+      "prioridade": 8,
+      "nivel_risco": "MEDIUM",
+      "detectado_em": "2025-10-23T16:04:56.834038",
+      "status": "falhada",
+      "erro": "Validação falhou",
+      "tentada_em": "2025-10-23T16:04:58.261917"
+    }
+  ],
+  "ultima_atualizacao": "2025-10-24T00:15:15.110119",
+  "versao": "1.0",
+  "observacao": "Removidas 198 melhorias não-aplicáveis (movidas para fila_manual_only.json)"
+}

@@ -1,0 +1,2298 @@
+{
+  "pendentes": [
+    {
+      "tipo": "qualidade",
+      "alvo": "funcao_main",
+      "motivo": "Função 'main' sem type hints (linha 5469)",
+      "codigo_sugerido": "def main(arg: tipo) -> tipo: ...",
+      "prioridade": 5,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "funcao___init__",
+      "motivo": "Função '__init__' sem type hints (linha 388)",
+      "codigo_sugerido": "def __init__(arg: tipo) -> tipo: ...",
+      "prioridade": 5,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "funcao___init__",
+      "motivo": "Função '__init__' sem type hints (linha 1409)",
+      "codigo_sugerido": "def __init__(arg: tipo) -> tipo: ...",
+      "prioridade": 5,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "funcao_cleanup_gracioso",
+      "motivo": "Função 'cleanup_gracioso' sem type hints (linha 1449)",
+      "codigo_sugerido": "def cleanup_gracioso(arg: tipo) -> tipo: ...",
+      "prioridade": 5,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "funcao_cleanup_forcado",
+      "motivo": "Função 'cleanup_forcado' sem type hints (linha 1489)",
+      "codigo_sugerido": "def cleanup_forcado(arg: tipo) -> tipo: ...",
+      "prioridade": 5,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "funcao_cleanup_final",
+      "motivo": "Função 'cleanup_final' sem type hints (linha 1499)",
+      "codigo_sugerido": "def cleanup_final(arg: tipo) -> tipo: ...",
+      "prioridade": 5,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "funcao___init__",
+      "motivo": "Função '__init__' sem type hints (linha 1531)",
+      "codigo_sugerido": "def __init__(arg: tipo) -> tipo: ...",
+      "prioridade": 5,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "funcao_registrar_uso",
+      "motivo": "Função 'registrar_uso' sem type hints (linha 1552)",
+      "codigo_sugerido": "def registrar_uso(arg: tipo) -> tipo: ...",
+      "prioridade": 5,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "funcao_obter_estatisticas",
+      "motivo": "Função 'obter_estatisticas' sem type hints (linha 1597)",
+      "codigo_sugerido": "def obter_estatisticas(arg: tipo) -> tipo: ...",
+      "prioridade": 5,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "funcao_exibir_estatisticas",
+      "motivo": "Função 'exibir_estatisticas' sem type hints (linha 1630)",
+      "codigo_sugerido": "def exibir_estatisticas(arg: tipo) -> tipo: ...",
+      "prioridade": 5,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "funcao___init__",
+      "motivo": "Função '__init__' sem type hints (linha 1675)",
+      "codigo_sugerido": "def __init__(arg: tipo) -> tipo: ...",
+      "prioridade": 5,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "funcao_obter_estatisticas",
+      "motivo": "Função 'obter_estatisticas' sem type hints (linha 1886)",
+      "codigo_sugerido": "def obter_estatisticas(arg: tipo) -> tipo: ...",
+      "prioridade": 5,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "funcao_exibir_estatisticas",
+      "motivo": "Função 'exibir_estatisticas' sem type hints (linha 1894)",
+      "codigo_sugerido": "def exibir_estatisticas(arg: tipo) -> tipo: ...",
+      "prioridade": 5,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "funcao___init__",
+      "motivo": "Função '__init__' sem type hints (linha 1933)",
+      "codigo_sugerido": "def __init__(arg: tipo) -> tipo: ...",
+      "prioridade": 5,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "funcao_calcular_uso_atual",
+      "motivo": "Função 'calcular_uso_atual' sem type hints (linha 2017)",
+      "codigo_sugerido": "def calcular_uso_atual(arg: tipo) -> tipo: ...",
+      "prioridade": 5,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "funcao_exibir_status",
+      "motivo": "Função 'exibir_status' sem type hints (linha 2161)",
+      "codigo_sugerido": "def exibir_status(arg: tipo) -> tipo: ...",
+      "prioridade": 5,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "funcao_obter_estatisticas",
+      "motivo": "Função 'obter_estatisticas' sem type hints (linha 2194)",
+      "codigo_sugerido": "def obter_estatisticas(arg: tipo) -> tipo: ...",
+      "prioridade": 5,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "funcao___init__",
+      "motivo": "Função '__init__' sem type hints (linha 2231)",
+      "codigo_sugerido": "def __init__(arg: tipo) -> tipo: ...",
+      "prioridade": 5,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "funcao__carregar_ferramentas_bash",
+      "motivo": "Função '_carregar_ferramentas_bash' sem type hints (linha 2304)",
+      "codigo_sugerido": "def _carregar_ferramentas_bash(arg: tipo) -> tipo: ...",
+      "prioridade": 5,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "funcao__carregar_ferramentas_arquivos",
+      "motivo": "Função '_carregar_ferramentas_arquivos' sem type hints (linha 2333)",
+      "codigo_sugerido": "def _carregar_ferramentas_arquivos(arg: tipo) -> tipo: ...",
+      "prioridade": 5,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "funcao__carregar_ferramentas_navegador",
+      "motivo": "Função '_carregar_ferramentas_navegador' sem type hints (linha 2386)",
+      "codigo_sugerido": "def _carregar_ferramentas_navegador(arg: tipo) -> tipo: ...",
+      "prioridade": 5,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "funcao__carregar_ferramentas_cofre",
+      "motivo": "Função '_carregar_ferramentas_cofre' sem type hints (linha 2510)",
+      "codigo_sugerido": "def _carregar_ferramentas_cofre(arg: tipo) -> tipo: ...",
+      "prioridade": 5,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "funcao__carregar_ferramentas_memoria",
+      "motivo": "Função '_carregar_ferramentas_memoria' sem type hints (linha 2563)",
+      "codigo_sugerido": "def _carregar_ferramentas_memoria(arg: tipo) -> tipo: ...",
+      "prioridade": 5,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "funcao__carregar_ferramentas_workspace",
+      "motivo": "Função '_carregar_ferramentas_workspace' sem type hints (linha 2626)",
+      "codigo_sugerido": "def _carregar_ferramentas_workspace(arg: tipo) -> tipo: ...",
+      "prioridade": 5,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "funcao__carregar_ferramentas_organizacao",
+      "motivo": "Função '_carregar_ferramentas_organizacao' sem type hints (linha 2780)",
+      "codigo_sugerido": "def _carregar_ferramentas_organizacao(arg: tipo) -> tipo: ...",
+      "prioridade": 5,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "funcao__carregar_ferramentas_telemetria",
+      "motivo": "Função '_carregar_ferramentas_telemetria' sem type hints (linha 2862)",
+      "codigo_sugerido": "def _carregar_ferramentas_telemetria(arg: tipo) -> tipo: ...",
+      "prioridade": 5,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "funcao__carregar_ferramentas_meta",
+      "motivo": "Função '_carregar_ferramentas_meta' sem type hints (linha 2984)",
+      "codigo_sugerido": "def _carregar_ferramentas_meta(arg: tipo) -> tipo: ...",
+      "prioridade": 5,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "funcao__carregar_ferramentas_base",
+      "motivo": "Função '_carregar_ferramentas_base' sem type hints (linha 3367)",
+      "codigo_sugerido": "def _carregar_ferramentas_base(arg: tipo) -> tipo: ...",
+      "prioridade": 5,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "funcao__criar_safe_builtins",
+      "motivo": "Função '_criar_safe_builtins' sem type hints (linha 3389)",
+      "codigo_sugerido": "def _criar_safe_builtins(arg: tipo) -> tipo: ...",
+      "prioridade": 5,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "funcao_obter_descricoes",
+      "motivo": "Função 'obter_descricoes' sem type hints (linha 3652)",
+      "codigo_sugerido": "def obter_descricoes(arg: tipo) -> tipo: ...",
+      "prioridade": 5,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "funcao___init__",
+      "motivo": "Função '__init__' sem type hints (linha 3677)",
+      "codigo_sugerido": "def __init__(arg: tipo) -> tipo: ...",
+      "prioridade": 5,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "funcao__detectar_estagnacao",
+      "motivo": "Função '_detectar_estagnacao' sem type hints (linha 3992)",
+      "codigo_sugerido": "def _detectar_estagnacao(arg: tipo) -> tipo: ...",
+      "prioridade": 5,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "funcao__executar_chamada_api",
+      "motivo": "Função '_executar_chamada_api' sem type hints (linha 4152)",
+      "codigo_sugerido": "def _executar_chamada_api(arg: tipo) -> tipo: ...",
+      "prioridade": 5,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "funcao__verificar_melhorias_pendentes",
+      "motivo": "Função '_verificar_melhorias_pendentes' sem type hints (linha 4489)",
+      "codigo_sugerido": "def _verificar_melhorias_pendentes(arg: tipo) -> tipo: ...",
+      "prioridade": 5,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "funcao__calcular_max_workers_paralelos",
+      "motivo": "Função '_calcular_max_workers_paralelos' sem type hints (linha 5094)",
+      "codigo_sugerido": "def _calcular_max_workers_paralelos(arg: tipo) -> tipo: ...",
+      "prioridade": 5,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "funcao__exibir_estatisticas",
+      "motivo": "Função '_exibir_estatisticas' sem type hints (linha 5447)",
+      "codigo_sugerido": "def _exibir_estatisticas(arg: tipo) -> tipo: ...",
+      "prioridade": 5,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "funcao___init__",
+      "motivo": "Função '__init__' sem type hints (linha 4663)",
+      "codigo_sugerido": "def __init__(arg: tipo) -> tipo: ...",
+      "prioridade": 5,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "funcao_visit_For",
+      "motivo": "Função 'visit_For' sem type hints (linha 4667)",
+      "codigo_sugerido": "def visit_For(arg: tipo) -> tipo: ...",
+      "prioridade": 5,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "funcao_visit_While",
+      "motivo": "Função 'visit_While' sem type hints (linha 4681)",
+      "codigo_sugerido": "def visit_While(arg: tipo) -> tipo: ...",
+      "prioridade": 5,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "funcao_visit_AugAssign",
+      "motivo": "Função 'visit_AugAssign' sem type hints (linha 4695)",
+      "codigo_sugerido": "def visit_AugAssign(arg: tipo) -> tipo: ...",
+      "prioridade": 5,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "funcao___init__",
+      "motivo": "Função '__init__' sem type hints (linha 4766)",
+      "codigo_sugerido": "def __init__(arg: tipo) -> tipo: ...",
+      "prioridade": 5,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "funcao_visit_FunctionDef",
+      "motivo": "Função 'visit_FunctionDef' sem type hints (linha 4770)",
+      "codigo_sugerido": "def visit_FunctionDef(arg: tipo) -> tipo: ...",
+      "prioridade": 5,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "funcao_visit_For",
+      "motivo": "Função 'visit_For' sem type hints (linha 4784)",
+      "codigo_sugerido": "def visit_For(arg: tipo) -> tipo: ...",
+      "prioridade": 5,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "funcao_visit_While",
+      "motivo": "Função 'visit_While' sem type hints (linha 4789)",
+      "codigo_sugerido": "def visit_While(arg: tipo) -> tipo: ...",
+      "prioridade": 5,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "funcao_visit_Import",
+      "motivo": "Função 'visit_Import' sem type hints (linha 4794)",
+      "codigo_sugerido": "def visit_Import(arg: tipo) -> tipo: ...",
+      "prioridade": 5,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "funcao_visit_ImportFrom",
+      "motivo": "Função 'visit_ImportFrom' sem type hints (linha 4812)",
+      "codigo_sugerido": "def visit_ImportFrom(arg: tipo) -> tipo: ...",
+      "prioridade": 5,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 288)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 295)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 297)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 306)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 316)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 317)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 318)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 319)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 321)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 322)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 813)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 859)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 998)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 1160)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 1238)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 1597)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 1732)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 1773)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 1807)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 1865)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 1886)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 2017)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 2047)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 2080)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 2194)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 3389)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 3428)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 3652)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 3819)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 4034)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 4085)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 5217)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 322)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 398)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 1130)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 1141)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 1147)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 1154)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 1268)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 1773)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 1807)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 1865)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 1966)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 1967)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 1968)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 2243)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 2244)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 2245)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 3712)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 3760)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 3762)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 3802)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 3812)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 4440)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 165)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 406)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 485)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 856)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 859)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 998)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 1552)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 1634)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 1640)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 1644)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 1693)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 1804)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 1863)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 1898)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 1967)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 1968)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 2046)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 2078)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 2079)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 2080)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 2135)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 2136)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 2233)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 3428)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 3466)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 3611)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 3680)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 3819)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 3819)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 4278)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 4590)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 4895)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 5216)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 5454)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 457)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 550)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 552)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 554)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 661)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 663)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 665)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 779)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 917)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 1219)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 1345)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 1693)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 1804)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 1843)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 1863)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 2101)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 2102)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 2105)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 3422)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 3551)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 3553)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 3557)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 3559)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 3561)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 3564)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 3565)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 3832)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 3836)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 3836)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 4198)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 4201)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 4280)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 5675)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 763)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 765)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 767)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 1084)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 1150)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 1151)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 1152)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 1153)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 1153)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 1153)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 1230)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 1348)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 1638)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 1638)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 1638)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 1902)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 1903)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 1904)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 2183)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 2187)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 2191)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 3424)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 3424)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 3567)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 3567)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 3567)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 3567)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 4188)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 4452)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 5267)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 5451)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 5452)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 5453)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 5681)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 163)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 1374)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 1381)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 1641)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 1641)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 1642)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 1645)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 2154)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 2155)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 2155)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 2182)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 2186)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 2190)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 3578)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 3604)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 4103)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 4104)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 4451)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 5272)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 5456)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 5457)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 5672)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 5673)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 5674)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 4442)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 5264)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 5308)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 5308)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 5310)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 5310)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 5310)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 5676)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 5676)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 4339)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 4727)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 4728)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 4730)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 4736)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 4836)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 5683)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 5684)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 5685)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 2117)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 2120)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 2124)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 4837)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 4839)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 5292)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 5295)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 5296)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "qualidade",
+      "alvo": "acesso_dict",
+      "motivo": "Acesso direto a dict[key] pode causar KeyError (linha 5296)",
+      "codigo_sugerido": "Use dict.get(key, default) para acesso seguro",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "refatoracao",
+      "alvo": "funcao_longa_input_seguro",
+      "motivo": "Função 'input_seguro' muito longa (92 linhas)",
+      "codigo_sugerido": "Considere dividir em funções menores",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "refatoracao",
+      "alvo": "funcao_longa_main",
+      "motivo": "Função 'main' muito longa (244 linhas)",
+      "codigo_sugerido": "Considere dividir em funções menores",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "refatoracao",
+      "alvo": "funcao_longa_planejar",
+      "motivo": "Função 'planejar' muito longa (78 linhas)",
+      "codigo_sugerido": "Considere dividir em funções menores",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "refatoracao",
+      "alvo": "funcao_longa__analisar_tarefa",
+      "motivo": "Função '_analisar_tarefa' muito longa (106 linhas)",
+      "codigo_sugerido": "Considere dividir em funções menores",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "refatoracao",
+      "alvo": "funcao_longa__criar_estrategia",
+      "motivo": "Função '_criar_estrategia' muito longa (102 linhas)",
+      "codigo_sugerido": "Considere dividir em funções menores",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "refatoracao",
+      "alvo": "funcao_longa__decompor_em_subtarefas",
+      "motivo": "Função '_decompor_em_subtarefas' muito longa (117 linhas)",
+      "codigo_sugerido": "Considere dividir em funções menores",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "refatoracao",
+      "alvo": "funcao_longa__validar_plano",
+      "motivo": "Função '_validar_plano' muito longa (143 linhas)",
+      "codigo_sugerido": "Considere dividir em funções menores",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "refatoracao",
+      "alvo": "funcao_longa_executar_plano",
+      "motivo": "Função 'executar_plano' muito longa (117 linhas)",
+      "codigo_sugerido": "Considere dividir em funções menores",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "refatoracao",
+      "alvo": "funcao_longa__executar_onda_sequencial",
+      "motivo": "Função '_executar_onda_sequencial' muito longa (77 linhas)",
+      "codigo_sugerido": "Considere dividir em funções menores",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "refatoracao",
+      "alvo": "funcao_longa__executar_onda_paralela",
+      "motivo": "Função '_executar_onda_paralela' muito longa (150 linhas)",
+      "codigo_sugerido": "Considere dividir em funções menores",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "refatoracao",
+      "alvo": "funcao_longa_processar_batch",
+      "motivo": "Função 'processar_batch' muito longa (58 linhas)",
+      "codigo_sugerido": "Considere dividir em funções menores",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "refatoracao",
+      "alvo": "funcao_longa_precisa_esperar",
+      "motivo": "Função 'precisa_esperar' muito longa (56 linhas)",
+      "codigo_sugerido": "Considere dividir em funções menores",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "refatoracao",
+      "alvo": "funcao_longa___init__",
+      "motivo": "Função '__init__' muito longa (72 linhas)",
+      "codigo_sugerido": "Considere dividir em funções menores",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "refatoracao",
+      "alvo": "funcao_longa__carregar_ferramentas_arquivos",
+      "motivo": "Função '_carregar_ferramentas_arquivos' muito longa (52 linhas)",
+      "codigo_sugerido": "Considere dividir em funções menores",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "refatoracao",
+      "alvo": "funcao_longa__carregar_ferramentas_navegador",
+      "motivo": "Função '_carregar_ferramentas_navegador' muito longa (123 linhas)",
+      "codigo_sugerido": "Considere dividir em funções menores",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "refatoracao",
+      "alvo": "funcao_longa__carregar_ferramentas_cofre",
+      "motivo": "Função '_carregar_ferramentas_cofre' muito longa (52 linhas)",
+      "codigo_sugerido": "Considere dividir em funções menores",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "refatoracao",
+      "alvo": "funcao_longa__carregar_ferramentas_memoria",
+      "motivo": "Função '_carregar_ferramentas_memoria' muito longa (62 linhas)",
+      "codigo_sugerido": "Considere dividir em funções menores",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "refatoracao",
+      "alvo": "funcao_longa__carregar_ferramentas_workspace",
+      "motivo": "Função '_carregar_ferramentas_workspace' muito longa (153 linhas)",
+      "codigo_sugerido": "Considere dividir em funções menores",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "refatoracao",
+      "alvo": "funcao_longa__carregar_ferramentas_organizacao",
+      "motivo": "Função '_carregar_ferramentas_organizacao' muito longa (81 linhas)",
+      "codigo_sugerido": "Considere dividir em funções menores",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "refatoracao",
+      "alvo": "funcao_longa__carregar_ferramentas_telemetria",
+      "motivo": "Função '_carregar_ferramentas_telemetria' muito longa (121 linhas)",
+      "codigo_sugerido": "Considere dividir em funções menores",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "refatoracao",
+      "alvo": "funcao_longa__carregar_ferramentas_meta",
+      "motivo": "Função '_carregar_ferramentas_meta' muito longa (382 linhas)",
+      "codigo_sugerido": "Considere dividir em funções menores",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "refatoracao",
+      "alvo": "funcao_longa_executar",
+      "motivo": "Função 'executar' muito longa (139 linhas)",
+      "codigo_sugerido": "Considere dividir em funções menores",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "refatoracao",
+      "alvo": "funcao_longa___init__",
+      "motivo": "Função '__init__' muito longa (141 linhas)",
+      "codigo_sugerido": "Considere dividir em funções menores",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "refatoracao",
+      "alvo": "funcao_muitos_params___init__",
+      "motivo": "Função '__init__' com muitos parâmetros (12)",
+      "codigo_sugerido": "Considere usar dataclass ou config object",
+      "prioridade": 5,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "refatoracao",
+      "alvo": "funcao_longa__avaliar_qualidade_resultado",
+      "motivo": "Função '_avaliar_qualidade_resultado' muito longa (64 linhas)",
+      "codigo_sugerido": "Considere dividir em funções menores",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "refatoracao",
+      "alvo": "funcao_longa__executar_chamada_api",
+      "motivo": "Função '_executar_chamada_api' muito longa (104 linhas)",
+      "codigo_sugerido": "Considere dividir em funções menores",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "refatoracao",
+      "alvo": "funcao_longa__processar_uso_ferramentas",
+      "motivo": "Função '_processar_uso_ferramentas' muito longa (136 linhas)",
+      "codigo_sugerido": "Considere dividir em funções menores",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "refatoracao",
+      "alvo": "funcao_longa__analisar_erro_recorrente",
+      "motivo": "Função '_analisar_erro_recorrente' muito longa (59 linhas)",
+      "codigo_sugerido": "Considere dividir em funções menores",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "refatoracao",
+      "alvo": "funcao_longa__verificar_melhorias_pendentes",
+      "motivo": "Função '_verificar_melhorias_pendentes' muito longa (100 linhas)",
+      "codigo_sugerido": "Considere dividir em funções menores",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "refatoracao",
+      "alvo": "funcao_longa__detectar_loops_ineficientes",
+      "motivo": "Função '_detectar_loops_ineficientes' muito longa (106 linhas)",
+      "codigo_sugerido": "Considere dividir em funções menores",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "refatoracao",
+      "alvo": "funcao_longa__detectar_imports_problematicos",
+      "motivo": "Função '_detectar_imports_problematicos' muito longa (104 linhas)",
+      "codigo_sugerido": "Considere dividir em funções menores",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "refatoracao",
+      "alvo": "funcao_longa__detectar_falta_documentacao",
+      "motivo": "Função '_detectar_falta_documentacao' muito longa (80 linhas)",
+      "codigo_sugerido": "Considere dividir em funções menores",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "refatoracao",
+      "alvo": "funcao_longa_executar_tarefa",
+      "motivo": "Função 'executar_tarefa' muito longa (233 linhas)",
+      "codigo_sugerido": "Considere dividir em funções menores",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    },
+    {
+      "tipo": "refatoracao",
+      "alvo": "funcao_longa_executar_subtarefa",
+      "motivo": "Função 'executar_subtarefa' muito longa (62 linhas)",
+      "codigo_sugerido": "Considere dividir em funções menores",
+      "prioridade": 6,
+      "ferramenta": "luna_v3_FINAL_OTIMIZADA"
+    }
+  ],
+  "aplicadas": [],
+  "metadata": {
+    "total_detectado": 292,
+    "p5": 47,
+    "p6": 239
+  }
+}

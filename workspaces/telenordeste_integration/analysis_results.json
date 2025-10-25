@@ -1,0 +1,644 @@
+{
+  "summary": {
+    "timestamp": "2025-10-23T20:48:56.128236",
+    "total_files_processed": 31,
+    "successful_analyses": 31,
+    "read_errors": 0,
+    "syntax_errors": 0,
+    "aggregate_metrics": {
+      "total_lines": 6222,
+      "total_code_lines": 4642,
+      "total_functions": 175,
+      "total_classes": 16
+    }
+  },
+  "files": [
+    {
+      "filepath": "C:\\Projetos Automações e Digitais\\Luna\\workspaces\\telenordeste_integration\\analisar_site.py",
+      "total_lines": 80,
+      "blank_lines": 15,
+      "comment_lines": 7,
+      "code_lines": 58,
+      "functions": 1,
+      "classes": 0,
+      "imports_list": [
+        "playwright.sync_api",
+        "time",
+        "json"
+      ],
+      "encoding_used": "utf-8",
+      "encoding_success": true,
+      "has_syntax_error": false,
+      "has_read_error": false,
+      "error_message": ""
+    },
+    {
+      "filepath": "C:\\Projetos Automações e Digitais\\Luna\\workspaces\\telenordeste_integration\\analyze_single_file.py",
+      "total_lines": 324,
+      "blank_lines": 73,
+      "comment_lines": 26,
+      "code_lines": 225,
+      "functions": 3,
+      "classes": 0,
+      "imports_list": [
+        "os",
+        "typing",
+        "file_stats",
+        "file_reader",
+        "line_counter",
+        "ast_analyzer",
+        "tempfile"
+      ],
+      "encoding_used": "utf-8",
+      "encoding_success": true,
+      "has_syntax_error": false,
+      "has_read_error": false,
+      "error_message": ""
+    },
+    {
+      "filepath": "C:\\Projetos Automações e Digitais\\Luna\\workspaces\\telenordeste_integration\\ast_analyzer.py",
+      "total_lines": 309,
+      "blank_lines": 57,
+      "comment_lines": 7,
+      "code_lines": 245,
+      "functions": 9,
+      "classes": 2,
+      "imports_list": [
+        "ast",
+        "typing",
+        "dataclasses"
+      ],
+      "encoding_used": "utf-8",
+      "encoding_success": true,
+      "has_syntax_error": false,
+      "has_read_error": false,
+      "error_message": ""
+    },
+    {
+      "filepath": "C:\\Projetos Automações e Digitais\\Luna\\workspaces\\telenordeste_integration\\config.py",
+      "total_lines": 130,
+      "blank_lines": 25,
+      "comment_lines": 3,
+      "code_lines": 102,
+      "functions": 13,
+      "classes": 1,
+      "imports_list": [
+        "os",
+        "json",
+        "pathlib",
+        "typing"
+      ],
+      "encoding_used": "utf-8",
+      "encoding_success": true,
+      "has_syntax_error": false,
+      "has_read_error": false,
+      "error_message": ""
+    },
+    {
+      "filepath": "C:\\Projetos Automações e Digitais\\Luna\\workspaces\\telenordeste_integration\\consultar_estrutura.py",
+      "total_lines": 167,
+      "blank_lines": 28,
+      "comment_lines": 2,
+      "code_lines": 137,
+      "functions": 8,
+      "classes": 1,
+      "imports_list": [
+        "json",
+        "os",
+        "sys",
+        "pathlib"
+      ],
+      "encoding_used": "utf-8",
+      "encoding_success": true,
+      "has_syntax_error": false,
+      "has_read_error": false,
+      "error_message": ""
+    },
+    {
+      "filepath": "C:\\Projetos Automações e Digitais\\Luna\\workspaces\\telenordeste_integration\\example_usage.py",
+      "total_lines": 255,
+      "blank_lines": 61,
+      "comment_lines": 16,
+      "code_lines": 178,
+      "functions": 8,
+      "classes": 0,
+      "imports_list": [
+        "datetime",
+        "config",
+        "notion_client",
+        "google_calendar_client",
+        "integrator"
+      ],
+      "encoding_used": "utf-8",
+      "encoding_success": true,
+      "has_syntax_error": false,
+      "has_read_error": false,
+      "error_message": ""
+    },
+    {
+      "filepath": "C:\\Projetos Automações e Digitais\\Luna\\workspaces\\telenordeste_integration\\exemplo_uso_file_reader.py",
+      "total_lines": 133,
+      "blank_lines": 37,
+      "comment_lines": 4,
+      "code_lines": 92,
+      "functions": 5,
+      "classes": 0,
+      "imports_list": [
+        "file_reader",
+        "os"
+      ],
+      "encoding_used": "utf-8",
+      "encoding_success": true,
+      "has_syntax_error": false,
+      "has_read_error": false,
+      "error_message": ""
+    },
+    {
+      "filepath": "C:\\Projetos Automações e Digitais\\Luna\\workspaces\\telenordeste_integration\\exemplo_uso_line_counter.py",
+      "total_lines": 108,
+      "blank_lines": 25,
+      "comment_lines": 10,
+      "code_lines": 73,
+      "functions": 1,
+      "classes": 0,
+      "imports_list": [
+        "line_counter",
+        "find_python_files",
+        "file_reader",
+        "sys",
+        "os"
+      ],
+      "encoding_used": "utf-8",
+      "encoding_success": true,
+      "has_syntax_error": false,
+      "has_read_error": false,
+      "error_message": ""
+    },
+    {
+      "filepath": "C:\\Projetos Automações e Digitais\\Luna\\workspaces\\telenordeste_integration\\explorar_site_avancado.py",
+      "total_lines": 118,
+      "blank_lines": 19,
+      "comment_lines": 11,
+      "code_lines": 88,
+      "functions": 1,
+      "classes": 0,
+      "imports_list": [
+        "playwright.sync_api",
+        "time",
+        "json",
+        "re"
+      ],
+      "encoding_used": "utf-8",
+      "encoding_success": true,
+      "has_syntax_error": false,
+      "has_read_error": false,
+      "error_message": ""
+    },
+    {
+      "filepath": "C:\\Projetos Automações e Digitais\\Luna\\workspaces\\telenordeste_integration\\fibonacci_analysis.py",
+      "total_lines": 259,
+      "blank_lines": 42,
+      "comment_lines": 7,
+      "code_lines": 210,
+      "functions": 9,
+      "classes": 1,
+      "imports_list": [
+        "json",
+        "re",
+        "datetime",
+        "pathlib"
+      ],
+      "encoding_used": "utf-8",
+      "encoding_success": true,
+      "has_syntax_error": false,
+      "has_read_error": false,
+      "error_message": ""
+    },
+    {
+      "filepath": "C:\\Projetos Automações e Digitais\\Luna\\workspaces\\telenordeste_integration\\fibonacci_calc.py",
+      "total_lines": 62,
+      "blank_lines": 16,
+      "comment_lines": 3,
+      "code_lines": 43,
+      "functions": 3,
+      "classes": 0,
+      "imports_list": [
+        "time",
+        "sys"
+      ],
+      "encoding_used": "utf-8",
+      "encoding_success": true,
+      "has_syntax_error": false,
+      "has_read_error": false,
+      "error_message": ""
+    },
+    {
+      "filepath": "C:\\Projetos Automações e Digitais\\Luna\\workspaces\\telenordeste_integration\\file_reader.py",
+      "total_lines": 148,
+      "blank_lines": 32,
+      "comment_lines": 12,
+      "code_lines": 104,
+      "functions": 2,
+      "classes": 0,
+      "imports_list": [
+        "typing",
+        "os",
+        "tempfile"
+      ],
+      "encoding_used": "utf-8",
+      "encoding_success": true,
+      "has_syntax_error": false,
+      "has_read_error": false,
+      "error_message": ""
+    },
+    {
+      "filepath": "C:\\Projetos Automações e Digitais\\Luna\\workspaces\\telenordeste_integration\\file_stats.py",
+      "total_lines": 216,
+      "blank_lines": 37,
+      "comment_lines": 14,
+      "code_lines": 165,
+      "functions": 4,
+      "classes": 1,
+      "imports_list": [
+        "dataclasses",
+        "typing"
+      ],
+      "encoding_used": "utf-8",
+      "encoding_success": true,
+      "has_syntax_error": false,
+      "has_read_error": false,
+      "error_message": ""
+    },
+    {
+      "filepath": "C:\\Projetos Automações e Digitais\\Luna\\workspaces\\telenordeste_integration\\find_python_files.py",
+      "total_lines": 102,
+      "blank_lines": 24,
+      "comment_lines": 12,
+      "code_lines": 66,
+      "functions": 1,
+      "classes": 0,
+      "imports_list": [
+        "os",
+        "typing",
+        "sys"
+      ],
+      "encoding_used": "utf-8",
+      "encoding_success": true,
+      "has_syntax_error": false,
+      "has_read_error": false,
+      "error_message": ""
+    },
+    {
+      "filepath": "C:\\Projetos Automações e Digitais\\Luna\\workspaces\\telenordeste_integration\\google_calendar_client.py",
+      "total_lines": 277,
+      "blank_lines": 51,
+      "comment_lines": 7,
+      "code_lines": 219,
+      "functions": 8,
+      "classes": 1,
+      "imports_list": [
+        "os",
+        "pickle",
+        "pathlib",
+        "typing",
+        "datetime",
+        "logging",
+        "google.auth.transport.requests",
+        "google.oauth2.credentials",
+        "google_auth_oauthlib.flow",
+        "googleapiclient.discovery",
+        "googleapiclient.errors"
+      ],
+      "encoding_used": "utf-8",
+      "encoding_success": true,
+      "has_syntax_error": false,
+      "has_read_error": false,
+      "error_message": ""
+    },
+    {
+      "filepath": "C:\\Projetos Automações e Digitais\\Luna\\workspaces\\telenordeste_integration\\integrator.py",
+      "total_lines": 298,
+      "blank_lines": 56,
+      "comment_lines": 16,
+      "code_lines": 226,
+      "functions": 8,
+      "classes": 1,
+      "imports_list": [
+        "logging",
+        "datetime",
+        "typing",
+        "pathlib",
+        "config",
+        "notion_client",
+        "google_calendar_client"
+      ],
+      "encoding_used": "utf-8",
+      "encoding_success": true,
+      "has_syntax_error": false,
+      "has_read_error": false,
+      "error_message": ""
+    },
+    {
+      "filepath": "C:\\Projetos Automações e Digitais\\Luna\\workspaces\\telenordeste_integration\\line_counter.py",
+      "total_lines": 237,
+      "blank_lines": 41,
+      "comment_lines": 30,
+      "code_lines": 166,
+      "functions": 1,
+      "classes": 0,
+      "imports_list": [
+        "re",
+        "typing"
+      ],
+      "encoding_used": "utf-8",
+      "encoding_success": true,
+      "has_syntax_error": false,
+      "has_read_error": false,
+      "error_message": ""
+    },
+    {
+      "filepath": "C:\\Projetos Automações e Digitais\\Luna\\workspaces\\telenordeste_integration\\main.py",
+      "total_lines": 312,
+      "blank_lines": 62,
+      "comment_lines": 15,
+      "code_lines": 235,
+      "functions": 5,
+      "classes": 0,
+      "imports_list": [
+        "sys",
+        "logging",
+        "datetime",
+        "pathlib",
+        "config",
+        "integrator"
+      ],
+      "encoding_used": "utf-8",
+      "encoding_success": true,
+      "has_syntax_error": false,
+      "has_read_error": false,
+      "error_message": ""
+    },
+    {
+      "filepath": "C:\\Projetos Automações e Digitais\\Luna\\workspaces\\telenordeste_integration\\notion_client.py",
+      "total_lines": 243,
+      "blank_lines": 45,
+      "comment_lines": 6,
+      "code_lines": 192,
+      "functions": 8,
+      "classes": 1,
+      "imports_list": [
+        "requests",
+        "typing",
+        "datetime",
+        "logging"
+      ],
+      "encoding_used": "utf-8",
+      "encoding_success": true,
+      "has_syntax_error": false,
+      "has_read_error": false,
+      "error_message": ""
+    },
+    {
+      "filepath": "C:\\Projetos Automações e Digitais\\Luna\\workspaces\\telenordeste_integration\\telenordeste_bot.py",
+      "total_lines": 281,
+      "blank_lines": 54,
+      "comment_lines": 20,
+      "code_lines": 207,
+      "functions": 11,
+      "classes": 1,
+      "imports_list": [
+        "playwright.sync_api",
+        "json",
+        "time",
+        "datetime",
+        "logging"
+      ],
+      "encoding_used": "utf-8",
+      "encoding_success": true,
+      "has_syntax_error": false,
+      "has_read_error": false,
+      "error_message": ""
+    },
+    {
+      "filepath": "C:\\Projetos Automações e Digitais\\Luna\\workspaces\\telenordeste_integration\\test_ast_analyzer.py",
+      "total_lines": 193,
+      "blank_lines": 41,
+      "comment_lines": 5,
+      "code_lines": 147,
+      "functions": 11,
+      "classes": 2,
+      "imports_list": [
+        "unittest",
+        "ast_analyzer"
+      ],
+      "encoding_used": "utf-8",
+      "encoding_success": true,
+      "has_syntax_error": false,
+      "has_read_error": false,
+      "error_message": ""
+    },
+    {
+      "filepath": "C:\\Projetos Automações e Digitais\\Luna\\workspaces\\telenordeste_integration\\test_fibonacci_iterativo.py",
+      "total_lines": 28,
+      "blank_lines": 6,
+      "comment_lines": 5,
+      "code_lines": 17,
+      "functions": 0,
+      "classes": 0,
+      "imports_list": [
+        "time",
+        "fibonacci_calc"
+      ],
+      "encoding_used": "utf-8",
+      "encoding_success": true,
+      "has_syntax_error": false,
+      "has_read_error": false,
+      "error_message": ""
+    },
+    {
+      "filepath": "C:\\Projetos Automações e Digitais\\Luna\\workspaces\\telenordeste_integration\\test_file_reader.py",
+      "total_lines": 190,
+      "blank_lines": 34,
+      "comment_lines": 6,
+      "code_lines": 150,
+      "functions": 8,
+      "classes": 0,
+      "imports_list": [
+        "tempfile",
+        "os",
+        "file_reader"
+      ],
+      "encoding_used": "utf-8",
+      "encoding_success": true,
+      "has_syntax_error": false,
+      "has_read_error": false,
+      "error_message": ""
+    },
+    {
+      "filepath": "C:\\Projetos Automações e Digitais\\Luna\\workspaces\\telenordeste_integration\\test_find_python_files.py",
+      "total_lines": 113,
+      "blank_lines": 20,
+      "comment_lines": 12,
+      "code_lines": 81,
+      "functions": 1,
+      "classes": 0,
+      "imports_list": [
+        "os",
+        "shutil",
+        "find_python_files"
+      ],
+      "encoding_used": "utf-8",
+      "encoding_success": true,
+      "has_syntax_error": false,
+      "has_read_error": false,
+      "error_message": ""
+    },
+    {
+      "filepath": "C:\\Projetos Automações e Digitais\\Luna\\workspaces\\telenordeste_integration\\validacao_fibonacci.py",
+      "total_lines": 103,
+      "blank_lines": 15,
+      "comment_lines": 9,
+      "code_lines": 79,
+      "functions": 0,
+      "classes": 0,
+      "imports_list": [
+        "re"
+      ],
+      "encoding_used": "utf-8",
+      "encoding_success": true,
+      "has_syntax_error": false,
+      "has_read_error": false,
+      "error_message": ""
+    },
+    {
+      "filepath": "C:\\Projetos Automações e Digitais\\Luna\\workspaces\\telenordeste_integration\\validation_performance.py",
+      "total_lines": 89,
+      "blank_lines": 13,
+      "comment_lines": 8,
+      "code_lines": 68,
+      "functions": 0,
+      "classes": 0,
+      "imports_list": [],
+      "encoding_used": "utf-8",
+      "encoding_success": true,
+      "has_syntax_error": false,
+      "has_read_error": false,
+      "error_message": ""
+    },
+    {
+      "filepath": "C:\\Projetos Automações e Digitais\\Luna\\workspaces\\telenordeste_integration\\verificar_status.py",
+      "total_lines": 282,
+      "blank_lines": 58,
+      "comment_lines": 7,
+      "code_lines": 217,
+      "functions": 12,
+      "classes": 1,
+      "imports_list": [
+        "os",
+        "sys",
+        "json",
+        "pathlib"
+      ],
+      "encoding_used": "utf-8",
+      "encoding_success": true,
+      "has_syntax_error": false,
+      "has_read_error": false,
+      "error_message": ""
+    },
+    {
+      "filepath": "C:\\Projetos Automações e Digitais\\Luna\\workspaces\\telenordeste_integration\\src\\calendar_client.py",
+      "total_lines": 358,
+      "blank_lines": 71,
+      "comment_lines": 21,
+      "code_lines": 266,
+      "functions": 8,
+      "classes": 1,
+      "imports_list": [
+        "os",
+        "pickle",
+        "typing",
+        "datetime",
+        "google.auth.transport.requests",
+        "google.oauth2.credentials",
+        "google_auth_oauthlib.flow",
+        "googleapiclient.discovery",
+        "pytz"
+      ],
+      "encoding_used": "utf-8",
+      "encoding_success": true,
+      "has_syntax_error": false,
+      "has_read_error": false,
+      "error_message": ""
+    },
+    {
+      "filepath": "C:\\Projetos Automações e Digitais\\Luna\\workspaces\\telenordeste_integration\\src\\main.py",
+      "total_lines": 292,
+      "blank_lines": 70,
+      "comment_lines": 17,
+      "code_lines": 205,
+      "functions": 11,
+      "classes": 0,
+      "imports_list": [
+        "os",
+        "sys",
+        "argparse",
+        "datetime",
+        "dotenv",
+        "notion_client",
+        "calendar_client",
+        "sync_manager"
+      ],
+      "encoding_used": "utf-8",
+      "encoding_success": true,
+      "has_syntax_error": false,
+      "has_read_error": false,
+      "error_message": ""
+    },
+    {
+      "filepath": "C:\\Projetos Automações e Digitais\\Luna\\workspaces\\telenordeste_integration\\src\\notion_client.py",
+      "total_lines": 222,
+      "blank_lines": 42,
+      "comment_lines": 11,
+      "code_lines": 169,
+      "functions": 6,
+      "classes": 1,
+      "imports_list": [
+        "os",
+        "typing",
+        "datetime",
+        "notion_client",
+        "pytz",
+        "dotenv"
+      ],
+      "encoding_used": "utf-8",
+      "encoding_success": true,
+      "has_syntax_error": false,
+      "has_read_error": false,
+      "error_message": ""
+    },
+    {
+      "filepath": "C:\\Projetos Automações e Digitais\\Luna\\workspaces\\telenordeste_integration\\src\\sync_manager.py",
+      "total_lines": 293,
+      "blank_lines": 59,
+      "comment_lines": 22,
+      "code_lines": 212,
+      "functions": 9,
+      "classes": 1,
+      "imports_list": [
+        "os",
+        "json",
+        "time",
+        "typing",
+        "datetime",
+        "notion_client",
+        "calendar_client",
+        "dotenv"
+      ],
+      "encoding_used": "utf-8",
+      "encoding_success": true,
+      "has_syntax_error": false,
+      "has_read_error": false,
+      "error_message": ""
+    }
+  ]
+}

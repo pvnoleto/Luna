@@ -1,0 +1,18 @@
+{
+  "api_key": "secret_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+  "database_id": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+  "properties": {
+    "title": "Name",
+    "status": "Status",
+    "date": "Data",
+    "priority": "Prioridade",
+    "assignee": "Responsável",
+    "description": "Descrição"
+  },
+  "status_values": {
+    "todo": "A Fazer",
+    "in_progress": "Em Progresso",
+    "done": "Concluído",
+    "cancelled": "Cancelado"
+  }
+}

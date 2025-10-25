@@ -1,0 +1,109 @@
+{
+  "pendentes": [
+    {
+      "alvo": "exibir_estatisticas",
+      "tipo": "type_hints",
+      "prioridade": 5,
+      "codigo": "def exibir_estatisticas(self):\n    \"\"\"Exibe estatísticas de cache formatadas.\"\"\"\n    stats = self.obter_estatisticas()\n    if stats['total_requests'] == 0:\n        return\n    print_realtime('\\n💎 ESTATÍSTICAS DE CACHE:')\n    print_realtime(f\"   Cache Hit Rate: {stats['cache_hit_rate']:.1f}% ({stats['requests_with_hits']}/{stats['total_requests']} requests)\")\n    if stats['tokens_economizados'] > 0:\n        print_realtime(f\"   Tokens economizados: {stats['tokens_economizados']:,} ({stats['economia_percentual']:.1f}%)\")\n        print_realtime(f\"   Economia de custo: ${stats['custo_economizado_usd']:.4f}\")\n    if stats['cache_read_tokens'] > 0:\n        print_realtime(f\"   Tokens do cache: {stats['cache_read_tokens']:,}\")",
+      "assinatura_original": "def exibir_estatisticas(self):",
+      "assinatura_nova": "def exibir_estatisticas(self):",
+      "gerado_por": "gerador_direto_v1"
+    },
+    {
+      "alvo": "exibir_estatisticas",
+      "tipo": "type_hints",
+      "prioridade": 5,
+      "codigo": "def exibir_estatisticas(self):\n    \"\"\"Exibe estatísticas formatadas.\"\"\"\n    stats = self.obter_estatisticas()\n    if stats['total_batches'] == 0:\n        return\n    print_realtime('\\n📊 ESTATÍSTICAS DE BATCH PROCESSING:')\n    print_realtime(f\"   Total de batches: {stats['total_batches']}\")\n    print_realtime(f\"   Total de requests: {stats['total_requests']}\")\n    print_realtime(f\"   Média por batch: {stats['avg_requests_per_batch']:.1f}\")",
+      "assinatura_original": "def exibir_estatisticas(self):",
+      "assinatura_nova": "def exibir_estatisticas(self):",
+      "gerado_por": "gerador_direto_v1"
+    },
+    {
+      "alvo": "_executar_chamada_api",
+      "tipo": "type_hints",
+      "prioridade": 5,
+      "codigo": "def _executar_chamada_api(self) -> Optional[Any]:\n    \"\"\"\n        Executa chamada à API Claude com tratamento de rate limit e cache.\n\n        🆕 MODO TURBO: Adiciona cache_control para economizar até 90% em tokens\n\n        Returns:\n            Response object ou None se houver rate limit\n        \"\"\"\n    from anthropic import RateLimitError\n    self.rate_limit_manager.aguardar_se_necessario()\n    try:\n        system_param = None\n        if self.usar_cache and hasattr(self, 'prompt_sistema_atual'):\n            system_param = [{'type': 'text', 'text': self.prompt_sistema_atual, 'cache_control': {'type': 'ephemeral'}}]\n        elif hasattr(self, 'prompt_sistema_atual'):\n            system_param = self.prompt_sistema_atual\n        tools = self.sistema_ferramentas.obter_descricoes()\n        if self.usar_cache and tools and (len(tools) > 0):\n            tools[-1]['cache_control'] = {'type': 'ephemeral'}\n        api_params = {'model': self.model_name, 'max_tokens': 4096, 'messages': self.historico_conversa}\n        if system_param:\n            api_params['system'] = system_param\n        if tools:\n            api_params['tools'] = tools\n        import time\n        tempo_inicio_api = time.time()\n        response = self.client.messages.create(**api_params)\n        tempo_latencia = time.time() - tempo_inicio_api\n        self.rate_limit_manager.registrar_uso(response.usage.input_tokens, response.usage.output_tokens)\n        cache_read = 0\n        cache_creation = 0\n        if self.usar_cache and self.cache_manager:\n            cache_read = getattr(response.usage, 'cache_read_input_tokens', 0)\n            cache_creation = getattr(response.usage, 'cache_creation_input_tokens', 0)\n            usage_dict = {'input_tokens': response.usage.input_tokens, 'output_tokens': response.usage.output_tokens, 'cache_creation_input_tokens': cache_creation, 'cache_read_input_tokens': cache_read}\n            self.cache_manager.registrar_uso(usage_dict)\n        if self.sistema_ferramentas.telemetria_disponivel and self.sistema_ferramentas.telemetria:\n            self.sistema_ferramentas.telemetria.registrar_requisicao_api(tokens_input=response.usage.input_tokens, tokens_output=response.usage.output_tokens, tokens_cache_read=cache_read, tokens_cache_creation=cache_creation, tempo_latencia=tempo_latencia, modelo=self.model_name)\n        return response\n    except RateLimitError:\n        print_realtime(f'\\n⚠️  RATE LIMIT ATINGIDO!')\n        print_realtime(f'   Aguardando 60 segundos...')\n        time.sleep(60)\n        return None\n    except Exception as e:\n        print_realtime(f'\\n❌ Erro: {e}')\n        raise",
+      "assinatura_original": "def _executar_chamada_api(self):",
+      "assinatura_nova": "def _executar_chamada_api(self) -> Optional[Any]:",
+      "gerado_por": "gerador_direto_v1"
+    },
+    {
+      "alvo": "visit_For",
+      "tipo": "type_hints",
+      "prioridade": 5,
+      "codigo": "def visit_For(self, node: Any):\n    \"\"\"\n                Executa operação de visit For\n\n                Args:\n                    node: Nó do grafo a ser verificado (tipo: Any)\n\n                Returns:\n                    Resultado da operação (tipo: Any)\n                \"\"\"\n    self.em_loop = True\n    self.generic_visit(node)\n    self.em_loop = False",
+      "assinatura_original": "def visit_For(self, node):",
+      "assinatura_nova": "def visit_For(self, node: Any):",
+      "gerado_por": "gerador_direto_v1"
+    },
+    {
+      "alvo": "visit_While",
+      "tipo": "type_hints",
+      "prioridade": 5,
+      "codigo": "def visit_While(self, node: Any):\n    \"\"\"\n                Executa operação de visit While\n\n                Args:\n                    node: Nó do grafo a ser verificado (tipo: Any)\n\n                Returns:\n                    Resultado da operação (tipo: Any)\n                \"\"\"\n    self.em_loop = True\n    self.generic_visit(node)\n    self.em_loop = False",
+      "assinatura_original": "def visit_While(self, node):",
+      "assinatura_nova": "def visit_While(self, node: Any):",
+      "gerado_por": "gerador_direto_v1"
+    },
+    {
+      "alvo": "visit_AugAssign",
+      "tipo": "type_hints",
+      "prioridade": 5,
+      "codigo": "def visit_AugAssign(self, node: Any):\n    \"\"\"\n                Executa operação de visit AugAssign\n\n                Args:\n                    node: Nó do grafo a ser verificado (tipo: Any)\n\n                Returns:\n                    Resultado da operação (tipo: Any)\n                \"\"\"\n    if self.em_loop and isinstance(node.op, ast.Add):\n        if isinstance(node.target, ast.Name):\n            var_name = node.target.id\n            if any((palavra in var_name.lower() for palavra in ['texto', 'resultado', 'saida', 'msg', 'html', 'output', 'str'])):\n                self.problemas.append({'linha': node.lineno, 'variavel': var_name})\n    self.generic_visit(node)",
+      "assinatura_original": "def visit_AugAssign(self, node):",
+      "assinatura_nova": "def visit_AugAssign(self, node: Any):",
+      "gerado_por": "gerador_direto_v1"
+    },
+    {
+      "alvo": "visit_FunctionDef",
+      "tipo": "type_hints",
+      "prioridade": 5,
+      "codigo": "def visit_FunctionDef(self, node: Any):\n    \"\"\"\n                Executa operação de visit FunctionDef\n\n                Args:\n                    node: Nó do grafo a ser verificado (tipo: Any)\n\n                Returns:\n                    Resultado da operação (tipo: Any)\n                \"\"\"\n    self.generic_visit(node)",
+      "assinatura_original": "def visit_FunctionDef(self, node):",
+      "assinatura_nova": "def visit_FunctionDef(self, node: Any):",
+      "gerado_por": "gerador_direto_v1"
+    },
+    {
+      "alvo": "visit_For",
+      "tipo": "type_hints",
+      "prioridade": 5,
+      "codigo": "def visit_For(self, node: Any):\n    self.em_funcao_ou_loop = True\n    self.generic_visit(node)\n    self.em_funcao_ou_loop = False",
+      "assinatura_original": "def visit_For(self, node):",
+      "assinatura_nova": "def visit_For(self, node: Any):",
+      "gerado_por": "gerador_direto_v1"
+    },
+    {
+      "alvo": "visit_While",
+      "tipo": "type_hints",
+      "prioridade": 5,
+      "codigo": "def visit_While(self, node: Any):\n    self.em_funcao_ou_loop = True\n    self.generic_visit(node)\n    self.em_funcao_ou_loop = False",
+      "assinatura_original": "def visit_While(self, node):",
+      "assinatura_nova": "def visit_While(self, node: Any):",
+      "gerado_por": "gerador_direto_v1"
+    },
+    {
+      "alvo": "visit_Import",
+      "tipo": "type_hints",
+      "prioridade": 5,
+      "codigo": "def visit_Import(self, node: Any):\n    \"\"\"\n                Executa operação de visit Import\n\n                Args:\n                    node: Nó do grafo a ser verificado (tipo: Any)\n\n                Returns:\n                    Resultado da operação (tipo: Any)\n                \"\"\"\n    if self.em_funcao_ou_loop:\n        nomes = [alias.name for alias in node.names]\n        self.problemas.append({'linha': node.lineno, 'modulos': nomes})\n    self.generic_visit(node)",
+      "assinatura_original": "def visit_Import(self, node):",
+      "assinatura_nova": "def visit_Import(self, node: Any):",
+      "gerado_por": "gerador_direto_v1"
+    },
+    {
+      "alvo": "visit_ImportFrom",
+      "tipo": "type_hints",
+      "prioridade": 5,
+      "codigo": "def visit_ImportFrom(self, node: Any):\n    \"\"\"\n                Executa operação de visit ImportFrom\n\n                Args:\n                    node: Nó do grafo a ser verificado (tipo: Any)\n\n                Returns:\n                    Resultado da operação (tipo: Any)\n                \"\"\"\n    if self.em_funcao_ou_loop:\n        self.problemas.append({'linha': node.lineno, 'modulos': [node.module or 'relative']})\n    self.generic_visit(node)",
+      "assinatura_original": "def visit_ImportFrom(self, node):",
+      "assinatura_nova": "def visit_ImportFrom(self, node: Any):",
+      "gerado_por": "gerador_direto_v1"
+    }
+  ],
+  "aplicadas": [],
+  "metadata": {
+    "total": 11,
+    "sucessos": 11,
+    "falhas": 0
+  }
+}

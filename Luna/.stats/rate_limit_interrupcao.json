@@ -1,11 +1,11 @@
 {
-  "timestamp": "2025-10-22T19:31:35.525252",
+  "timestamp": "2025-10-23T22:34:46.725230",
   "stats": {
-    "total_requisicoes": 25,
-    "total_tokens": 175451,
+    "total_requisicoes": 141,
+    "total_tokens": 796485,
     "total_esperas": 0,
     "tempo_total_espera": 0,
-    "media_tokens_req": 7018.04
+    "media_tokens_req": 5648.829787234043
   },
   "motivo": "interrupcao_ctrl_c"
 }

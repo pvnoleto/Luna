@@ -1,0 +1,52 @@
+{
+  "url": "https://www.telenordeste.com.br/",
+  "title": "Início | TeleNordeste",
+  "keywords_encontradas": {
+    "consulta": true,
+    "atendimento": true,
+    "paciente": true,
+    "acessar": true
+  },
+  "total_links": 7,
+  "links": [
+    {
+      "text": "Início",
+      "href": "https://www.telenordeste.com.br"
+    },
+    {
+      "text": "Área do Gestor de Saúde dos Municípios",
+      "href": "https://www.telenordeste.com.br/cópia-área-do-paciente-teleinterco"
+    },
+    {
+      "text": "Painel do projeto",
+      "href": "https://www.telenordeste.com.br"
+    },
+    {
+      "text": "Biblioteca Virtual",
+      "href": "https://www.telenordeste.com.br/biblioteca-virtual"
+    },
+    {
+      "text": "O que vem por aí",
+      "href": "https://www.telenordeste.com.br/cópia-biblioteca-virtual"
+    },
+    {
+      "text": "CLIQUE AQUI PARA ACESSAR",
+      "href": "https://bit.ly/Painel_TeleNordeste"
+    },
+    {
+      "text": "TeleNordeste Suporte\n(11) 96856-6334",
+      "href": "https://wa.me/11968566334"
+    }
+  ],
+  "interactive_elements": [
+    {
+      "selector": "button",
+      "text": "Ir para o conteúdo principal"
+    },
+    {
+      "selector": "a[href*=\"paciente\"]",
+      "text": "Área do Gestor de Saúde dos Municípios"
+    }
+  ],
+  "total_iframes": 1
+}

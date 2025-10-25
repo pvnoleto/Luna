@@ -1,0 +1,39 @@
+
+╔══════════════════════════════════════════════════════════════════════╗
+║           RELATÓRIO DE MÉTRICAS COMPARATIVAS - FIBONACCI            ║
+╚══════════════════════════════════════════════════════════════════════╝
+
+📋 DADOS DE ENTRADA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  • Tempo Iterativo:  0.000004 segundos
+  • Tempo Recursivo:  0.196282 segundos
+  • N (Fibonacci):    30
+  • Resultado:        832040
+
+📊 MÉTRICAS CALCULADAS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. DIFERENÇA ABSOLUTA
+   └─ 0.196278 segundos
+   └─ Quanto tempo a mais a versão recursiva demorou
+
+2. FATOR MULTIPLICATIVO
+   └─ 49,070.50x
+   └─ Quantas vezes mais lenta é a versão recursiva
+
+3. DIFERENÇA PERCENTUAL
+   └─ 4,906,950.00%
+   └─ Percentual de aumento no tempo de execução
+
+🎯 CONCLUSÃO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+A versão recursiva é 49,071x mais lenta que a iterativa
+
+A diferença de performance é extremamente significativa, demonstrando
+a importância de escolher o algoritmo apropriado para cada caso de uso.
+A versão iterativa é claramente superior para este problema específico.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✅ Cálculos validados e formatados para legibilidade
+📅 Data: 2024
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

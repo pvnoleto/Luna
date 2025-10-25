@@ -4149,7 +4149,7 @@ Comece BUSCANDO aprendizados relevantes, depois execute a tarefa!"""
         self.tentativas_recuperacao = 0
         self.rate_limit_manager.exibir_status()
 
-    def _executar_chamada_api(self):
+    def _executar_chamada_api(self) -> Optional[Any]:
         """
         Executa chamada à API Claude com tratamento de rate limit e cache.
 
@@ -4664,7 +4664,7 @@ pass
                 self.em_loop = False
                 self.problemas = []
 
-            def visit_For(self, node):
+            def visit_For(self, node: Any):
                 """
                 Executa operação de visit For
 
@@ -4678,7 +4678,7 @@ pass
                 self.generic_visit(node)
                 self.em_loop = False
 
-            def visit_While(self, node):
+            def visit_While(self, node: Any):
                 """
                 Executa operação de visit While
 
@@ -4692,7 +4692,7 @@ pass
                 self.generic_visit(node)
                 self.em_loop = False
 
-            def visit_AugAssign(self, node):
+            def visit_AugAssign(self, node: Any):
                 """
                 Executa operação de visit AugAssign
 
@@ -4767,7 +4767,7 @@ for item in items:
                 self.em_funcao_ou_loop = False
                 self.problemas = []
 
-            def visit_FunctionDef(self, node):
+            def visit_FunctionDef(self, node: Any):
                 """
                 Executa operação de visit FunctionDef
 
@@ -4781,17 +4781,17 @@ for item in items:
                 # Mas detectar em loops
                 self.generic_visit(node)
 
-            def visit_For(self, node):
+            def visit_For(self, node: Any):
                 self.em_funcao_ou_loop = True
                 self.generic_visit(node)
                 self.em_funcao_ou_loop = False
 
-            def visit_While(self, node):
+            def visit_While(self, node: Any):
                 self.em_funcao_ou_loop = True
                 self.generic_visit(node)
                 self.em_funcao_ou_loop = False
 
-            def visit_Import(self, node):
+            def visit_Import(self, node: Any):
                 """
                 Executa operação de visit Import
 
@@ -4809,7 +4809,7 @@ for item in items:
                     })
                 self.generic_visit(node)
 
-            def visit_ImportFrom(self, node):
+            def visit_ImportFrom(self, node: Any):
                 """
                 Executa operação de visit ImportFrom
 

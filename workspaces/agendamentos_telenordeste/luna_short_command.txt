@@ -1,0 +1,7 @@
+2
+
+
+n
+
+ler_arquivo workspaces/agendamentos_telenordeste/PROMPT_PARA_LUNA_CLEAN.txt e executar essa tarefa
+sair

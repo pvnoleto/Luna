@@ -1,0 +1,158 @@
+{
+  "workspace": "telenordeste_integration",
+  "base_path": "workspaces/telenordeste_integration",
+  "data_mapeamento": "2024",
+  "estrutura_atual": {
+    "pastas": {
+      "src": {
+        "descricao": "Código fonte principal",
+        "arquivos": [
+          "calendar_client.py",
+          "main.py",
+          "notion_client.py",
+          "sync_manager.py"
+        ]
+      },
+      "scripts": {
+        "descricao": "Scripts de automação",
+        "arquivos": [
+          "auto_sync.bat",
+          "install.bat",
+          "install.sh",
+          "sync_now.bat"
+        ]
+      },
+      "config": {
+        "descricao": "Configurações",
+        "arquivos": [
+          "notion_config.example.json"
+        ]
+      },
+      "__pycache__": {
+        "descricao": "Cache Python",
+        "arquivos": [
+          "fibonacci_calc.cpython-313.pyc"
+        ]
+      },
+      "p": {
+        "descricao": "Pasta vazia/desconhecida",
+        "arquivos": []
+      }
+    },
+    "arquivos_raiz": {
+      "codigo_python": [
+        "main.py",
+        "integrator.py",
+        "telenordeste_bot.py",
+        "google_calendar_client.py",
+        "notion_client.py",
+        "config.py",
+        "analisar_site.py",
+        "explorar_site_avancado.py",
+        "example_usage.py",
+        "fibonacci_calc.py",
+        "validacao_fibonacci.py",
+        "validation_performance.py",
+        "verificar_status.py"
+      ],
+      "documentacao": [
+        "INDEX.md",
+        "README.md",
+        "README_COMPLETO.md",
+        "QUICK_START.md",
+        "SETUP.md",
+        "GUIA_VISUAL_RAPIDO.md",
+        "ACOES_IMEDIATAS.md",
+        "DIAGNOSTICO_COMPLETO.md",
+        "RELATORIO_FINAL.md",
+        "RESUMO_PROJETO.md",
+        "STATUS_PROJETO.md",
+        "VALIDATION_SUMMARY.md"
+      ],
+      "configuracao": [
+        ".env.example",
+        ".gitignore",
+        "config.json",
+        "config.template.json",
+        "requirements.txt"
+      ],
+      "dados_resultados": [
+        "analise_estrutura.json",
+        "exploracao_completa.json",
+        "fibonacci_results.txt",
+        "validation_report.txt",
+        "texto_pagina.txt",
+        "pagina_inicial.html"
+      ],
+      "imagens": [
+        "analise_site.png",
+        "exploracao_completa.png",
+        "screenshot_inicial.png"
+      ],
+      "scripts_batch": [
+        "install.bat",
+        "run.bat"
+      ]
+    }
+  },
+  "estrutura_ideal": {
+    "pastas_criar": [
+      "docs",
+      "docs/guides",
+      "docs/reports",
+      "data",
+      "data/analysis",
+      "data/results",
+      "data/cache",
+      "assets",
+      "assets/screenshots",
+      "assets/html",
+      "tests",
+      "src/clients",
+      "src/core",
+      "src/bots",
+      "scripts/automation",
+      "scripts/setup",
+      "scripts/analysis",
+      "scripts/validation"
+    ]
+  },
+  "locais_salvamento": {
+    "codigo_fonte": "src/",
+    "clientes_api": "src/clients/",
+    "core_business": "src/core/",
+    "bots": "src/bots/",
+    "scripts_automacao": "scripts/automation/",
+    "scripts_instalacao": "scripts/setup/",
+    "scripts_analise": "scripts/analysis/",
+    "scripts_validacao": "scripts/validation/",
+    "configuracoes": "config/",
+    "documentacao": "docs/",
+    "guias": "docs/guides/",
+    "relatorios": "docs/reports/",
+    "dados_analise": "data/analysis/",
+    "resultados": "data/results/",
+    "cache": "data/cache/",
+    "screenshots": "assets/screenshots/",
+    "html": "assets/html/",
+    "testes": "tests/"
+  },
+  "problemas_identificados": [
+    "Código duplicado: clientes na raiz e em src/",
+    "Arquivos Python dispersos na raiz",
+    "Documentação na raiz deveria estar em docs/",
+    "Resultados misturados com código",
+    "Pasta 'p' vazia sem propósito",
+    "Faltam pastas: docs/, data/, assets/, tests/"
+  ],
+  "metricas": {
+    "total_arquivos": 45,
+    "total_pastas": 5,
+    "arquivos_python": 13,
+    "arquivos_documentacao": 12,
+    "arquivos_configuracao": 5,
+    "arquivos_dados": 6,
+    "arquivos_imagem": 3,
+    "scripts_batch": 2
+  }
+}

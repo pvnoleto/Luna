@@ -1,0 +1,174 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                  📁 MAPA VISUAL DA ESTRUTURA DE DIRETÓRIOS                   ║
+║                      Telenordeste Integration Project                        ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+📍 LOCALIZAÇÃO BASE:
+   C:\Projetos Automações e Digitais\Luna\workspaces\telenordeste_integration
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                          ESTRUTURA ATUAL COMPLETA                          ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+telenordeste_integration/
+│
+├─┬─ 📂 src/ ──────────────────────── [4 arquivos] ─ CÓDIGO FONTE
+│ ├── calendar_client.py              Cliente Google Calendar API
+│ ├── main.py                         Ponto de entrada principal
+│ ├── notion_client.py                Cliente Notion API
+│ └── sync_manager.py                 Gerenciador de sincronização
+│
+├─┬─ 📂 scripts/ ─────────────────── [4 arquivos] ─ AUTOMAÇÃO
+│ ├── auto_sync.bat                   Sincronização automática (Windows)
+│ ├── install.bat                     Instalador Windows
+│ ├── install.sh                      Instalador Linux/Mac
+│ └── sync_now.bat                    Executar sincronização manual
+│
+├─┬─ 📂 config/ ──────────────────── [1 arquivo] ─ CONFIGURAÇÃO
+│ └── notion_config.example.json      Template de configuração Notion
+│
+├─┬─ 📂 __pycache__/ ────────────── [1 arquivo] ─ CACHE PYTHON
+│ └── fibonacci_calc.cpython-313.pyc  Bytecode compilado
+│
+├─── 📂 p/ ──────────────────────── [0 arquivos] ─ VAZIA
+│
+├─┬─ 📄 ARQUIVOS RAIZ (45 total) ────────────────────────────────────────────
+│ │
+│ ├─┬─ 🐍 CÓDIGO PYTHON [13 arquivos]
+│ │ ├── main.py                       Script principal (duplicado)
+│ │ ├── integrator.py                 Integrador de sistemas
+│ │ ├── telenordeste_bot.py           Bot principal Telenordeste
+│ │ ├── google_calendar_client.py    Cliente Calendar (duplicado)
+│ │ ├── notion_client.py              Cliente Notion (duplicado)
+│ │ ├── config.py                     Gerenciador de configuração
+│ │ ├── analisar_site.py              Análise de websites
+│ │ ├── explorar_site_avancado.py    Exploração avançada web
+│ │ ├── example_usage.py              Exemplos de uso
+│ │ ├── fibonacci_calc.py             Calculadora Fibonacci
+│ │ ├── validacao_fibonacci.py       Validação Fibonacci
+│ │ ├── validation_performance.py    Validação de performance
+│ │ └── verificar_status.py          Verificador de status
+│ │
+│ ├─┬─ 📚 DOCUMENTAÇÃO [12 arquivos]
+│ │ ├── INDEX.md                      Índice geral do projeto
+│ │ ├── README.md                     Readme principal
+│ │ ├── README_COMPLETO.md            Documentação completa
+│ │ ├── QUICK_START.md                Guia de início rápido
+│ │ ├── SETUP.md                      Guia de instalação
+│ │ ├── GUIA_VISUAL_RAPIDO.md         Guia visual ilustrado
+│ │ ├── ACOES_IMEDIATAS.md            Ações pendentes urgentes
+│ │ ├── DIAGNOSTICO_COMPLETO.md       Diagnóstico técnico detalhado
+│ │ ├── RELATORIO_FINAL.md            Relatório final do projeto
+│ │ ├── RESUMO_PROJETO.md             Resumo executivo
+│ │ ├── STATUS_PROJETO.md             Status atual do projeto
+│ │ └── VALIDATION_SUMMARY.md         Resumo de validações
+│ │
+│ ├─┬─ ⚙️  CONFIGURAÇÃO [5 arquivos]
+│ │ ├── .env.example                  Template de variáveis ambiente
+│ │ ├── .gitignore                    Arquivos ignorados pelo Git
+│ │ ├── config.json                   Configuração principal JSON
+│ │ ├── config.template.json          Template de configuração
+│ │ └── requirements.txt              Dependências Python (pip)
+│ │
+│ ├─┬─ 💾 DADOS & RESULTADOS [6 arquivos]
+│ │ ├── analise_estrutura.json        Resultado de análise estrutural
+│ │ ├── exploracao_completa.json      Dados de exploração completa
+│ │ ├── fibonacci_results.txt         Resultados cálculo Fibonacci
+│ │ ├── validation_report.txt         Relatório de validação
+│ │ ├── texto_pagina.txt              Texto extraído de página web
+│ │ └── pagina_inicial.html           HTML capturado da página
+│ │
+│ ├─┬─ 🖼️  IMAGENS [3 arquivos]
+│ │ ├── analise_site.png              Screenshot análise de site
+│ │ ├── exploracao_completa.png       Screenshot exploração
+│ │ └── screenshot_inicial.png        Screenshot inicial
+│ │
+│ └─┬─ 📜 SCRIPTS BATCH [2 arquivos]
+│   ├── install.bat                   Instalador principal
+│   └── run.bat                       Executor principal
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                           LOCAIS DE SALVAMENTO                             ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+┌────────────────────────────┬─────────────────────────────────────────────┐
+│ TIPO DE ARQUIVO            │ LOCAL RECOMENDADO                           │
+├────────────────────────────┼─────────────────────────────────────────────┤
+│ 🐍 Código Python           │ src/                                        │
+│ 🔌 Clientes API            │ src/clients/                                │
+│ ⚙️  Core Business Logic    │ src/core/                                   │
+│ 🤖 Bots                    │ src/bots/                                   │
+│ 🔄 Scripts Automação       │ scripts/automation/                         │
+│ 📦 Scripts Instalação      │ scripts/setup/                              │
+│ 🔍 Scripts Análise         │ scripts/analysis/                           │
+│ ✅ Scripts Validação       │ scripts/validation/                         │
+│ ⚙️  Configurações          │ config/                                     │
+│ 📚 Documentação            │ docs/                                       │
+│ 📖 Guias                   │ docs/guides/                                │
+│ 📊 Relatórios              │ docs/reports/                               │
+│ 📈 Dados de Análise        │ data/analysis/                              │
+│ 📋 Resultados              │ data/results/                               │
+│ 💾 Cache                   │ data/cache/                                 │
+│ 📸 Screenshots             │ assets/screenshots/                         │
+│ 🌐 HTML                    │ assets/html/                                │
+│ 🧪 Testes                  │ tests/                                      │
+└────────────────────────────┴─────────────────────────────────────────────┘
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                            ESTATÍSTICAS DO PROJETO                         ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+📊 TOTAL DE ARQUIVOS: 45
+📂 TOTAL DE PASTAS: 5
+
+📝 DISTRIBUIÇÃO POR TIPO:
+   ├─ 🐍 Python Scripts........... 13 (28.9%)  ████████████░░░░░░░░░░░░░░░░░░
+   ├─ 📚 Documentação............. 12 (26.7%)  ███████████░░░░░░░░░░░░░░░░░░░
+   ├─ ⚙️  Configuração............. 5 (11.1%)  █████░░░░░░░░░░░░░░░░░░░░░░░░░
+   ├─ 💾 Dados/Resultados......... 6 (13.3%)  ██████░░░░░░░░░░░░░░░░░░░░░░░░
+   ├─ 🖼️  Imagens................. 3 (6.7%)   ███░░░░░░░░░░░░░░░░░░░░░░░░░░░
+   └─ 📜 Batch Scripts............ 2 (4.4%)   ██░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                         ⚠️  PROBLEMAS IDENTIFICADOS                        ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+1. ⚠️  Código duplicado: clientes na raiz E em src/
+2. ⚠️  Arquivos Python dispersos na raiz
+3. ⚠️  Documentação na raiz deveria estar em docs/
+4. ⚠️  Resultados misturados com código
+5. ⚠️  Pasta 'p' vazia sem propósito
+6. ⚠️  Faltam pastas: docs/, data/, assets/, tests/
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                          ✅ AÇÕES RECOMENDADAS                             ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+✓ Criar pastas faltantes (docs/, data/, assets/, tests/)
+✓ Consolidar clientes em src/clients/
+✓ Mover toda documentação para docs/
+✓ Organizar dados em data/ com subpastas
+✓ Mover screenshots para assets/
+✓ Remover pasta 'p' vazia
+✓ Limpar raiz do projeto
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                          🎯 PRÓXIMOS PASSOS                                ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+Para consultar esta estrutura programaticamente:
+  
+  python consultar_estrutura.py show       # Mostra estrutura completa
+  python consultar_estrutura.py stats      # Mostra estatísticas
+  python consultar_estrutura.py validate   # Valida organização
+  python consultar_estrutura.py locate py  # Onde salvar arquivo Python
+
+Arquivos gerados:
+  ✓ ESTRUTURA_DIRETORIOS.md              Documentação completa
+  ✓ estrutura_mapeada.json               Dados estruturados
+  ✓ consultar_estrutura.py               Script de consulta
+  ✓ MAPA_VISUAL_ESTRUTURA.txt            Este arquivo
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                    ✅ ESTRUTURA MAPEADA COM SUCESSO!                         ║
+╚══════════════════════════════════════════════════════════════════════════════╝

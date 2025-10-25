@@ -1,0 +1,22 @@
+{
+  "diferenca_absoluta": {
+    "valor": 0.196278,
+    "formatado": "0.196278 segundos",
+    "descricao": "Quanto tempo a mais a versão recursiva demorou"
+  },
+  "fator_multiplicativo": {
+    "valor": 49070.50000000001,
+    "formatado": "49,070.50x",
+    "descricao": "Quantas vezes mais lenta é a versão recursiva"
+  },
+  "diferenca_percentual": {
+    "valor": 4906950.000000001,
+    "formatado": "4,906,950.00%",
+    "descricao": "Percentual de aumento no tempo de execução"
+  },
+  "resumo": {
+    "tempo_iterativo": 4e-06,
+    "tempo_recursivo": 0.196282,
+    "conclusao": "A versão recursiva é 49,071x mais lenta que a iterativa"
+  }
+}

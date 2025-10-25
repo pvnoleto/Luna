@@ -1,0 +1,38 @@
+{
+  "_comment": "Template de Configuração - TeleNordeste Integration",
+  "_instructions": "1. Copie este arquivo para 'config.json' 2. Preencha com suas credenciais",
+  
+  "notion": {
+    "api_token": "secret_XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "database_id": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "filter_property": "Status",
+    "filter_value": "A Fazer"
+  },
+  
+  "google_calendar": {
+    "calendar_id": "primary",
+    "credentials_file": "credentials.json",
+    "token_file": "token.json"
+  },
+  
+  "sync": {
+    "auto_sync_interval": 3600,
+    "timezone": "America/Fortaleza",
+    "default_duration": 60
+  },
+  
+  "mapping": {
+    "_comment": "Mapeamento entre campos do Notion e Google Calendar",
+    "title_field": "Name",
+    "date_field": "Data",
+    "description_field": "Descrição",
+    "duration_field": "Duração"
+  },
+  
+  "advanced": {
+    "_comment": "Configurações avançadas (opcional)",
+    "log_level": "INFO",
+    "max_retries": 3,
+    "timeout": 30
+  }
+}

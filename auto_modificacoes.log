@@ -1153,3 +1153,1048 @@
 [2025-10-22 19:31:35] INFO: Código modificado
 [2025-10-22 19:31:35] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
 [2025-10-22 19:31:35] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251022_193135.py
+[2025-10-22 19:47:37] INFO: 
+======================================================================
+[2025-10-22 19:47:37] INFO: MODIFICAÇÃO: qualidade
+[2025-10-22 19:47:37] INFO: Alvo: linha_3621_c:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-22 19:47:37] INFO: Motivo: Bare except clause detectado na linha 3621
+[2025-10-22 19:47:37] INFO: ======================================================================
+[2025-10-22 19:47:37] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251022_194737.py
+[2025-10-22 19:47:37] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251022_194737.py
+[2025-10-22 19:47:38] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-22 19:47:38] INFO: Código modificado
+[2025-10-22 19:47:38] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-22 19:47:38] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251022_194737.py
+[2025-10-22 19:47:38] INFO: 
+======================================================================
+[2025-10-22 19:47:38] INFO: MODIFICAÇÃO: qualidade
+[2025-10-22 19:47:38] INFO: Alvo: linha_4868_c:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-22 19:47:38] INFO: Motivo: Bare except clause detectado na linha 4868
+[2025-10-22 19:47:38] INFO: ======================================================================
+[2025-10-22 19:47:38] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251022_194738.py
+[2025-10-22 19:47:38] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251022_194738.py
+[2025-10-22 19:47:38] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-22 19:47:38] INFO: Código modificado
+[2025-10-22 19:47:38] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-22 19:47:38] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251022_194738.py
+[2025-10-23 14:18:29] INFO: 
+======================================================================
+[2025-10-23 14:18:29] INFO: MODIFICAÇÃO: qualidade
+[2025-10-23 14:18:29] INFO: Alvo: linha_3708_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-23 14:18:29] INFO: Motivo: Bare except clause detectado na linha 3708
+[2025-10-23 14:18:29] INFO: ======================================================================
+[2025-10-23 14:18:29] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251023_141829.py
+[2025-10-23 14:18:30] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251023_141829.py
+[2025-10-23 14:18:30] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-23 14:18:30] INFO: Código modificado
+[2025-10-23 14:18:30] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-23 14:18:30] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251023_141829.py
+[2025-10-23 14:18:30] INFO: 
+======================================================================
+[2025-10-23 14:18:30] INFO: MODIFICAÇÃO: qualidade
+[2025-10-23 14:18:30] INFO: Alvo: linha_4955_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-23 14:18:30] INFO: Motivo: Bare except clause detectado na linha 4955
+[2025-10-23 14:18:30] INFO: ======================================================================
+[2025-10-23 14:18:30] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251023_141830.py
+[2025-10-23 14:18:30] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251023_141830.py
+[2025-10-23 14:18:30] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-23 14:18:30] INFO: Código modificado
+[2025-10-23 14:18:30] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-23 14:18:30] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251023_141830.py
+[2025-10-23 14:31:30] INFO: 
+======================================================================
+[2025-10-23 14:31:30] INFO: MODIFICAÇÃO: bug_fix
+[2025-10-23 14:31:30] INFO: Alvo: ler_arquivo
+[2025-10-23 14:31:30] INFO: Motivo: Corrigir erro recorrente (3x): ERRO: [Errno 2] No such file or directory: 'C:\\Users\\Pedro Victor\\OneDrive\\Área de Trabalho\\Doc
+[2025-10-23 14:31:30] INFO: ======================================================================
+[2025-10-23 14:31:30] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251023_143130.py
+[2025-10-23 14:31:30] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251023_143130.py
+[2025-10-23 14:31:30] INFO: Alvo 'ler_arquivo' não encontrado - adicionando ao final
+[2025-10-23 14:31:30] INFO: Código modificado
+[2025-10-23 14:31:31] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-23 14:31:31] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251023_143130.py
+[2025-10-23 14:51:18] INFO: 
+======================================================================
+[2025-10-23 14:51:18] INFO: MODIFICAÇÃO: qualidade
+[2025-10-23 14:51:18] INFO: Alvo: linha_3708_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-23 14:51:18] INFO: Motivo: Bare except clause detectado na linha 3708
+[2025-10-23 14:51:18] INFO: ======================================================================
+[2025-10-23 14:51:18] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251023_145118.py
+[2025-10-23 14:51:18] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251023_145118.py
+[2025-10-23 14:51:18] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-23 14:51:18] INFO: Código modificado
+[2025-10-23 14:51:18] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-23 14:51:18] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251023_145118.py
+[2025-10-23 14:51:18] INFO: 
+======================================================================
+[2025-10-23 14:51:18] INFO: MODIFICAÇÃO: qualidade
+[2025-10-23 14:51:18] INFO: Alvo: linha_4955_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-23 14:51:18] INFO: Motivo: Bare except clause detectado na linha 4955
+[2025-10-23 14:51:18] INFO: ======================================================================
+[2025-10-23 14:51:18] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251023_145118.py
+[2025-10-23 14:51:18] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251023_145118.py
+[2025-10-23 14:51:18] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-23 14:51:18] INFO: Código modificado
+[2025-10-23 14:51:18] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-23 14:51:18] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251023_145118.py
+[2025-10-23 15:06:08] INFO: 
+======================================================================
+[2025-10-23 15:06:08] INFO: MODIFICAÇÃO: qualidade
+[2025-10-23 15:06:08] INFO: Alvo: linha_3717_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-23 15:06:08] INFO: Motivo: Bare except clause detectado na linha 3717
+[2025-10-23 15:06:08] INFO: ======================================================================
+[2025-10-23 15:06:08] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251023_150608.py
+[2025-10-23 15:06:08] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251023_150608.py
+[2025-10-23 15:06:08] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-23 15:06:08] INFO: Código modificado
+[2025-10-23 15:06:08] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-23 15:06:08] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251023_150608.py
+[2025-10-23 15:06:08] INFO: 
+======================================================================
+[2025-10-23 15:06:08] INFO: MODIFICAÇÃO: qualidade
+[2025-10-23 15:06:08] INFO: Alvo: linha_4964_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-23 15:06:08] INFO: Motivo: Bare except clause detectado na linha 4964
+[2025-10-23 15:06:08] INFO: ======================================================================
+[2025-10-23 15:06:08] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251023_150608.py
+[2025-10-23 15:06:08] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251023_150608.py
+[2025-10-23 15:06:08] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-23 15:06:08] INFO: Código modificado
+[2025-10-23 15:06:09] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-23 15:06:09] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251023_150608.py
+[2025-10-23 15:16:09] INFO: 
+======================================================================
+[2025-10-23 15:16:09] INFO: MODIFICAÇÃO: qualidade
+[2025-10-23 15:16:09] INFO: Alvo: linha_3724_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-23 15:16:09] INFO: Motivo: Bare except clause detectado na linha 3724
+[2025-10-23 15:16:09] INFO: ======================================================================
+[2025-10-23 15:16:09] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251023_151609.py
+[2025-10-23 15:16:09] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251023_151609.py
+[2025-10-23 15:16:09] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-23 15:16:09] INFO: Código modificado
+[2025-10-23 15:16:09] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-23 15:16:09] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251023_151609.py
+[2025-10-23 15:16:09] INFO: 
+======================================================================
+[2025-10-23 15:16:09] INFO: MODIFICAÇÃO: qualidade
+[2025-10-23 15:16:09] INFO: Alvo: linha_4971_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-23 15:16:09] INFO: Motivo: Bare except clause detectado na linha 4971
+[2025-10-23 15:16:09] INFO: ======================================================================
+[2025-10-23 15:16:09] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251023_151609.py
+[2025-10-23 15:16:09] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251023_151609.py
+[2025-10-23 15:16:09] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-23 15:16:09] INFO: Código modificado
+[2025-10-23 15:16:09] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-23 15:16:09] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251023_151609.py
+[2025-10-23 15:44:36] INFO: 
+======================================================================
+[2025-10-23 15:44:36] INFO: MODIFICAÇÃO: qualidade
+[2025-10-23 15:44:36] INFO: Alvo: linha_3724_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-23 15:44:36] INFO: Motivo: Bare except clause detectado na linha 3724
+[2025-10-23 15:44:36] INFO: ======================================================================
+[2025-10-23 15:44:36] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251023_154436.py
+[2025-10-23 15:44:36] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251023_154436.py
+[2025-10-23 15:44:36] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-23 15:44:36] INFO: Código modificado
+[2025-10-23 15:44:36] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-23 15:44:36] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251023_154436.py
+[2025-10-23 15:44:36] INFO: 
+======================================================================
+[2025-10-23 15:44:36] INFO: MODIFICAÇÃO: qualidade
+[2025-10-23 15:44:36] INFO: Alvo: linha_4972_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-23 15:44:36] INFO: Motivo: Bare except clause detectado na linha 4972
+[2025-10-23 15:44:36] INFO: ======================================================================
+[2025-10-23 15:44:37] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251023_154436.py
+[2025-10-23 15:44:37] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251023_154436.py
+[2025-10-23 15:44:37] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-23 15:44:37] INFO: Código modificado
+[2025-10-23 15:44:37] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-23 15:44:37] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251023_154436.py
+[2025-10-23 16:04:56] INFO: 
+======================================================================
+[2025-10-23 16:04:56] INFO: MODIFICAÇÃO: bug_fix
+[2025-10-23 16:04:56] INFO: Alvo: ler_arquivo
+[2025-10-23 16:04:56] INFO: Motivo: Corrigir erro recorrente (3x): ERRO: [Errno 2] No such file or directory: 'C:\\Projetos Automações e Digitais\\Luna\\workspaces\\te
+[2025-10-23 16:04:56] INFO: ======================================================================
+[2025-10-23 16:04:56] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251023_160456.py
+[2025-10-23 16:04:57] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251023_160456.py
+[2025-10-23 16:04:57] INFO: Alvo 'ler_arquivo' não encontrado - adicionando ao final
+[2025-10-23 16:04:57] INFO: Código modificado
+[2025-10-23 16:04:57] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-23 16:04:57] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251023_160456.py
+[2025-10-23 16:04:57] INFO: 
+======================================================================
+[2025-10-23 16:04:57] INFO: MODIFICAÇÃO: qualidade
+[2025-10-23 16:04:57] INFO: Alvo: linha_3728_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-23 16:04:57] INFO: Motivo: Bare except clause detectado na linha 3728
+[2025-10-23 16:04:57] INFO: ======================================================================
+[2025-10-23 16:04:57] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251023_160457.py
+[2025-10-23 16:04:57] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251023_160457.py
+[2025-10-23 16:04:57] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-23 16:04:57] INFO: Código modificado
+[2025-10-23 16:04:57] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-23 16:04:57] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251023_160457.py
+[2025-10-23 16:04:57] INFO: 
+======================================================================
+[2025-10-23 16:04:57] INFO: MODIFICAÇÃO: qualidade
+[2025-10-23 16:04:57] INFO: Alvo: linha_4977_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-23 16:04:57] INFO: Motivo: Bare except clause detectado na linha 4977
+[2025-10-23 16:04:57] INFO: ======================================================================
+[2025-10-23 16:04:57] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251023_160457.py
+[2025-10-23 16:04:57] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251023_160457.py
+[2025-10-23 16:04:57] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-23 16:04:58] INFO: Código modificado
+[2025-10-23 16:04:58] ERROR: VALIDAÇÃO FALHOU: Execução falhou: Classe 'AgenteCompletoFinal' não encontrada
+[2025-10-23 16:04:58] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251023_160457.py
+[2025-10-23 17:33:46] INFO: 
+======================================================================
+[2025-10-23 17:33:46] INFO: MODIFICAÇÃO: qualidade
+[2025-10-23 17:33:46] INFO: Alvo: linha_3758_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-23 17:33:46] INFO: Motivo: Bare except clause detectado na linha 3758
+[2025-10-23 17:33:46] INFO: ======================================================================
+[2025-10-23 17:33:46] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251023_173346.py
+[2025-10-23 17:33:46] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251023_173346.py
+[2025-10-23 17:33:46] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-23 17:33:46] INFO: Código modificado
+[2025-10-23 17:33:46] WARNING: Smoke tests não disponíveis: No module named 'smoke_tests_luna'
+[2025-10-23 17:33:46] INFO: MODIFICAÇÃO APLICADA COM SUCESSO
+[2025-10-23 17:33:46] INFO: 
+======================================================================
+[2025-10-23 17:33:46] INFO: MODIFICAÇÃO: qualidade
+[2025-10-23 17:33:46] INFO: Alvo: linha_5007_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-23 17:33:46] INFO: Motivo: Bare except clause detectado na linha 5007
+[2025-10-23 17:33:46] INFO: ======================================================================
+[2025-10-23 17:33:46] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251023_173346.py
+[2025-10-23 17:33:46] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251023_173346.py
+[2025-10-23 17:33:46] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-23 17:33:46] INFO: Código modificado
+[2025-10-23 17:33:46] WARNING: Smoke tests não disponíveis: No module named 'smoke_tests_luna'
+[2025-10-23 17:33:46] INFO: MODIFICAÇÃO APLICADA COM SUCESSO
+[2025-10-23 17:46:10] INFO: 
+======================================================================
+[2025-10-23 17:46:10] INFO: MODIFICAÇÃO: qualidade
+[2025-10-23 17:46:10] INFO: Alvo: linha_1683_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-23 17:46:10] INFO: Motivo: Bare except clause detectado na linha 1683
+[2025-10-23 17:46:10] INFO: ======================================================================
+[2025-10-23 17:46:10] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251023_174610.py
+[2025-10-23 17:46:10] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251023_174610.py
+[2025-10-23 17:46:10] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-23 17:46:10] INFO: Código modificado
+[2025-10-23 17:46:10] WARNING: Smoke tests não disponíveis: No module named 'smoke_tests_luna'
+[2025-10-23 17:46:10] INFO: MODIFICAÇÃO APLICADA COM SUCESSO
+[2025-10-23 17:46:10] INFO: 
+======================================================================
+[2025-10-23 17:46:10] INFO: MODIFICAÇÃO: qualidade
+[2025-10-23 17:46:10] INFO: Alvo: linha_2417_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-23 17:46:10] INFO: Motivo: Bare except clause detectado na linha 2417
+[2025-10-23 17:46:10] INFO: ======================================================================
+[2025-10-23 17:46:10] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251023_174610.py
+[2025-10-23 17:46:10] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251023_174610.py
+[2025-10-23 17:46:10] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-23 17:46:10] INFO: Código modificado
+[2025-10-23 17:46:11] WARNING: Smoke tests não disponíveis: No module named 'smoke_tests_luna'
+[2025-10-23 17:46:11] INFO: MODIFICAÇÃO APLICADA COM SUCESSO
+[2025-10-23 18:03:46] INFO: 
+======================================================================
+[2025-10-23 18:03:46] INFO: MODIFICAÇÃO: qualidade
+[2025-10-23 18:03:46] INFO: Alvo: linha_1690_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-23 18:03:46] INFO: Motivo: Bare except clause detectado na linha 1690
+[2025-10-23 18:03:46] INFO: ======================================================================
+[2025-10-23 18:03:46] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251023_180346.py
+[2025-10-23 18:03:46] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251023_180346.py
+[2025-10-23 18:03:46] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-23 18:03:46] INFO: Código modificado
+[2025-10-23 18:03:47] WARNING: Smoke tests não disponíveis: No module named 'smoke_tests_luna'
+[2025-10-23 18:03:47] INFO: MODIFICAÇÃO APLICADA COM SUCESSO
+[2025-10-23 18:03:47] INFO: 
+======================================================================
+[2025-10-23 18:03:47] INFO: MODIFICAÇÃO: qualidade
+[2025-10-23 18:03:47] INFO: Alvo: linha_2424_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-23 18:03:47] INFO: Motivo: Bare except clause detectado na linha 2424
+[2025-10-23 18:03:47] INFO: ======================================================================
+[2025-10-23 18:03:47] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251023_180347.py
+[2025-10-23 18:03:47] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251023_180347.py
+[2025-10-23 18:03:47] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-23 18:03:47] INFO: Código modificado
+[2025-10-23 18:03:47] WARNING: Smoke tests não disponíveis: No module named 'smoke_tests_luna'
+[2025-10-23 18:03:47] INFO: MODIFICAÇÃO APLICADA COM SUCESSO
+[2025-10-23 18:19:13] INFO: 
+======================================================================
+[2025-10-23 18:19:13] INFO: MODIFICAÇÃO: qualidade
+[2025-10-23 18:19:13] INFO: Alvo: linha_1685_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-23 18:19:13] INFO: Motivo: Bare except clause detectado na linha 1685
+[2025-10-23 18:19:13] INFO: ======================================================================
+[2025-10-23 18:19:13] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251023_181913.py
+[2025-10-23 18:19:13] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251023_181913.py
+[2025-10-23 18:19:13] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-23 18:19:13] INFO: Código modificado
+[2025-10-23 18:19:13] WARNING: Smoke tests não disponíveis: No module named 'smoke_tests_luna'
+[2025-10-23 18:19:13] INFO: MODIFICAÇÃO APLICADA COM SUCESSO
+[2025-10-23 18:19:13] INFO: 
+======================================================================
+[2025-10-23 18:19:13] INFO: MODIFICAÇÃO: qualidade
+[2025-10-23 18:19:13] INFO: Alvo: linha_2419_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-23 18:19:13] INFO: Motivo: Bare except clause detectado na linha 2419
+[2025-10-23 18:19:13] INFO: ======================================================================
+[2025-10-23 18:19:13] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251023_181913.py
+[2025-10-23 18:19:13] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251023_181913.py
+[2025-10-23 18:19:13] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-23 18:19:13] INFO: Código modificado
+[2025-10-23 18:19:14] WARNING: Smoke tests não disponíveis: No module named 'smoke_tests_luna'
+[2025-10-23 18:19:14] INFO: MODIFICAÇÃO APLICADA COM SUCESSO
+[2025-10-23 19:01:17] INFO: 
+======================================================================
+[2025-10-23 19:01:17] INFO: MODIFICAÇÃO: qualidade
+[2025-10-23 19:01:17] INFO: Alvo: linha_1697_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-23 19:01:17] INFO: Motivo: Bare except clause detectado na linha 1697
+[2025-10-23 19:01:17] INFO: ======================================================================
+[2025-10-23 19:01:18] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251023_190117.py
+[2025-10-23 19:01:18] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251023_190117.py
+[2025-10-23 19:01:18] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-23 19:01:18] INFO: Código modificado
+[2025-10-23 19:01:18] WARNING: Smoke tests não disponíveis: No module named 'smoke_tests_luna'
+[2025-10-23 19:01:18] INFO: MODIFICAÇÃO APLICADA COM SUCESSO
+[2025-10-23 19:01:18] INFO: 
+======================================================================
+[2025-10-23 19:01:18] INFO: MODIFICAÇÃO: qualidade
+[2025-10-23 19:01:18] INFO: Alvo: linha_2431_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-23 19:01:18] INFO: Motivo: Bare except clause detectado na linha 2431
+[2025-10-23 19:01:18] INFO: ======================================================================
+[2025-10-23 19:01:18] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251023_190118.py
+[2025-10-23 19:01:18] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251023_190118.py
+[2025-10-23 19:01:18] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-23 19:01:18] INFO: Código modificado
+[2025-10-23 19:01:18] WARNING: Smoke tests não disponíveis: No module named 'smoke_tests_luna'
+[2025-10-23 19:01:18] INFO: MODIFICAÇÃO APLICADA COM SUCESSO
+[2025-10-23 20:14:18] INFO: 
+======================================================================
+[2025-10-23 20:14:18] INFO: MODIFICAÇÃO: bug_fix
+[2025-10-23 20:14:18] INFO: Alvo: ler_arquivo
+[2025-10-23 20:14:18] INFO: Motivo: Corrigir erro recorrente (3x): ERRO: [Errno 2] No such file or directory: 'C:\\Projetos Automações e Digitais\\Luna\\workspaces\\te
+[2025-10-23 20:14:18] INFO: ======================================================================
+[2025-10-23 20:14:18] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251023_201418.py
+[2025-10-23 20:14:18] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251023_201418.py
+[2025-10-23 20:14:19] INFO: Alvo 'ler_arquivo' não encontrado - adicionando ao final
+[2025-10-23 20:14:19] INFO: Código modificado
+[2025-10-23 20:14:19] WARNING: Smoke tests não disponíveis: No module named 'smoke_tests_luna'
+[2025-10-23 20:14:19] INFO: MODIFICAÇÃO APLICADA COM SUCESSO
+[2025-10-23 20:14:19] INFO: 
+======================================================================
+[2025-10-23 20:14:19] INFO: MODIFICAÇÃO: bug_fix
+[2025-10-23 20:14:19] INFO: Alvo: ler_arquivo
+[2025-10-23 20:14:19] INFO: Motivo: Corrigir erro recorrente (3x): ERRO: [Errno 2] No such file or directory: 'C:\\Projetos Automações e Digitais\\Luna\\workspaces\\te
+[2025-10-23 20:14:19] INFO: ======================================================================
+[2025-10-23 20:14:19] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251023_201419.py
+[2025-10-23 20:14:19] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251023_201419.py
+[2025-10-23 20:14:19] INFO: Alvo 'ler_arquivo' não encontrado - adicionando ao final
+[2025-10-23 20:14:19] INFO: Código modificado
+[2025-10-23 20:14:19] WARNING: Smoke tests não disponíveis: No module named 'smoke_tests_luna'
+[2025-10-23 20:14:19] INFO: MODIFICAÇÃO APLICADA COM SUCESSO
+[2025-10-23 20:14:19] INFO: 
+======================================================================
+[2025-10-23 20:14:19] INFO: MODIFICAÇÃO: bug_fix
+[2025-10-23 20:14:19] INFO: Alvo: ler_arquivo
+[2025-10-23 20:14:19] INFO: Motivo: Corrigir erro recorrente (3x): ERRO: [Errno 2] No such file or directory: 'C:\\Projetos Automações e Digitais\\Luna\\workspaces\\te
+[2025-10-23 20:14:19] INFO: ======================================================================
+[2025-10-23 20:14:19] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251023_201419.py
+[2025-10-23 20:14:19] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251023_201419.py
+[2025-10-23 20:14:19] INFO: Alvo 'ler_arquivo' não encontrado - adicionando ao final
+[2025-10-23 20:14:19] INFO: Código modificado
+[2025-10-23 20:14:19] WARNING: Smoke tests não disponíveis: No module named 'smoke_tests_luna'
+[2025-10-23 20:14:19] INFO: MODIFICAÇÃO APLICADA COM SUCESSO
+[2025-10-23 20:14:19] INFO: 
+======================================================================
+[2025-10-23 20:14:19] INFO: MODIFICAÇÃO: bug_fix
+[2025-10-23 20:14:19] INFO: Alvo: ler_arquivo
+[2025-10-23 20:14:19] INFO: Motivo: Corrigir erro recorrente (4x): ERRO: [Errno 2] No such file or directory: 'C:\\Projetos Automações e Digitais\\Luna\\workspaces\\te
+[2025-10-23 20:14:19] INFO: ======================================================================
+[2025-10-23 20:14:19] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251023_201419.py
+[2025-10-23 20:14:19] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251023_201419.py
+[2025-10-23 20:14:20] INFO: Alvo 'ler_arquivo' não encontrado - adicionando ao final
+[2025-10-23 20:14:20] INFO: Código modificado
+[2025-10-23 20:14:20] WARNING: Smoke tests não disponíveis: No module named 'smoke_tests_luna'
+[2025-10-23 20:14:20] INFO: MODIFICAÇÃO APLICADA COM SUCESSO
+[2025-10-23 20:14:20] INFO: 
+======================================================================
+[2025-10-23 20:14:20] INFO: MODIFICAÇÃO: bug_fix
+[2025-10-23 20:14:20] INFO: Alvo: ler_arquivo
+[2025-10-23 20:14:20] INFO: Motivo: Corrigir erro recorrente (3x): ERRO: [Errno 2] No such file or directory: 'C:\\Projetos Automações e Digitais\\Luna\\workspaces\\te
+[2025-10-23 20:14:20] INFO: ======================================================================
+[2025-10-23 20:14:20] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251023_201420.py
+[2025-10-23 20:14:20] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251023_201420.py
+[2025-10-23 20:14:20] INFO: Alvo 'ler_arquivo' não encontrado - adicionando ao final
+[2025-10-23 20:14:20] INFO: Código modificado
+[2025-10-23 20:14:20] WARNING: Smoke tests não disponíveis: No module named 'smoke_tests_luna'
+[2025-10-23 20:14:20] INFO: MODIFICAÇÃO APLICADA COM SUCESSO
+[2025-10-23 20:14:51] INFO: 
+======================================================================
+[2025-10-23 20:14:51] INFO: MODIFICAÇÃO: qualidade
+[2025-10-23 20:14:51] INFO: Alvo: linha_1697_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-23 20:14:51] INFO: Motivo: Bare except clause detectado na linha 1697
+[2025-10-23 20:14:51] INFO: ======================================================================
+[2025-10-23 20:14:51] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251023_201451.py
+[2025-10-23 20:14:51] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251023_201451.py
+[2025-10-23 20:14:51] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-23 20:14:51] INFO: Código modificado
+[2025-10-23 20:14:51] WARNING: Smoke tests não disponíveis: No module named 'smoke_tests_luna'
+[2025-10-23 20:14:51] INFO: MODIFICAÇÃO APLICADA COM SUCESSO
+[2025-10-23 20:14:51] INFO: 
+======================================================================
+[2025-10-23 20:14:51] INFO: MODIFICAÇÃO: qualidade
+[2025-10-23 20:14:51] INFO: Alvo: linha_2431_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-23 20:14:51] INFO: Motivo: Bare except clause detectado na linha 2431
+[2025-10-23 20:14:51] INFO: ======================================================================
+[2025-10-23 20:14:51] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251023_201451.py
+[2025-10-23 20:14:51] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251023_201451.py
+[2025-10-23 20:14:52] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-23 20:14:52] INFO: Código modificado
+[2025-10-23 20:14:52] WARNING: Smoke tests não disponíveis: No module named 'smoke_tests_luna'
+[2025-10-23 20:14:52] INFO: MODIFICAÇÃO APLICADA COM SUCESSO
+[2025-10-23 20:33:29] INFO: 
+======================================================================
+[2025-10-23 20:33:29] INFO: MODIFICAÇÃO: bug_fix
+[2025-10-23 20:33:29] INFO: Alvo: ler_arquivo
+[2025-10-23 20:33:29] INFO: Motivo: Corrigir erro recorrente (3x): ERRO: [Errno 2] No such file or directory: 'C:\\Projetos Automações e Digitais\\Luna\\workspaces\\te
+[2025-10-23 20:33:29] INFO: ======================================================================
+[2025-10-23 20:33:29] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251023_203329.py
+[2025-10-23 20:33:29] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251023_203329.py
+[2025-10-23 20:33:30] INFO: Alvo 'ler_arquivo' não encontrado - adicionando ao final
+[2025-10-23 20:33:30] INFO: Código modificado
+[2025-10-23 20:33:30] WARNING: Smoke tests não disponíveis: No module named 'smoke_tests_luna'
+[2025-10-23 20:33:30] INFO: MODIFICAÇÃO APLICADA COM SUCESSO
+[2025-10-23 20:33:30] INFO: 
+======================================================================
+[2025-10-23 20:33:30] INFO: MODIFICAÇÃO: bug_fix
+[2025-10-23 20:33:30] INFO: Alvo: ler_arquivo
+[2025-10-23 20:33:30] INFO: Motivo: Corrigir erro recorrente (3x): ERRO: [Errno 2] No such file or directory: 'C:\\Projetos Automações e Digitais\\Luna\\workspaces\\te
+[2025-10-23 20:33:30] INFO: ======================================================================
+[2025-10-23 20:33:30] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251023_203330.py
+[2025-10-23 20:33:30] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251023_203330.py
+[2025-10-23 20:33:30] INFO: Alvo 'ler_arquivo' não encontrado - adicionando ao final
+[2025-10-23 20:33:30] INFO: Código modificado
+[2025-10-23 20:33:30] WARNING: Smoke tests não disponíveis: No module named 'smoke_tests_luna'
+[2025-10-23 20:33:30] INFO: MODIFICAÇÃO APLICADA COM SUCESSO
+[2025-10-23 20:33:30] INFO: 
+======================================================================
+[2025-10-23 20:33:30] INFO: MODIFICAÇÃO: bug_fix
+[2025-10-23 20:33:30] INFO: Alvo: ler_arquivo
+[2025-10-23 20:33:30] INFO: Motivo: Corrigir erro recorrente (3x): ERRO: [Errno 2] No such file or directory: 'C:\\Projetos Automações e Digitais\\Luna\\workspaces\\te
+[2025-10-23 20:33:30] INFO: ======================================================================
+[2025-10-23 20:33:30] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251023_203330.py
+[2025-10-23 20:33:30] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251023_203330.py
+[2025-10-23 20:33:30] INFO: Alvo 'ler_arquivo' não encontrado - adicionando ao final
+[2025-10-23 20:33:30] INFO: Código modificado
+[2025-10-23 20:33:30] WARNING: Smoke tests não disponíveis: No module named 'smoke_tests_luna'
+[2025-10-23 20:33:30] INFO: MODIFICAÇÃO APLICADA COM SUCESSO
+[2025-10-23 20:33:30] INFO: 
+======================================================================
+[2025-10-23 20:33:30] INFO: MODIFICAÇÃO: bug_fix
+[2025-10-23 20:33:30] INFO: Alvo: ler_arquivo
+[2025-10-23 20:33:30] INFO: Motivo: Corrigir erro recorrente (4x): ERRO: [Errno 2] No such file or directory: 'C:\\Projetos Automações e Digitais\\Luna\\workspaces\\te
+[2025-10-23 20:33:30] INFO: ======================================================================
+[2025-10-23 20:33:30] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251023_203330.py
+[2025-10-23 20:33:30] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251023_203330.py
+[2025-10-23 20:33:31] INFO: Alvo 'ler_arquivo' não encontrado - adicionando ao final
+[2025-10-23 20:33:31] INFO: Código modificado
+[2025-10-23 20:33:31] WARNING: Smoke tests não disponíveis: No module named 'smoke_tests_luna'
+[2025-10-23 20:33:31] INFO: MODIFICAÇÃO APLICADA COM SUCESSO
+[2025-10-23 20:33:31] INFO: 
+======================================================================
+[2025-10-23 20:33:31] INFO: MODIFICAÇÃO: bug_fix
+[2025-10-23 20:33:31] INFO: Alvo: ler_arquivo
+[2025-10-23 20:33:31] INFO: Motivo: Corrigir erro recorrente (3x): ERRO: [Errno 2] No such file or directory: 'C:\\Projetos Automações e Digitais\\Luna\\workspaces\\te
+[2025-10-23 20:33:31] INFO: ======================================================================
+[2025-10-23 20:33:31] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251023_203331.py
+[2025-10-23 20:33:31] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251023_203331.py
+[2025-10-23 20:33:31] INFO: Alvo 'ler_arquivo' não encontrado - adicionando ao final
+[2025-10-23 20:33:31] INFO: Código modificado
+[2025-10-23 20:33:31] WARNING: Smoke tests não disponíveis: No module named 'smoke_tests_luna'
+[2025-10-23 20:33:31] INFO: MODIFICAÇÃO APLICADA COM SUCESSO
+[2025-10-23 20:33:32] INFO: 
+======================================================================
+[2025-10-23 20:33:32] INFO: MODIFICAÇÃO: bug_fix
+[2025-10-23 20:33:32] INFO: Alvo: ler_arquivo
+[2025-10-23 20:33:32] INFO: Motivo: Corrigir erro recorrente (3x): ERRO: [Errno 2] No such file or directory: 'C:\\Projetos Automações e Digitais\\Luna\\workspaces\\te
+[2025-10-23 20:33:32] INFO: ======================================================================
+[2025-10-23 20:33:32] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251023_203332.py
+[2025-10-23 20:33:32] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251023_203332.py
+[2025-10-23 20:33:32] INFO: Alvo 'ler_arquivo' não encontrado - adicionando ao final
+[2025-10-23 20:33:32] INFO: Código modificado
+[2025-10-23 20:33:32] WARNING: Smoke tests não disponíveis: No module named 'smoke_tests_luna'
+[2025-10-23 20:33:32] INFO: MODIFICAÇÃO APLICADA COM SUCESSO
+[2025-10-23 20:33:32] INFO: 
+======================================================================
+[2025-10-23 20:33:32] INFO: MODIFICAÇÃO: bug_fix
+[2025-10-23 20:33:32] INFO: Alvo: ler_arquivo
+[2025-10-23 20:33:32] INFO: Motivo: Corrigir erro recorrente (3x): ERRO: [Errno 2] No such file or directory: 'C:\\Projetos Automações e Digitais\\Luna\\workspaces\\te
+[2025-10-23 20:33:32] INFO: ======================================================================
+[2025-10-23 20:33:32] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251023_203332.py
+[2025-10-23 20:33:32] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251023_203332.py
+[2025-10-23 20:33:32] INFO: Alvo 'ler_arquivo' não encontrado - adicionando ao final
+[2025-10-23 20:33:32] INFO: Código modificado
+[2025-10-23 20:33:33] WARNING: Smoke tests não disponíveis: No module named 'smoke_tests_luna'
+[2025-10-23 20:33:33] INFO: MODIFICAÇÃO APLICADA COM SUCESSO
+[2025-10-23 20:33:33] INFO: 
+======================================================================
+[2025-10-23 20:33:33] INFO: MODIFICAÇÃO: bug_fix
+[2025-10-23 20:33:33] INFO: Alvo: ler_arquivo
+[2025-10-23 20:33:33] INFO: Motivo: Corrigir erro recorrente (4x): ERRO: [Errno 2] No such file or directory: 'C:\\Projetos Automações e Digitais\\Luna\\workspaces\\te
+[2025-10-23 20:33:33] INFO: ======================================================================
+[2025-10-23 20:33:33] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251023_203333.py
+[2025-10-23 20:33:33] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251023_203333.py
+[2025-10-23 20:33:33] INFO: Alvo 'ler_arquivo' não encontrado - adicionando ao final
+[2025-10-23 20:33:33] INFO: Código modificado
+[2025-10-23 20:33:33] WARNING: Smoke tests não disponíveis: No module named 'smoke_tests_luna'
+[2025-10-23 20:33:33] INFO: MODIFICAÇÃO APLICADA COM SUCESSO
+[2025-10-23 20:33:33] INFO: 
+======================================================================
+[2025-10-23 20:33:33] INFO: MODIFICAÇÃO: qualidade
+[2025-10-23 20:33:33] INFO: Alvo: linha_1697_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-23 20:33:33] INFO: Motivo: Bare except clause detectado na linha 1697
+[2025-10-23 20:33:33] INFO: ======================================================================
+[2025-10-23 20:33:33] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251023_203333.py
+[2025-10-23 20:33:33] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251023_203333.py
+[2025-10-23 20:33:33] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-23 20:33:33] INFO: Código modificado
+[2025-10-23 20:33:33] WARNING: Smoke tests não disponíveis: No module named 'smoke_tests_luna'
+[2025-10-23 20:33:33] INFO: MODIFICAÇÃO APLICADA COM SUCESSO
+[2025-10-23 20:33:33] INFO: 
+======================================================================
+[2025-10-23 20:33:33] INFO: MODIFICAÇÃO: qualidade
+[2025-10-23 20:33:33] INFO: Alvo: linha_2431_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-23 20:33:33] INFO: Motivo: Bare except clause detectado na linha 2431
+[2025-10-23 20:33:33] INFO: ======================================================================
+[2025-10-23 20:33:33] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251023_203333.py
+[2025-10-23 20:33:33] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251023_203333.py
+[2025-10-23 20:33:33] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-23 20:33:33] INFO: Código modificado
+[2025-10-23 20:33:33] WARNING: Smoke tests não disponíveis: No module named 'smoke_tests_luna'
+[2025-10-23 20:33:33] INFO: MODIFICAÇÃO APLICADA COM SUCESSO
+[2025-10-23 20:36:29] INFO: 
+======================================================================
+[2025-10-23 20:36:29] INFO: MODIFICAÇÃO: bug_fix
+[2025-10-23 20:36:29] INFO: Alvo: ler_arquivo
+[2025-10-23 20:36:29] INFO: Motivo: Corrigir erro recorrente (3x): ERRO: [Errno 2] No such file or directory: 'C:\\Projetos Automações e Digitais\\Luna\\workspaces\\te
+[2025-10-23 20:36:29] INFO: ======================================================================
+[2025-10-23 20:36:29] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251023_203629.py
+[2025-10-23 20:36:29] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251023_203629.py
+[2025-10-23 20:36:29] INFO: Alvo 'ler_arquivo' não encontrado - adicionando ao final
+[2025-10-23 20:36:29] INFO: Código modificado
+[2025-10-23 20:36:29] WARNING: Smoke tests não disponíveis: No module named 'smoke_tests_luna'
+[2025-10-23 20:36:29] INFO: MODIFICAÇÃO APLICADA COM SUCESSO
+[2025-10-23 20:36:29] INFO: 
+======================================================================
+[2025-10-23 20:36:29] INFO: MODIFICAÇÃO: bug_fix
+[2025-10-23 20:36:29] INFO: Alvo: ler_arquivo
+[2025-10-23 20:36:29] INFO: Motivo: Corrigir erro recorrente (3x): ERRO: [Errno 2] No such file or directory: 'C:\\Projetos Automações e Digitais\\Luna\\workspaces\\te
+[2025-10-23 20:36:29] INFO: ======================================================================
+[2025-10-23 20:36:29] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251023_203629.py
+[2025-10-23 20:36:29] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251023_203629.py
+[2025-10-23 20:36:30] INFO: Alvo 'ler_arquivo' não encontrado - adicionando ao final
+[2025-10-23 20:36:30] INFO: Código modificado
+[2025-10-23 20:36:30] WARNING: Smoke tests não disponíveis: No module named 'smoke_tests_luna'
+[2025-10-23 20:36:30] INFO: MODIFICAÇÃO APLICADA COM SUCESSO
+[2025-10-23 20:36:30] INFO: 
+======================================================================
+[2025-10-23 20:36:30] INFO: MODIFICAÇÃO: bug_fix
+[2025-10-23 20:36:30] INFO: Alvo: ler_arquivo
+[2025-10-23 20:36:30] INFO: Motivo: Corrigir erro recorrente (3x): ERRO: [Errno 2] No such file or directory: 'C:\\Projetos Automações e Digitais\\Luna\\workspaces\\te
+[2025-10-23 20:36:30] INFO: ======================================================================
+[2025-10-23 20:36:30] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251023_203630.py
+[2025-10-23 20:36:30] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251023_203630.py
+[2025-10-23 20:36:30] INFO: Alvo 'ler_arquivo' não encontrado - adicionando ao final
+[2025-10-23 20:36:30] INFO: Código modificado
+[2025-10-23 20:36:30] WARNING: Smoke tests não disponíveis: No module named 'smoke_tests_luna'
+[2025-10-23 20:36:30] INFO: MODIFICAÇÃO APLICADA COM SUCESSO
+[2025-10-23 20:36:30] INFO: 
+======================================================================
+[2025-10-23 20:36:30] INFO: MODIFICAÇÃO: bug_fix
+[2025-10-23 20:36:30] INFO: Alvo: ler_arquivo
+[2025-10-23 20:36:30] INFO: Motivo: Corrigir erro recorrente (4x): ERRO: [Errno 2] No such file or directory: 'C:\\Projetos Automações e Digitais\\Luna\\workspaces\\te
+[2025-10-23 20:36:30] INFO: ======================================================================
+[2025-10-23 20:36:30] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251023_203630.py
+[2025-10-23 20:36:30] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251023_203630.py
+[2025-10-23 20:36:30] INFO: Alvo 'ler_arquivo' não encontrado - adicionando ao final
+[2025-10-23 20:36:30] INFO: Código modificado
+[2025-10-23 20:36:30] WARNING: Smoke tests não disponíveis: No module named 'smoke_tests_luna'
+[2025-10-23 20:36:30] INFO: MODIFICAÇÃO APLICADA COM SUCESSO
+[2025-10-23 20:36:30] INFO: 
+======================================================================
+[2025-10-23 20:36:30] INFO: MODIFICAÇÃO: bug_fix
+[2025-10-23 20:36:30] INFO: Alvo: ler_arquivo
+[2025-10-23 20:36:30] INFO: Motivo: Corrigir erro recorrente (3x): ERRO: [Errno 2] No such file or directory: 'C:\\Projetos Automações e Digitais\\Luna\\workspaces\\te
+[2025-10-23 20:36:30] INFO: ======================================================================
+[2025-10-23 20:36:30] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251023_203630.py
+[2025-10-23 20:36:30] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251023_203630.py
+[2025-10-23 20:36:31] INFO: Alvo 'ler_arquivo' não encontrado - adicionando ao final
+[2025-10-23 20:36:31] INFO: Código modificado
+[2025-10-23 20:36:31] WARNING: Smoke tests não disponíveis: No module named 'smoke_tests_luna'
+[2025-10-23 20:36:31] INFO: MODIFICAÇÃO APLICADA COM SUCESSO
+[2025-10-23 21:03:14] INFO: 
+======================================================================
+[2025-10-23 21:03:14] INFO: MODIFICAÇÃO: bug_fix
+[2025-10-23 21:03:14] INFO: Alvo: ler_arquivo
+[2025-10-23 21:03:14] INFO: Motivo: Corrigir erro recorrente (3x): ERRO: [Errno 2] No such file or directory: 'C:\\Projetos Automações e Digitais\\Luna\\workspaces\\te
+[2025-10-23 21:03:14] INFO: ======================================================================
+[2025-10-23 21:03:14] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251023_210314.py
+[2025-10-23 21:03:14] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251023_210314.py
+[2025-10-23 21:03:14] INFO: Alvo 'ler_arquivo' não encontrado - adicionando ao final
+[2025-10-23 21:03:14] INFO: Código modificado
+[2025-10-23 21:03:14] WARNING: Smoke tests não disponíveis: No module named 'smoke_tests_luna'
+[2025-10-23 21:03:14] INFO: MODIFICAÇÃO APLICADA COM SUCESSO
+[2025-10-23 21:03:14] INFO: 
+======================================================================
+[2025-10-23 21:03:14] INFO: MODIFICAÇÃO: bug_fix
+[2025-10-23 21:03:14] INFO: Alvo: ler_arquivo
+[2025-10-23 21:03:14] INFO: Motivo: Corrigir erro recorrente (3x): ERRO: [Errno 2] No such file or directory: 'C:\\Projetos Automações e Digitais\\Luna\\workspaces\\te
+[2025-10-23 21:03:14] INFO: ======================================================================
+[2025-10-23 21:03:14] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251023_210314.py
+[2025-10-23 21:03:14] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251023_210314.py
+[2025-10-23 21:03:14] INFO: Alvo 'ler_arquivo' não encontrado - adicionando ao final
+[2025-10-23 21:03:14] INFO: Código modificado
+[2025-10-23 21:03:14] WARNING: Smoke tests não disponíveis: No module named 'smoke_tests_luna'
+[2025-10-23 21:03:14] INFO: MODIFICAÇÃO APLICADA COM SUCESSO
+[2025-10-23 21:03:14] INFO: 
+======================================================================
+[2025-10-23 21:03:14] INFO: MODIFICAÇÃO: bug_fix
+[2025-10-23 21:03:14] INFO: Alvo: ler_arquivo
+[2025-10-23 21:03:14] INFO: Motivo: Corrigir erro recorrente (3x): ERRO: [Errno 2] No such file or directory: 'C:\\Projetos Automações e Digitais\\Luna\\workspaces\\te
+[2025-10-23 21:03:14] INFO: ======================================================================
+[2025-10-23 21:03:14] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251023_210314.py
+[2025-10-23 21:03:14] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251023_210314.py
+[2025-10-23 21:03:14] INFO: Alvo 'ler_arquivo' não encontrado - adicionando ao final
+[2025-10-23 21:03:14] INFO: Código modificado
+[2025-10-23 21:03:14] WARNING: Smoke tests não disponíveis: No module named 'smoke_tests_luna'
+[2025-10-23 21:03:14] INFO: MODIFICAÇÃO APLICADA COM SUCESSO
+[2025-10-23 21:20:51] INFO: 
+======================================================================
+[2025-10-23 21:20:51] INFO: MODIFICAÇÃO: qualidade
+[2025-10-23 21:20:51] INFO: Alvo: linha_1707_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-23 21:20:51] INFO: Motivo: Bare except clause detectado na linha 1707
+[2025-10-23 21:20:51] INFO: ======================================================================
+[2025-10-23 21:20:51] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251023_212051.py
+[2025-10-23 21:20:51] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251023_212051.py
+[2025-10-23 21:20:51] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-23 21:20:51] INFO: Código modificado
+[2025-10-23 21:20:51] WARNING: Smoke tests não disponíveis: No module named 'smoke_tests_luna'
+[2025-10-23 21:20:51] INFO: MODIFICAÇÃO APLICADA COM SUCESSO
+[2025-10-23 21:20:51] INFO: 
+======================================================================
+[2025-10-23 21:20:51] INFO: MODIFICAÇÃO: qualidade
+[2025-10-23 21:20:51] INFO: Alvo: linha_2445_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-23 21:20:51] INFO: Motivo: Bare except clause detectado na linha 2445
+[2025-10-23 21:20:51] INFO: ======================================================================
+[2025-10-23 21:20:51] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251023_212051.py
+[2025-10-23 21:20:51] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251023_212051.py
+[2025-10-23 21:20:51] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-23 21:20:51] INFO: Código modificado
+[2025-10-23 21:20:52] WARNING: Smoke tests não disponíveis: No module named 'smoke_tests_luna'
+[2025-10-23 21:20:52] INFO: MODIFICAÇÃO APLICADA COM SUCESSO
+[2025-10-23 21:22:05] INFO: 
+======================================================================
+[2025-10-23 21:22:05] INFO: MODIFICAÇÃO: qualidade
+[2025-10-23 21:22:05] INFO: Alvo: linha_1701_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-23 21:22:05] INFO: Motivo: Bare except clause detectado na linha 1701
+[2025-10-23 21:22:05] INFO: ======================================================================
+[2025-10-23 21:22:05] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251023_212205.py
+[2025-10-23 21:22:05] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251023_212205.py
+[2025-10-23 21:22:05] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-23 21:22:05] INFO: Código modificado
+[2025-10-23 21:22:05] WARNING: Smoke tests não disponíveis: No module named 'smoke_tests_luna'
+[2025-10-23 21:22:05] INFO: MODIFICAÇÃO APLICADA COM SUCESSO
+[2025-10-23 21:22:05] INFO: 
+======================================================================
+[2025-10-23 21:22:05] INFO: MODIFICAÇÃO: qualidade
+[2025-10-23 21:22:05] INFO: Alvo: linha_2437_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-23 21:22:05] INFO: Motivo: Bare except clause detectado na linha 2437
+[2025-10-23 21:22:05] INFO: ======================================================================
+[2025-10-23 21:22:05] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251023_212205.py
+[2025-10-23 21:22:05] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251023_212205.py
+[2025-10-23 21:22:05] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-23 21:22:05] INFO: Código modificado
+[2025-10-23 21:22:05] WARNING: Smoke tests não disponíveis: No module named 'smoke_tests_luna'
+[2025-10-23 21:22:05] INFO: MODIFICAÇÃO APLICADA COM SUCESSO
+[2025-10-23 22:14:46] INFO: 
+======================================================================
+[2025-10-23 22:14:46] INFO: MODIFICAÇÃO: qualidade
+[2025-10-23 22:14:46] INFO: Alvo: linha_1722_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-23 22:14:46] INFO: Motivo: Bare except clause detectado na linha 1722
+[2025-10-23 22:14:46] INFO: ======================================================================
+[2025-10-23 22:14:46] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251023_221446.py
+[2025-10-23 22:14:46] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251023_221446.py
+[2025-10-23 22:14:46] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-23 22:14:46] INFO: Código modificado
+[2025-10-23 22:14:47] WARNING: Smoke tests não disponíveis: No module named 'smoke_tests_luna'
+[2025-10-23 22:14:47] INFO: MODIFICAÇÃO APLICADA COM SUCESSO
+[2025-10-23 22:14:47] INFO: 
+======================================================================
+[2025-10-23 22:14:47] INFO: MODIFICAÇÃO: qualidade
+[2025-10-23 22:14:47] INFO: Alvo: linha_2460_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-23 22:14:47] INFO: Motivo: Bare except clause detectado na linha 2460
+[2025-10-23 22:14:47] INFO: ======================================================================
+[2025-10-23 22:14:47] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251023_221447.py
+[2025-10-23 22:14:47] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251023_221447.py
+[2025-10-23 22:14:47] INFO: Alvo 'Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py' não encontrado - adicionando ao final
+[2025-10-23 22:14:47] INFO: Código modificado
+[2025-10-23 22:14:47] WARNING: Smoke tests não disponíveis: No module named 'smoke_tests_luna'
+[2025-10-23 22:14:47] INFO: MODIFICAÇÃO APLICADA COM SUCESSO
+[2025-10-24 00:04:42] INFO: 
+======================================================================
+[2025-10-24 00:04:42] INFO: MODIFICAÇÃO: otimizacao
+[2025-10-24 00:04:42] INFO: Alvo: linha_5215_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-24 00:04:42] INFO: Motivo: Loop ineficiente detectado: 'texto +=' em loop (O(n²))
+[2025-10-24 00:04:42] INFO: ======================================================================
+[2025-10-24 00:04:42] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251024_000442.py
+[2025-10-24 00:04:42] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251024_000442.py
+[2025-10-24 00:04:42] INFO: DEBUG: Detectado targeting por linha 5215
+[2025-10-24 00:04:42] WARNING: WARNING: Nenhuma função/classe encontrada próxima à linha 5215
+[2025-10-24 00:04:42] ERROR: TARGETING FALHOU: Não foi possível extrair nome do alvo 'linha_5215_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py'
+[2025-10-24 00:04:42] INFO: Fallback: usando substituição completa do código
+[2025-10-24 00:04:42] INFO: Código modificado
+[2025-10-24 00:04:43] INFO: 
+======================================================================
+[2025-10-24 00:04:43] INFO: MODIFICAÇÃO: otimizacao
+[2025-10-24 00:04:43] INFO: Alvo: linha_5215_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-24 00:04:43] INFO: Motivo: Loop ineficiente detectado: 'texto +=' em loop (O(n²))
+[2025-10-24 00:04:43] INFO: ======================================================================
+[2025-10-24 00:04:43] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251024_000443.py
+[2025-10-24 00:04:43] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251024_000443.py
+[2025-10-24 00:04:43] INFO: DEBUG: Detectado targeting por linha 5215
+[2025-10-24 00:04:43] WARNING: WARNING: Nenhuma função/classe encontrada próxima à linha 5215
+[2025-10-24 00:04:43] ERROR: TARGETING FALHOU: Não foi possível extrair nome do alvo 'linha_5215_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py'
+[2025-10-24 00:04:43] INFO: Fallback: usando substituição completa do código
+[2025-10-24 00:04:43] INFO: Código modificado
+[2025-10-24 00:04:43] INFO: 
+======================================================================
+[2025-10-24 00:04:43] INFO: MODIFICAÇÃO: otimizacao
+[2025-10-24 00:04:43] INFO: Alvo: linha_5224_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-24 00:04:43] INFO: Motivo: Loop ineficiente detectado: 'texto +=' em loop (O(n²))
+[2025-10-24 00:04:43] INFO: ======================================================================
+[2025-10-24 00:04:43] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251024_000443.py
+[2025-10-24 00:04:43] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251024_000443.py
+[2025-10-24 00:04:43] INFO: DEBUG: Detectado targeting por linha 5224
+[2025-10-24 00:04:43] WARNING: WARNING: Nenhuma função/classe encontrada próxima à linha 5224
+[2025-10-24 00:04:43] ERROR: TARGETING FALHOU: Não foi possível extrair nome do alvo 'linha_5224_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py'
+[2025-10-24 00:04:43] INFO: Fallback: usando substituição completa do código
+[2025-10-24 00:04:43] INFO: Código modificado
+[2025-10-24 00:04:43] INFO: 
+======================================================================
+[2025-10-24 00:04:43] INFO: MODIFICAÇÃO: otimizacao
+[2025-10-24 00:04:43] INFO: Alvo: linha_5231_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-24 00:04:43] INFO: Motivo: Loop ineficiente detectado: 'texto +=' em loop (O(n²))
+[2025-10-24 00:04:43] INFO: ======================================================================
+[2025-10-24 00:04:43] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251024_000443.py
+[2025-10-24 00:04:43] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251024_000443.py
+[2025-10-24 00:04:43] INFO: DEBUG: Detectado targeting por linha 5231
+[2025-10-24 00:04:43] WARNING: WARNING: Nenhuma função/classe encontrada próxima à linha 5231
+[2025-10-24 00:04:43] ERROR: TARGETING FALHOU: Não foi possível extrair nome do alvo 'linha_5231_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py'
+[2025-10-24 00:04:43] INFO: Fallback: usando substituição completa do código
+[2025-10-24 00:04:43] INFO: Código modificado
+[2025-10-24 00:04:43] INFO: 
+======================================================================
+[2025-10-24 00:04:43] INFO: MODIFICAÇÃO: otimizacao
+[2025-10-24 00:04:43] INFO: Alvo: linha_5232_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-24 00:04:43] INFO: Motivo: Loop ineficiente detectado: 'texto +=' em loop (O(n²))
+[2025-10-24 00:04:43] INFO: ======================================================================
+[2025-10-24 00:04:43] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251024_000443.py
+[2025-10-24 00:04:43] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251024_000443.py
+[2025-10-24 00:04:43] INFO: DEBUG: Detectado targeting por linha 5232
+[2025-10-24 00:04:43] WARNING: WARNING: Nenhuma função/classe encontrada próxima à linha 5232
+[2025-10-24 00:04:43] ERROR: TARGETING FALHOU: Não foi possível extrair nome do alvo 'linha_5232_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py'
+[2025-10-24 00:04:43] INFO: Fallback: usando substituição completa do código
+[2025-10-24 00:04:43] INFO: Código modificado
+[2025-10-24 00:04:43] INFO: 
+======================================================================
+[2025-10-24 00:04:43] INFO: MODIFICAÇÃO: otimizacao
+[2025-10-24 00:04:43] INFO: Alvo: linha_5237_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-24 00:04:43] INFO: Motivo: Loop ineficiente detectado: 'texto +=' em loop (O(n²))
+[2025-10-24 00:04:43] INFO: ======================================================================
+[2025-10-24 00:04:43] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251024_000443.py
+[2025-10-24 00:04:43] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251024_000443.py
+[2025-10-24 00:04:43] INFO: DEBUG: Detectado targeting por linha 5237
+[2025-10-24 00:04:43] WARNING: WARNING: Nenhuma função/classe encontrada próxima à linha 5237
+[2025-10-24 00:04:43] ERROR: TARGETING FALHOU: Não foi possível extrair nome do alvo 'linha_5237_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py'
+[2025-10-24 00:04:43] INFO: Fallback: usando substituição completa do código
+[2025-10-24 00:04:43] INFO: Código modificado
+[2025-10-24 00:04:43] INFO: 
+======================================================================
+[2025-10-24 00:04:43] INFO: MODIFICAÇÃO: otimizacao
+[2025-10-24 00:04:43] INFO: Alvo: linha_5267_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-24 00:04:43] INFO: Motivo: Loop ineficiente detectado: 'texto +=' em loop (O(n²))
+[2025-10-24 00:04:43] INFO: ======================================================================
+[2025-10-24 00:04:43] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251024_000443.py
+[2025-10-24 00:04:43] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251024_000443.py
+[2025-10-24 00:04:43] INFO: DEBUG: Detectado targeting por linha 5267
+[2025-10-24 00:04:43] WARNING: WARNING: Nenhuma função/classe encontrada próxima à linha 5267
+[2025-10-24 00:04:43] ERROR: TARGETING FALHOU: Não foi possível extrair nome do alvo 'linha_5267_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py'
+[2025-10-24 00:04:43] INFO: Fallback: usando substituição completa do código
+[2025-10-24 00:04:43] INFO: Código modificado
+[2025-10-24 00:04:44] INFO: 
+======================================================================
+[2025-10-24 00:04:44] INFO: MODIFICAÇÃO: otimizacao
+[2025-10-24 00:04:44] INFO: Alvo: linha_2562_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-24 00:04:44] INFO: Motivo: Loop ineficiente detectado: 'texto +=' em loop (O(n²))
+[2025-10-24 00:04:44] INFO: ======================================================================
+[2025-10-24 00:04:44] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251024_000444.py
+[2025-10-24 00:04:44] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251024_000444.py
+[2025-10-24 00:04:44] INFO: DEBUG: Detectado targeting por linha 2562
+[2025-10-24 00:04:44] WARNING: WARNING: Nenhuma função/classe encontrada próxima à linha 2562
+[2025-10-24 00:04:44] ERROR: TARGETING FALHOU: Não foi possível extrair nome do alvo 'linha_2562_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py'
+[2025-10-24 00:04:44] INFO: Fallback: usando substituição completa do código
+[2025-10-24 00:04:44] INFO: Código modificado
+[2025-10-24 00:04:44] INFO: 
+======================================================================
+[2025-10-24 00:04:44] INFO: MODIFICAÇÃO: otimizacao
+[2025-10-24 00:04:44] INFO: Alvo: linha_2569_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-24 00:04:44] INFO: Motivo: Loop ineficiente detectado: 'texto +=' em loop (O(n²))
+[2025-10-24 00:04:44] INFO: ======================================================================
+[2025-10-24 00:04:44] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251024_000444.py
+[2025-10-24 00:04:44] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251024_000444.py
+[2025-10-24 00:04:44] INFO: DEBUG: Detectado targeting por linha 2569
+[2025-10-24 00:04:44] WARNING: WARNING: Nenhuma função/classe encontrada próxima à linha 2569
+[2025-10-24 00:04:44] ERROR: TARGETING FALHOU: Não foi possível extrair nome do alvo 'linha_2569_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py'
+[2025-10-24 00:04:44] INFO: Fallback: usando substituição completa do código
+[2025-10-24 00:04:44] INFO: Código modificado
+[2025-10-24 00:04:44] INFO: 
+======================================================================
+[2025-10-24 00:04:44] INFO: MODIFICAÇÃO: otimizacao
+[2025-10-24 00:04:44] INFO: Alvo: linha_2564_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-24 00:04:44] INFO: Motivo: Loop ineficiente detectado: 'texto +=' em loop (O(n²))
+[2025-10-24 00:04:44] INFO: ======================================================================
+[2025-10-24 00:04:44] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251024_000444.py
+[2025-10-24 00:04:44] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251024_000444.py
+[2025-10-24 00:04:44] INFO: DEBUG: Detectado targeting por linha 2564
+[2025-10-24 00:04:44] WARNING: WARNING: Nenhuma função/classe encontrada próxima à linha 2564
+[2025-10-24 00:04:44] ERROR: TARGETING FALHOU: Não foi possível extrair nome do alvo 'linha_2564_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py'
+[2025-10-24 00:04:44] INFO: Fallback: usando substituição completa do código
+[2025-10-24 00:04:44] INFO: Código modificado
+[2025-10-24 00:04:44] INFO: 
+======================================================================
+[2025-10-24 00:04:44] INFO: MODIFICAÇÃO: otimizacao
+[2025-10-24 00:04:44] INFO: Alvo: linha_2576_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-24 00:04:44] INFO: Motivo: Loop ineficiente detectado: 'texto +=' em loop (O(n²))
+[2025-10-24 00:04:44] INFO: ======================================================================
+[2025-10-24 00:04:44] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251024_000444.py
+[2025-10-24 00:04:44] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251024_000444.py
+[2025-10-24 00:04:44] INFO: DEBUG: Detectado targeting por linha 2576
+[2025-10-24 00:04:44] WARNING: WARNING: Nenhuma função/classe encontrada próxima à linha 2576
+[2025-10-24 00:04:44] ERROR: TARGETING FALHOU: Não foi possível extrair nome do alvo 'linha_2576_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py'
+[2025-10-24 00:04:44] INFO: Fallback: usando substituição completa do código
+[2025-10-24 00:04:44] INFO: Código modificado
+[2025-10-24 00:04:44] INFO: 
+======================================================================
+[2025-10-24 00:04:44] INFO: MODIFICAÇÃO: otimizacao
+[2025-10-24 00:04:44] INFO: Alvo: linha_2576_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-24 00:04:44] INFO: Motivo: Loop ineficiente detectado: 'texto +=' em loop (O(n²))
+[2025-10-24 00:04:44] INFO: ======================================================================
+[2025-10-24 00:04:44] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251024_000444.py
+[2025-10-24 00:04:44] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251024_000444.py
+[2025-10-24 00:04:44] INFO: DEBUG: Detectado targeting por linha 2576
+[2025-10-24 00:04:44] WARNING: WARNING: Nenhuma função/classe encontrada próxima à linha 2576
+[2025-10-24 00:04:44] ERROR: TARGETING FALHOU: Não foi possível extrair nome do alvo 'linha_2576_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py'
+[2025-10-24 00:04:44] INFO: Fallback: usando substituição completa do código
+[2025-10-24 00:04:44] INFO: Código modificado
+[2025-10-24 00:04:45] INFO: 
+======================================================================
+[2025-10-24 00:04:45] INFO: MODIFICAÇÃO: otimizacao
+[2025-10-24 00:04:45] INFO: Alvo: linha_2590_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-24 00:04:45] INFO: Motivo: Loop ineficiente detectado: 'texto +=' em loop (O(n²))
+[2025-10-24 00:04:45] INFO: ======================================================================
+[2025-10-24 00:04:45] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251024_000445.py
+[2025-10-24 00:04:45] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251024_000445.py
+[2025-10-24 00:04:45] INFO: DEBUG: Detectado targeting por linha 2590
+[2025-10-24 00:04:45] WARNING: WARNING: Nenhuma função/classe encontrada próxima à linha 2590
+[2025-10-24 00:04:45] ERROR: TARGETING FALHOU: Não foi possível extrair nome do alvo 'linha_2590_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py'
+[2025-10-24 00:04:45] INFO: Fallback: usando substituição completa do código
+[2025-10-24 00:04:45] INFO: Código modificado
+[2025-10-24 00:04:45] INFO: 
+======================================================================
+[2025-10-24 00:04:45] INFO: MODIFICAÇÃO: otimizacao
+[2025-10-24 00:04:45] INFO: Alvo: linha_2582_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-24 00:04:45] INFO: Motivo: Loop ineficiente detectado: 'texto +=' em loop (O(n²))
+[2025-10-24 00:04:45] INFO: ======================================================================
+[2025-10-24 00:04:45] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251024_000445.py
+[2025-10-24 00:04:45] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251024_000445.py
+[2025-10-24 00:04:45] INFO: DEBUG: Detectado targeting por linha 2582
+[2025-10-24 00:04:45] WARNING: WARNING: Nenhuma função/classe encontrada próxima à linha 2582
+[2025-10-24 00:04:45] ERROR: TARGETING FALHOU: Não foi possível extrair nome do alvo 'linha_2582_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py'
+[2025-10-24 00:04:45] INFO: Fallback: usando substituição completa do código
+[2025-10-24 00:04:45] INFO: Código modificado
+[2025-10-24 00:04:45] INFO: 
+======================================================================
+[2025-10-24 00:04:45] INFO: MODIFICAÇÃO: otimizacao
+[2025-10-24 00:04:45] INFO: Alvo: linha_2605_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-24 00:04:45] INFO: Motivo: Loop ineficiente detectado: 'texto +=' em loop (O(n²))
+[2025-10-24 00:04:45] INFO: ======================================================================
+[2025-10-24 00:04:45] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251024_000445.py
+[2025-10-24 00:04:45] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251024_000445.py
+[2025-10-24 00:04:45] INFO: DEBUG: Detectado targeting por linha 2605
+[2025-10-24 00:04:45] WARNING: WARNING: Nenhuma função/classe encontrada próxima à linha 2605
+[2025-10-24 00:04:45] ERROR: TARGETING FALHOU: Não foi possível extrair nome do alvo 'linha_2605_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py'
+[2025-10-24 00:04:45] INFO: Fallback: usando substituição completa do código
+[2025-10-24 00:04:45] INFO: Código modificado
+[2025-10-24 00:06:10] INFO: 
+======================================================================
+[2025-10-24 00:06:10] INFO: MODIFICAÇÃO: otimizacao
+[2025-10-24 00:06:10] INFO: Alvo: linha_5215_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-24 00:06:10] INFO: Motivo: Loop ineficiente detectado: 'texto +=' em loop (O(n²))
+[2025-10-24 00:06:10] INFO: ======================================================================
+[2025-10-24 00:06:10] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251024_000610.py
+[2025-10-24 00:06:10] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251024_000610.py
+[2025-10-24 00:06:10] INFO: DEBUG: Detectado targeting por linha 5215
+[2025-10-24 00:06:10] WARNING: WARNING: Nenhuma função/classe encontrada próxima à linha 5215
+[2025-10-24 00:06:10] ERROR: TARGETING FALHOU: Não foi possível extrair nome do alvo 'linha_5215_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py'
+[2025-10-24 00:06:10] INFO: Fallback: usando substituição completa do código
+[2025-10-24 00:06:10] INFO: Código modificado
+[2025-10-24 00:06:10] ERROR: VALIDAÇÃO FALHOU: Import falhou: module 'importlib' has no attribute 'util'
+[2025-10-24 00:06:10] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251024_000610.py
+[2025-10-24 00:08:57] INFO: 
+======================================================================
+[2025-10-24 00:08:57] INFO: MODIFICAÇÃO: otimizacao
+[2025-10-24 00:08:57] INFO: Alvo: linha_5215_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py
+[2025-10-24 00:08:57] INFO: Motivo: Loop ineficiente detectado: 'texto +=' em loop (O(n²))
+[2025-10-24 00:08:57] INFO: ======================================================================
+[2025-10-24 00:08:57] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251024_000857.py
+[2025-10-24 00:08:57] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251024_000857.py
+[2025-10-24 00:08:57] INFO: DEBUG: Detectado targeting por linha 5215
+[2025-10-24 00:08:57] WARNING: WARNING: Nenhuma função/classe encontrada próxima à linha 5215
+[2025-10-24 00:08:57] ERROR: TARGETING FALHOU: Não foi possível extrair nome do alvo 'linha_5215_C:\Projetos Automações e Digitais\Luna\luna_v3_FINAL_OTIMIZADA.py'
+[2025-10-24 00:08:57] INFO: Fallback: usando substituição completa do código
+[2025-10-24 00:08:57] INFO: Código modificado
+[2025-10-24 00:08:57] ERROR: VALIDAÇÃO FALHOU: Import falhou: module 'importlib' has no attribute 'util'
+[2025-10-24 00:08:57] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251024_000857.py
+[2025-10-24 00:17:47] INFO: 
+======================================================================
+[2025-10-24 00:17:47] INFO: MODIFICAÇÃO: documentacao
+[2025-10-24 00:17:47] INFO: Alvo: tem_ciclo
+[2025-10-24 00:17:47] INFO: Motivo: Função pública 'tem_ciclo' sem docstring (linha 923)
+[2025-10-24 00:17:47] INFO: ======================================================================
+[2025-10-24 00:17:47] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251024_001747.py
+[2025-10-24 00:17:47] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251024_001747.py
+[2025-10-24 00:17:47] ERROR: Erro de sintaxe ao processar AST: invalid syntax (<unknown>, line 1)
+[2025-10-24 00:17:47] INFO: Fallback: usando substituição completa do código
+[2025-10-24 00:17:47] INFO: Código modificado
+[2025-10-24 00:17:47] ERROR: VALIDAÇÃO FALHOU: Sintaxe inválida: Linha 1: invalid syntax
+[2025-10-24 00:17:47] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251024_001747.py
+[2025-10-24 00:17:47] INFO: 
+======================================================================
+[2025-10-24 00:17:47] INFO: MODIFICAÇÃO: documentacao
+[2025-10-24 00:17:47] INFO: Alvo: LoopVisitor
+[2025-10-24 00:17:47] INFO: Motivo: Classe 'LoopVisitor' sem docstring (linha 4733)
+[2025-10-24 00:17:47] INFO: ======================================================================
+[2025-10-24 00:17:47] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251024_001747.py
+[2025-10-24 00:17:47] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251024_001747.py
+[2025-10-24 00:17:47] DEBUG: DEBUG: alvo='LoopVisitor' -> nome_extraído='LoopVisitor'
+[2025-10-24 00:17:47] ERROR: TARGETING FALHOU: Nó 'LoopVisitor' não encontrado no código
+[2025-10-24 00:17:47] DEBUG: DEBUG: alvo original = 'LoopVisitor'
+[2025-10-24 00:17:47] DEBUG: DEBUG: nós disponíveis no AST:
+[2025-10-24 00:17:47] INFO: Fallback: usando substituição completa do código
+[2025-10-24 00:17:47] INFO: Código modificado
+[2025-10-24 00:17:47] ERROR: VALIDAÇÃO FALHOU: Import falhou: module 'importlib' has no attribute 'util'
+[2025-10-24 00:17:47] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251024_001747.py
+[2025-10-24 00:17:47] INFO: 
+======================================================================
+[2025-10-24 00:17:47] INFO: MODIFICAÇÃO: documentacao
+[2025-10-24 00:17:47] INFO: Alvo: ImportVisitor
+[2025-10-24 00:17:47] INFO: Motivo: Classe 'ImportVisitor' sem docstring (linha 4802)
+[2025-10-24 00:17:47] INFO: ======================================================================
+[2025-10-24 00:17:47] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251024_001747.py
+[2025-10-24 00:17:47] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251024_001747.py
+[2025-10-24 00:17:47] DEBUG: DEBUG: alvo='ImportVisitor' -> nome_extraído='ImportVisitor'
+[2025-10-24 00:17:47] ERROR: TARGETING FALHOU: Nó 'ImportVisitor' não encontrado no código
+[2025-10-24 00:17:47] DEBUG: DEBUG: alvo original = 'ImportVisitor'
+[2025-10-24 00:17:47] DEBUG: DEBUG: nós disponíveis no AST:
+[2025-10-24 00:17:47] INFO: Fallback: usando substituição completa do código
+[2025-10-24 00:17:47] INFO: Código modificado
+[2025-10-24 00:17:47] ERROR: VALIDAÇÃO FALHOU: Import falhou: module 'importlib' has no attribute 'util'
+[2025-10-24 00:17:47] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251024_001747.py
+[2025-10-24 00:17:47] INFO: 
+======================================================================
+[2025-10-24 00:17:47] INFO: MODIFICAÇÃO: documentacao
+[2025-10-24 00:17:47] INFO: Alvo: visit_For
+[2025-10-24 00:17:47] INFO: Motivo: Função pública 'visit_For' sem docstring (linha 4738)
+[2025-10-24 00:17:47] INFO: ======================================================================
+[2025-10-24 00:17:47] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251024_001747.py
+[2025-10-24 00:17:47] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251024_001747.py
+[2025-10-24 00:17:47] ERROR: Erro de sintaxe ao processar AST: invalid syntax (<unknown>, line 1)
+[2025-10-24 00:17:47] INFO: Fallback: usando substituição completa do código
+[2025-10-24 00:17:47] INFO: Código modificado
+[2025-10-24 00:17:47] ERROR: VALIDAÇÃO FALHOU: Sintaxe inválida: Linha 1: invalid syntax
+[2025-10-24 00:17:47] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251024_001747.py
+[2025-10-24 00:17:47] INFO: 
+======================================================================
+[2025-10-24 00:17:47] INFO: MODIFICAÇÃO: documentacao
+[2025-10-24 00:17:47] INFO: Alvo: visit_While
+[2025-10-24 00:17:47] INFO: Motivo: Função pública 'visit_While' sem docstring (linha 4743)
+[2025-10-24 00:17:47] INFO: ======================================================================
+[2025-10-24 00:17:47] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251024_001747.py
+[2025-10-24 00:17:47] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251024_001747.py
+[2025-10-24 00:17:47] ERROR: Erro de sintaxe ao processar AST: invalid syntax (<unknown>, line 1)
+[2025-10-24 00:17:47] INFO: Fallback: usando substituição completa do código
+[2025-10-24 00:17:47] INFO: Código modificado
+[2025-10-24 00:17:47] ERROR: VALIDAÇÃO FALHOU: Sintaxe inválida: Linha 1: invalid syntax
+[2025-10-24 00:17:47] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251024_001747.py
+[2025-10-24 00:17:47] INFO: 
+======================================================================
+[2025-10-24 00:17:47] INFO: MODIFICAÇÃO: documentacao
+[2025-10-24 00:17:47] INFO: Alvo: visit_AugAssign
+[2025-10-24 00:17:47] INFO: Motivo: Função pública 'visit_AugAssign' sem docstring (linha 4748)
+[2025-10-24 00:17:47] INFO: ======================================================================
+[2025-10-24 00:17:47] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251024_001747.py
+[2025-10-24 00:17:47] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251024_001747.py
+[2025-10-24 00:17:47] ERROR: Erro de sintaxe ao processar AST: invalid syntax (<unknown>, line 1)
+[2025-10-24 00:17:47] INFO: Fallback: usando substituição completa do código
+[2025-10-24 00:17:47] INFO: Código modificado
+[2025-10-24 00:17:47] ERROR: VALIDAÇÃO FALHOU: Sintaxe inválida: Linha 1: invalid syntax
+[2025-10-24 00:17:48] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251024_001747.py
+[2025-10-24 00:17:48] INFO: 
+======================================================================
+[2025-10-24 00:17:48] INFO: MODIFICAÇÃO: documentacao
+[2025-10-24 00:17:48] INFO: Alvo: visit_FunctionDef
+[2025-10-24 00:17:48] INFO: Motivo: Função pública 'visit_FunctionDef' sem docstring (linha 4807)
+[2025-10-24 00:17:48] INFO: ======================================================================
+[2025-10-24 00:17:48] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251024_001748.py
+[2025-10-24 00:17:48] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251024_001748.py
+[2025-10-24 00:17:48] ERROR: Erro de sintaxe ao processar AST: invalid syntax (<unknown>, line 1)
+[2025-10-24 00:17:48] INFO: Fallback: usando substituição completa do código
+[2025-10-24 00:17:48] INFO: Código modificado
+[2025-10-24 00:17:48] ERROR: VALIDAÇÃO FALHOU: Sintaxe inválida: Linha 1: invalid syntax
+[2025-10-24 00:17:48] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251024_001748.py
+[2025-10-24 00:17:48] INFO: 
+======================================================================
+[2025-10-24 00:17:48] INFO: MODIFICAÇÃO: documentacao
+[2025-10-24 00:17:48] INFO: Alvo: visit_For
+[2025-10-24 00:17:48] INFO: Motivo: Função pública 'visit_For' sem docstring (linha 4812)
+[2025-10-24 00:17:48] INFO: ======================================================================
+[2025-10-24 00:17:48] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251024_001748.py
+[2025-10-24 00:17:48] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251024_001748.py
+[2025-10-24 00:17:48] ERROR: Erro de sintaxe ao processar AST: invalid syntax (<unknown>, line 1)
+[2025-10-24 00:17:48] INFO: Fallback: usando substituição completa do código
+[2025-10-24 00:17:48] INFO: Código modificado
+[2025-10-24 00:17:48] ERROR: VALIDAÇÃO FALHOU: Sintaxe inválida: Linha 1: invalid syntax
+[2025-10-24 00:17:48] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251024_001748.py
+[2025-10-24 00:17:48] INFO: 
+======================================================================
+[2025-10-24 00:17:48] INFO: MODIFICAÇÃO: documentacao
+[2025-10-24 00:17:48] INFO: Alvo: visit_While
+[2025-10-24 00:17:48] INFO: Motivo: Função pública 'visit_While' sem docstring (linha 4817)
+[2025-10-24 00:17:48] INFO: ======================================================================
+[2025-10-24 00:17:48] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251024_001748.py
+[2025-10-24 00:17:48] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251024_001748.py
+[2025-10-24 00:17:48] ERROR: Erro de sintaxe ao processar AST: invalid syntax (<unknown>, line 1)
+[2025-10-24 00:17:48] INFO: Fallback: usando substituição completa do código
+[2025-10-24 00:17:48] INFO: Código modificado
+[2025-10-24 00:17:48] ERROR: VALIDAÇÃO FALHOU: Sintaxe inválida: Linha 1: invalid syntax
+[2025-10-24 00:17:48] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251024_001748.py
+[2025-10-24 00:17:48] INFO: 
+======================================================================
+[2025-10-24 00:17:48] INFO: MODIFICAÇÃO: documentacao
+[2025-10-24 00:17:48] INFO: Alvo: visit_Import
+[2025-10-24 00:17:48] INFO: Motivo: Função pública 'visit_Import' sem docstring (linha 4822)
+[2025-10-24 00:17:48] INFO: ======================================================================
+[2025-10-24 00:17:48] INFO: Backup criado: backups_auto_evolucao/agente_backup_20251024_001748.py
+[2025-10-24 00:17:48] INFO: ✅ Backup validado: backups_auto_evolucao/agente_backup_20251024_001748.py
+[2025-10-24 00:17:48] ERROR: Erro de sintaxe ao processar AST: invalid syntax (<unknown>, line 1)
+[2025-10-24 00:17:48] INFO: Fallback: usando substituição completa do código
+[2025-10-24 00:17:48] INFO: Código modificado
+[2025-10-24 00:17:48] ERROR: VALIDAÇÃO FALHOU: Sintaxe inválida: Linha 1: invalid syntax
+[2025-10-24 00:17:48] INFO: Rollback realizado: backups_auto_evolucao/agente_backup_20251024_001748.py
