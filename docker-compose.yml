@@ -1,0 +1,82 @@
+version: '3.8'
+
+services:
+  luna:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: luna-v3:latest
+    container_name: luna-agent
+
+    # Interactive mode for CLI interaction
+    stdin_open: true
+    tty: true
+
+    # Environment variables
+    environment:
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+      - PYTHONUTF8=1
+      - PYTHONIOENCODING=utf-8
+      - TERM=xterm-256color
+
+    # Load additional env vars from .env file
+    env_file:
+      - .env
+
+    # Volumes for persistence
+    volumes:
+      # Workspaces - your projects
+      - ./workspaces:/app/workspaces
+
+      # Memory and configuration
+      - ./memoria_agente.json:/app/memoria_agente.json
+      - ./workspace_config.json:/app/workspace_config.json
+
+      # Credentials (encrypted vault and Google tokens)
+      - ./cofre.enc:/app/cofre.enc
+      - ./credentials.json:/app/credentials.json
+      - ./token_gmail.json:/app/token_gmail.json
+      - ./token_calendar.json:/app/token_calendar.json
+
+      # Backups
+      - ./backups_auto_evolucao:/app/backups_auto_evolucao
+      - ./.backups:/app/.backups
+
+      # Luna internal data
+      - ./Luna:/app/Luna
+
+      # Logs (optional - comment out if not needed)
+      - ./LOGS_EXECUCAO:/app/LOGS_EXECUCAO
+
+    # Restart policy
+    restart: unless-stopped
+
+    # Resource limits (adjust based on your needs)
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: 2G
+        reservations:
+          cpus: '1'
+          memory: 512M
+
+    # Network mode (use host for easier access)
+    network_mode: bridge
+
+    # Healthcheck (optional)
+    healthcheck:
+      test: ["CMD", "python", "-c", "import sys; sys.exit(0)"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+# Named volumes (alternative to bind mounts)
+volumes:
+  luna_workspaces:
+    driver: local
+  luna_data:
+    driver: local
+  luna_backups:
+    driver: local

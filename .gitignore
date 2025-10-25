@@ -1,11 +1,136 @@
-"# Arquivos de ambiente e credenciais"  
-".env"  
-".env.local"  
-"*.key"  
-"*.pem"  
-"cofre_credenciais.enc"  
-""  
-"# Python"  
-"__pycache__/"  
-"*.pyc"  
-"*.bak" 
+# ==============================================================================
+# GITIGNORE - Luna V3
+# ==============================================================================
+
+# Arquivos de ambiente e credenciais
+# ==============================================================================
+.env
+.env.local
+.env.*
+*.key
+*.pem
+cofre.enc
+cofre_credenciais.enc
+credentials.json
+token_*.json
+
+# Python
+# ==============================================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.pyc
+*.pyo
+*.egg
+*.egg-info/
+dist/
+build/
+*.bak
+venv/
+venv_*/
+.venv/
+env/
+ENV/
+
+# Logs e Telemetria
+# ==============================================================================
+*.log
+*.jsonl
+LOGS_EXECUCAO/
+Luna/.stats/
+auto_modificacoes.log
+workspace.log
+
+# Backups
+# ==============================================================================
+*.backup
+*.backup_*
+.backups/
+.backups_*/
+.rollback_backups/
+backups_auto_evolucao/
+luna_v3_FINAL_OTIMIZADA.py.backup*
+memoria_agente.json.bak
+
+# Arquivos Temporários
+# ==============================================================================
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+.temp/
+.cache/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDEs e Editores
+# ==============================================================================
+.vscode/
+.idea/
+*.sublime-*
+.DS_Store
+Thumbs.db
+
+# Docker
+# ==============================================================================
+.dockerignore
+docker-compose.override.yml
+
+# Serena (MCP)
+# ==============================================================================
+.serena/
+
+# Claude Code
+# ==============================================================================
+.claude/settings.local.json
+
+# Arquivos de Teste e Debug
+# ==============================================================================
+test_*.py
+*_test.py
+debug_*.py
+poc_*.py
+suite_*.txt
+tarefa_*.txt
+teste_*.txt
+fibonacci_*.txt
+fibonacci_*.json
+luna_performance.json
+tuner_history.json
+
+# Workspaces (dados do usuário)
+# ==============================================================================
+workspaces/**/config.json
+workspaces/**/.env
+workspaces/**/__pycache__/
+workspaces/**/*.log
+
+# Documentação Temporária
+# ==============================================================================
+PROXIMA_SESSAO.md
+LEIA_PRIMEIRO_*.md
+INSTRUCOES_*.md
+
+# Scripts Específicos
+# ==============================================================================
+luna-docker
+start-claude-docker.sh
+executar_luna_NO_PLANNING.sh
+
+# Planos Gerados
+# ==============================================================================
+Luna/planos/*.json
+
+# Arquivos Corrompidos
+# ==============================================================================
+*.CORRUPTED_*
+
+# Outros
+# ==============================================================================
+relatorio_imports.txt
+*.comparison.txt
+*.analysis.json

@@ -1,0 +1,13 @@
+
+======================================================================
+Traceback (most recent call last):
+  File "C:\Projetos Automações e Digitais\Luna\test_improvements_integration.py", line 315, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "C:\Projetos Automações e Digitais\Luna\test_improvements_integration.py", line 277, in main
+    print("\U0001f680 SUITE DE TESTES: Melhorias Luna V3")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pedro Victor\AppData\Local\Programs\Python\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f680' in position 0: character maps to <undefined>

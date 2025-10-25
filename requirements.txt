@@ -1,0 +1,23 @@
+# Luna V3 - Python Dependencies
+
+# Core dependencies
+anthropic>=0.18.0
+python-dotenv>=1.0.0
+
+# Playwright for web automation (computer use)
+playwright>=1.40.0
+
+# Cryptography for credentials vault
+cryptography>=41.0.0
+
+# Notion API integration
+notion-client>=2.2.0
+
+# Google APIs (Gmail + Calendar)
+google-auth>=2.23.0
+google-auth-oauthlib>=1.1.0
+google-auth-httplib2>=0.1.1
+google-api-python-client>=2.100.0
+
+# Optional utilities
+requests>=2.31.0
